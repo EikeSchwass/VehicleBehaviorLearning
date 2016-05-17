@@ -1,0 +1,60 @@
+﻿<Window x:Class="VehicleBehaviorLearning.Windows.SimulationReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleBehaviorLearning.Windows"
+        xmlns:liveCharts="clr-namespace:LiveCharts;assembly=LiveCharts"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:controls="clr-namespace:VehicleBehaviorLearning.Windows.Controls"
+        xmlns:behavior="clr-namespace:VehicleBehaviorLearning.Engine.Vehicles.Behavior"
+        mc:Ignorable="d"
+        Title="SimulationReportWindow" Height="600" Width="1000" SizeChanged="SimulationReportWindow_OnSizeChanged" Loaded="SimulationReportWindow_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Single Step" x:Name="SingleStepButton" Click="SingleStepButton_OnClick" />
+            <Button Content="Run" x:Name="RunButton" Click="RunButton_OnClick" />
+            <Button Content="Stop" x:Name="StopButton" Click="StopButton_OnClick" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <liveCharts:LineChart LegendLocation="Bottom" DisableAnimations="True" x:Name="RatingLineCharts" LineSmoothness="0">
+                <liveCharts:LineChart.AxisX>
+                    <liveCharts:Axis Title="Generations" />
+                </liveCharts:LineChart.AxisX>
+                <liveCharts:LineChart.AxisY>
+                    <liveCharts:Axis Title="Rating" />
+                </liveCharts:LineChart.AxisY>
+            </liveCharts:LineChart>
+            <liveCharts:LineChart LegendLocation="Bottom" Grid.Row="1" Grid.Column="0" DisableAnimations="True" x:Name="DeviationLineCharts" LineSmoothness="0">
+                <liveCharts:LineChart.AxisX>
+                    <liveCharts:Axis Title="Generations" />
+                </liveCharts:LineChart.AxisX>
+                <liveCharts:LineChart.AxisY>
+                    <liveCharts:Axis Title="Rating" />
+                </liveCharts:LineChart.AxisY>
+            </liveCharts:LineChart>
+            <liveCharts:LineChart LegendLocation="Bottom" Grid.Row="2" Grid.Column="0" DisableAnimations="True" x:Name="MutationLineCharts" LineSmoothness="0">
+                <liveCharts:LineChart.AxisX>
+                    <liveCharts:Axis Title="Generations" />
+                </liveCharts:LineChart.AxisX>
+                <liveCharts:LineChart.AxisY>
+                    <liveCharts:Axis Title="Rating" />
+                </liveCharts:LineChart.AxisY>
+            </liveCharts:LineChart>
+            <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" />
+        </Grid>
+    </Grid>
+</Window>
