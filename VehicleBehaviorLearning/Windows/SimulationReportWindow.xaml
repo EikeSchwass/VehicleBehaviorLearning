@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VehicleBehaviorLearning.Windows"
-        xmlns:liveCharts="clr-namespace:LiveCharts;assembly=LiveCharts"
-        xmlns:system="clr-namespace:System;assembly=mscorlib"
         xmlns:controls="clr-namespace:VehicleBehaviorLearning.Windows.Controls"
-        xmlns:behavior="clr-namespace:VehicleBehaviorLearning.Engine.Vehicles.Behavior"
+        xmlns:liveCharts.Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:liveCharts="clr-namespace:LiveCharts;assembly=LiveCharts"
+        xmlns:chart="clr-namespace:LiveCharts.Wpf.Charts.Chart;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="SimulationReportWindow" Height="600" Width="1000" SizeChanged="SimulationReportWindow_OnSizeChanged" Loaded="SimulationReportWindow_OnLoaded">
     <Grid>
@@ -30,30 +29,30 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <liveCharts:LineChart LegendLocation="Bottom" DisableAnimations="True" x:Name="RatingLineCharts" LineSmoothness="0">
-                <liveCharts:LineChart.AxisX>
-                    <liveCharts:Axis Title="Generations" />
-                </liveCharts:LineChart.AxisX>
-                <liveCharts:LineChart.AxisY>
-                    <liveCharts:Axis Title="Rating" />
-                </liveCharts:LineChart.AxisY>
-            </liveCharts:LineChart>
-            <liveCharts:LineChart LegendLocation="Bottom" Grid.Row="1" Grid.Column="0" DisableAnimations="True" x:Name="DeviationLineCharts" LineSmoothness="0">
-                <liveCharts:LineChart.AxisX>
-                    <liveCharts:Axis Title="Generations" />
-                </liveCharts:LineChart.AxisX>
-                <liveCharts:LineChart.AxisY>
-                    <liveCharts:Axis Title="Rating" />
-                </liveCharts:LineChart.AxisY>
-            </liveCharts:LineChart>
-            <liveCharts:LineChart LegendLocation="Bottom" Grid.Row="2" Grid.Column="0" DisableAnimations="True" x:Name="MutationLineCharts" LineSmoothness="0">
-                <liveCharts:LineChart.AxisX>
-                    <liveCharts:Axis Title="Generations" />
-                </liveCharts:LineChart.AxisX>
-                <liveCharts:LineChart.AxisY>
-                    <liveCharts:Axis Title="Rating" />
-                </liveCharts:LineChart.AxisY>
-            </liveCharts:LineChart>
+            <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" DisableAnimations="True" x:Name="RatingLineCharts">
+                <liveCharts.Wpf:CartesianChart.AxisX>
+                    <liveCharts.Wpf:Axis Title="Generations" />
+                </liveCharts.Wpf:CartesianChart.AxisX>
+                <liveCharts.Wpf:CartesianChart.AxisY>
+                    <liveCharts.Wpf:Axis Title="Rating" />
+                </liveCharts.Wpf:CartesianChart.AxisY>
+            </liveCharts.Wpf:CartesianChart>
+            <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" Grid.Row="1" Grid.Column="0" DisableAnimations="True" x:Name="DeviationLineCharts">
+                <liveCharts.Wpf:CartesianChart.AxisX>
+                    <liveCharts.Wpf:Axis Title="Generations" />
+                </liveCharts.Wpf:CartesianChart.AxisX>
+                <liveCharts.Wpf:CartesianChart.AxisY>
+                    <liveCharts.Wpf:Axis Title="Rating" />
+                </liveCharts.Wpf:CartesianChart.AxisY>
+            </liveCharts.Wpf:CartesianChart>
+            <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" Grid.Row="2" Grid.Column="0" DisableAnimations="True" x:Name="MutationLineCharts">
+                <liveCharts.Wpf:CartesianChart.AxisX>
+                    <liveCharts.Wpf:Axis Title="Generations" />
+                </liveCharts.Wpf:CartesianChart.AxisX>
+                <liveCharts.Wpf:CartesianChart.AxisY>
+                    <liveCharts.Wpf:Axis Title="Rating" />
+                </liveCharts.Wpf:CartesianChart.AxisY>
+            </liveCharts.Wpf:CartesianChart>
             <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" />
         </Grid>
     </Grid>

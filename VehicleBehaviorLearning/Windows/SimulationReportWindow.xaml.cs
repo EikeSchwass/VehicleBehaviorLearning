@@ -11,6 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Threading;
+using LiveCharts.Configurations;
+using LiveCharts.Wpf;
 using VehicleBehaviorLearning.Engine.Vehicles.Behavior;
 
 namespace VehicleBehaviorLearning.Windows
@@ -34,14 +36,14 @@ namespace VehicleBehaviorLearning.Windows
 
         private void SimulationReportWindow_OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            RatingLineCharts.Update();
+            RatingLineCharts.UpdateLayout();
         }
 
         private void SimulationReportWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
             {
-                var seriesConfiguration = new SeriesConfiguration<SimulationResult>();
-                seriesConfiguration.X(s => s.VehicleBehavior.GetGeneration()).Y(s => s.Rating);
+                var seriesConfiguration = Mappers.Xy<SimulationResult>();
+                seriesConfiguration = seriesConfiguration.X(s => s.VehicleBehavior.GetGeneration()).Y(s => s.Rating);
                 SeriesCollection = new SeriesCollection(seriesConfiguration);
                 for (int i = 0; i < SimulationSettings.Instance.VehicleBehaviors.Count; i++)
                 {
@@ -50,8 +52,8 @@ namespace VehicleBehaviorLearning.Windows
                 RatingLineCharts.Series = SeriesCollection;
             }
             {
-                var seriesConfiguration = new SeriesConfiguration<double>();
-                seriesConfiguration.Y(s => Math.Round(s, 2));
+                var seriesConfiguration = Mappers.Xy<double>();
+                seriesConfiguration = seriesConfiguration.X((x, i) => i).Y(s => Math.Round(s, 2));
                 var seriesCollection = new SeriesCollection(seriesConfiguration)
                                    {
                                        new LineSeries {Title = "Deviation", Values = new ChartValues<double>(), Fill = Brushes.Transparent}
@@ -61,8 +63,8 @@ namespace VehicleBehaviorLearning.Windows
                 DeviationLineCharts.Series = seriesCollection;
             }
             {
-                var seriesConfiguration = new SeriesConfiguration<double>();
-                seriesConfiguration.Y(s => Math.Round(s, 2));
+                var seriesConfiguration = Mappers.Xy<double>();
+                seriesConfiguration = seriesConfiguration.X((x, i) => i).Y(s => Math.Round(s, 2));
                 var seriesCollection = new SeriesCollection(seriesConfiguration)
                                    {
                                        new LineSeries {Title = "Mutation", Values = new ChartValues<double>(), Fill = Brushes.Transparent}
@@ -80,7 +82,11 @@ namespace VehicleBehaviorLearning.Windows
                                                                                                                                      if (SeriesCollection[i].Values.Count < 10)
                                                                                                                                          SeriesCollection[i].Values.Add(results[i]);
                                                                                                                                      else
-                                                                                                                                         SeriesCollection[i].Values = new ChartValues<SimulationResult>().AddRange(SeriesCollection[i].Values.Rotate<SimulationResult>(-1));
+                                                                                                                                     {
+                                                                                                                                         var chartValues = new ChartValues<SimulationResult>();
+                                                                                                                                         chartValues.AddRange(SeriesCollection[i].Values.Rotate<SimulationResult>(-1));
+                                                                                                                                         SeriesCollection[i].Values = chartValues;
+                                                                                                                                     }
                                                                                                                                      SeriesCollection[i].Values[SeriesCollection[i].Values.Count - 1] = results[i];
                                                                                                                                  }
                                                                                                                                  DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation());
@@ -103,7 +109,6 @@ namespace VehicleBehaviorLearning.Windows
             for (int i = 0; i < 10000 && !IsStopped; i++)
             {
                 await SimulationManager.CompleteGenerationAsync();
-                RatingLineCharts.UnsafeUpdate();
                 await Task.Delay(10);
             }
             IsStopped = true;
