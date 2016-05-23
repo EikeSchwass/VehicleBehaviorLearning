@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<SimulationSettings RacetrackWidth="28" UseCurrentVehicleSpeedAsInput="false" SensorSpacingFactor="0" MaxUpdateTime="0.016666">
+  <CarChassisSettings>
+    <Density>2.7</Density>
+    <FrontLeftWheel x="-0.9" y="1.5" />
+    <FrontRightWheel x="0.9" y="1.5" />
+    <RearRightWheel x="-0.9" y="-1.8" />
+    <RearLeftWheel x="0.9" y="-1.8" />
+    <SensorConnection x="-0" y="1.675" />
+    <Chassis>
+      <Vector2 x="-0.45" y="-1.825" />
+      <Vector2 x="-0.9" y="-1.325" />
+      <Vector2 x="-0.85" y="0.274999857" />
+      <Vector2 x="-0.25" y="2.125" />
+      <Vector2 x="0.25" y="2.125" />
+      <Vector2 x="0.85" y="0.274999857" />
+      <Vector2 x="0.9" y="-1.325" />
+      <Vector2 x="0.45" y="-1.825" />
+    </Chassis>
+    <SensorAngles>
+      <double>-40</double>
+      <double>-20</double>
+      <double>0</double>
+      <double>20</double>
+      <double>45</double>
+    </SensorAngles>
+    <SensorAnglesString>-40, -20, 0, 20, 45</SensorAnglesString>
+  </CarChassisSettings>
+  <VehicleSettings>
+    <WheelWidth>1</WheelWidth>
+    <WheelDiameter>0.5</WheelDiameter>
+    <WheelDensity>1</WheelDensity>
+    <WheelMaxLateralImpulse>2.5</WheelMaxLateralImpulse>
+    <WheelStraightenFactor>0.01</WheelStraightenFactor>
+    <MinSpeedFactor>0.1</MinSpeedFactor>
+    <MaxSpeed>300</MaxSpeed>
+    <MaxDriveForce>150</MaxDriveForce>
+    <TurnSpeedPerSecond>300</TurnSpeedPerSecond>
+    <SpeedSteeringPenaltyExponent>2.45</SpeedSteeringPenaltyExponent>
+    <SpeedSteeringPenaltyCompensation>21000</SpeedSteeringPenaltyCompensation>
+    <ViewDistance>250</ViewDistance>
+    <WheelDriveMode>RearWheelDrive</WheelDriveMode>
+    <MaxSteeringAngle>12</MaxSteeringAngle>
+  </VehicleSettings>
+  <MachineLearningSettings>
+    <NumberOfNeuronsInHiddenLayers>
+      <int>2</int>
+    </NumberOfNeuronsInHiddenLayers>
+    <MutationChanceStart>0.25</MutationChanceStart>
+    <MutationDeviationStart>10</MutationDeviationStart>
+    <ActivationFunctionInHiddenLayers>Sigmoid</ActivationFunctionInHiddenLayers>
+    <MutationChanceBase>0.05</MutationChanceBase>
+    <MutationDeviationBase>1</MutationDeviationBase>
+    <MutationDeviationSpikeInterval>0</MutationDeviationSpikeInterval>
+    <MutationChanceSpikeInterval>0</MutationChanceSpikeInterval>
+    <MutationDeviationSpikeHeight>0.1</MutationDeviationSpikeHeight>
+    <MutationChanceSpikeHeight>0.05</MutationChanceSpikeHeight>
+  </MachineLearningSettings>
+  <SensorSpacing>10</SensorSpacing>
+  <WindowWidth>800</WindowWidth>
+  <WindowHeight>600</WindowHeight>
+  <MaxSimulationTime>120</MaxSimulationTime>
+</SimulationSettings>
