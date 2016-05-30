@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using VehicleBehaviorLearning.Engine.Helper;
+using VehicleBehaviorLearning.Windows.Controls;
 
 namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
 {
     public class NeuronalVehicleBehavior : ITreeNode
     {
         public string Text => ToString();
-        public ITreeNode ParentNode => Parent;
+        public ITreeNode ParentNode =>  Parent;
         public NeuronalVehicleBehavior Parent { get; }
         public double[][] Neurons { get; }
         public double[] Weights { get; }
@@ -86,6 +88,24 @@ namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
             throw new ArgumentException("Invalid argument configuration");
         }
 
+        public double GetWeightReverse(int toLayer, int indexFrom, int indexTo)
+        {
+            int weightIndex = 0;
+            for (int i = 1; i < Neurons.Length; i++)
+            {
+                for (int j = (i == Neurons.Length - 1 ? 0 : 1); j < Neurons[i].Length; j++)
+                {
+                    for (int k = 0; k < Neurons[i - 1].Length; k++)
+                    {
+                        if (i == toLayer && k == indexFrom && j == indexTo)
+                            return Weights[weightIndex];
+                        weightIndex++;
+                    }
+                }
+            }
+            throw new ArgumentException("Invalid argument configuration");
+        }
+
         public VehicleBehaviorActions GetVehicleBehaviorActions(VehicleBehaviorInput vehicleBehaviorInput)
         {
 
@@ -142,8 +162,6 @@ namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
             }
             var r1 = Equals(Parent, other.Parent);
             var result = r1 && weightEqual;
-            if (!result)
-                Debug.WriteLine(r1);
             return result;
         }
 

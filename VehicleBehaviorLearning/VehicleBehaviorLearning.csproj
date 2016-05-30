@@ -76,6 +76,10 @@
     <Compile Include="Engine\Vehicles\Behavior\ITreeNode.cs" />
     <Compile Include="Windows\Camera.cs" />
     <Compile Include="Windows\Controls\Edge.cs" />
+    <Compile Include="Windows\Controls\LineDefinition.cs" />
+    <Compile Include="Windows\Controls\NeuronalNetDisplayControl.xaml.cs">
+      <DependentUpon>NeuronalNetDisplayControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Controls\SimulationResultDisplay.xaml.cs">
       <DependentUpon>SimulationResultDisplay.xaml</DependentUpon>
     </Compile>
@@ -86,6 +90,10 @@
       <DependentUpon>SimulationReportWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\SimulationWindow.cs" />
+    <Page Include="Windows\Controls\NeuronalNetDisplayControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Controls\SimulationResultDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

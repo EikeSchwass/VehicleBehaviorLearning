@@ -11,7 +11,7 @@ namespace VehicleBehaviorLearning.Engine
     [Serializable]
     public class MachineLearningSettings : INotifyPropertyChanged
     {
-        private int[] numberOfNeuronsInHiddenLayers = { 2 };
+        private int[] numberOfNeuronsInHiddenLayers = { };
         private double mutationChanceStart = 0.25;
         private double mutationChanceBase = 0.05;
         private double mutationDeviationStart = 10;

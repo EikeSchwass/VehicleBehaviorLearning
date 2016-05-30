@@ -115,7 +115,7 @@ namespace VehicleBehaviorLearning.Windows.Controls
             set { SetValue(TreeNodesProperty, value); }
         }
 
-        public Func<ITreeNode, ITreeNode, Line> GenerateEdge { get; set; }
+        public Func<ITreeNode, ITreeNode, LineDefinition> GenerateEdge { get; set; }
 
         public event Action<object, ITreeNode> TreeNodeClicked;
         public event Action<object, ITreeNode> TreeNodeMouseEnter;
@@ -141,6 +141,27 @@ namespace VehicleBehaviorLearning.Windows.Controls
         private void TreeNodesChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             Redraw();
+        }
+
+        protected override Size MeasureOverride(Size constraint)
+        {
+            Size size = base.MeasureOverride(constraint);
+            try
+            {
+                if (double.IsInfinity(constraint.Width))
+                {
+                    size = new Size(AnalyzedTreeNodes.Count * (NodeRadius * 2 + 50), size.Height);
+                }
+                if (double.IsInfinity(constraint.Height))
+                {
+                    size = new Size(size.Width, AnalyzedTreeNodes.Max(a => a.Count) * (NodeRadius * 2 + 10));
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                return base.MeasureOverride(constraint);
+            }
+            return size;
         }
 
         private void Redraw()
@@ -188,18 +209,15 @@ namespace VehicleBehaviorLearning.Windows.Controls
 
                     if (x > 0)
                     {
-                        foreach (var treeNodeFrom in AnalyzedTreeNodes[x - 1].Where(node => currentNode.ParentNode == node))
+                        foreach (var treeNodeFrom in AnalyzedTreeNodes[x - 1].Where(node => currentNode.ParentNode.Equals(node)))
                         {
-                            var fromControl = new List<FrameworkElement>(RootCanvas.Children.Cast<FrameworkElement>()).First(c => c.Tag == treeNodeFrom);
+                            var fromControl = new List<FrameworkElement>(RootCanvas.Children.Cast<FrameworkElement>()).First(c => Equals(c.Tag, treeNodeFrom));
                             double toX = Canvas.GetLeft(contentControl) + contentControl.ActualWidth / 2;
                             double toY = Canvas.GetTop(contentControl) + contentControl.ActualHeight / 2;
                             double fromX = Canvas.GetLeft(fromControl) + fromControl.ActualWidth / 2;
                             double fromY = Canvas.GetTop(fromControl) + fromControl.ActualHeight / 2;
-                            Line line = null;
-                            if (GenerateEdge != null)
-                                line = GenerateEdge(treeNodeFrom, currentNode);
-                            else
-                                line = new Line { Stroke = LineStroke, StrokeThickness = LineThickness, X1 = fromX, X2 = toX, Y1 = fromY, Y2 = toY };
+                            LineDefinition lineDefinition = GenerateEdge?.Invoke(treeNodeFrom, currentNode) ?? new LineDefinition(LineThickness, LineStroke);
+                            Line line = new Line { Stroke = lineDefinition.StrokeBrush, StrokeThickness = lineDefinition.StrokeThickness, X1 = fromX, X2 = toX, Y1 = fromY, Y2 = toY };
                             Edges.Add(new Edge(treeNodeFrom, currentNode, line, fromControl, contentControl));
                             RootCanvas.Children.Add(line);
                             Panel.SetZIndex(line, -1);
@@ -209,6 +227,7 @@ namespace VehicleBehaviorLearning.Windows.Controls
                 }
             }
             Ellipses = ellipses.AsReadOnly();
+            InvalidateMeasure();
         }
 
         private void NodeMouseLeave(object sender, MouseEventArgs e)
@@ -266,7 +285,7 @@ namespace VehicleBehaviorLearning.Windows.Controls
                     {
                         var tempLine = GenerateEdge(source.From, source.To);
                         source.Line.StrokeThickness = tempLine.StrokeThickness;
-                        source.Line.Stroke = tempLine.Stroke;
+                        source.Line.Stroke = tempLine.StrokeBrush;
                     }
                     else
                     {

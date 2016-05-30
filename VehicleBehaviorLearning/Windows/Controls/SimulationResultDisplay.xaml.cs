@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using VehicleBehaviorLearning.Engine;
 using VehicleBehaviorLearning.Engine.Vehicles.Behavior;
+using Line = System.Windows.Shapes.Line;
 
 namespace VehicleBehaviorLearning.Windows.Controls
 {
@@ -37,6 +38,17 @@ namespace VehicleBehaviorLearning.Windows.Controls
             };
             if (sfd.ShowDialog(this.Parent as Window) == true)
                 FileVehicleBehaviorFactory.Save(simulationResult.VehicleBehavior, sfd.FileName);
+        }
+
+        private void SimulationResultDisplay_OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var simulationResult = (SimulationResult)e.NewValue;
+            DisplayTreeView(simulationResult);
+        }
+
+        private void DisplayTreeView(SimulationResult simulationResult)
+        {
+            NeuronalNetDisplayControl.NeuronalNet = simulationResult.VehicleBehavior;
         }
     }
 }

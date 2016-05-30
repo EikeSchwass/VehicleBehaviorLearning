@@ -49,15 +49,15 @@ namespace VehicleBehaviorLearning.Windows
             }
             
             if (hover)
-                chartPoint?.View.OnHover(chartPoint);
+                chartPoint?.View?.OnHover(chartPoint);
             else
-                chartPoint?.View.OnHoverLeave(chartPoint);
+                chartPoint?.View?.OnHoverLeave(chartPoint);
             Debug.WriteLine(chartPoint);
         }
 
         private void SimulationReportWindow_OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            RatingLineCharts.UpdateLayout();
+            //RatingLineCharts.UpdateLayout();
         }
 
         private void SimulationReportWindow_OnLoaded(object sender, RoutedEventArgs e)

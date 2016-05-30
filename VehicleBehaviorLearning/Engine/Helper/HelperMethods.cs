@@ -166,7 +166,7 @@ namespace VehicleBehaviorLearning.Engine.Helper
         {
             ITreeNode current = treeNode;
             int parents = 0;
-            while (current.ParentNode != null)
+            while (current?.ParentNode != null)
             {
                 current = current.ParentNode;
                 parents++;

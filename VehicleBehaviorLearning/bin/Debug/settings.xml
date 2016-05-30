@@ -43,9 +43,7 @@
     <MaxSteeringAngle>12</MaxSteeringAngle>
   </VehicleSettings>
   <MachineLearningSettings>
-    <NumberOfNeuronsInHiddenLayers>
-      <int>2</int>
-    </NumberOfNeuronsInHiddenLayers>
+    <NumberOfNeuronsInHiddenLayers />
     <MutationChanceStart>0.25</MutationChanceStart>
     <MutationDeviationStart>10</MutationDeviationStart>
     <ActivationFunctionInHiddenLayers>Sigmoid</ActivationFunctionInHiddenLayers>
