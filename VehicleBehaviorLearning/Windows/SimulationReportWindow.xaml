@@ -54,6 +54,7 @@
                 </liveCharts.Wpf:CartesianChart.AxisY>
             </liveCharts.Wpf:CartesianChart>
             <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" TreeNodeClicked="TreeViewControl_OnTreeNodeClicked" TreeNodeMouseEnter="TreeViewControl_OnTreeNodeMouseEnter" TreeNodeMouseLeave="TreeViewControl_OnTreeNodeMouseLeave" />
+            <controls:SimulationResultDisplay Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" x:Name="SimulationResultDisplay" />
         </Grid>
     </Grid>
 </Window>

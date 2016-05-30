@@ -43,10 +43,7 @@ namespace VehicleBehaviorLearning.Windows
             foreach (var series in RatingLineCharts.Series)
             {
                 chartPoint = (series.Values.Points.
-                Where(v =>
-                {
-                    return ((SimulationResult)v.Instance).VehicleBehavior.Equals((NeuronalVehicleBehavior)treeNode);
-                })).FirstOrDefault();
+                Where(v => ((SimulationResult)v.Instance).VehicleBehavior.Equals((NeuronalVehicleBehavior)treeNode))).FirstOrDefault();
                 if (chartPoint != null)
                     break;
             }
@@ -179,16 +176,17 @@ namespace VehicleBehaviorLearning.Windows
 
         private async Task DisplaySingleBehavior(NeuronalVehicleBehavior neuronalVehicleBehavior)
         {
-            await ShowSimulationWindow(neuronalVehicleBehavior);
+            var simulationResult = SimulationManager.SimulationData.AllResults.SelectMany(s => s.Select(k => k)).FirstOrDefault(s => s.VehicleBehavior.Equals(neuronalVehicleBehavior));
+            SimulationResultDisplay.DataContext = simulationResult;
+            //await ShowSimulationWindow(neuronalVehicleBehavior);
         }
 
 
         private void RatingLineCharts_OnDataClick(object arg1, ChartPoint arg2)
         {
-            var treeNode = (ITreeNode)((SimulationResult)arg2.Instance).VehicleBehavior;
-            throw new NotImplementedException();
+            var simulationResult = (SimulationResult)arg2.Instance;
+            SimulationResultDisplay.DataContext = simulationResult;
         }
-
 
         private void RatingLineCharts_OnDataMouseEnter(object arg1, ChartPoint arg2)
         {
