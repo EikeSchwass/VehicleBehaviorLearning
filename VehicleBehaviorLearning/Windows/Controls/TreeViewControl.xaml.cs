@@ -49,6 +49,24 @@ namespace VehicleBehaviorLearning.Windows.Controls
         public static readonly DependencyProperty HighlightChildEdgeThicknessProperty = DependencyProperty.Register(
                                                         "HighlightChildEdgeThickness", typeof(double), typeof(TreeViewControl), new PropertyMetadata(4.0));
 
+        public static readonly DependencyProperty NodeRadiusProperty = DependencyProperty.Register(
+                                                        "NodeRadius", typeof(double), typeof(TreeViewControl), new PropertyMetadata(8.0));
+
+        public static readonly DependencyProperty EllipsesProperty = DependencyProperty.Register(
+                                                        "Ellipses", typeof(IReadOnlyList<Ellipse>), typeof(TreeViewControl), new PropertyMetadata(new List<Ellipse>().AsReadOnly()));
+
+        public IReadOnlyList<Ellipse> Ellipses
+        {
+            get { return (IReadOnlyList<Ellipse>)GetValue(EllipsesProperty); }
+            private set { SetValue(EllipsesProperty, value); }
+        }
+
+        public double NodeRadius
+        {
+            get { return (double)GetValue(NodeRadiusProperty); }
+            set { SetValue(NodeRadiusProperty, value); }
+        }
+
         public double HighlightChildEdgeThickness
         {
             get { return (double)GetValue(HighlightChildEdgeThicknessProperty); }
@@ -99,6 +117,10 @@ namespace VehicleBehaviorLearning.Windows.Controls
 
         public Func<ITreeNode, ITreeNode, Line> GenerateEdge { get; set; }
 
+        public event Action<object, ITreeNode> TreeNodeClicked;
+        public event Action<object, ITreeNode> TreeNodeMouseEnter;
+        public event Action<object, ITreeNode> TreeNodeMouseLeave;
+
         private static void TreeNodesPropertyChanged(DependencyObject dp, DependencyPropertyChangedEventArgs e)
         {
             TreeViewControl treeViewControl = (TreeViewControl)dp;
@@ -123,6 +145,7 @@ namespace VehicleBehaviorLearning.Windows.Controls
 
         private void Redraw()
         {
+            List<Ellipse> ellipses = new List<Ellipse>();
             RootCanvas.Children.Clear();
             AnalyzedTreeNodes.Clear();
             Edges.Clear();
@@ -153,9 +176,11 @@ namespace VehicleBehaviorLearning.Windows.Controls
                     ITreeNode currentNode = AnalyzedTreeNodes[x][y];
                     double posX = x * distanceX + offsetX;
                     double posY = y * distanceY + offsetY;
-                    var contentControl = new Ellipse { Width = 32, Height = 32, Tag = currentNode, Fill = new SolidColorBrush(Color.FromArgb(180, 180, 180, 180)), Stroke = Brushes.Black, StrokeThickness = 1 };
+                    var contentControl = new Ellipse { Width = NodeRadius * 2, Height = NodeRadius * 2, Tag = currentNode, Fill = new SolidColorBrush(Color.FromArgb(180, 180, 180, 180)), Stroke = Brushes.Black, StrokeThickness = 1 };
                     contentControl.MouseEnter += NodeMouseEnter;
                     contentControl.MouseLeave += NodeMouseLeave;
+                    contentControl.MouseDown += (o, e) => TreeNodeClicked?.Invoke(this, currentNode);
+                    ellipses.Add(contentControl);
                     RootCanvas.Children.Add(contentControl);
                     UpdateLayout();
                     Canvas.SetLeft(contentControl, posX - contentControl.ActualWidth / 2);
@@ -183,31 +208,14 @@ namespace VehicleBehaviorLearning.Windows.Controls
                     }
                 }
             }
-
+            Ellipses = ellipses.AsReadOnly();
         }
 
         private void NodeMouseLeave(object sender, MouseEventArgs e)
         {
             Ellipse ellipse = (Ellipse)sender;
-            ellipse.Stroke = Brushes.Black;
-            var previousEllipses = GetPreviousEllipses(ellipse).Concat(Enumerable.Repeat(ellipse, 1)).Concat(GetNextEllipses(ellipse)).ToArray();
-            foreach (var previousEllipse in previousEllipses)
-            {
-                foreach (var source in Edges.Where(edge => Equals(edge.FromFrameworkElement, previousEllipse) && previousEllipses.Contains(edge.ToFrameworkElement)))
-                {
-                    if (GenerateEdge != null)
-                    {
-                        var tempLine = GenerateEdge(source.From, source.To);
-                        source.Line.StrokeThickness = tempLine.StrokeThickness;
-                        source.Line.Stroke = tempLine.Stroke;
-                    }
-                    else
-                    {
-                        source.Line.StrokeThickness = LineThickness;
-                        source.Line.Stroke = LineStroke;
-                    }
-                }
-            }
+            UnMarkEllipse(ellipse);
+            TreeNodeMouseLeave?.Invoke(this, (ITreeNode)ellipse.Tag);
         }
 
         private void NodeMouseEnter(object sender, MouseEventArgs e)
@@ -215,6 +223,12 @@ namespace VehicleBehaviorLearning.Windows.Controls
             if (IsReadonly)
                 return;
             Ellipse ellipse = (Ellipse)sender;
+            MarkEllipse(ellipse);
+            TreeNodeMouseEnter?.Invoke(this, (ITreeNode)ellipse.Tag);
+        }
+
+        public void MarkEllipse(Ellipse ellipse)
+        {
             ellipse.Stroke = Brushes.White;
             {
                 var previousEllipses = GetPreviousEllipses(ellipse).Concat(Enumerable.Repeat(ellipse, 1)).ToArray();
@@ -235,6 +249,29 @@ namespace VehicleBehaviorLearning.Windows.Controls
                     {
                         source.Line.StrokeThickness = HighlightChildEdgeThickness;
                         source.Line.Stroke = HighlightBrushChildEdges;
+                    }
+                }
+            }
+        }
+
+        public void UnMarkEllipse(Ellipse ellipse)
+        {
+            ellipse.Stroke = Brushes.Black;
+            var previousEllipses = GetPreviousEllipses(ellipse).Concat(Enumerable.Repeat(ellipse, 1)).Concat(GetNextEllipses(ellipse)).ToArray();
+            foreach (var previousEllipse in previousEllipses)
+            {
+                foreach (var source in Edges.Where(edge => Equals(edge.FromFrameworkElement, previousEllipse) && previousEllipses.Contains(edge.ToFrameworkElement)))
+                {
+                    if (GenerateEdge != null)
+                    {
+                        var tempLine = GenerateEdge(source.From, source.To);
+                        source.Line.StrokeThickness = tempLine.StrokeThickness;
+                        source.Line.Stroke = tempLine.Stroke;
+                    }
+                    else
+                    {
+                        source.Line.StrokeThickness = LineThickness;
+                        source.Line.Stroke = LineStroke;
                     }
                 }
             }

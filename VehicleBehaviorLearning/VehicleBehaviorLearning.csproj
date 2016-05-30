@@ -42,14 +42,6 @@
     <Reference Include="FarseerPhysics">
       <HintPath>..\..\..\..\..\Downloads\Farseer Physics Engine 3.5 Samples\Farseer Physics Engine 3.5 Samples\Farseer Physics Engine 3.5\bin\Release\FarseerPhysics.dll</HintPath>
     </Reference>
-    <Reference Include="LiveCharts, Version=0.7.0.0, Culture=neutral, PublicKeyToken=c5935629d38af058, processorArchitecture=MSIL">
-      <HintPath>packages\LiveCharts.0.7.0\lib\portable40-net40+sl5+win8+wp8+wpa81\LiveCharts.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.7.0.0, Culture=neutral, PublicKeyToken=3b585c2a5f1a92c1, processorArchitecture=MSIL">
-      <HintPath>packages\LiveCharts.Wpf.0.7.0\lib\net46\LiveCharts.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <HintPath>packages\OpenTK.1.1.2225.0\lib\net20\OpenTK.dll</HintPath>
       <Private>True</Private>
@@ -254,6 +246,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DLLs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{d447642c-a85f-4ab0-96d9-c66cff91aada}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfView\WpfView.csproj">
+      <Project>{4d253423-ae05-47f6-a59d-9162ec0bb1f2}</Project>
+      <Name>WpfView</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

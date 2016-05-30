@@ -29,7 +29,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" DisableAnimations="True" x:Name="RatingLineCharts">
+            <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" DisableAnimations="True" x:Name="RatingLineCharts" DataClick="RatingLineCharts_OnDataClick" DataMouseEnter="RatingLineCharts_OnDataMouseEnter" DataMouseLeave="RatingLineCharts_OnDataMouseLeave">
                 <liveCharts.Wpf:CartesianChart.AxisX>
                     <liveCharts.Wpf:Axis Title="Generations" />
                 </liveCharts.Wpf:CartesianChart.AxisX>
@@ -53,7 +53,7 @@
                     <liveCharts.Wpf:Axis Title="Rating" />
                 </liveCharts.Wpf:CartesianChart.AxisY>
             </liveCharts.Wpf:CartesianChart>
-            <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" />
+            <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" TreeNodeClicked="TreeViewControl_OnTreeNodeClicked" TreeNodeMouseEnter="TreeViewControl_OnTreeNodeMouseEnter" TreeNodeMouseLeave="TreeViewControl_OnTreeNodeMouseLeave" />
         </Grid>
     </Grid>
 </Window>

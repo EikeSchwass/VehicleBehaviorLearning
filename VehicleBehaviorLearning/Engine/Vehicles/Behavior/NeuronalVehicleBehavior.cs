@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using VehicleBehaviorLearning.Engine.Helper;
 
@@ -123,6 +124,43 @@ namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
         public NeuronalVehicleBehavior Clone()
         {
             return new NeuronalVehicleBehavior(this);
+        }
+
+        protected bool Equals(NeuronalVehicleBehavior other)
+        {
+            if (Weights.Length != other.Weights.Length)
+                return false;
+            bool weightEqual = true;
+            for (int i = 0; i < Weights.Length; i++)
+            {
+                // ReSharper disable once CompareOfFloatsByEqualityOperator
+                if (Weights[i] != other.Weights[i])
+                {
+                    weightEqual = false;
+                    break;
+                }
+            }
+            var r1 = Equals(Parent, other.Parent);
+            var result = r1 && weightEqual;
+            if (!result)
+                Debug.WriteLine(r1);
+            return result;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            var other = obj as NeuronalVehicleBehavior;
+            return other != null && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((Parent?.GetHashCode() ?? 0) * 397) ^ (Weights?.GetHashCode() ?? 0);
+            }
         }
     }
 }

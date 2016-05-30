@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
 using LiveCharts;
 using OpenTK;
@@ -9,10 +10,12 @@ using VehicleBehaviorLearning.Engine.Helper;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using LiveCharts.Configurations;
 using LiveCharts.Wpf;
+using LiveCharts.Wpf.Series;
 using VehicleBehaviorLearning.Engine.Vehicles.Behavior;
 
 namespace VehicleBehaviorLearning.Windows
@@ -32,6 +35,27 @@ namespace VehicleBehaviorLearning.Windows
             SimulationManager = simulationManager;
             InitializeComponent();
 
+        }
+
+        public void Hover(ITreeNode treeNode, bool hover)
+        {
+            ChartPoint chartPoint = null;
+            foreach (var series in RatingLineCharts.Series)
+            {
+                chartPoint = (series.Values.Points.
+                Where(v =>
+                {
+                    return ((SimulationResult)v.Instance).VehicleBehavior.Equals((NeuronalVehicleBehavior)treeNode);
+                })).FirstOrDefault();
+                if (chartPoint != null)
+                    break;
+            }
+            
+            if (hover)
+                chartPoint?.View.OnHover(chartPoint);
+            else
+                chartPoint?.View.OnHoverLeave(chartPoint);
+            Debug.WriteLine(chartPoint);
         }
 
         private void SimulationReportWindow_OnSizeChanged(object sender, SizeChangedEventArgs e)
@@ -75,24 +99,28 @@ namespace VehicleBehaviorLearning.Windows
             }
             SimulationManager.SimulationData.SimulationResultAdded += (simulationData, results) =>
                                                                       {
-                                                                          Dispatcher.BeginInvoke(DispatcherPriority.Render, new Action(() =>
-                                                                                                                             {
-                                                                                                                                 for (int i = 0; i < results.Count; i++)
-                                                                                                                                 {
-                                                                                                                                     if (SeriesCollection[i].Values.Count < 10)
-                                                                                                                                         SeriesCollection[i].Values.Add(results[i]);
-                                                                                                                                     else
-                                                                                                                                     {
-                                                                                                                                         var chartValues = new ChartValues<SimulationResult>();
-                                                                                                                                         chartValues.AddRange(SeriesCollection[i].Values.Rotate<SimulationResult>(-1));
-                                                                                                                                         SeriesCollection[i].Values = chartValues;
-                                                                                                                                     }
-                                                                                                                                     SeriesCollection[i].Values[SeriesCollection[i].Values.Count - 1] = results[i];
-                                                                                                                                 }
-                                                                                                                                 DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation());
-                                                                                                                                 MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance());
-                                                                                                                             }));
+                                                                          Dispatcher.BeginInvoke(DispatcherPriority.Render, new Action(() => UpdateVisualization(simulationData, results)));
                                                                       };
+        }
+
+        private void UpdateVisualization(SimulationData simulationData, List<SimulationResult> results)
+        {
+            for (int i = 0; i < results.Count; i++)
+            {
+                if (SeriesCollection[i].Values.Count < 10)
+                    SeriesCollection[i].Values.Add(results[i]);
+                else
+                {
+                    var chartValues = new ChartValues<SimulationResult>();
+                    chartValues.AddRange(SeriesCollection[i].Values.Rotate<SimulationResult>(-1));
+                    SeriesCollection[i].Values = chartValues;
+                }
+                SeriesCollection[i].Values[SeriesCollection[i].Values.Count - 1] = results[i];
+            }
+            DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation());
+            MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance());
+
+            TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
         }
 
         private void StopButton_OnClick(object sender, RoutedEventArgs e)
@@ -119,10 +147,15 @@ namespace VehicleBehaviorLearning.Windows
 
         private async void SingleStepButton_OnClick(object sender, RoutedEventArgs e)
         {
+            await ShowSimulationWindow(SimulationManager.SimulationData.BestResults.Last().VehicleBehavior);
+        }
+
+        private async Task ShowSimulationWindow(NeuronalVehicleBehavior vehicleBehavior)
+        {
             SimulationWindow simulationWindow = null;
             Thread th = new Thread(() =>
                                    {
-                                       simulationWindow = new SimulationWindow(new Simulation(SimulationManager.SimulationData.BestResults.Last().VehicleBehavior));
+                                       simulationWindow = new SimulationWindow(new Simulation(vehicleBehavior));
                                        simulationWindow.Run();
                                    });
             th.SetApartmentState(ApartmentState.STA);
@@ -136,6 +169,45 @@ namespace VehicleBehaviorLearning.Windows
                                                      };
 
             IsEnabled = true;
+        }
+
+        private async void TreeViewControl_OnTreeNodeClicked(object sender, ITreeNode node)
+        {
+            var neuronalVehicleBehavior = (NeuronalVehicleBehavior)node;
+            await DisplaySingleBehavior(neuronalVehicleBehavior);
+        }
+
+        private async Task DisplaySingleBehavior(NeuronalVehicleBehavior neuronalVehicleBehavior)
+        {
+            await ShowSimulationWindow(neuronalVehicleBehavior);
+        }
+
+
+        private void RatingLineCharts_OnDataClick(object arg1, ChartPoint arg2)
+        {
+            var treeNode = (ITreeNode)((SimulationResult)arg2.Instance).VehicleBehavior;
+            throw new NotImplementedException();
+        }
+
+
+        private void RatingLineCharts_OnDataMouseEnter(object arg1, ChartPoint arg2)
+        {
+            TreeViewControl.MarkEllipse(TreeViewControl.Ellipses.First(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
+        }
+
+        private void RatingLineCharts_OnDataMouseLeave(object arg1, ChartPoint arg2)
+        {
+            TreeViewControl.UnMarkEllipse(TreeViewControl.Ellipses.First(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
+        }
+
+        private void TreeViewControl_OnTreeNodeMouseEnter(object arg1, ITreeNode arg2)
+        {
+            Hover(arg2, true);
+        }
+
+        private void TreeViewControl_OnTreeNodeMouseLeave(object arg1, ITreeNode arg2)
+        {
+            Hover(arg2, false);
         }
     }
 }
