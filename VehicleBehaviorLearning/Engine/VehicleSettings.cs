@@ -17,10 +17,11 @@ namespace VehicleBehaviorLearning.Engine
         private float turnSpeedPerSecond = 300;
         private float speedSteeringPenaltyExponent = 2.45f;
         private float speedSteeringPenaltyCompensation = 21000;
-        private double viewDistance = 250;
+        private double viewDistance = 500;
         private WheelDriveMode wheelDriveMode = WheelDriveMode.RearWheelDrive;
         private float maxSteeringAngle = 12;
-        
+        private double vehicleBehaviorActionsSmoothness = 0.2;
+
         public float WheelWidth
         {
             get { return wheelWidth; }
@@ -163,7 +164,7 @@ namespace VehicleBehaviorLearning.Engine
                 OnPropertyChanged();
             }
         }
-        
+
         public float MaxSteeringAngle
         {
             get { return maxSteeringAngle; }
@@ -171,6 +172,17 @@ namespace VehicleBehaviorLearning.Engine
             {
                 if (value.Equals(maxSteeringAngle)) return;
                 maxSteeringAngle = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double VehicleBehaviorActionsSmoothness
+        {
+            get { return vehicleBehaviorActionsSmoothness; }
+            set
+            {
+                if (value.Equals(vehicleBehaviorActionsSmoothness)) return;
+                vehicleBehaviorActionsSmoothness = value;
                 OnPropertyChanged();
             }
         }

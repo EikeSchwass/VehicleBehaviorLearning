@@ -117,7 +117,7 @@ namespace VehicleBehaviorLearning.Windows
             DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation());
             MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance());
 
-            TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
+            //TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
         }
 
         private void StopButton_OnClick(object sender, RoutedEventArgs e)
@@ -190,12 +190,12 @@ namespace VehicleBehaviorLearning.Windows
 
         private void RatingLineCharts_OnDataMouseEnter(object arg1, ChartPoint arg2)
         {
-            TreeViewControl.MarkEllipse(TreeViewControl.Ellipses.First(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
+            TreeViewControl.MarkEllipse(TreeViewControl.Ellipses.FirstOrDefault(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
         }
 
         private void RatingLineCharts_OnDataMouseLeave(object arg1, ChartPoint arg2)
         {
-            TreeViewControl.UnMarkEllipse(TreeViewControl.Ellipses.First(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
+            TreeViewControl.UnMarkEllipse(TreeViewControl.Ellipses.FirstOrDefault(k => ((SimulationResult)arg2.Instance).VehicleBehavior.Equals(k.Tag)));
         }
 
         private void TreeViewControl_OnTreeNodeMouseEnter(object arg1, ITreeNode arg2)

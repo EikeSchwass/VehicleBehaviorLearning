@@ -31,19 +31,26 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
         {
             foreach (var angle in SimulationSettings.Instance.CarChassisSettings.SensorAngles)
             {
-                var direction = Vehicle.ForwardNormal.Rotate((float)(angle / 180.0 * Math.PI));
-                var endPoint = SensorStart + direction * (float)SimulationSettings.Instance.VehicleSettings.ViewDistance;
-                float value = 1;
-                Vehicle.World.RayCast((hit, v1, v2, fraction) =>
-                                      {
-                                          UserData userData = (UserData)(hit.UserData ?? hit.Body.UserData);
-                                          if (userData != UserData.Wall)
-                                              return -1f;
-                                          if (value > fraction)
-                                              value = fraction;
-                                          return -1;
-                                      }, SensorStart.ToXnaVector(), endPoint.ToXnaVector());
-                yield return new SensorValue((float)angle, value);
+                float averageValue = 0;
+                for (int i = 0; i < SimulationSettings.Instance.CountAngleSmoothness; i++)
+                {
+                    double actualAngle = (i - SimulationSettings.Instance.CountAngleSmoothness / 2) * SimulationSettings.Instance.DeltaAngleSmoothness + angle;
+                    var direction = Vehicle.ForwardNormal.Rotate((float)(actualAngle / 180.0 * Math.PI));
+                    var endPoint = SensorStart + direction * (float)SimulationSettings.Instance.VehicleSettings.ViewDistance;
+                    float value = 1;
+                    Vehicle.World.RayCast((hit, v1, v2, fraction) =>
+                    {
+                        UserData userData = (UserData)(hit.UserData ?? hit.Body.UserData);
+                        if (userData != UserData.Wall)
+                            return -1f;
+                        if (value > fraction)
+                            value = fraction;
+                        return -1;
+                    }, SensorStart.ToXnaVector(), endPoint.ToXnaVector());
+                    averageValue += value;
+                }
+                averageValue /= SimulationSettings.Instance.CountAngleSmoothness;
+                yield return new SensorValue((float)angle, averageValue);
             }
         }
 

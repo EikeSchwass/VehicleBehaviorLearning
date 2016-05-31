@@ -47,7 +47,7 @@ namespace VehicleBehaviorLearning.Engine
         public Vector2 RearLeftWheel { get; set; }
         public Vector2 SensorConnection { get; set; }
         public Vector2[] Chassis { get; set; }
-        public double[] SensorAngles { get; set; } = { -40, -20, 0, 20, 45 };
+        public double[] SensorAngles { get; set; } = { -40, -20, -4, 4, 20, 45 };
 
         public string SensorAnglesString
         {

@@ -33,6 +33,8 @@ namespace VehicleBehaviorLearning.Engine
         private int windowWidth = 800;
         private int windowHeight = 600;
         private double maxSimulationTime = 120;
+        private double deltaAngleSmoothness = 0.1;
+        private int countAngleSmoothness = 1;
 
         public CarChassisSettings CarChassisSettings { get; set; } = CarChassisSettings.Default;
         public VehicleSettings VehicleSettings { get; set; } = new VehicleSettings();
@@ -141,6 +143,20 @@ namespace VehicleBehaviorLearning.Engine
                 maxSimulationTime = value;
                 OnPropertyChanged();
             }
+        }
+
+        [XmlAttribute]
+        public double DeltaAngleSmoothness
+        {
+            get { return deltaAngleSmoothness; }
+            set { deltaAngleSmoothness = value; }
+        }
+
+        [XmlAttribute]
+        public int CountAngleSmoothness
+        {
+            get { return countAngleSmoothness; }
+            set { countAngleSmoothness = value; }
         }
 
 

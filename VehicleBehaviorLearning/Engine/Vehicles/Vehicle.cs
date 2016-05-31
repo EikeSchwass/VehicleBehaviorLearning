@@ -11,6 +11,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
 {
     public class Vehicle
     {
+        private VehicleBehaviorActions LastVehicleBehaviorActions { get; set; } = new VehicleBehaviorActions(0.1, 0);
         public Vector2 StartPosition { get; }
         public float StartAngle { get; }
         public World World { get; }
@@ -40,11 +41,11 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
             Chassis = carChassis;
             VehiclePhysic = vehiclePhysic;
             SensorCollection = new SensorCollection(this);
-            Body = BodyFactory.CreatePolygon(World, Chassis.GetVertices(), carChassis.Density, position.ToXnaVector(),UserData.Vehicle);
+            Body = BodyFactory.CreatePolygon(World, Chassis.GetVertices(), carChassis.Density, position.ToXnaVector(), UserData.Vehicle);
             Body.CollidesWith = Category.Cat2;
             Body.CollisionCategories = Category.Cat1;
             Body.BodyType = BodyType.Dynamic;
-            Body.Rotation=angle;
+            Body.Rotation = angle;
             Body.Friction = 0;
             StartPosition = position;
             StartAngle = angle;
@@ -58,7 +59,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
         {
 
         }
-        
+
         public Vector2 GetForwardVelocity()
         {
             var currentForwardNormal = ForwardNormal.ToXnaVector();
@@ -76,7 +77,15 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
 
         public void Update(double time)
         {
+            double vehicleBehaviorActionsSmoothness = SimulationSettings.Instance.VehicleSettings.VehicleBehaviorActionsSmoothness;
+
             var vehicleBehaviorActions = Behavior.GetVehicleBehaviorActions(SensorCollection.CalculateVehicleBehaviorInput());
+
+            double smoothedSpeedFactor = vehicleBehaviorActions.SpeedFactor * (1 - vehicleBehaviorActionsSmoothness) + LastVehicleBehaviorActions.SpeedFactor * vehicleBehaviorActionsSmoothness;
+            double smoothedSteeringFactor = vehicleBehaviorActions.SteeringFactor * (1 - vehicleBehaviorActionsSmoothness) + LastVehicleBehaviorActions.SteeringFactor * vehicleBehaviorActionsSmoothness;
+
+            vehicleBehaviorActions = new VehicleBehaviorActions(smoothedSpeedFactor, smoothedSteeringFactor);
+
             VehiclePhysic.UpdateFriction(this, time);
             VehiclePhysic.UpdateForwardForces(this, vehicleBehaviorActions, time);
             VehiclePhysic.UpdateSteering(this, vehicleBehaviorActions, time);

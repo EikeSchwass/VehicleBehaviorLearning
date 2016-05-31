@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<SimulationSettings RacetrackWidth="28" UseCurrentVehicleSpeedAsInput="false" SensorSpacingFactor="0" MaxUpdateTime="0.016666">
+<SimulationSettings RacetrackWidth="28" UseCurrentVehicleSpeedAsInput="false" SensorSpacingFactor="0" MaxUpdateTime="0.016666" DeltaAngleSmoothness="0.1" CountAngleSmoothness="1">
   <CarChassisSettings>
     <Density>2.7</Density>
     <FrontLeftWheel x="-0.9" y="1.5" />
@@ -20,11 +20,12 @@
     <SensorAngles>
       <double>-40</double>
       <double>-20</double>
-      <double>0</double>
+      <double>-4</double>
+      <double>4</double>
       <double>20</double>
       <double>45</double>
     </SensorAngles>
-    <SensorAnglesString>-40, -20, 0, 20, 45</SensorAnglesString>
+    <SensorAnglesString>-40, -20, -4, 4, 20, 45</SensorAnglesString>
   </CarChassisSettings>
   <VehicleSettings>
     <WheelWidth>1</WheelWidth>
@@ -38,9 +39,10 @@
     <TurnSpeedPerSecond>300</TurnSpeedPerSecond>
     <SpeedSteeringPenaltyExponent>2.45</SpeedSteeringPenaltyExponent>
     <SpeedSteeringPenaltyCompensation>21000</SpeedSteeringPenaltyCompensation>
-    <ViewDistance>250</ViewDistance>
+    <ViewDistance>500</ViewDistance>
     <WheelDriveMode>RearWheelDrive</WheelDriveMode>
     <MaxSteeringAngle>12</MaxSteeringAngle>
+    <VehicleBehaviorActionsSmoothness>0.2</VehicleBehaviorActionsSmoothness>
   </VehicleSettings>
   <MachineLearningSettings>
     <NumberOfNeuronsInHiddenLayers />

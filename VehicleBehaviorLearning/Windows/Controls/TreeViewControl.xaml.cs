@@ -248,6 +248,8 @@ namespace VehicleBehaviorLearning.Windows.Controls
 
         public void MarkEllipse(Ellipse ellipse)
         {
+            if (ellipse == null)
+                return;
             ellipse.Stroke = Brushes.White;
             {
                 var previousEllipses = GetPreviousEllipses(ellipse).Concat(Enumerable.Repeat(ellipse, 1)).ToArray();
@@ -275,6 +277,8 @@ namespace VehicleBehaviorLearning.Windows.Controls
 
         public void UnMarkEllipse(Ellipse ellipse)
         {
+            if (ellipse == null)
+                return;
             ellipse.Stroke = Brushes.Black;
             var previousEllipses = GetPreviousEllipses(ellipse).Concat(Enumerable.Repeat(ellipse, 1)).Concat(GetNextEllipses(ellipse)).ToArray();
             foreach (var previousEllipse in previousEllipses)
