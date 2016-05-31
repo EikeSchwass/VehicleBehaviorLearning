@@ -34,7 +34,7 @@ namespace VehicleBehaviorLearning.Windows
         {
             SimulationManager = simulationManager;
             InitializeComponent();
-
+            RatingLineCharts.DisableAnimations = true;
         }
 
         public void Hover(ITreeNode treeNode, bool hover)
@@ -68,7 +68,7 @@ namespace VehicleBehaviorLearning.Windows
                 SeriesCollection = new SeriesCollection(seriesConfiguration);
                 for (int i = 0; i < SimulationSettings.Instance.VehicleBehaviors.Count; i++)
                 {
-                    SeriesCollection.Add(new LineSeries { Title = $"#{i + 1}", Values = new ChartValues<SimulationResult>(), Fill = Brushes.Transparent });
+                    SeriesCollection.Add(new LineSeries { Title = $"#{i + 1}", Values = new ChartValues<SimulationResult>(), Fill = Brushes.Transparent, LineSmoothness = 0});
                 }
                 RatingLineCharts.Series = SeriesCollection;
             }
