@@ -53,7 +53,7 @@ namespace VehicleBehaviorLearning.Engine
         private void NextGeneration()
         {
             List<NeuronalVehicleBehavior> vehicleBehaviors = new List<NeuronalVehicleBehavior>();
-            vehicleBehaviors.AddRange(Simulations.OrderByDescending(s => s.SimulationResult.Rating).Take(1).Select(s => s.VehicleBehavior.Clone()));
+            vehicleBehaviors.AddRange(Simulations.OrderByDescending(s => s.SimulationResult.Rating).Take(4).Select(s => s.VehicleBehavior.Clone()));
             while (vehicleBehaviors.Count < Simulations.Length)
             {
                 double chanceIndex = ThreadSafeRandom.NextDouble(0, Simulations.Sum(s => s.SimulationResult.Rating));

@@ -45,7 +45,9 @@
     <VehicleBehaviorActionsSmoothness>0.2</VehicleBehaviorActionsSmoothness>
   </VehicleSettings>
   <MachineLearningSettings>
-    <NumberOfNeuronsInHiddenLayers />
+    <NumberOfNeuronsInHiddenLayers>
+      <int>4</int>
+    </NumberOfNeuronsInHiddenLayers>
     <MutationChanceStart>0.25</MutationChanceStart>
     <MutationDeviationStart>10</MutationDeviationStart>
     <ActivationFunctionInHiddenLayers>Sigmoid</ActivationFunctionInHiddenLayers>

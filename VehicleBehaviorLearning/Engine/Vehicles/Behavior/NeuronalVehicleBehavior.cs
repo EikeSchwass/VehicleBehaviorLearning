@@ -10,7 +10,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
     public class NeuronalVehicleBehavior : ITreeNode
     {
         public string Text => ToString();
-        public ITreeNode ParentNode =>  Parent;
+        public ITreeNode ParentNode => Parent;
         public NeuronalVehicleBehavior Parent { get; }
         public double[][] Neurons { get; }
         public double[] Weights { get; }
@@ -114,7 +114,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles.Behavior
                 Neurons[0][1] = vehicleBehaviorInput.SpeedFraction;
             for (int i = 0; i < vehicleBehaviorInput.SensorValues.Count; i++)
             {
-                Neurons[0][i + (SimulationSettings.Instance.UseCurrentVehicleSpeedAsInput ? 1 : 0)] = vehicleBehaviorInput.SensorValues[i].Value;
+                Neurons[0][1 + i + (SimulationSettings.Instance.UseCurrentVehicleSpeedAsInput ? 1 : 0)] = vehicleBehaviorInput.SensorValues[i].Value;
             }
             for (int i = 1; i < Neurons.Length; i++)
             {

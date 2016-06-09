@@ -294,7 +294,7 @@ namespace LiveCharts.Wpf.Series
 
             if (series.Values != series.LastKnownValues && series.LastKnownValues != null)
             {
-                series.LastKnownValues.Points.ForEach(x => x.View.RemoveFromView(series.Model.Chart));
+                series.LastKnownValues.Points.ForEach(x => x?.View?.RemoveFromView(series?.Model?.Chart));
             }
 
             CallChartUpdater()(dependencyObject, dependencyPropertyChangedEventArgs);
