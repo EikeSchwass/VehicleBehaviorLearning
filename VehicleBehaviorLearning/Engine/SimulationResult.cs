@@ -11,6 +11,7 @@ namespace VehicleBehaviorLearning.Engine
         private double distance;
         private double survivedSteps;
         private NeuronalVehicleBehavior vehicleBehavior;
+        private Racetrack racetrack;
 
         public double Distance
         {
@@ -25,12 +26,12 @@ namespace VehicleBehaviorLearning.Engine
             }
         }
 
-        public double AverageSpeed => SurvivedTime > 0 ? Distance / SurvivedTime : 0;
+        public double AverageSpeed => SurvivedTime > 0 ? Distance / SurvivedTime * 3.6 : 0;
         public double Rating
         {
             get
             {
-                double rating = Distance*Distance;
+                double rating = Distance / Racetrack.Length ;
                 return rating;
                 if (Distance >= 1)
                     rating += 100000 - SurvivedTime;
@@ -58,9 +59,12 @@ namespace VehicleBehaviorLearning.Engine
             }
         }
 
-        public SimulationResult(NeuronalVehicleBehavior vehicleBehavior)
+        public Racetrack Racetrack { get; }
+
+        public SimulationResult(NeuronalVehicleBehavior vehicleBehavior, Racetrack racetrack)
         {
             VehicleBehavior = vehicleBehavior;
+            Racetrack = racetrack;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

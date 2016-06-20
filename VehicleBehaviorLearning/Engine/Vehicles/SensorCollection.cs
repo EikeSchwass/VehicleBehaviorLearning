@@ -50,7 +50,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
                     averageValue += value;
                 }
                 averageValue /= SimulationSettings.Instance.CountAngleSmoothness;
-                yield return new SensorValue((float)angle, averageValue);
+                yield return new SensorValue((float)angle, averageValue * 0.9f);
             }
         }
 

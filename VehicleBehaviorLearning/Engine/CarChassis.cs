@@ -16,19 +16,19 @@ namespace VehicleBehaviorLearning.Engine
         private float density = 2.7f;
 
         public static CarChassisSettings Default => new CarChassisSettings(new Vector2(-0.9f, 1.5f),
-                                                           new Vector2(0.9f, 1.5f),
-                                                           new Vector2(-0.9f, -1.8f),
-                                                           new Vector2(0.9f, -1.8f),
-                                                           new Vector2(-0f, 3.5f - 1.825f),
-                                                           //Chassis
-                                                           new Vector2(-0.45f, 0 - 1.825f),
-                                                           new Vector2(-0.9f, 0.5f - 1.825f),
-                                                           new Vector2(-0.85f, 2.1f - 1.825f),
-                                                           new Vector2(-0.25f, 3.95f - 1.825f),
-                                                           new Vector2(0.25f, 3.95f - 1.825f),
-                                                           new Vector2(0.85f, 2.1f - 1.825f),
-                                                           new Vector2(0.9f, 0.5f - 1.825f),
-                                                           new Vector2(0.45f, 0 - 1.825f)
+                                                                           new Vector2(0.9f, 1.5f),
+                                                                           new Vector2(-0.9f, -1.8f),
+                                                                           new Vector2(0.9f, -1.8f),
+                                                                           new Vector2(-0f, 1.675F),
+                                                                           //Chassis
+                                                                           new Vector2(-0.45f, -1.825F),
+                                                                           new Vector2(-0.9f, -1.325F),
+                                                                           new Vector2(-0.85f, 0.275F),
+                                                                           new Vector2(-0.25f, 2.125F),
+                                                                           new Vector2(0.25f, 2.125F),
+                                                                           new Vector2(0.85f, 0.275F),
+                                                                           new Vector2(0.9f, -1.325F),
+                                                                           new Vector2(0.45f, -1.825F)
             );
 
         public float Density
@@ -47,7 +47,7 @@ namespace VehicleBehaviorLearning.Engine
         public Vector2 RearLeftWheel { get; set; }
         public Vector2 SensorConnection { get; set; }
         public Vector2[] Chassis { get; set; }
-        public double[] SensorAngles { get; set; } = { -40, -20, -4, 4, 20, 45 };
+        public double[] SensorAngles { get; set; } = { -40, -20, -4, 4, 20, 40 };
 
         public string SensorAnglesString
         {

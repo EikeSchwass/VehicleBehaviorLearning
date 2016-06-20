@@ -17,7 +17,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
             if (desiredSpeedFactor * SimulationSettings.Instance.VehicleSettings.MaxSpeed > currentSpeed)
                 force = SimulationSettings.Instance.VehicleSettings.MaxDriveForce;
             else if (desiredSpeedFactor * SimulationSettings.Instance.VehicleSettings.MaxSpeed < currentSpeed)
-                force = -SimulationSettings.Instance.VehicleSettings.MaxDriveForce;
+                force = -SimulationSettings.Instance.VehicleSettings.MaxDriveForce * 1.5f;
 
             switch (SimulationSettings.Instance.VehicleSettings.WheelDriveMode)
             {
@@ -45,7 +45,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
             float turnPerTimeStep = (float)(SimulationSettings.Instance.VehicleSettings.TurnSpeedPerSecond / 180.0 * Math.PI * time);
             float angleNow = vehicle.LeftFrontWheel.Joint.JointAngle;
 
-            float steeringBlocker =  (float)(1f / (1 + Math.Pow(vehicle.GetForwardVelocity().Length, SimulationSettings.Instance.VehicleSettings.SpeedSteeringPenaltyExponent) / SimulationSettings.Instance.VehicleSettings.SpeedSteeringPenaltyCompensation));
+            float steeringBlocker = (float)(1f / (1 + Math.Pow(vehicle.GetForwardVelocity().Length, SimulationSettings.Instance.VehicleSettings.SpeedSteeringPenaltyExponent) / SimulationSettings.Instance.VehicleSettings.SpeedSteeringPenaltyCompensation));
 
             float desiredAngle = vehicleBehaviorActions.SteeringFactor * SimulationSettings.Instance.VehicleSettings.MaxSteeringAngle * steeringBlocker;
             float angleToTurn = (float)(desiredAngle / 180.0 * Math.PI - angleNow);

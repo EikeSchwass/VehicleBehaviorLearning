@@ -89,7 +89,7 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
             VehiclePhysic.UpdateFriction(this, time);
             VehiclePhysic.UpdateForwardForces(this, vehicleBehaviorActions, time);
             VehiclePhysic.UpdateSteering(this, vehicleBehaviorActions, time);
-            VehiclePhysic.UpdateDrag(this, time);
+            //VehiclePhysic.UpdateDrag(this, time);
         }
     }
 }

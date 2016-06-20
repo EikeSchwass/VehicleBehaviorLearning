@@ -53,7 +53,8 @@ namespace VehicleBehaviorLearning.Engine
         private void NextGeneration()
         {
             List<NeuronalVehicleBehavior> vehicleBehaviors = new List<NeuronalVehicleBehavior>();
-            vehicleBehaviors.AddRange(Simulations.OrderByDescending(s => s.SimulationResult.Rating).Take(4).Select(s => s.VehicleBehavior.Clone()));
+            var ordered = Simulations.OrderByDescending(s => s.SimulationResult.Rating).ToList();
+            vehicleBehaviors.AddRange(ordered.Take(ordered.Count / 2).Select(s => s.VehicleBehavior.Clone()));
             while (vehicleBehaviors.Count < Simulations.Length)
             {
                 double chanceIndex = ThreadSafeRandom.NextDouble(0, Simulations.Sum(s => s.SimulationResult.Rating));
@@ -88,7 +89,7 @@ namespace VehicleBehaviorLearning.Engine
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationDeviationStart - SimulationSettings.Instance.MachineLearningSettings.MutationDeviationBase) / generation;
             y += SimulationSettings.Instance.MachineLearningSettings.MutationDeviationBase;
-            y += ((Math.Sin(MathHelper.ToRadians((SimulationData.Generations - 1) / 13f * 360)) / 2 + 0.5) * SimulationSettings.Instance.MachineLearningSettings.MutationDeviationStart / 2) * HelperMethods.Sigmoid(SimulationData.GenerationsAfterLastImprovement * 0.1 - 3);
+            y += ((Math.Sin(MathHelper.ToRadians((SimulationData.Generations - 1) / 13f * 360)) / 2 + 0.5) * SimulationSettings.Instance.MachineLearningSettings.MutationDeviationStart / 4) * HelperMethods.Sigmoid(SimulationData.GenerationsAfterLastImprovement * 0.1 - 3);
             int mutationSpikeInterval = SimulationSettings.Instance.MachineLearningSettings.MutationDeviationSpikeInterval;
             if (mutationSpikeInterval > 0 && generation % mutationSpikeInterval == 0)
                 y += SimulationSettings.Instance.MachineLearningSettings.MutationDeviationSpikeHeight;
@@ -101,7 +102,7 @@ namespace VehicleBehaviorLearning.Engine
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationChanceStart - SimulationSettings.Instance.MachineLearningSettings.MutationChanceBase) / generation;
             y += SimulationSettings.Instance.MachineLearningSettings.MutationChanceBase;
-            y += ((Math.Sin(MathHelper.ToRadians((SimulationData.Generations) / 17f * 360)) / 2 + 0.5) * SimulationSettings.Instance.MachineLearningSettings.MutationChanceStart / 2) * HelperMethods.Sigmoid(SimulationData.GenerationsAfterLastImprovement * 0.25 - 3);
+            y += ((Math.Sin(MathHelper.ToRadians((SimulationData.Generations) / 17f * 360)) / 2 + 0.5) * SimulationSettings.Instance.MachineLearningSettings.MutationChanceStart / 4) * HelperMethods.Sigmoid(SimulationData.GenerationsAfterLastImprovement * 0.25 - 3);
             int mutationSpikeInterval = SimulationSettings.Instance.MachineLearningSettings.MutationChanceSpikeInterval;
             if (mutationSpikeInterval > 0 && generation % mutationSpikeInterval == 0)
                 y += SimulationSettings.Instance.MachineLearningSettings.MutationChanceSpikeHeight;

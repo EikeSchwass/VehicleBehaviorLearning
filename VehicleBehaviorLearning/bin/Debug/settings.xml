@@ -10,10 +10,10 @@
     <Chassis>
       <Vector2 x="-0.45" y="-1.825" />
       <Vector2 x="-0.9" y="-1.325" />
-      <Vector2 x="-0.85" y="0.274999857" />
+      <Vector2 x="-0.85" y="0.275" />
       <Vector2 x="-0.25" y="2.125" />
       <Vector2 x="0.25" y="2.125" />
-      <Vector2 x="0.85" y="0.274999857" />
+      <Vector2 x="0.85" y="0.275" />
       <Vector2 x="0.9" y="-1.325" />
       <Vector2 x="0.45" y="-1.825" />
     </Chassis>
@@ -23,9 +23,9 @@
       <double>-4</double>
       <double>4</double>
       <double>20</double>
-      <double>45</double>
+      <double>40</double>
     </SensorAngles>
-    <SensorAnglesString>-40, -20, -4, 4, 20, 45</SensorAnglesString>
+    <SensorAnglesString>-40, -20, -4, 4, 20, 40</SensorAnglesString>
   </CarChassisSettings>
   <VehicleSettings>
     <WheelWidth>1</WheelWidth>
@@ -46,7 +46,7 @@
   </VehicleSettings>
   <MachineLearningSettings>
     <NumberOfNeuronsInHiddenLayers>
-      <int>4</int>
+      <int>6</int>
     </NumberOfNeuronsInHiddenLayers>
     <MutationChanceStart>0.25</MutationChanceStart>
     <MutationDeviationStart>10</MutationDeviationStart>

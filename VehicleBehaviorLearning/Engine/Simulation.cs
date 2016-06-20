@@ -25,7 +25,7 @@ namespace VehicleBehaviorLearning.Engine
 
         public Simulation(NeuronalVehicleBehavior neuronalVehicleBehavior)
         {
-            SimulationResult = new SimulationResult(neuronalVehicleBehavior);
+            SimulationResult = new SimulationResult(neuronalVehicleBehavior, Racetrack);
             VehicleBehavior = neuronalVehicleBehavior;
             Racetrack = SimulationSettings.Instance.SelectedRacetrack;
             CreateVertices(Racetrack.InnerVertices);
@@ -97,7 +97,7 @@ namespace VehicleBehaviorLearning.Engine
 
         private void SetProgress(int progressIndex)
         {
-            SimulationResult.Distance++;// 1.0 / Sensors.Count;
+            SimulationResult.Distance += 1.0 / Sensors.Count * Racetrack.Length;
             /*if (SimulationResult.Distance >= 1)
             {
                 Completed = true;
@@ -132,7 +132,7 @@ namespace VehicleBehaviorLearning.Engine
 
         public SimulationResult GetSimulationResult()
         {
-            SimulationResult = new SimulationResult(VehicleBehavior);
+            SimulationResult = new SimulationResult(VehicleBehavior, Racetrack);
             Vehicle.Behavior = VehicleBehavior;
 
             while (!Completed)

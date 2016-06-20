@@ -8,5 +8,12 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="VehicleBehaviorLearning.Engine.Racetrack">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAwAAAAAAAAAAAAAARAIAAEAAAAAAAAAEAAAgA=</HashCode>
+      <FileName>Engine\Racetrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
