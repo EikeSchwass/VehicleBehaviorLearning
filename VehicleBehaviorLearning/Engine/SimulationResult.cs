@@ -31,7 +31,7 @@ namespace VehicleBehaviorLearning.Engine
         {
             get
             {
-                double rating = Distance / Racetrack.Length ;
+                double rating = Distance / Racetrack?.Length ?? 1;
                 return rating;
                 if (Distance >= 1)
                     rating += 100000 - SurvivedTime;
