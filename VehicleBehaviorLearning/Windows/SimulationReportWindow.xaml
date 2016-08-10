@@ -42,7 +42,7 @@
                     <liveCharts.Wpf:Axis Title="Generations" />
                 </liveCharts.Wpf:CartesianChart.AxisX>
                 <liveCharts.Wpf:CartesianChart.AxisY>
-                    <liveCharts.Wpf:Axis Title="Rating" />
+                    <liveCharts.Wpf:Axis Title="Mutationintensity" />
                 </liveCharts.Wpf:CartesianChart.AxisY>
             </liveCharts.Wpf:CartesianChart>
             <liveCharts.Wpf:CartesianChart LegendLocation="Bottom" Grid.Row="2" Grid.Column="0" DisableAnimations="True" x:Name="MutationLineCharts">
@@ -50,7 +50,7 @@
                     <liveCharts.Wpf:Axis Title="Generations" />
                 </liveCharts.Wpf:CartesianChart.AxisX>
                 <liveCharts.Wpf:CartesianChart.AxisY>
-                    <liveCharts.Wpf:Axis Title="Rating" />
+                    <liveCharts.Wpf:Axis Title="Mutationrate" />
                 </liveCharts.Wpf:CartesianChart.AxisY>
             </liveCharts.Wpf:CartesianChart>
             <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" TreeNodeClicked="TreeViewControl_OnTreeNodeClicked" TreeNodeMouseEnter="TreeViewControl_OnTreeNodeMouseEnter" TreeNodeMouseLeave="TreeViewControl_OnTreeNodeMouseLeave" />

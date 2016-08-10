@@ -114,8 +114,8 @@ namespace VehicleBehaviorLearning.Windows
                 }
                 SeriesCollection[i].Values[SeriesCollection[i].Values.Count - 1] = results[i];
             }
-            DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation());
-            MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance());
+            DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation(SimulationManager.SimulationData.BestResults.LastOrDefault()));
+            MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance(SimulationManager.SimulationData.BestResults.LastOrDefault()));
 
             //TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
         }

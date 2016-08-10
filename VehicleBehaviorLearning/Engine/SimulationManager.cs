@@ -54,18 +54,19 @@ namespace VehicleBehaviorLearning.Engine
         {
             List<NeuronalVehicleBehavior> vehicleBehaviors = new List<NeuronalVehicleBehavior>();
             var ordered = Simulations.OrderByDescending(s => s.SimulationResult.Rating).ToList();
-            vehicleBehaviors.AddRange(ordered.Take(ordered.Count / 2).Select(s => s.VehicleBehavior.Clone()));
+            vehicleBehaviors.AddRange(ordered.Take(1).Select(s => s.VehicleBehavior.Clone()));
             while (vehicleBehaviors.Count < Simulations.Length)
             {
-                double chanceIndex = ThreadSafeRandom.NextDouble(0, Simulations.Sum(s => s.SimulationResult.Rating));
+                double exponent = 4;
+                double chanceIndex = ThreadSafeRandom.NextDouble(0, Simulations.Sum(s => Math.Pow(s.SimulationResult.Rating, exponent)));
                 double sum = 0;
 
                 foreach (Simulation simulation in Simulations)
                 {
-                    sum += simulation.SimulationResult.Rating;
+                    sum += Math.Pow(simulation.SimulationResult.Rating, exponent);
                     if (chanceIndex <= sum)
                     {
-                        vehicleBehaviors.Add(simulation.VehicleBehavior.Mutate(CalculateMutationChance(), CalculateDeviation()));
+                        vehicleBehaviors.Add(simulation.VehicleBehavior.Mutate(CalculateMutationChance(simulation.SimulationResult), CalculateDeviation(simulation.SimulationResult)));
                         break;
                     }
                 }
@@ -83,8 +84,9 @@ namespace VehicleBehaviorLearning.Engine
             await Task.Run(() => CompleteGeneration());
         }
 
-        public double CalculateDeviation()
+        public double CalculateDeviation(SimulationResult simulationResult)
         {
+            return Math.Max(0.1, 2 - simulationResult.Rating);
             int generation = SimulationData.Generations;
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationDeviationStart - SimulationSettings.Instance.MachineLearningSettings.MutationDeviationBase) / generation;
@@ -96,8 +98,9 @@ namespace VehicleBehaviorLearning.Engine
             return y;
         }
 
-        public double CalculateMutationChance()
+        public double CalculateMutationChance(SimulationResult simulationResult)
         {
+            return Math.Max(0.01, 0.01 / Math.Pow(simulationResult.Rating, 0.2));
             int generation = SimulationData.Generations;
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationChanceStart - SimulationSettings.Instance.MachineLearningSettings.MutationChanceBase) / generation;

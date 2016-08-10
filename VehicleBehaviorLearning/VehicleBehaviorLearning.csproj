@@ -111,7 +111,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Engine\ActivationFunctions.cs" />
-    <Compile Include="Engine\CarChassis.cs" />
+    <Compile Include="Engine\CarChassisSettings.cs" />
     <Compile Include="Engine\Helper\HelperMethods.cs" />
     <Compile Include="Engine\MachineLearningSettings.cs" />
     <Compile Include="Engine\Racetrack.cs" />
@@ -228,6 +228,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagramExcerpt.cd" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />

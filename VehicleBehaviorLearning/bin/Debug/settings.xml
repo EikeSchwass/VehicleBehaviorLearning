@@ -48,11 +48,11 @@
     <NumberOfNeuronsInHiddenLayers>
       <int>6</int>
     </NumberOfNeuronsInHiddenLayers>
-    <MutationChanceStart>0.25</MutationChanceStart>
-    <MutationDeviationStart>10</MutationDeviationStart>
+    <MutationChanceStart>0.5</MutationChanceStart>
+    <MutationDeviationStart>5</MutationDeviationStart>
     <ActivationFunctionInHiddenLayers>Sigmoid</ActivationFunctionInHiddenLayers>
-    <MutationChanceBase>0.05</MutationChanceBase>
-    <MutationDeviationBase>1</MutationDeviationBase>
+    <MutationChanceBase>0.075</MutationChanceBase>
+    <MutationDeviationBase>0.5</MutationDeviationBase>
     <MutationDeviationSpikeInterval>0</MutationDeviationSpikeInterval>
     <MutationChanceSpikeInterval>0</MutationChanceSpikeInterval>
     <MutationDeviationSpikeHeight>0.1</MutationDeviationSpikeHeight>
