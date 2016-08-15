@@ -57,7 +57,6 @@ namespace VehicleBehaviorLearning.Engine.Vehicles
 
         public void UpdateFriction(Vehicle vehicle, double time)
         {
-
             foreach (var wheel in vehicle.GetAllWheels())
             {
                 var lateralvelocity = Vector2.Dot(wheel.RightNormal, wheel.Body.LinearVelocity.ToOpenTkVector()) * wheel.RightNormal;
