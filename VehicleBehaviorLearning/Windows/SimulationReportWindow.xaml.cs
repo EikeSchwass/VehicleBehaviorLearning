@@ -117,7 +117,10 @@ namespace VehicleBehaviorLearning.Windows
             DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation(SimulationManager.SimulationData.BestResults.LastOrDefault()));
             MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance(SimulationManager.SimulationData.BestResults.LastOrDefault()));
 
+#if DEBUG
+#else
             TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
+#endif
         }
 
         private void StopButton_OnClick(object sender, RoutedEventArgs e)
