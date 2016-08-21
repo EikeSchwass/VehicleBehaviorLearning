@@ -1,0 +1,72 @@
+.printpreview {
+ margin: 0 auto;
+}
+body, #wrapperOuter{
+ background: #fff;
+}
+#supplement {
+  display:block;
+  float:none;
+}
+#navServiceMeta, #langSwitch, #navPrimary, #search, #navSecondary, #wrapperSB, #footerLinks, #btnDrucken, #fancybox-wrap, .noprint {
+ display:none;
+}
+#wrapperHeader{
+ margin: 0;
+}
+#wrapperDivisions {
+ padding: 0;
+ margin-top: 0;
+ top: 0;
+}
+#wrapperLayoutEinspaltigMitMS #wrapperContent {
+ width: auto;
+ margin: 0;
+}
+#wrapperInner {
+ min-width: 0;
+ max-width: none;
+}
+#wrapperLayoutEinspaltigOhneMS #wrapperContent {
+ margin-left: 0; 
+}
+#wrapperOuter #wrapperInner #wrapperContent{
+ float: none;
+}
+#area, #fade2BG {
+ display: none;
+}
+#wrapperHeader {
+ background: none;
+ height: 110px;
+ top: 10px;
+}
+
+/* *** PM-Footer *** */
+div.pr_footer {
+  display: block !important;
+  font-size: 0.9em;
+  height: 120px;
+  position: relative;
+  visibility: visible !important;
+}
+div.pr_footer div.pr_publisher {
+  left:0;
+  position:absolute;
+  width:160px;
+}
+div.pr_footer div.pr_contact {
+  left:170px;
+  position:absolute;
+  width:150px;
+}
+div.pr_footer div.pr_service {
+  left:345px;
+  position:absolute;
+  width:130px;
+}
+div.pr_footer div.pr_address {
+  left:490px;
+  position:absolute;
+  width:160px;
+}

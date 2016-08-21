@@ -23,7 +23,7 @@ namespace VehicleBehaviorLearning.Engine
             get
             {
                 double lastBest = BestResults.Last().Rating;
-                for (int i = BestResults.Count-2; i >= 0; i--)
+                for (int i = BestResults.Count - 2; i >= 0; i--)
                 {
                     if (BestResults[i].Rating < lastBest)
                         return BestResults.Count - 1 - i;
@@ -36,7 +36,7 @@ namespace VehicleBehaviorLearning.Engine
 
         public SimulationData()
         {
-
+            BestResults = new ChartValues<SimulationResult>();
         }
 
         public void AddSimulationResults(SimulationResult[] simulationResults)

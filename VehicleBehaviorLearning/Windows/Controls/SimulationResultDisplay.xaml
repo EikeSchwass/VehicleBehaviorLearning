@@ -45,6 +45,7 @@
         <local:NeuronalNetDisplayControl Grid.Row="1" x:Name="NeuronalNetDisplayControl" />
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Save Behavior" Click="SaveButton_OnClick" />
+            <Button Content="Visualize" Click="VisualizeButton_OnClick" />
         </StackPanel>
     </Grid>
 </UserControl>

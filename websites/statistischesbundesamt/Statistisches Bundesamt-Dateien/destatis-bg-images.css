@@ -1,0 +1,260 @@
+#wrapperOuter {background:url(/SiteGlobals/StyleBundles/Bilder/bgHeaderTrenner.png?__blob=normal&v=9) 0 116px repeat-x #f4f4f4;}
+#wrapperHeader {background:url(/SiteGlobals/StyleBundles/Bilder/bgHeaderLong.jpg?__blob=normal&v=9) no-repeat;}
+#fade2BG {background:url(/SiteGlobals/StyleBundles/Bilder/fade2BG.png?__blob=normal&v=8) no-repeat;}
+#navServiceMeta {background:url(/SiteGlobals/StyleBundles/Bilder/bgMetaNavi.png?__blob=normal&v=9) repeat;}
+#langSwitch ul li#de,#langSwitch ul li.deutsch_node a {background:url(/SiteGlobals/StyleBundles/Bilder/btnLangLeft.png?__blob=normal&v=9) no-repeat;}
+#langSwitch ul li#de.active, #langSwitch ul li.deutsch_node strong, #langSwitch ul li.deutsch_node.active a {background:url(/SiteGlobals/StyleBundles/Bilder/btnLangLeft-a.png?__blob=normal&v=9) no-repeat;}
+#langSwitch ul li#en,#langSwitch ul li.englisch_node a {background:url(/SiteGlobals/StyleBundles/Bilder/btnLangRight.png?__blob=normal&v=9) no-repeat;}
+#langSwitch ul li#en.active,#langSwitch ul li.englisch_node strong,#langSwitch ul li.englisch_node.active a {background:url(/SiteGlobals/StyleBundles/Bilder/btnLangRight-a.png?__blob=normal&v=9) no-repeat;}
+#search form p {background:url(/SiteGlobals/StyleBundles/Bilder/bgHeaderSucheOhneIcon.png?__blob=normal&v=9) no-repeat;}
+#search input.submit {background:url(/SiteGlobals/StyleBundles/Bilder/btnHeaderSucheLupe.png?__blob=normal&v=9) no-repeat;}
+#search input.submit:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnHeaderSucheLupe-a.png?__blob=normal&v=9) no-repeat;}
+#navPrimary #bgLeft {background:url(/SiteGlobals/StyleBundles/Bilder/bgHeaderTrennerLeft.png?__blob=normal&v=9) no-repeat;}
+#navPrimary ul li h3 {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimLeft.png?__blob=normal&v=9) no-repeat;}
+#navPrimary ul li.active h3 {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimLeft-a.png?__blob=normal&v=9) no-repeat;}
+#navPrimary ul li h3 a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimRight.png?__blob=normal&v=9) no-repeat right top;}
+#navPrimary ul li h3 strong, #navPrimary ul li.active h3 a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimRight-a.png?__blob=normal&v=9) no-repeat right top;}
+#navPrimary ul li h3:hover, #navPrimary ul li.active.hovered h3, #navPrimary ul li.hovered h3  {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimLeft-h.png?__blob=normal&v=9) no-repeat;}
+#navPrimary ul li h3:hover a, #navPrimary ul li.active.hovered h3 a, #navPrimary ul li.hovered h3 a,#navPrimary ul li h3:hover strong, #navPrimary ul li.hovered h3 strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavPrimRight-h.png?__blob=normal&v=9) no-repeat right top;}
+#navSecondary .navMain ul li ul li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat #deeef8 8px 5px;}
+#navSecondary .navMain ul li ul li a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat #ffffff 8px 5px;}
+#navSecondary .navMain ul li ul li strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat #ffffff 8px 5px;}
+#navSecondary .navMain ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat transparent 20px 5px;}
+#navSecondary .navMain ul li ul li ul li a:hover,
+#navSecondary .navMain ul li ul li ul li a:focus {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat transparent 20px 5px;}
+#navSecondary .navMain ul li ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li ul li strong {background-image:none;}
+#navSecondary .navMain ul li ul li ul li ul li a:hover,
+#navSecondary .navMain ul li ul li ul li ul li a:focus {background:none transparent;}
+#siteNav #navBreadcrumbs ol li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgBreadcrumbPfeil-a.png?__blob=normal&v=8) no-repeat transparent 0 center;}
+#siteNav #navBreadcrumbs ol li.first a {background-image:none;}
+#siteNav #navBreadcrumbs ol li strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgBreadcrumbPfeil.png?__blob=normal&v=8) no-repeat transparent 0 center;}
+#btnDrucken a {background:url(/SiteGlobals/StyleBundles/Bilder/btnDruckenFooter.png?__blob=normal&v=9) no-repeat 0 1px;}
+.allLink a, a.themenLink {background:url(/SiteGlobals/StyleBundles/Bilder/bgAllLinkArrow.png?__blob=normal&v=11) no-repeat 0 4px;}
+.moreLink, .module p strong.more a {background:url(/SiteGlobals/StyleBundles/Bilder/bgMoreLink.png?__blob=normal&v=4) no-repeat right 0.5em;}
+.weitereStatistiken .alleStatistiken li.linkZurStatistik a {background:url(/SiteGlobals/StyleBundles/Bilder/bgZurStatistik.png?__blob=normal&v=9) no-repeat 0 1px;}
+div.shadowBot {background-image:url(/SiteGlobals/StyleBundles/Bilder/bgModuleShadowBot.png?__blob=normal&v=9); background-repeat:repeat-x; background-position:bottom; padding-bottom: 4px;}
+div.shadowBot .shadowBot {background-image: none; padding-bottom: 0; margin-bottom: 0;}
+.aktuellePublikationen .allePublikationen {background:url(/SiteGlobals/StyleBundles/Bilder/bgAktuellePublikationen.png?__blob=normal&v=8) repeat-x left -70px #fff!important;}
+.weitereStatistiken .alleStatistiken li.linkZurPM a,
+.weitereStatistiken .alleStatistiken li.linkZurPresseMitteilung a{background:url(/SiteGlobals/StyleBundles/Bilder/bgZurPM.png?__blob=normal&v=9) no-repeat 0 1px;}
+.zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox {background:url(/SiteGlobals/StyleBundles/Bilder/bgZahlDerWocheBoxLeft.png?__blob=normal&v=9) no-repeat;}
+.zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox span {background:url(/SiteGlobals/StyleBundles/Bilder/bgZahlDerWocheBoxRight.png?__blob=normal&v=9) no-repeat right;}
+.miniNav ul li.btnLeft a {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft.png?__blob=normal&v=8) no-repeat;}
+.miniNav ul li.btnLeft a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft-h.png?__blob=normal&v=8) no-repeat;}
+.miniNav ul li.btnLeft.disabled a, .miniNav ul li.btnLeft.disabled a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft-d.png?__blob=normal&v=8) no-repeat;}
+.miniNav ul li.btnRight a {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight.png?__blob=normal&v=8) no-repeat;}
+.miniNav ul li.btnRight a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight-h.png?__blob=normal&v=8) no-repeat;}
+.miniNav ul li.btnRight.disabled a, .miniNav ul li.btnRight.disabled a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight-d.png?__blob=normal&v=8) no-repeat;}
+.calendar .prev a, a.ui-datepicker-prev {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft.png?__blob=normal&v=8) no-repeat;}
+.calendar .prev a:hover, a.ui-datepicker-prev:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft-h.png?__blob=normal&v=8) no-repeat;}
+.calendar .next a, a.ui-datepicker-next {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight.png?__blob=normal&v=8) no-repeat;}
+.calendar .next a:hover, a.ui-datepicker-next:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight-h.png?__blob=normal&v=8) no-repeat;}
+.TeaserBGPicture {background:url(/SiteGlobals/StyleBundles/Bilder/bgTeaserSTATmagazin.jpg?__blob=normal&v=8) no-repeat right top!important;}
+#area.colorsetBlau {background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x.png?__blob=normal&v=8) repeat-x 0 10px;}
+#area.colorsetBlau .leftBGStart, #area.colorsetBlau .rightBGStart {background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart.png?__blob=normal&v=8) no-repeat 0 10px;}
+#area.colorsetBlau .leftBGEnd, #area.colorsetBlau .rightBGEnd {background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd.png?__blob=normal&v=8) no-repeat 0 10px;}
+#area.colorsetRot {background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-rot.png?__blob=normal&v=8) repeat-x 0 10px;}
+#area.colorsetRot .leftBGStart, #area.colorsetRot .rightBGStart {background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-rot.png?__blob=normal&v=8) no-repeat 0 10px;}
+#area.colorsetRot .leftBGEnd, #area.colorsetRot .rightBGEnd {background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-rot.png?__blob=normal&v=8) no-repeat 0 10px;}
+#area.colorsetGelb { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-gelb.png?__blob=normal&v=3) repeat-x 0 10px;}
+#area.colorsetGelb .leftBGStart, #area.colorsetGelb .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-gelb.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetGelb .leftBGEnd, #area.colorsetGelb .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-gelb.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetMittelGelb { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-mittelgelb.png?__blob=normal&v=2) repeat-x 0 10px;}
+#area.colorsetMittelGelb .leftBGStart, #area.colorsetMittelGelb .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-mittelgelb.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetMittelGelb .leftBGEnd, #area.colorsetMittelGelb .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-mittelgelb.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetOrange { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-orange.png?__blob=normal&v=2) repeat-x 0 10px;}
+#area.colorsetOrange .leftBGStart, #area.colorsetOrange .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-orange.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetOrange .leftBGEnd, #area.colorsetOrange .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-orange.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetMittelRot { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-mittelrot.png?__blob=normal&v=2) repeat-x 0 10px;}
+#area.colorsetMittelRot .leftBGStart, #area.colorsetMittelRot .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-mittelrot.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetMittelRot .leftBGEnd, #area.colorsetMittelRot .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-mittelrot.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetDunkelRot { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-dunkelrot.png?__blob=normal&v=1) repeat-x 0 10px;}
+#area.colorsetDunkelRot .leftBGStart, #area.colorsetDunkelRot .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-dunkelrot.png?__blob=normal&v=1) no-repeat 0 10px;}
+#area.colorsetDunkelRot .leftBGEnd, #area.colorsetDunkelRot .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-dunkelrot.png?__blob=normal&v=1) no-repeat 0 10px;}
+#area.colorsetHellGruen { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-hellgruen.png?__blob=normal&v=3) repeat-x 0 10px;}
+#area.colorsetHellGruen .leftBGStart, #area.colorsetHellGruen .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-hellgruen.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetHellGruen .leftBGEnd, #area.colorsetHellGruen .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-hellgruen.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetDunkelGruen { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-dunkelgruen.png?__blob=normal&v=3) repeat-x 0 10px;}
+#area.colorsetDunkelGruen .leftBGStart, #area.colorsetDunkelGruen .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-dunkelgruen.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetDunkelGruen .leftBGEnd, #area.colorsetDunkelGruen .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-dunkelgruen.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetHellBlau { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-hellblau.png?__blob=normal&v=3) repeat-x 0 10px;}
+#area.colorsetHellBlau .leftBGStart, #area.colorsetHellBlau .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-hellblau.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetHellBlau .leftBGEnd, #area.colorsetHellBlau .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-hellblau.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetMittelBlau { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-mittelblau.png?__blob=normal&v=3) repeat-x 0 10px;}
+#area.colorsetMittelBlau .leftBGStart, #area.colorsetMittelBlau .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-mittelblau.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetMittelBlau .leftBGEnd, #area.colorsetMittelBlau .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-mittelblau.png?__blob=normal&v=3) no-repeat 0 10px;}
+#area.colorsetDunkelBlau { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-dunkelblau.png?__blob=normal&v=2) repeat-x 0 10px;}
+#area.colorsetDunkelBlau .leftBGStart, #area.colorsetDunkelBlau .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-dunkelblau.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetDunkelBlau .leftBGEnd, #area.colorsetDunkelBlau .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-dunkelblau.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetGrau { background:url(/SiteGlobals/StyleBundles/Bilder/bgArea-x-grau.png?__blob=normal&v=2) repeat-x 0 10px;}
+#area.colorsetGrau .leftBGStart, #area.colorsetGrau .rightBGStart { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaLeftStart-grau.png?__blob=normal&v=2) no-repeat 0 10px;}
+#area.colorsetGrau .leftBGEnd, #area.colorsetGrau .rightBGEnd { background:url(/SiteGlobals/StyleBundles/Bilder/bgAreaRightEnd-grau.png?__blob=normal&v=2) no-repeat 0 10px;}
+.singleview ul.toc a {background:url(/SiteGlobals/StyleBundles/Bilder/bgAllLinkArrow.png?__blob=normal&v=11) no-repeat 0 4px;}
+.singleview p.navToTop a, .dossierDocuments p.navToTop a {background:url(/SiteGlobals/StyleBundles/Bilder/bgPfeilNachOben.png?__blob=normal&v=9) no-repeat right 2px;}
+.singleview .RichTextExtLink {background:url(/SiteGlobals/StyleBundles/Bilder/bgExtLink.png?__blob=normal&v=9) no-repeat right 1px;}
+.singleview .mainLanguage ul li {background:url(bgFlag-en.png) no-repeat 0 2px;}
+.singleview .picture a.lupe span.empty, .singleview .illustration a.lupe span.empty {background:url(/SiteGlobals/StyleBundles/Bilder/btnLupe.png?__blob=normal&v=9) no-repeat;}
+.overlay ul.menu li.active {background-image:url(/SiteGlobals/StyleBundles/Bilder/bgOverlayActiveTabArrow.png?__blob=normal&v=5); background-repeat:no-repeat; background-position: left center;}
+.overlay.overlayWeiss ul.menu li.active {background-image:url(/SiteGlobals/StyleBundles/Bilder/bgOverlayWeissActiveTabArrow.png?__blob=normal&v=5); background-repeat:no-repeat;}
+.tabbedX3 .menu {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabBorderBot.png?__blob=normal&v=9) repeat-x 0px 0px;}
+.tabbedX3 .menu li.level1 {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabLeft.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .menu li.level1 div {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabRight.png?__blob=normal&v=9) no-repeat right top;}
+.tabbedX3 .menu li.level1.current {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabLeft-a.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .menu li.level1.current div {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabRight-a.png?__blob=normal&v=9) no-repeat right top;}
+.tabbedX3 .tabContent .navIndexLevel2 li,
+.tabbedX3 .tabContent .navIndexLevel3 li {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterMidLeft.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .tabContent .navIndexLevel2 li a,
+.tabbedX3 .tabContent .navIndexLevel3 li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterMidRight.png?__blob=normal&v=11) no-repeat right;}
+.tabbedX3 .tabContent .navIndexLevel2 li.active,
+ .tabbedX3 .tabContent .navIndexLevel3 li.active {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterMidLeft-a.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .tabContent .navIndexLevel2 li.active strong, .tabbedX3 .tabContent .navIndexLevel3 li.active strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterMidRight-a.png?__blob=normal&v=11) no-repeat right;}
+.tabbedX3 .tabContent .navIndexLevel2 li.first, .tabbedX3 .tabContent .navIndexLevel3 li.first {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterLeftLeft.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .tabContent .navIndexLevel2 li.first.active, .tabbedX3 .tabContent .navIndexLevel3 li.first.active {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterLeftLeft-a.png?__blob=normal&v=9) no-repeat;}
+.tabbedX3 .tabContent .navIndexLevel2 li.last a, .tabbedX3 .tabContent .navIndexLevel3 li.last a {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterRightRight.png?__blob=normal&v=11) no-repeat right;}
+.tabbedX3 .tabContent .navIndexLevel2 li.last.active strong, .tabbedX3 .tabContent .navIndexLevel3 li.last.active strong {background:url(/SiteGlobals/StyleBundles/Bilder/bgUmschalterRightRight-a.png?__blob=normal&v=10) no-repeat right;}
+.tabbedX3 .btnLeft a {background:url(/SiteGlobals/StyleBundles/Bilder/btnTabbedSliderLeft.png?__blob=normal&v=8) no-repeat;}
+.tabbedX3 .btnLeft a.disabled {background-position:right top;}
+.tabbedX3 .btnRight a {background:url(/SiteGlobals/StyleBundles/Bilder/btnTabbedSliderRight.png?__blob=normal&v=8) no-repeat;}
+.tabbedX3 .btnRight a.disabled {background-position:right top;}
+.tabbedSliderTeaser .btnLeft a {background:url(/SiteGlobals/StyleBundles/Bilder/btnTabbedSliderLeft.png?__blob=normal&v=8) no-repeat;}
+.tabbedSliderTeaser .btnLeft a.disabled {background-position:right top;}
+.tabbedSliderTeaser .btnRight a {background:url(/SiteGlobals/StyleBundles/Bilder/btnTabbedSliderRight.png?__blob=normal&v=8) no-repeat;}
+.tabbedSliderTeaser .btnRight a.disabled {background-position:right top;}
+.tabbedSliderTeaser .menu {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabBorderBot.png?__blob=normal&v=9) repeat-x 0px 0px;}
+.tabbedSliderTeaser .menu li.level1 {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabLeft.png?__blob=normal&v=9) no-repeat;}
+.tabbedSliderTeaser .menu li.level1 div {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabRight.png?__blob=normal&v=9) no-repeat right top;}
+.tabbedSliderTeaser .menu li.level1.current {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabLeft-a.png?__blob=normal&v=9) no-repeat;}
+.tabbedSliderTeaser .menu li.level1.current div {background:url(/SiteGlobals/StyleBundles/Bilder/bgTabRight-a.png?__blob=normal&v=9) no-repeat right top;}
+.wrapperSitemap ul.sitemap li ul li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat 0 4px;}
+.wrapperSitemap ul.sitemap li ul li ul li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat 16px 4px;}
+.wrapperSitemap ul.sitemap li ul li ul li ul li a {background-image:none;}
+#kontaktformular .submitButton div {  background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft.png?__blob=normal&v=9) no-repeat;}
+#kontaktformular .submitButton div span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight.png?__blob=normal&v=10) no-repeat right;}
+#kontaktformular .submitButton div:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft-h.png?__blob=normal&v=9) no-repeat;}
+#kontaktformular .submitButton div:hover span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight-h.png?__blob=normal&v=10) no-repeat right;}
+.embedFrame .headline.jsON {background:url(/SiteGlobals/StyleBundles/Bilder/bgEmbedPfeil.png?__blob=normal&v=8) no-repeat 0 3px;}
+.embedFrame .headline.jsON.active {background:url(/SiteGlobals/StyleBundles/Bilder/bgEmbedPfeil-a.png?__blob=normal&v=8) no-repeat 0 3px;}
+.searchform .volltextsuche p.suchEingabe .formHandle {  background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft.png?__blob=normal&v=9) no-repeat;}
+.searchform .volltextsuche p.suchEingabe .formHandle span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight.png?__blob=normal&v=10) no-repeat right;}
+.searchform .volltextsuche p.suchEingabe .formHandle:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft-h.png?__blob=normal&v=9) no-repeat;}
+.searchform .volltextsuche p.suchEingabe .formHandle:hover span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight-h.png?__blob=normal&v=10) no-repeat right;}
+.searchform .searchOptions .buttons button div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-mid.png?__blob=normal&v=8) transparent no-repeat right top;}
+.searchform .searchOptions .buttons button.disabledPageButton div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-left-left.png?__blob=normal&v=8) transparent no-repeat right bottom;}
+.searchform .searchOptions .buttons button.first div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-left-right.png?__blob=normal&v=8) transparent no-repeat right top;}
+.searchform .searchOptions .buttons button.first div span {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-left-left.png?__blob=normal&v=8) transparent no-repeat left top;}
+.searchform .searchOptions .buttons button.first.disabledPageButton div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-left-right.png?__blob=normal&v=8) transparent no-repeat right bottom;}
+.searchform .searchOptions .buttons button.first.disabledPageButton div span {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-left-left.png?__blob=normal&v=8) transparent no-repeat left bottom;}
+.searchform .searchOptions .buttons button.last.disabledPageButton div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-right-right.png?__blob=normal&v=8) transparent no-repeat right bottom;}
+.searchform .searchOptions .buttons button.last.disabledPageButton div span {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-right-left.png?__blob=normal&v=8) transparent no-repeat left bottom;}
+.searchform .searchOptions .buttons button.last div {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-right-right.png?__blob=normal&v=8) transparent no-repeat right top;}
+.searchform .searchOptions .buttons button.last div span {background:url(/SiteGlobals/StyleBundles/Bilder/btnSearchSprite-right-left.png?__blob=normal&v=8) transparent no-repeat -1px top;}
+.searchresult .relevance-1 {background:url(/SiteGlobals/StyleBundles/Bilder/bgRelevanz-1.png?__blob=normal&v=9) no-repeat center center;}
+.searchresult .relevance-2 {background:url(/SiteGlobals/StyleBundles/Bilder/bgRelevanz-2.png?__blob=normal&v=9) no-repeat center center;}
+.searchresult .relevance-3 {background:url(/SiteGlobals/StyleBundles/Bilder/bgRelevanz-3.png?__blob=normal&v=9) no-repeat center center;}
+.searchresult .relevance-4 {background:url(/SiteGlobals/StyleBundles/Bilder/bgRelevanz-4.png?__blob=normal&v=9) no-repeat center center;}
+.searchresult .relevance-5 {background:url(/SiteGlobals/StyleBundles/Bilder/bgRelevanz-5.png?__blob=normal&v=9) no-repeat center center;}
+.searchresult .pagelinks .naviButtons ul li a.first {background:url(/SiteGlobals/StyleBundles/Bilder/btnPagelinkStart.png?__blob=normal&v=8) no-repeat center center;}
+.searchresult .pagelinks .naviButtons ul li a.last {background:url(/SiteGlobals/StyleBundles/Bilder/btnPagelinkEnd.png?__blob=normal&v=8) no-repeat center center;}
+form#suchfilter fieldset.zeitraumBereich .formHandle,
+#fancybox-outer .formHandle,
+.printpreview .formHandle {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft.png?__blob=normal&v=9) no-repeat;}
+form#suchfilter fieldset.zeitraumBereich .formHandle span,
+#fancybox-outer .formHandle span,
+.printpreview .formHandle span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight.png?__blob=normal&v=10) no-repeat right;}
+form#suchfilter fieldset.zeitraumBereich .formHandle:hover,
+#fancybox-outer .formHandle:hover,
+.printpreview .formHandle:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft-h.png?__blob=normal&v=9) no-repeat;}
+form#suchfilter fieldset.zeitraumBereich .formHandle:hover span,
+#fancybox-outer .formHandle:hover span,
+.printpreview .formHandle:hover span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight-h.png?__blob=normal&v=10) no-repeat right;}
+form#suchfilter fieldset .btnExpand {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterPlus.png?__blob=normal&v=8) no-repeat;}
+form#suchfilter fieldset .btnExpand.open {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterMinus.png?__blob=normal&v=8) no-repeat;}
+form#suchfilter fieldset .options .btnExpand {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterPlus-s.png?__blob=normal&v=8) no-repeat;}
+form#suchfilter fieldset .options .btnExpand.open {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterMinus-s.png?__blob=normal&v=8) no-repeat;}
+form#suchfilter fieldset .options .formField button {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterCheckbox-ia.png?__blob=normal&v=9) no-repeat 0 3px;}
+form#suchfilter fieldset .options .formField button.disabled, form#suchfilter fieldset .options .formField span.buttonErsatz {background:url(/SiteGlobals/StyleBundles/Bilder/btnSuchFilterCheckbox-a.png?__blob=normal&v=9) no-repeat 0 3px;}
+.shoppingCartAdd a.shoppingCartLink {background:url(/SiteGlobals/StyleBundles/Bilder/btnShoppingCartAdd.png?__blob=normal&v=8) no-repeat;}
+.shoppingCartRemove a.shoppingCartLink {background:url(/SiteGlobals/StyleBundles/Bilder/btnShoppingCartRemove.png?__blob=normal&v=9) no-repeat;}
+.scrollLinks .forward a {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight.png?__blob=normal&v=8) no-repeat;}
+.scrollLinks .forward a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavRight-h.png?__blob=normal&v=8) no-repeat;}
+.scrollLinks .back a {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft.png?__blob=normal&v=8) no-repeat;}
+.scrollLinks .back a:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnMiniNavLeft-h.png?__blob=normal&v=8) no-repeat;}
+.downloadIcon a {padding:0 0 0 20px;background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownload.png?__blob=normal&v=9) no-repeat;}
+.downloadIcon a.IconPDF {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadPDF.png?__blob=normal&v=10) no-repeat; padding:0 0 0 20px;}
+.downloadIcon a.Icondoc {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadDOC.png?__blob=normal&v=10) no-repeat; padding:0 0 0 20px;}
+.downloadIcon a.Iconxls {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadXLS.png?__blob=normal&v=10) no-repeat; padding:0 0 0 20px;}
+.singleview fieldset.bestellerdatenForm div span.formHandle {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft.png?__blob=normal&v=9) no-repeat;}
+.singleview fieldset.bestellerdatenForm div span.formHandle span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight.png?__blob=normal&v=10) no-repeat right;}
+.singleview fieldset.bestellerdatenForm div span.formHandle:hover {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitLeft-h.png?__blob=normal&v=9) no-repeat;}
+.singleview fieldset.bestellerdatenForm div span.formHandle:hover span {background:url(/SiteGlobals/StyleBundles/Bilder/btnFormSubmitRight-h.png?__blob=normal&v=10) no-repeat right;}
+.calendar-state {background:url(/SiteGlobals/StyleBundles/Bilder/ajaxLoading.gif?__blob=normal&v=9) no-repeat;}
+#fancybox-loading div {background-image: url(/SiteGlobals/StyleBundles/Bilder/fancybox/fancybox.png?__blob=normal&v=9);}
+#fancybox-right {background: transparent url(/SiteGlobals/StyleBundles/Bilder/fancybox/blank.gif?__blob=normal&v=9);}
+#fancybox-left-ico { background-image: url(/SiteGlobals/StyleBundles/Bilder/fancybox/fancybox.png?__blob=normal&v=9);}
+#fancybox-right-ico { background-image: url(/SiteGlobals/StyleBundles/Bilder/fancybox/fancybox.png?__blob=normal&v=9);}
+.fbClose {background: transparent url(/SiteGlobals/StyleBundles/Bilder/fancybox/btnClose.png?__blob=normal&v=9) right 2px no-repeat;}
+/* Destatis */
+.downloadIcon a.Icondocx {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadDOC.png?__blob=normal&v=10) no-repeat; padding:0 0 0 20px;}
+.downloadIcon a.Iconxlsx {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadXLS.png?__blob=normal&v=10) no-repeat; padding:0 0 0 20px;}
+.downloadIcon a.Iconepub {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadEPUB.png?__blob=normal&v=3) no-repeat; padding:0 0 0 20px;}
+.downloadIcon a.Iconzip {background:url(/SiteGlobals/StyleBundles/Bilder/bgIconDownloadZIP.png?__blob=normal&v=2) no-repeat; padding:0 0 0 20px;}
+.module .interaktiveAnwendungen.diaGalerie div.alleAnwendungen .teaser a.lupe span.empty { background: url(/SiteGlobals/StyleBundles/Bilder/btnLupe.png?__blob=normal&v=9) no-repeat; }
+/* am 12.01.16 von JK auskommentiert, da im Internet das Hintergrundbildchen bei Verlinkungen in der Glossarbox auf andere Glossareinträge nicht angezeigt werden soll */
+/* a.RichTextGlossarLink {background:url(/SiteGlobals/StyleBundles/Bilder/bgGlossarLink.png?__blob=normal&v=3) no-repeat 1px 2px; padding-left:16px;} */
+#jump { background: url(/SiteGlobals/StyleBundles/Bilder/bgMenuMobile.png?__blob=normal&v=2) no-repeat 0 50%; }
+#back { background: url(/SiteGlobals/StyleBundles/Bilder/bgMenuMobileX.png?__blob=normal&v=2) no-repeat 0 50%; }
+#wrapperOuter .wrapperSitemap ul.sitemap li ul li ul li a {background:url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat 6px 4px;}
+#wrapperOuter .wrapperSitemap ul.sitemap li ul li ul li ul li a {background-image:none;}
+div.module.shadowBot div.singleview p.moreP a.ExternalLink {background:url(/SiteGlobals/StyleBundles/Bilder/bgExtLink.png?__blob=normal&v=9) no-repeat scroll right 1px transparent; padding-right: 16px; }
+p.optionstyle3 a {background:url(/SiteGlobals/StyleBundles/Bilder/bgMoreLink.png?__blob=normal&v=4) no-repeat right 0.5em;}
+/* Ergaenzung fuer Themenbloecke (TK - 25.04.2016) */
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser div.datenbank {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_SB_Datenbank.png?__blob=normal&v=1);
+ background-position: center 0;
+}
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser div.onlinemelden {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_SB_OnlineMelden.png?__blob=normal&v=2);
+}
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser div.anschaulich {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_SB_Anschaulich.png?__blob=normal&v=2);
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div.tabellen {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_MB_Tabellen.png?__blob=normal&v=4);
+ background-position: center 0;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div.datenbank {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_MB_Datenbank.png?__blob=normal&v=9);
+ background-position: center 0;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div.publikationen {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_MB_Publikationen.png?__blob=normal&v=5);
+ background-position: center 0;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div.weiteres {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_MB_Weiteres.png?__blob=normal&v=5);
+ background-position: center 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.regional {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_Regional.png?__blob=normal&v=5);
+ background-position: 0 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.international {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_International.png?__blob=normal&v=3);
+ background-position: 0 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.weiterfuehrend {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_Weiterfuehrend.png?__blob=normal&v=4);
+ background-position: 0 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.andereanbieter {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_AndereAnbieter.png?__blob=normal&v=4);
+ background-position: 0 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.datenbanken {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_Datenbanken.png?__blob=normal&v=4);
+ background-position: 0 0;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.publikationen {
+ background-image: url(/SiteGlobals/StyleBundles/Bilder/bg_TB_Publikationen.png?__blob=normal&v=3);
+ background-position: 0 0;
+}

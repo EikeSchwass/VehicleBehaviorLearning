@@ -47,6 +47,7 @@
   <MachineLearningSettings>
     <NumberOfNeuronsInHiddenLayers>
       <int>6</int>
+      <int>2</int>
     </NumberOfNeuronsInHiddenLayers>
     <MutationChanceStart>0.5</MutationChanceStart>
     <MutationDeviationStart>5</MutationDeviationStart>

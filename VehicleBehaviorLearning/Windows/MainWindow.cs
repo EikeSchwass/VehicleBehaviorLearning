@@ -1,10 +1,17 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using LiveCharts;
 using Microsoft.Win32;
 using VehicleBehaviorLearning.Engine;
+using VehicleBehaviorLearning.Engine.Helper;
 using VehicleBehaviorLearning.Engine.Vehicles.Behavior;
+using VehicleBehaviorLearning.Properties;
 
 namespace VehicleBehaviorLearning.Windows
 {
@@ -16,6 +23,11 @@ namespace VehicleBehaviorLearning.Windows
         public MainWindow()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 40; i++)
+            {
+                SimulationSettings.Instance.VehicleBehaviors.Add(new RandomVehicleBehaviorFactory());
+            }
         }
 
         private void OnLoaded(object sender, RoutedEventArgs e)

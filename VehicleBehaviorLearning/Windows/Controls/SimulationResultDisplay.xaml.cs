@@ -24,6 +24,8 @@ namespace VehicleBehaviorLearning.Windows.Controls
     /// </summary>
     public partial class SimulationResultDisplay : UserControl
     {
+        public event Action<SimulationResult> VisualizeRequested;
+
         public SimulationResultDisplay()
         {
             InitializeComponent();
@@ -38,6 +40,11 @@ namespace VehicleBehaviorLearning.Windows.Controls
             };
             if (sfd.ShowDialog(this.Parent as Window) == true)
                 FileVehicleBehaviorFactory.Save(simulationResult.VehicleBehavior, sfd.FileName);
+        }
+
+        private void VisualizeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            VisualizeRequested?.Invoke((SimulationResult) DataContext);
         }
 
         private void SimulationResultDisplay_OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)

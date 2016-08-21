@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="FF" prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#" lang="en"><head>
+        <meta id="CompatabilityMode" http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="Farseer%20Physics%20Engine%20-%20Home-Dateien/StyleSheet.css" id="MasterCss" rel="stylesheet" type="text/css">
+        <link rel="SHORTCUT ICON" href="https://www.codeplex.com/favicon.ico">
+        <title>Farseer Physics Engine - Home</title>
+        
+        <!--
+        Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code,
+        not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+        -->
+        <script src="Farseer%20Physics%20Engine%20-%20Home-Dateien/jquery-1.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            if (typeof jQuery === 'undefined') {
+                document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <script src="Farseer%20Physics%20Engine%20-%20Home-Dateien/jquery-ui.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            if (typeof jQuery.ui === 'undefined') {
+                document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+
+        
+            <script type="text/javascript">
+                var appInsights=window.appInsights||function(config){
+                    function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+                }({
+                    instrumentationKey:"3a5c29be-06e6-465e-862f-c10a5d93d3a2"
+                });
+    
+                window.appInsights=appInsights;
+                appInsights.trackPageView();
+            </script><script src="Farseer%20Physics%20Engine%20-%20Home-Dateien/ai.js"></script>
+        
+    <style type="text/css">.SideBar, .SideBarPadding{display:none;}.MainContent{width:auto;}.SiteContentTable{width:100%;}</style>
+    <style id="ProjectStyles" type="text/css">
+        .SiteHeader, .SiteHeaderLeft {
+            height:45px !important;
+            overflow:hidden;
+        }
+        .SiteContent 
+        {
+            padding: 0 0 1em 0;
+            margin-top:0;
+            min-height:225px;
+            border-right: 1px solid lightgrey;
+            border-left: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+        }
+        .IE table.MinWidthContent
+        {
+	        table-layout: auto !important;	
+        }
+    </style>
+    
+    
+    <style type="text/css">.ProjectContent{padding:0;}</style>
+    <style type="text/css">
+        .WikiHolder
+        {
+            margin: 0 1em 0 0;
+        }
+        #WikiContent
+        {
+            margin-top: 15px;
+        }
+        #WikiBreadCrumbs
+        {
+            margin: 0.25em 0 1em 0;
+        }
+        .SecondarySearchButton 
+        {
+            margin:0 0 0 -0.6em;
+        }
+        .FF .SecondarySearchButton 
+        {
+            margin:-0.1em 0 0 -0.5em;
+            height: 22px;
+        }
+        .IE .SecondarySearchButton
+        {
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+    
+    
+    
+    
+    <meta id="WTProjectName" name="WT.pi" content="FarseerPhysics">
+    
+
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://farseerphysics.codeplex.com/rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" title="WLWManifest" href="https://www.codeplex.com/wlwmanifest.xml">
+    
+    
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine" url="https://farseerphysics.codeplex.com/project/feeds/rss">
+    
+        
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Discussions" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2ffarseerphysics">
+        
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Issues" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2ffarseerphysics">
+        
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Downloads" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2ffarseerphysics">
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Reviews" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2ffarseerphysics">
+        
+    
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Source code" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2ffarseerphysics">
+        <link rel="alternate" type="application/rss+xml" title="Farseer Physics Engine - Wiki" url="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2ffarseerphysics">
+    
+        
+    
+        <meta content="summary" name="twitter:card"><meta content="@CodePlex" name="twitter:site"><meta content="https://farseerphysics.codeplex.com/Wikipage?ProjectName=farseerphysics" name="twitter:url"><meta content="Farseer Physics Engine" name="twitter:title"><meta content="The Farseer Physics Engine is an easy to use 2D physics engine that focuses on simplicity, useful features and enabling the creation of fun and dynamic games." name="twitter:description"><meta content="https://www.codeplex.com/Images/codeplex.png" name="twitter:image"><meta content="CodePlex" property="og:site_name"><meta content="https://farseerphysics.codeplex.com/Wikipage?ProjectName=farseerphysics" property="og:url"><meta content="object" property="og:type"><meta content="Farseer Physics Engine" property="og:title"><meta content="The Farseer Physics Engine is an easy to use 2D physics engine that focuses on simplicity, useful features and enabling the creation of fun and dynamic games." property="og:description"><meta content="https://www.codeplex.com/Images/codeplex.png" property="og:image">
+        
+
+    </head>
+    
+    <body class=" NoImages">
+        <script src="Farseer%20Physics%20Engine%20-%20Home-Dateien/ScriptLoader.ashx" type="text/javascript"></script>
+        <form id="aspnetForm" autocomplete="off" method="POST" enctype="multipart/form-data">
+            <input name="__RequestVerificationToken" value="saJGA914EWef186MCg6KAusoV0_7C5uV_3FDiNAiGYQ8e7pKSDS0C7gBBA3tPRC4dxxWy9aYbc-n44VXghLcJp0EgvavQtKq-ROGIQFtVtPODU-U683SbnhzB5VHN-gZl8pA4A2" type="hidden">
+            
+            
+            
+            <div style="display:none;">
+                
+                <img id="BlankImage" style="width:0;height:0;" src="Farseer%20Physics%20Engine%20-%20Home-Dateien/blank.png" onload="self.logoImageLoaded=true;">
+
+                <script language="javascript" type="text/javascript">
+                    var date = new Date();
+                    var timezoneOffset = date.getTimezoneOffset() / 60 * -1;
+                    var timezoneOffsetCookie = getCookie("TimezoneOffset");
+                    var firstTimeSetTimezoneCookie = false;
+
+                    if (timezoneOffsetCookie == null || timezoneOffsetCookie != timezoneOffset) {
+                        firstTimeSetTimezoneCookie = true;
+                        document.cookie = "TimezoneOffset=" + timezoneOffset + '; domain=.codeplex.com;expires=Mo, 21 Aug 2017 07:28:05 UTC';
+                    }
+                </script>
+            </div>
+            
+            <div id="header">
+                <div id="header_wrap" class="row">
+                    <p id="logo"><a href="https://www.codeplex.com/">Code<span class="semi">Plex</span></a><span id="tagline">Project Hosting for Open Source Software</span></p>
+                    
+
+<ul id="nav">
+
+    <li><a href="https://www.codeplex.com/site/register/new" id="registerLink" class="ZoomFix">Register</a></li>
+    <li><a class="SignInLink" href="https://www.codeplex.com/site/login?RedirectUrl=https%3a%2f%2ffarseerphysics.codeplex.com%2fWikipage" id="signInLink">Sign In</a></li>
+  
+    <li class="last"><a class="rss_site_icon" href="https://www.codeplex.com/site/feeds/rss" type="application/rss+xml" rel="Alternate" title="CodePlex Site Activity"></a></li>
+</ul>
+                    <input style="color: rgb(170, 170, 170); font-style: italic;" title="Search all projects" data-searchtype="searchbox" autocomplete="off" id="searchsite" name="searchsite" maxlength="500" value="Search all projects" type="text"><span id="search_mag"><a data-searchtype="icon" id="submitSearch" name="submitSearch" class="magnify" title="Search all projects" href="#"></a></span>
+                    <script>
+	$(document).ready(function() {
+    var searchButton = $('#submitSearch'),
+        searchBar = $('#searchsite');
+
+    // Register our own handler for the search event while we wait for the SearchBox script to load.
+    searchButton.bind('click.backupSearchBox', doProjectSearch);
+    searchBar.bind('keypress.backupSearchBox', function(e) { if ($keyCode(e) === 13) { doProjectSearch(); return false; } });
+
+    function cleanupSearchEvents() {
+        // If the SearchBox was loaded, unregister our handlers.
+        if (epx_loaded) {
+            searchButton.unbind('.backupSearchBox');
+            searchBar.unbind('.backupSearchBox');
+        }
+    }
+
+    $loadScript('https://services.social.microsoft.com/search/Widgets/SearchBox.jss?appid=1000&scopeid=1&boxId=searchsite&btnId=submitSearch&watermark=Search%20all%20projects&overrideWatermark=true&searchLocation=https%3a%2f%2fwww.codeplex.com%2fsite%2fsearch&allowEmptySearch=true&focusOnInit=False&minimumTermLength=3', cleanupSearchEvents);
+})
+function doProjectSearch() {
+    
+    var url = 'https://www.codeplex.com/site/search';
+
+    //If search term is not same as watermark
+    if($('#searchsite').val() != 'Search all projects')    
+    {        
+        url = url + '?query=' + encodeURIComponent($('#searchsite').val());
+    }
+
+    
+    var callback = '';
+    if (callback.length > 0 && eval('typeof ' + callback) != 'undefined')
+        url += eval(callback + '()');
+
+    window.location.href = url;
+    return false;
+}
+</script>
+                <div style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(122, 132, 142); font-family: &quot;Segoe UI&quot;,&quot;Microsoft Sans Serif&quot;,Arial,Geneva,sans-serif; font-size: 13px;" id="SearchFlyoutContainer"><div id="SuggestionContainer"><ul data-searchtype="search dropdown" style="list-style: outside none none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></div>
+            </div>
+            
+            <div id="wrap">
+                
+    <div id="sub_heading" class="row">
+        
+        <div id="ProjectHeader">
+            <div id="project_title_row" class="row">
+                <div id="project_logo">
+                    
+    
+    <h1><a href="https://farseerphysics.codeplex.com/"><img src="Farseer%20Physics%20Engine%20-%20Home-Dateien/Download.png" alt="Farseer Physics Engine"></a></h1>
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="ProjectDetailsDiv">
+            
+        </div>
+		<div class="clear"></div>
+        
+
+<ul id="page_box_links">
+	<li id="homeTabCell" style="width: 75px;"><a id="homeTab" href="https://farseerphysics.codeplex.com/" class="home_active">home</a><div></div></li>
+    
+	<li id="sourceTabCell" style="width: 125px;"><a id="sourceTab" href="https://farseerphysics.codeplex.com/SourceControl/latest" class="box_source">source code</a><div></div></li>
+    
+	<li id="releasesTabCell" style="width: 117px;"><a id="releasesTab" href="https://farseerphysics.codeplex.com/releases" class="box_downloads">downloads</a><div></div></li>
+    
+    <li id="documentationTabCell" style="width: 155px;"><a id="documentationTab" href="https://farseerphysics.codeplex.com/documentation" class="box_documentation">documentation</a><div></div></li>
+    
+	<li id="discussionTabCell" style="width: 124px;"><a id="discussionTab" href="https://farseerphysics.codeplex.com/discussions" class="box_discussions">discussions</a><div></div></li>
+    
+	<li id="workItemsTabCell" style="width: 82px;"><a id="workItemsTab" href="https://farseerphysics.codeplex.com/workitem/list/basic" class="box_issue">issues</a><div></div></li>
+    
+	<li id="peopleTabCell" style="width: 82px;"><a id="peopleTab" href="https://farseerphysics.codeplex.com/team/view" class="box_people">people</a><div></div></li>
+	<li class="last" id="licenseTabCell" style="width: 82px;"><a id="licenseTab" href="https://farseerphysics.codeplex.com/license" class="box_license">license</a><div></div></li>
+    
+    <span class="stretch"></span>
+</ul>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#page_box_links').applyLastClassToList();
+    });
+</script>
+		    <div class="clear"></div>
+            
+    <div id="DeleteWikiPagePanel" class="modal" style="display: none;">
+        <div class="row">
+            <h2>Are you Sure? <a href="javascript:return%20false;" class="close">X</a></h2>
+        </div>
+        <div class="modal_info">
+            By clicking Delete, all history, comments and attachments for this page will be deleted and cannot be restored.
+            <div class="modal_buttons">
+                <input id="CancelButton" class="cancel" value="Cancel" type="button">
+                <input id="DeleteButton" class="ok" value="Delete" type="button">
+            </div>
+            <div class="ClearBoth"></div>
+        </div>
+    </div>
+    
+    <div id="homepage_sub_menu">
+		<ul class="page_box_sublinks">
+            
+                <li><a id="pageInfoHyperLink" href="https://farseerphysics.codeplex.com/wiki/PageInfo?title=Home" title="Page information for Home page.">Page Info</a></li>
+            
+            <li class="last"><a id="changesHyperlink" href="https://farseerphysics.codeplex.com/wikipage/history" title="View change history for all pages.">Change History (all pages)</a></li>
+		</ul>
+        
+
+<div>
+    
+    <div id="actionBar" class="action_bar">
+        <ul id="actionBar_ul" class="actionBar_sublinks subtab_right" style="vertical-align: middle;">
+
+            
+
+                <li id="li_actionbar_followproject" data-action-id="actionbar_followproject" data-action-type="None" class="actionBar_sublinks" data-options-id="68a2f0d2-8bd6-45dc-be11-46d896a3239f">
+                
+                     
+                    
+                    <div class="actionBar_custom_content"></div>
+
+                    <a href="#" id="actionbar_followproject" title="Follow this project to get updates in your activity stream." class="action_bar_item_link"><img id="img_actionbar_followproject" class="action_bar_item_image" src="Farseer%20Physics%20Engine%20-%20Home-Dateien/actionbar_follow.png" style="vertical-align: middle"> Follow (833)</a>
+
+                </li>
+
+            
+
+                <li id="li_actionbar_subscribe" data-action-id="actionbar_subscribe" data-action-type="PopUp" class="actionBar_sublinks last" data-options-id="63b08553-7f37-4303-8e3a-db4cdcd6dd5c">
+                
+                    <script class="options" defer="defer" id="63b08553-7f37-4303-8e3a-db4cdcd6dd5c" type="application/json">{}</script> 
+                    
+                    <div class="actionBar_custom_content">
+
+<div id="rssHoverDiv" class="HoverPanel LeftHoverWidth" style="display: none">
+        <ul id="3_FeedsPanel" class="RssFeedsPanel">
+            <li>
+                <a id="ProjectRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss" class="ArrowSmall NoUnderline">All Project Updates</a>
+            </li>
+            
+            <li>
+                <a id="DiscussionRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fforum%2ffarseerphysics" class="ArrowSmall NoUnderline">Discussions</a>
+            </li>
+            
+            <li>
+                <a id="IssueTrackerRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fworkitem%2ffarseerphysics" class="ArrowSmall NoUnderline">Issue Tracker</a>
+            </li>
+            
+            <li>
+                <a id="ReleasesRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2frelease%2ffarseerphysics" class="ArrowSmall NoUnderline">Downloads</a>
+            </li>
+            <li>
+                <a id="ReviewsRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2freview%2ffarseerphysics" class="ArrowSmall NoUnderline">Reviews</a>
+            </li>
+            
+            <li>
+                <a id="SourceControlRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fsourcecontrol%2ffarseerphysics" class="ArrowSmall NoUnderline">Source Code</a>
+            </li>
+            <li>
+                <a id="WikiRssLink" href="https://farseerphysics.codeplex.com/project/feeds/rss?ProjectRSSFeed=codeplex%3a%2f%2fwiki%2ffarseerphysics" class="ArrowSmall NoUnderline">Wiki &amp; Documentation</a>
+            </li>
+        </ul>
+</div></div>
+
+                    <a href="#" id="actionbar_subscribe" title="Subscribe to project updates in RSS feeds." class="action_bar_item_link">
+                        <img id="img_actionbar_subscribe" class="action_bar_item_image" src="Farseer%20Physics%20Engine%20-%20Home-Dateien/actionbar_subscribe.png" style="vertical-align: middle">
+                        Subscribe
+                    </a>
+
+                </li>
+
+            
+        </ul>
+    </div>
+</div>
+        <div class="clear"></div>
+    </div>
+    
+        
+
+    </div>
+    
+    
+    
+<div id="left_column" class="no_border">
+    
+
+    <div class="WikiHolder">
+
+        
+            <div id="WikiContent" class="WikiContent">
+                
+<div class="wikidoc">
+<h1>Welcome to Farseer Physics Engine</h1>
+<a href="http://www.facebook.com/#%21/pages/Farseer-Physics-Engine/167177613314656">Facebook</a> :
+<a href="https://farseerphysics.codeplex.com/wikipage?title=Acknowledgments&amp;referringTitle=Home">
+Acknowledgments</a> : <a href="https://farseerphysics.codeplex.com/wikipage?title=Donations&amp;referringTitle=Home">
+Donations</a> : <a href="https://farseerphysics.codeplex.com/wikipage?title=Tutorials&amp;referringTitle=Home">
+Tutorials &amp; FAQ</a><br>
+<h2>What is Farseer Physics Engine?</h2>
+Farseer Physics Engine is a collision detection system with realistic 
+physics responses. This means you can create a game or robotic 
+simulation easily using the engine and the associated tools. Everything 
+from a simple hobby game to a complex robotic simulation
+ is possible with Farseer Physics Engine. <a href="https://farseerphysics.codeplex.com/wikipage?title=Downloads&amp;referringTitle=Home">
+Download</a> the latest version and checkout our <a href="https://farseerphysics.codeplex.com/documentation?referringTitle=Home">
+documentation</a>.<br>
+<br>
+<img src="Farseer%20Physics%20Engine%20-%20Home-Dateien/Download_002.png" alt="FarseerWalkerSample.png" title="FarseerWalkerSample.png"><br>
+<h2>Features</h2>
+Farseer Physics Engine is based on Box2D, which means we have a lot of 
+features in common. However, we also have a lot more features that are 
+not included in the Box2D engine. See a list in our
+<a href="http://farseerphysics.codeplex.com/documentation">documentation</a>.
+<ul>
+<li>Continuous collision detection (with time of impact solver) </li><li>Contact callbacks: begin, end, pre-solve, post-solve </li><li>Convex and concave polyons and circles. </li><li>Multiple shapes per body </li><li>Dynamic tree and quad tree broadphase </li><li>Fast broadphase AABB queries and raycasts </li><li>Collision groups and categories </li><li>Sleep management </li><li>Friction and restitution </li><li>Stable stacking with a linear-time solver </li><li>Revolute, prismatic, distance, pulley, gear, mouse joint, and other joint types
+</li><li>Joint limits and joint motors </li><li>Controllers (gravity, force generators) </li><li>Tools to decompose concave polygons, find convex hulls and boolean operations
+</li><li>Factories to simplify the creation of bodies</li></ul>
+<h2>Support Us</h2>
+Donate to help us keep the project going.<br>
+<br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=D5BVVCJEXSLC6&amp;lc=DK&amp;item_name=Farseer%20Physics%20Engine&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">Click here to donate</a><br>
+<br>
+Donations are listed on our <a href="https://farseerphysics.codeplex.com/wikipage?title=Donations">
+donations page</a>.<br>
+<br>
+</div>
+<div></div>
+
+            </div>
+        
+                <p>Last edited <span class="smartDate" title="26.08.2013 22:36:30" localtimeticks="1377581790">Aug 26, 2013 at 10:36 PM</span> by <a id="wikiEditByLink" href="https://www.codeplex.com/site/users/view/genbox">genbox</a>, version 178</p>
+            
+    </div>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#deleteWikiHyperLink').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', true, '30em');
+            });
+            $('#DeleteButton').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', false);
+                CodePlex.UpdateProgress.show();
+                $.ajax({
+                    type: 'DELETE',
+                    url: 'https://farseerphysics.codeplex.com/',
+                    data: {title: $('#WikiTitle').val()},
+                    success: function (data) {
+                        CodePlex.UpdateProgress.hide();
+                        window.location = data;
+                    },
+                    error: function (data) {
+                        CodePlex.UpdateProgress.hide();
+                    }
+                });
+            });
+            $('#CancelButton').click(function () {
+                OpenDialog('#DeleteWikiPagePanel', false);
+            });
+            
+            
+        });
+    </script>
+</div>
+
+        
+	<div id="right_sidebar">
+        
+
+<input value="Search Wiki &amp; Documentation" class="EmptyTextBox" name="" maxlength="500" id="wiki_search" title="Search Wiki and Documentation" type="text"><a id="SearchButton" class="wiki_magnify" href="#" title="Search Wiki and Documentation"></a>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $('#wiki_search').keypress(function (e) {
+            if (e.keyCode == 13) {
+                wikiSearch();
+                return false;
+            }
+        });
+
+        $('#SearchButton').click(function () {
+            wikiSearch();
+            return false;
+        });
+
+        $('#wiki_search').promptBox('Search Wiki & Documentation');
+
+    });
+    function setWikiCommentTextBoxFocus() {
+        $('#Comment').focus();
+        return false;
+    }
+
+    function wikiSearch() {
+        var $textbox = $('#wiki_search');
+        if($textbox.attr('dirty') != 'true')
+            return;
+        var searchText = encodeURIComponent(jQuery.trim($textbox.val()));
+        if(searchText != null & searchText.length > 0)
+            window.location.href = 'https://farseerphysics.codeplex.com/wiki/search?tab=Home&SearchText=' + searchText;
+    }
+
+</script>
+                <a id="download_button" href="#" d:posturl="https://farseerphysics.codeplex.com/releases/captureDownload" d:fileid="722127" d:clickoncepath="" onclick="return $.release.fn.downloadFile(this);">
+                    download
+                </a>
+                
+<div id="ClickOnceOperaPanel" class="modal" style="display: none;">
+    <div class="row">
+        <h2>Opera does not support ClickOnce <a href="javascript:return%20false;" class="close">X</a></h2>
+    </div>
+    <div class="modal_info">
+        <div class="Body">
+            To install this application, save it and then open it.  Opening it directly from Opera will not work correctly.
+        </div>
+        <div class="modal_buttons">
+            <input class="ok" onclick="operaContinue();" value="Ok" type="button">
+        </div>    
+        <div class="ClearBoth"></div>
+    </div>
+</div>
+	<div id="current_rating">
+        <table>
+            <tbody><tr>
+    			<th><span class="rating_header">current</span></th>
+    			<td>
+                    Farseer Physics Engine 3.5
+    			</td>
+            </tr>
+            <tr>
+    			<th><span class="rating_header">date</span></th>
+    			<td><span class="smartDate full" title="26.08.2013 09:00:00" localtimeticks="1377532800">Mon Aug 26, 2013 at 9:00 AM</span></td>
+            </tr>
+            <tr>
+    			<th><span class="rating_header">status</span></th>
+    			<td>Stable</td>
+            </tr>
+            <tr>
+    			<th><span class="rating_header">downloads</span></th>
+    			<td>24.729</td>
+            </tr>
+            <tr>
+    			<th><span class="rating_header">rating</span></th>
+                <td>
+                    <span id="releaseRatingContainer" title="5 star rating"><span id="releaseRating_Star_0" class="RatingStar FilledRatingStar" d:rating="1" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="releaseRating_Star_1" class="RatingStar FilledRatingStar" d:rating="2" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="releaseRating_Star_2" class="RatingStar FilledRatingStar" d:rating="3" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="releaseRating_Star_3" class="RatingStar FilledRatingStar" d:rating="4" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="releaseRating_Star_4" class="RatingStar FilledRatingStar" d:rating="5" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="releaseratingName"></span><input id="releasecurrentRating" value="5" type="hidden"></span>
+                    <span class="right">
+                        5 ratings
+                    </span>
+                    <br>
+                    
+                    <a href="https://farseerphysics.codeplex.com/releases/view/110074?RateReview=true">Review this release</a>
+                    
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+	<div id="recent_reviews">
+	    <h2>Most Helpful Reviews</h2>
+        
+            <p class="review"><span id="RatingContainer" title="5 star rating"><span id="Rating_Star_0" class="RatingStar FilledRatingStar" d:rating="1" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_1" class="RatingStar FilledRatingStar" d:rating="2" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_2" class="RatingStar FilledRatingStar" d:rating="3" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_3" class="RatingStar FilledRatingStar" d:rating="4" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_4" class="RatingStar FilledRatingStar" d:rating="5" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="ratingName"></span><input id="currentRating" value="5" type="hidden"></span>Includes all those important bits that are needed to develop a good game.</p>
+        
+            <p class="review"><span id="RatingContainer" title="5 star rating"><span id="Rating_Star_0" class="RatingStar FilledRatingStar" d:rating="1" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_1" class="RatingStar FilledRatingStar" d:rating="2" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_2" class="RatingStar FilledRatingStar" d:rating="3" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_3" class="RatingStar FilledRatingStar" d:rating="4" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="Rating_Star_4" class="RatingStar FilledRatingStar" d:rating="5" onclick="MvcValidation_ClearErrors('Rating');">&nbsp;</span><span id="ratingName"></span><input id="currentRating" value="5" type="hidden"></span>One of the best additions to MonoGame ever! :) Good work!</p>
+        
+        <a id="view_all_reviews" href="https://farseerphysics.codeplex.com/releases/view/110074#ReviewsAnchor">View all reviews</a>
+        <div class="clear"></div>
+    </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#PageActivity .Link').click(function () {
+                var val = $(this).attr('d:value');
+                $.post('https://farseerphysics.codeplex.com/stats/getActivity',
+                    { period: val },
+                    function (data) {
+                        $('#PageActivity span').hide();
+                        $('#PageActivity .Link').show();
+                        $('#Page' + val + 'Label').show();
+                        $('#Page' + val + 'Link').hide();
+                        $('#pageViews').text(data.PageViews);
+                        $('#visits').text(data.Visits);
+                        $('#downloads').text(data.Downloads);
+                    }, 'json');
+                return false;
+            });
+        });
+</script>
+<div id="activity">
+	<h2>activity</h2>
+
+	<div class="clear"></div>
+
+    <table>
+	    <tbody><tr>
+            <th class="t_heading">downloads</th>
+	    </tr>
+		<tr>
+			<td><span id="downloads">111</span></td>
+		</tr>
+    </tbody></table>
+
+	<ul id="PageActivity"> 
+		<li>Days: </li>
+		<li>
+		    <span id="Page7Label">7</span>
+            <a id="Page7Link" href="#" class="Link" style="display:none;" d:value="7">7</a>
+		</li>
+		<li>
+		    <span id="Page30Label" style="display:none;">30</span>
+            <a id="Page30Link" href="#" class="Link" d:value="30">30</a>
+		</li>
+		<li>
+		    <span id="Page-1Label" style="display:none;">All</span>
+            <a id="Page-1Link" href="#" class="Link" d:value="-1">All</a>
+		</li>
+        <li id="activity_details"><a href="https://farseerphysics.codeplex.com/stats">Details</a></li>
+	</ul>
+
+</div>
+
+	<div id="related_projects">
+		<h2>related projects</h2>
+
+        
+            <p><a href="https://simpleseer.codeplex.com/">SimpleSeer</a></p>
+        
+            <p><a href="https://farseersimplesamples.codeplex.com/">Farseer Physics Engine Simple Samples</a></p>
+        
+            <p><a href="https://physicshelper.codeplex.com/">Physics Helper for Blend, Silverlight, WP7 and Farseer</a></p>
+        
+	</div>
+
+    </div>
+
+        
+                
+                <div class="clear"></div>
+                
+                <div id="footer">
+                    <div class="row">
+                        <hr>
+                        <ul>
+                            <li>© 2006-2016 Microsoft</li>
+                            <li><a href="https://www.codeplex.com/site/help">Get Help</a></li>
+                            <li><a href="https://farseerphysics.codeplex.com/site/legal/privacy">Privacy Statement</a></li>
+                            <li><a href="https://www.codeplex.com/site/legal/terms">Terms of Use</a></li>
+                            <li><a href="https://www.codeplex.com/site/legal/conduct">Code of Conduct</a></li>
+                            <li><a href="http://developermedia.com/" target="_blank">Advertise With Us</a></li>
+                            <li>Version 8.21.2015.21031</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+
+<div aria-labelledby="ui-dialog-title-UpdateProgressPanel" role="dialog" tabindex="-1" class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable ui-resizable" style="display: none; z-index: 1000; outline: 0px none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-dialog-title-UpdateProgressPanel" class="ui-dialog-title">&nbsp;</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="UpdateProgressPanel" class="loading_animation ui-dialog-content ui-widget-content" style="">
+                <div class="row">
+                    <h2 class="anim_h2">
+                        <span id="UpdateProgressText">Updating...</span>
+                        <span id="animatedLoadingIconContainer">
+                            <img id="animatedLoadingIcon" src="Farseer%20Physics%20Engine%20-%20Home-Dateien/loading_animation.gif" class="anim_img">
+                        </span>
+                    </h2>
+                </div>
+            </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div style="z-index: 1001;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"></div><div style="z-index: 1002;" class="ui-resizable-handle ui-resizable-sw"></div><div style="z-index: 1003;" class="ui-resizable-handle ui-resizable-ne"></div><div style="z-index: 1004;" class="ui-resizable-handle ui-resizable-nw"></div></div></body></html>

@@ -1,0 +1,550 @@
+/* ***********************************************************
+ ------------- CONTENT -----------
+ 0. DEVELOPMENT SETTINGS
+ 1. GENERAL STYLES
+  1.1 Link
+  1.2 Table
+  1.3 Form
+  1.A Tools
+ 2. LAYOUT
+  2.1 Social Bookmarks
+ 3. HEADER
+  3.1 Service Navigation Meta
+  3.2 Language Switcher
+  3.3 Search Bar
+ 4. NAVIGATION
+  4.1 Primary Navigation
+   4.1.1 Flyout
+  4.2 Secondary Navigation
+  4.3 Breadcrumb
+  4.4 Sitemap Links
+ 5. CONTENT
+  5.1 Module
+ 6. FOOTER
+ 7. TEMP SECTION
+ ----------------------------------
+*********************************************************** */
+/*********************** 0. DEVELOPMENT SETTINGS ***********************/
+/*********************** 1. GENERAL STYLES *****************************/
+body {
+ font-size: 1em;
+}
+body.gsb input {
+ -webkit-appearance: none;
+}
+.formHandle a {
+ line-height: 1.8em;
+}
+/*********************** 2. LAYOUT *************************************/
+#wrapperInner {
+ min-width: 480px;
+ max-width: 700px;
+ padding: 0 12px;
+ background:url(/SiteGlobals/StyleBundles/Bilder/m.gif?__blob=normal&v=2) no-repeat scroll 0px 50% transparent;
+}
+#wrapperHeader {
+ height: auto;
+/* margin: 40px 0 0; */
+margin: 0 !important;
+}
+#wrapperDivisions {
+ margin: 0;
+ padding: 0;
+ top: 0;
+}
+#wrapperOuter, #navPrimary #bgLeft, #navPrimary ul li h3, #navPrimary ul li.active h3, #navPrimary ul li h3 a, #navPrimary ul li.active h3 strong, #navPrimary ul li h3 strong, #navPrimary ul li.active h3 a {
+ background-image: none;
+}
+#wrapperLayoutStartseite {
+ margin-top: 14px !important;
+}
+#wrapperLayoutEinspaltigMitMS #wrapperContent, #wrapperLayoutEinspaltigOhneMS #wrapperContent, #wrapperLayoutZweispaltigOhneMS #wrapperContent, #wrapperLayoutZweispaltigMitMS #wrapperContent, #wrapperLayoutEinspaltigMitMS #wrapperContent, #wrapperLayoutEinspaltigMitMS #supplement, #wrapperLayoutZweispaltigOhneMS #wrapperContent, #wrapperLayoutZweispaltigOhneMS #wrapperColumnA, #wrapperLayoutZweispaltigOhneMS #wrapperColumnB, #wrapperLayoutZweispaltigMitMS #wrapperContent, #wrapperLayoutZweispaltigMitMS #supplement, #wrapperLayoutZweispaltigMitMS #wrapperColumnA, #wrapperLayoutZweispaltigMitMS #wrapperColumnB, #wrapperLayoutDreispaltigOhneMS #wrapperContent, #wrapperLayoutDreispaltigOhneMS #wrapperColumnA, #wrapperLayoutDreispaltigOhneMS #wrapperColumnB, #wrapperLayoutDreispaltigOhneMS #wrapperColumnC {
+ float: none;
+ width: auto;
+ margin: 0;
+}
+/* #wrapperFooter #footerLinks, #wrapperSB, #siteInfo {
+ min-width: 480px;
+ max-width: 700px;
+} */
+#wrapperFooter #footerLinks {
+ display: none !important;
+}
+#wrapperFooter #footerLinksMobile {
+  display: block;
+}
+#wrapperOuter #themenAuswahl {
+  display: block;
+}
+#wrapperOuter #themenAuswahl a {
+  display: block;
+  padding-left: 12px;
+}
+#wrapperOuter #themenAuswahl.icon a {
+  padding-left: 32px;
+  background: url(/SiteGlobals/StyleBundles/Bilder/bgMenuThemen.png?__blob=normal&v=2) no-repeat scroll 0px 50% transparent;
+}
+#wrapperFooter #footerLinksMobile ul li {
+  width: 46%;
+  min-height: 10em;
+  float: left;
+  padding: 0 15px 8px 0;
+}
+#wrapperFooter #footerLinksMobile ul li ul li {
+  width: 100%;
+  min-height:0;
+  padding-bottom: 4;
+}
+#wrapperFooter #footerLinksMobile hr {
+  display:none;
+}
+#wrapperFooter #footerLinksMobile p {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+#wrapperFooter #footerLinksMobile ul li ul li a {
+    background: url(/SiteGlobals/StyleBundles/Bilder/bgNavSecPfeil.png?__blob=normal&v=9) no-repeat scroll 0px 6px transparent;
+    display: block;
+    padding-left: 14px;
+}
+#wrapperFooter #footerLinksMobile h1 {
+    font-size: 1.167em;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px 0px 8px;
+    font-weight: normal;
+}
+#wrapperFooter #wrapperSB, #wrapperFooter #siteInfo {
+ min-width: 480px;
+ max-width: 700px;
+}
+#area {
+ margin-left: 0;
+}
+#wrapperOuter .searchresult ul.hitlist .searchResultRight {width:18%;}
+#wrapperOuter .searchresult ul.hitlist .searchResultLeft {width:80%;}
+/*********************** 3. HEADER *************************************/
+/* ** 3.1 Service Navigation Meta ** */
+/* #navServiceMeta {
+    background: none repeat scroll 0 0 transparent;
+    font-size: 1em;
+    height: 40px;
+    left: 0;
+    line-height: 1em;
+    overflow: hidden;
+    padding: 0 12px;
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    z-index: 11;
+} */
+#navServiceMeta {
+  display: none !important;
+}
+/* ** 3.3 Search Bar ** */
+/* #search {
+ position: relative;
+ right: auto;
+ top: auto;
+ margin-top: 14px;
+} */
+#search {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  left: 0;
+  margin-left: 240px;
+}
+#search form p {
+  background: #fff;
+  box-shadow: 3px 2px 4px -1px #B1B1B1 inset;
+  border: 1px solid #b1b1b1;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  width: 100%;
+/*  height: 2.4em; */
+  height: 1.6em;
+}
+#search form input.suchtext {
+    background-color: transparent;
+    font-size: 1.2em;
+    margin-left: 16px;
+    width: 85%;
+}
+#search input.submit {
+ margin: 6px 2px 0 0;
+}
+#search form p {
+  height: 1.6em;
+}
+#wrapperOuter #search form input.suchtext {
+ margin-top: 0px;
+}
+#wrapperOuter #search input.submit {
+ margin-top: 0px;
+}
+#langSwitch {
+ font-size: 0.9167em;
+ line-height: 1em;
+}
+#langSwitch ul li span, #langSwitch ul li strong, #langSwitch ul li a {
+ padding-bottom: 6px !important;
+}
+/*********************** 4. NAVIGATION *********************************/
+/* ** 4.1 Primary Navigation ** */
+#navPrimary {
+ top: 0;
+ margin: 12px 0;
+}
+/* #navPrimary ul li {
+  max-width: 480px;
+  overflow:hidden;
+  min-width: 100%;
+  width: 100%;
+  float: none;
+  margin-bottom: 4px;
+  -moz-box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
+  box-shadow: 2px 2px 2px #888888;
+} */
+#navPrimary ul li {
+ max-width: 480px;
+ overflow:hidden;
+ min-width: 19%;
+ width: 19% !important;
+ max-height: 2.75;
+ height: 2.45em;
+ float: left;
+ margin-bottom: 4px;
+ -moz-box-shadow: 2px 2px 2px #888888;
+ -webkit-box-shadow: 2px 2px 2px #888888;
+ box-shadow: 2px 2px 2px #888888;
+}
+#navPrimary ul li h3:hover, #navPrimary ul li.active.hovered h3, #navPrimary ul li.hovered h3 {
+    background: none #0160A2;
+}
+#navPrimary ul li h3:hover a, #navPrimary ul li.active.hovered h3 a, #navPrimary ul li.hovered h3 a {
+    background: none #0160A2;
+}
+#navPrimary ul li h3 {
+ background-color: #697782;
+ height: 100%;
+}
+/* #navPrimary ul li h3 a, #navPrimary ul li h3 strong {
+ font-size: 1.3em;
+ padding: 0 0 0 4px;
+} */
+#navPrimary ul li h3 a, #navPrimary ul li h3 strong {
+ font-size: 1.0em;
+ padding: 0;
+}
+#navPrimary ul li h3 a, #navPrimary ul li h3 a span {
+ font-weight: normal;
+ line-height: 1em;
+}
+#navPrimary ul li.active h3 {
+ background-color: #075083;
+}
+#navPrimary ul li .box .menu, #naviteaser {
+ display: none !important;
+}
+/* ** 4.2 Secondary Navigation ** */
+#navSecondary {
+ float: none;
+ min-height: inherit;
+ height: auto;
+ width: auto;
+}
+#navSecondary .navMain ul li a, #navSecondary .navMain ul li strong {
+ padding-left: 24px;
+ padding-bottom: 4px;
+ padding-top: 4px;
+}
+#navSecondary .navMain ul li ul li a, #navSecondary .navMain ul li ul li strong {
+ padding-left: 40px;
+}
+#navSecondary .navMain ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li strong {
+ padding-left: 52px;
+}
+#navSecondary .navMain ul li ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li ul li strong {
+ padding-left: 64px;
+}
+/* #navSecondary .navMain ul li ul li a, #navSecondary .navMain ul li ul li strong, #navSecondary .navMain ul li ul li a:hover {
+ background-position: 24px 7px;
+}
+#navSecondary .navMain ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li strong, #navSecondary .navMain ul li ul li ul li a:hover {
+ background-position: 36px 7px;
+} */
+#navSecondary .navMain ul li ul li a, #navSecondary .navMain ul li ul li strong, #navSecondary .navMain ul li ul li a:hover {
+ background-position: 24px 45%;
+}
+#navSecondary .navMain ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li strong, #navSecondary .navMain ul li ul li ul li a:hover {
+ background-position: 36px 45%;
+}
+/**************** Optimierte Mobilversion ******************/
+#wrapperOuter #siteNav {
+  display: none;
+}
+#wrapperOuter #langSwitch ul li#de, #wrapperOuter #langSwitch ul li.deutsch_node a {background-position: right top;}
+#wrapperOuter #langSwitch ul li#de.active, #wrapperOuter #langSwitch ul li.deutsch_node strong, #wrapperOuter #langSwitch ul li.deutsch_node.active a {background-position: right top;}
+#wrapperOuter #langSwitch ul li#en, #wrapperOuter #langSwitch ul li.englisch_node a {background-position: left top;}
+#wrapperOuter #langSwitch ul li#en.active, #wrapperOuter #langSwitch ul li.englisch_node strong, #wrapperOuter #langSwitch ul li.englisch_node.active a {background-position: left top;}
+#langSwitch ul li.englisch_node strong, #langSwitch ul li.englisch_node a { padding-left: 11px; padding-right: 10px; }
+#wrapperOuter #navPrimary ul li {
+  padding-left: 3px;
+}
+#wrapperOuter #navPrimary ul li h3 a span, #wrapperOuter #navPrimary ul li h3 strong span {
+  top: 3px;
+  text-align: center;
+}
+#wrapperOuter #siteNav #navBreadcrumbs ol li strong, #wrapperOuter #siteNav #navBreadcrumbs ol li a {
+  background-position: 0px 0.3em;
+}
+#wrapperOuter #navSecondary {
+  padding-bottom: 12px;
+}
+#wrapperOuter #navSecondary .navMain {
+  padding-bottom: 0;
+}
+#wrapperOuter #navSecondary:not(:target) {
+  display: block;
+  z-index: 1000;
+}
+#wrapperOuter #navSecondary:target {
+  z-index: 1001;
+}
+#wrapperOuter #navSecondary:not(:target) a:not(#jump), #wrapperOuter #navSecondary:not(:target) li {
+  border-bottom-width: 0;
+  overflow: hidden;
+  height: 0;
+  line-height: 0;
+  padding: 0 1em;
+  margin-bottom: 0;
+}
+#wrapperOuter #navSecondary:not(:target) fieldset {
+  border: 0;
+  overflow: hidden;
+  height: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+#wrapperOuter #navSecondary:target a {
+  border-bottom-width: 1px;
+  position: relative;
+  z-index: 1;
+}
+#wrapperOuter #jump:not(:target) {
+  display: block !important;
+  padding: 0 0 0 32px;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  z-index: 1001;
+}
+#wrapperOuter #navSecondary:target #jump {
+  display: none !important;
+}
+#wrapperOuter #back:not(:target) {
+  display: block !important;
+  position: relative;
+  padding: 0 0 0 32px;
+  margin: 0;
+  border: 0;
+}
+#wrapperOuter #back:not(:target) a {
+  display: block !important;
+  z-index: 0;
+}
+/*********************** 5. CONTENT *********************************/
+#wrapperOuter div.pmTeaser div.singleTeaser div.wrapperSingleTeaser p {
+  display: none;
+}
+#wrapperOuter div.schlaglicht p.teaserImage {
+  max-width: 120px;
+}
+#wrapperOuter div.schlaglicht p.teaserImage img {
+  width: 120px;
+  max-width: 120px !important;
+}
+#wrapperOuter div.imfokus .picture.links,
+#wrapperOuter div.imfokus .picture.linksOhne {
+  max-width: 120px;
+}
+#wrapperOuter div.imfokus .picture.links p.teaserImage img,
+#wrapperOuter div.imfokus .picture.linksOhne p.teaserImage img {
+  width: 120px;
+  max-width: 120px !important;
+}
+#wrapperOuter .picture.links,
+#wrapperOuter .picture.linksOhne {
+  max-width: 120px;
+}
+#wrapperOuter .picture.links p.teaserImage img,
+#wrapperOuter .picture.linksOhne p.teaserImage img,
+#wrapperOuter .teaserImage.picture.links img,
+#wrapperOuter .teaserImage.picture.linksOhne img {
+  max-width: 120px !important;
+}
+#wrapperOuter #wrapperLayoutEinspaltigOhneMS .teaserImage.picture.links img,
+#wrapperOuter #wrapperLayoutEinspaltigOhneMS .teaserImage.picture.linksOhne img {
+  max-width: 340px !important;
+}
+#wrapperOuter div.pmTeaser div.singleTeaser span.picture img {
+  width: 120px;
+  max-width: 120px !important;
+}
+#wrapperOuter div.pictureGallery div.pictureAfterBody {
+  max-width: 120px;
+}
+#wrapperOuter div.pictureGallery div.pictureAfterBody img {
+  width: 120px;
+  max-width: 120px !important;
+}
+#wrapperOuter div.module.shadowBot div.singleview p {
+  clear: none;
+}
+#wrapperOuter #wrapperLayoutStartseite div.module.shadowBot p {
+  clear: none;
+}
+#wrapperOuter p.einbinden {
+  display:none;
+}
+#wrapperOuter div.schlaglicht div.picture.schlaglichtbreite .embedFrame {
+  padding:0;
+}
+/* ** 5.1 Module ** */
+.singleview p.navToTop, .dossierDocuments p.navToTop {
+ border-top: 1px solid #CCC;
+}
+.singleview p.navToTop a, .dossierDocuments p.navToTop a {
+ background-position: right 6px;
+}
+#wrapperInner #wrapperDivisions .wrapperTeaser {
+ width: 100%;
+ margin-left: 0;
+ margin-right: 0;
+}
+#wrapperInner #wrapperDivisions .teaserThreeCol .wrapperTeaser,
+#wrapperInner #wrapperDivisions .teaserTwoCol .wrapperTeaser {
+ margin-bottom: 10px;
+}
+#wrapperInner #wrapperDivisions .teaserThreeCol .wrapperTeaser:last-child,
+#wrapperInner #wrapperDivisions .teaserTwoCol .wrapperTeaser:last-child {
+ margin-bottom: 0px;
+}
+#wrapperLayoutStartseite #wrapperColumnA,
+#wrapperLayoutStartseite #wrapperColumnB {
+ width: 100%;
+}
+.tabbedSliderTeaser .menu li.level1 div a {
+ font-size: 0.9em;
+}
+.tabbedX3 .menu li.level1 div a {
+ font-size: 0.8em;
+}
+.tabbedX3 .tabContent .navIndexLevel2 li a, .tabbedX3 .tabContent .navIndexLevel2 li strong, .tabbedX3 .tabContent .navIndexLevel3 li a, .tabbedX3 .tabContent .navIndexLevel3 li strong {
+ font-size: 0.8em;
+}
+#wrapperLayoutStartseite .module.toptable {
+ display:none !important;
+}
+#wrapperLayoutStartseite .module.zahlDerWoche {
+ display:none !important;
+}
+#wrapperLayoutStartseite span.embedFrame {
+ display: none;
+}
+/* #wrapperOuter #wrapperLayoutStartseite div.quickFacts a.RichTextIntLink {
+  color: #000000;
+}
+#wrapperOuter #wrapperLayoutStartseite div.quickFacts a.RichTextIntLink:hover {
+  cursor: text;
+  text-decoration: none;
+} */
+#wrapperOuter #wrapperLayoutStartseite div.aktuellePublikationen {
+  display:none;
+}
+#wrapperOuter #wrapperLayoutStartseite div.aktuellePublikationen.mobil {
+  display:block;
+}
+#wrapperOuter #wrapperLayoutStartseite div.module.quickFacts.mobil_no,
+#wrapperOuter #wrapperLayoutStartseite div.module.quickFacts.nichtmobil {
+  display: none;
+}
+#wrapperOuter div.module.overlay.nichtmobil,
+#wrapperOuter div.module.shadowBot.nichtmobil {
+  display: none;
+}
+#wrapperOuter div.module.overlay.mobil,
+#wrapperOuter div.module.shadowBot.mobil {
+  display: inherit;
+}
+/* Marginalblock im mobilen Layout ausblenden, aber nicht Startseitenblock - TK, 11.04.2016 */
+#wrapperInner #wrapperDivisions div.marginalblock {
+ display: none;
+}
+#wrapperInner #wrapperDivisions div.marginalblock.ssblock {
+ display: block;
+}
+#wrapperInner #wrapperDivisions div.marginalblock.ssblock div.wrapperTeaser div a {
+ padding-top: 54px;
+}
+/* Kleinere Schrift und geringeres Padding in Mobilansicht, damit ganze Tabellenbreite der Presse-Terminvorschau sichtbar ist - TK, 05.04.2016 */
+#wrapperOuter table.pressetermine {
+ font-size: 0.84em;
+}
+#wrapperOuter div.naechsteTermine table.pressetermine tr.termin td {
+ padding: 4px;
+}
+
+/* ** 5.6 Sitemap ** */
+.wrapperSitemap ul.sitemap li ul a {
+  display:block;
+  padding-left:12px;
+ }
+ .wrapperSitemap ul.sitemap li ul li ul a {
+  display:block;
+  padding-left:18px;
+ }
+ .wrapperSitemap ul.sitemap li ul li ul li ul a {
+  display:block;
+  padding-left:26px;
+ }
+/*********************** 6. FOOTER *********************************/
+#wrapperSB ul#socialBookmarks {
+ margin-right: 12px;
+}
+#wrapperSiteInfo {
+ width: 100%;
+ height: 54px !important; /* wegen Ergaenzung um Link auf Barrierefrei im Footer (wegen Veroeffentlichung Leichte Sprache/Gebaerdenvideos) ergaenzt - TK 24.03.2016 */
+}
+#siteInfo p {
+ margin-left: 12px;
+ font-size: 0.9em;
+ float: none !important; /* wegen Ergaenzung um Link auf Barrierefrei im Footer (wegen Veroeffentlichung Leichte Sprache/Gebaerdenvideos) ergaenzt - TK 24.03.2016 */
+}
+#siteInfo .imprintFooter {
+  display: block !important;
+/*  margin-left:0px !important;*/ /* wegen Ergaenzung um Link auf Barrierefrei im Footer (wegen Veroeffentlichung Leichte Sprache/Gebaerdenvideos) auskommentiert - TK 24.03.2016 */
+  font-size: 0.9em;
+}
+#siteInfo .imprintFooter a, #siteInfo .imprintFooter a:visited, #siteInfo .imprintFooter a:hover {
+  color: #FFFFFF !important;
+}
+#btnDrucken {
+ margin-right: 12px;
+ display: none;
+}
+#footerLinks ul li {
+    margin-right: 0;
+    width: 100%;
+}
+#footerLinks > ul > li {
+ margin-bottom: 10px;
+}
+/*********************** 7. TOOLS **********************************/
+.fbClose {line-height: 1em;}
+/*********************** 8. TEMP SECTION ***************************/

@@ -116,11 +116,7 @@ namespace VehicleBehaviorLearning.Windows
             }
             DeviationLineCharts.Series[0].Values.Add(SimulationManager.CalculateDeviation(SimulationManager.SimulationData.BestResults.LastOrDefault()));
             MutationLineCharts.Series[0].Values.Add(SimulationManager.CalculateMutationChance(SimulationManager.SimulationData.BestResults.LastOrDefault()));
-
-#if DEBUG
-#else
             TreeViewControl.TreeNodes = simulationData.AllResults.Select(s => s.Select(k => k.VehicleBehavior).ToArray()).SelectMany(k => k);
-#endif
         }
 
         private void StopButton_OnClick(object sender, RoutedEventArgs e)
@@ -130,6 +126,7 @@ namespace VehicleBehaviorLearning.Windows
 
         private async void RunButton_OnClick(object sender, RoutedEventArgs e)
         {
+            VisualizeBestButton.IsEnabled = false;
             RunButton.IsEnabled = false;
             SingleStepButton.IsEnabled = false;
             StopButton.IsEnabled = true;
@@ -143,12 +140,30 @@ namespace VehicleBehaviorLearning.Windows
             RunButton.IsEnabled = true;
             SingleStepButton.IsEnabled = true;
             StopButton.IsEnabled = false;
+            VisualizeBestButton.IsEnabled = true;
         }
 
         private async void SingleStepButton_OnClick(object sender, RoutedEventArgs e)
         {
+            VisualizeBestButton.IsEnabled = false;
+            RunButton.IsEnabled = false;
+            SingleStepButton.IsEnabled = false;
+            StopButton.IsEnabled = false;
+            IsStopped = false;
+            await SimulationManager.CompleteGenerationAsync();
+            await Task.Delay(10);
+            IsStopped = true;
+            RunButton.IsEnabled = true;
+            SingleStepButton.IsEnabled = true;
+            StopButton.IsEnabled = false;
+            VisualizeBestButton.IsEnabled = true;
+        }
+
+        private async void VisualizeBestButton_OnClick(object sender, RoutedEventArgs e)
+        {
             await ShowSimulationWindow(SimulationManager.SimulationData.BestResults.Last().VehicleBehavior);
         }
+        
 
         private async Task ShowSimulationWindow(NeuronalVehicleBehavior vehicleBehavior)
         {
@@ -209,6 +224,11 @@ namespace VehicleBehaviorLearning.Windows
         private void TreeViewControl_OnTreeNodeMouseLeave(object arg1, ITreeNode arg2)
         {
             Hover(arg2, false);
+        }
+
+        private async void SimulationResultDisplay_OnVisualizeRequested(SimulationResult obj)
+        {
+            await ShowSimulationWindow(obj.VehicleBehavior);
         }
     }
 }

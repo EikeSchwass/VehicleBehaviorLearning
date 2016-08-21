@@ -1,0 +1,3123 @@
+.GlossarBox {
+position:relative;
+left:-10px;
+width:320px;
+padding:12px;
+margin-bottom:20px;
+}
+.GlossarBox #cbox-wrapper h4, .GlossarBox #cbox-wrapper h1 {text-align:center; background-color:#ccc; font-weight:normal; font-size:1.25em; letter-spacing:1px; padding:6px; line-height:1.3em; margin-top:6px;}
+/* h2/h3-Ueberschriften in Glossarbox deutlicher hervorheben - TK 11.08.2016 */
+/* .GlossarBox #cbox-wrapper h2, .GlossarBox #cbox-wrapper h3 {margin-top:10px; font-size:1.083em;} */
+.GlossarBox #cbox-wrapper h2 {font-size:1.5em; line-height:28px; padding:0 0 12px;}
+.GlossarBox #cbox-wrapper h3{font-size:1.1667em; line-height:1.1428em; margin-top:10px; padding-bottom:6px;font-weight:bold;}
+.glossarClose:after {clear:both;content:" ";display:block;font-size:0;height:0;visibility:hidden;}
+#fancybox-outer.glossar .formHandle span {display:none; }
+#fancybox-outer.glossar .formHandle {background-image:none; display:none;}
+#fancybox-outer.glossar .fbClose {top:-16px;}
+.x3 .xx1, .x3 .xx2, .x3 .xx3, .x2 .xx1, .x2 .xx2, .x1 .xx1 {overflow-x:hidden!important;}
+/* ***********************************************************
+ ------------- CONTENT -----------
+ 0. RESET SETTINGS
+ 1. GENERAL STYLES
+  1.1 Link
+  1.2 Table
+  1.3 Form
+  1.4 Editor Styles
+  1.5 PrintPreview
+  1.A Tools
+ 2. LAYOUT
+  2.1 Social Bookmarks
+  2.2 Pictures
+  2.3 Overlay
+  2.4 Tabbed Slider
+   2.4.1 Tabbed Slider Teaser
+   2.4.2 Tabbed Slider X3
+  2.5 Search
+   2.5.1 SearchForm
+   2.5.2 SearchResult
+   2.5.3 Filter
+ 3. HEADER
+ 3.1 Service Navigation Meta
+ 3.2 Language Switcher
+ 3.3 Search Bar
+ 4. NAVIGATION
+  4.1 Primary Navigation
+   4.1.1 Flyout
+  4.2 Secondary Navigation
+  4.3 Breadcrumb
+ 5. CONTENT
+  5.1 Module
+  5.2 Area
+  5.3 Special Elements
+   5.3.1 Eilmeldung
+   5.3.2 Teaser
+   5.3.3 Schlaglicht
+   5.3.4 Tagcloud
+   5.3.5 Weitere Statistiken
+   5.3.6 Zahl der Woche
+   5.3.7 aktuelle Publikationen
+   5.3.8 interaktive Anwendungen
+   5.3.9 Schiebeb?hne
+   5.3.10 naechste Termine
+   5.3.11 PublicationBox
+   5.3.12 Kontaktformular
+   5.3.13 BestellerdatenForm
+   5.3.14 d115:leistung leistung
+   5.3.19 Presse Terminvorschau
+  5.4 SingleView
+   5.4.1 SingleView Anchor
+   5.4.2 SingleView ListStyles
+   5.4.3 SingleView PhotoGallery
+   5.4.4 Bestellformular
+  5.5 Teaser Layout
+   5.5.1 Teaser Wrapper
+   5.5.2 Teaser Col Layout
+   5.5.3 StatMagazin
+  5.6 Sitemap
+  5.7 Optimierte Mobilversion
+ 6. FOOTER
+ 7. SPECIAL ELEMENTS
+  7.1 Flash Content
+  7.2 Calendar
+  7.3 FancyBox
+ 8. TEMP SECTION
+ ----------------------------------
+*********************************************************** */
+/*********************** 0. RESET SETTINGS ***********************/
+body {background: white; margin:0; padding:0;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0; padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+fieldset,img { border: 0 none; vertical-align: top;}
+address,caption,cite,code,dfn,em,th,var {font-style:normal; font-weight:normal;}
+ul {list-style:none;}
+caption, th, td {text-align:left; font-weight: normal;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+/***Um die gepunktete Unterstreichung der Acronyme zu verhindern, Auszeichnung von text-decoration:none;***/
+abbr,acronym {border:0; font-variant:normal;text-decoration:none;}
+input,textarea,select {font-family:inherit; font-size:inherit; font-weight:inherit;}
+:focus {outline: 0 none;}
+button {font-family: inherit;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+button {font-family: inherit;}
+acronym,abbr,span[lang]{font-weight: inherit;}
+kbd { margin: 0; padding: 0; border: 0; outline: 0; font-weight: normal; font-style: inherit; font-size: 100%; font-family: inherit;}
+.ieButton  {display:none!important;}
+/*********************** 1. GENERAL STYLES ***********************/
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 0.75em; /* 12px */
+ line-height: 1.4167em; /* 17px */
+ color: #2B2B2D;
+ background-color: #f4f4f4;
+}
+/* ** Die Punkte bei Umlauten in Überschriften wurden im IE9 nicht angezeigt. Daher padding-top gesetzt. ** */
+h3.boxheadline, h2.boxheadline {
+  font-size:1.167em; /*fix*/
+  line-height:1em;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  padding-top: 2px;
+  padding-bottom: 16px;
+}
+/* ** 1.1 Link ** */
+ a, a:active, a:visited {color: #075083; text-decoration: none;}
+ a, object, embed {outline: none;}
+ a:focus {outline: 1px dotted #000; text-decoration: underline;}
+ a:hover {text-decoration: underline;}
+ .shoppingCartAdd a.shoppingCartLink, .shoppingCartRemove a.shoppingCartLink {
+  display: inline-block;
+  padding-left: 24px;
+  padding-top: 2px;
+ }
+ .scrollLinks {
+   display:block;
+   clear:both;
+   text-align:center;
+   padding-bottom:24px;
+ }
+ .scrollLinks .forward, .scrollLinks .back, .scrollLinks .start {
+   display:inline-block;
+ }
+ .scrollLinks .start {
+   position:relative;
+   top:-6px;
+   padding:0 6px;
+ }
+ .scrollLinks .forward a, .scrollLinks .back a {
+   display:inline-block;
+   width:21px;
+   height:21px;
+ }
+ .scrollLinks .forward a img, .scrollLinks .back a img {
+   display:none;
+ }
+ .downloadLink a, .downloadIcon a { display:inline-block; }
+/* Glossar-Links schwarz und unterpunktet darstellen - TK 11.08.2016 */
+a.RichTextGlossarLink, a.RichTextGlossarLink:visited {color:#000; border-bottom:1px dotted #000; text-decoration:none;}
+a.RichTextGlossarLink:hover, a.RichTextGlossarLink:active, a.RichTextGlossarLink:focus {color:#000; border-bottom:1px dotted #000; text-decoration:none;}
+ /* 1.2.1 Marginal Table */
+ .quickFacts table, .toptable table {}
+ .quickFacts table tr, .toptable table tr {padding: 2px 8px;}
+ .quickFacts table th, .toptable table th {}
+ .quickFacts table td, .toptable table td {background-color: #ccdfec; border: 1px solid #fff; padding: 2px 8px;}
+ .quickFacts table tbody tr.highlight td, .toptable table tbody tr.highlight td {background-color: #FDE7CB;}
+ .quickFacts table tbody tr.even td, .toptable table tbody tr.even td {background-color: #e5eff5;}
+/* ** 1.2 Table ** */
+ table {background-color:#f5f7f8; width: 100%; margin-bottom: 12px; border-collapse: collapse; border-spacing: 0px;}
+ table caption {padding-bottom: 6px; text-align: left; font-weight: bold;}
+ table th {background-color:#C8CCD0;}
+ table tbody tr:last-child th {border-bottom-color: #C8CCD0;}
+ table tfoot tr td {border: none; background-color: #fff; padding-top: 15px; text-align: left;}
+ .module table tfoot tr td p {padding-bottom: 8px;}
+ table tr th {border:1px solid #fff; border-top-color: #C8CCD0; padding:4px 8px 4px; padding-bottom:4px; vertical-align: middle; text-align: center;}
+ table tr td {border:1px solid #C9C9C9; background-color: #fff; padding:4px 8px 4px; padding-bottom:4px; text-align: right;}
+ table td[scope="row"], table th[scope="row"] {background-color:#E7EAEC;}
+ table th.left, table td.left {text-align: left;}
+ table th.center, table td.center {text-align: center;}
+ table th.right, table td.right {text-align: right;}
+ table tbody tr.highlight td {background-color:#8EB7D2;}
+ table tbody tr.even td {background-color:#E7EAEC;}
+ table tbody .bodyTitle,
+ table tbody .bodyTitle td,
+ table tbody .ZentrierteUeberschrift,
+ table tbody .ZentrierteUeberschrift td,
+table tbody .Zwischenueberschrift,
+ table tbody .Zwischenueberschrift td {background-color: #C8CCD0; border-left: 1px solid #fff; border-bottom: 1px solid #fff; text-align: center;}
+ table strong {font-weight: bold;}
+ table em {font-style: italic;}
+ table strong em, table em strong {font-weight: bold; font-style: italic;}
+ table tbody th,
+ table tbody td.Vorspalte,
+ table tbody td.Vorspalte-ind1,
+ table tbody td.Vorspalte-ind2,
+ table tbody td.Vorspalte-ind3,
+ table tbody td.Vorspalte-ind4,
+ table tbody td.Vorspalte-ind5,
+ table tbody td.Vorspalte-ind6,
+ table tbody td.Vorspalte-ind7 {text-align: left; vertical-align: middle; color: #2B2B2D; background-color: #e7eaec !important; border-color: #fff;}
+ table th.Vorspalte, table td.Vorspalte {padding-left:0.36em;}
+ table th.Vorspalte-ind1, table td.Vorspalte-ind1 {padding-left:0.72em;}
+ table th.Vorspalte-ind2, table td.Vorspalte-ind2 {padding-left:1.44em;}
+ table th.Vorspalte-ind3, table td.Vorspalte-ind3 {padding-left:2.16em;}
+ table th.Vorspalte-ind4, table td.Vorspalte-ind4 {padding-left:2.88em;}
+ table th.Vorspalte-ind5, table td.Vorspalte-ind5 {padding-left:3.6em;}
+ table th.Vorspalte-ind6, table td.Vorspalte-ind6 {padding-left:4.32em;}
+ table th.Vorspalte-ind7, table td.Vorspalte-ind7 {padding-left:5.04em;}
+/* Die beiden folgenden Styles wurden eingefuegt, um in Tabellen die erste Zelle immer linksbündig zu haben  -  9.10.15 JK */
+/* Auch bei den Kopfzeilen und den Zwischenueberschriften*/
+/* table tbody tr td.Zwischenueberschrift {text-align: left; padding-left: 0.36em; } */
+/*table thead tr:first-child th:first-child,
+ table thead tr:first-child th:first-child p {text-align: left !important; padding-left: 0.36em !important; } */
+/* ** 1.3 Form ** */
+ textarea {resize: none;font-family: Arial, Helvetica, sans-serif; font-size: 1em; line-height: 1.4167em; color: #000000;}
+/* ** 1.4 Editor Styles ** */
+ .smallfont1 {
+  font-size: 0.8em;
+ }
+ .smallfont2 {
+  font-size: 0.9em;
+ }
+ .largefont {
+  font-size: 1.15em;
+ }
+ .indentstyle1 {
+  padding-left: 20px;
+ }
+ .indentstyle2 {
+  padding-left: 40px;
+ }
+ .floatleftstyle {
+  float: left;
+ }
+ .floatleftstyle img {
+  padding: 4px 7px 2px 0px;
+ }
+ .floatrightstyle {
+  float: right;
+ }
+ .floatrightstyle img {
+  padding: 4px 0px 2px 7px;
+ }
+ .colouredbg {
+  background-color: #EEEEEE;
+ }
+ .footer {
+  display: block;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 10px auto;
+ }
+ .spaceleftstyle {
+  padding-left: 15px;
+ }
+ .spacerightstyle {
+  padding-right: 15px;
+ }
+ .optionstyle1 {
+  display: block;
+  width: 200px;
+ }
+ .optionstyle2 {
+  font-weight: bold;
+ }
+ .optionstyle3 {
+  padding-top: 3px;
+  margin-top: 3px;
+ }
+ h1 .optionstyle3 {
+  padding: 3px 7px 3px 7px;
+  background-color: #eeeeee;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+ }
+ .highlight {
+  font-weight: bold;
+  background-color: #eeeeee;
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 1em 0;
+ }
+ .noModule .module {
+  margin-bottom: 0;
+ }
+/* Unter Publikationen erhalten alle Bilder einen grauen Rahmen. Um dies zu umgehen, kann beim Einbetten eines Bildes die Klasse "noborder" unter "Rolle" vergeben werden. - TK, 20.04.2016. Ergaenzung fuer Marginalspalte (supplement) - TK 02.05.2016 */
+#content span.teaserImage.picture.links.noborder img, #supplement span.teaserImage.picture.links.noborder img {
+ border: 0;
+}
+/* 1.5 PrintPreview */
+#printPreview {
+    border-bottom: 1px solid #C8CCD0;
+    display: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.printpreview #printPreview {
+ display: block;
+}
+.printpreview .formHandle {
+ cursor: pointer;
+ display: inline-block;
+ height: 29px;
+ padding-left: 6px;
+}
+.printpreview .formHandle span {
+ cursor: pointer;
+ display: inline-block;
+ height: 29px;
+ padding-right: 6px;
+}
+.printpreview .formHandle a {
+ background: none repeat scroll 0 0 transparent;
+ border: 0 none;
+ color: #FFFFFF;
+ cursor: pointer;
+ font-weight: bold;
+ margin: 0;
+ padding: 0 5px;
+ line-height: 2.4em;
+}
+.printpreview .formHandle a:hover {
+ text-decoration: none;
+}
+/* ** 1.A Tools ** */
+ .floatleft {float: left;}
+ .floatright {float: right;}
+ .clear {clear: both;}
+ .noJS, .hidden {display: none;}
+ .navSkip, .aural {width: 1px; height: 1px; position: absolute; top: -1000px; left: -2000px; overflow: hidden;}
+ /* Clearfix */
+ .clearfix:after, .clear:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+ * html .clearfix, * html .clear {zoom: 1;} /* IE6 */
+ *:first-child+ html .clearfix, *:first-child+ html .clear {zoom: 1;} /* IE7 */
+ p.center {text-align:center;}
+ /* Embed Frame */
+ .embedFrame {
+   padding:6px 14px 4px 16px;
+  background-color:#E5EFF5;
+  border-top:1px solid #D9D9D9;
+  display: block;
+ }
+ .embedFrame .headline.jsON {
+   color:#075083;
+  cursor:pointer;
+  padding-left:16px;
+  display: block;
+ }
+ .embedFrame .headline.jsON.active {
+  padding-bottom: 5px;
+ }
+ .embedFrame .headline.jsON:hover {
+   text-decoration:underline;
+ }
+ .embedFrame .content {
+  font-size: 0.917em;
+ }
+ .embedFrame .content input {
+   width:100%;
+   border:1px solid #D9D9D9;
+   padding:2px;
+   margin-bottom: 10px;
+   margin-top: 2px;
+ }
+/*********************** 2. LAYOUT ***********************/
+#wrapperOuter {
+ text-align: center;
+}
+#wrapperInner {
+ margin: 0 auto;
+ text-align: left;
+ min-width: 994px;
+ max-width: 1400px;
+}
+#wrapperHeader {
+ position: relative;
+ margin: 0 26px 0 30px;
+ height: 127px;
+}
+#siteNav {
+ margin: 12px 0 6px 0;
+}
+#wrapperDivisions {
+ position: relative;
+ padding: 0 28px 12px 32px;
+ margin-top: 21px;
+ top: -21px;
+}
+#wrapperDivisions,
+#wrapperLayoutStartseite,
+#wrapperLayoutEinspaltigMitMS,
+#wrapperLayoutEinspaltigOhneMS,
+#wrapperLayoutZweispaltigMitMS,
+#wrapperLayoutZweispaltigOhneMS,
+#wrapperLayoutDreispaltigOhneMS {
+ overflow: hidden;
+}
+#supplement {
+ float: right;
+}
+#supplement left{
+ float: left;
+}
+#wrapperLayoutStartseite {
+ margin-top: 34px;
+}
+#wrapperLayoutStartseite #wrapperColumnA {
+ float: left;
+ width: 60%;
+}
+#wrapperLayoutStartseite #wrapperColumnB {
+ float: right;
+ width: 38%;
+}
+#wrapperLayoutEinspaltigMitMS #wrapperContent {
+ float: left;
+ width: 64%;
+ margin-left: 20px;
+}
+#wrapperLayoutEinspaltigMitMS #wrapperContent .search {
+ float: right;
+ width: 64%;
+ margin-left: 20px;
+}
+#wrapperLayoutEinspaltigMitMS #supplement {
+ width: 32%;
+}
+#wrapperLayoutEinspaltigOhneMS #wrapperContent {
+ margin-left: 20px;
+}
+#wrapperLayoutZweispaltigMitMS #wrapperContent {
+ float: left;
+ margin-left: 20px;
+}
+#wrapperLayoutZweispaltigMitMS #wrapperColumnA {
+ float: left;
+ width: 32%;
+ margin-right: 2%;
+}
+#wrapperLayoutZweispaltigMitMS #wrapperColumnB {
+ float: left;
+ width: 32%;
+}
+#wrapperLayoutZweispaltigMitMS #supplement {
+ width: 32%;
+}
+#wrapperLayoutZweispaltigOhneMS #wrapperContent {
+ /*float:left;*/
+ margin-left: 20px;
+}
+#wrapperLayoutZweispaltigOhneMS #wrapperColumnA {
+ float: left;
+ width: 49%;
+}
+#wrapperLayoutZweispaltigOhneMS #wrapperColumnB {
+ float: right;
+ width: 49%;
+}
+#wrapperLayoutDreispaltigOhneMS #wrapperContent {
+ /*float:left;*/
+ margin-left: 20px;
+}
+#wrapperLayoutDreispaltigOhneMS #wrapperColumnA {
+ float: left;
+ width: 32%;
+}
+#wrapperLayoutDreispaltigOhneMS #wrapperColumnB {
+ float: left;
+ width: 32%;
+ margin-left: 2%;
+}
+#wrapperLayoutDreispaltigOhneMS #wrapperColumnC {
+ float: right;
+ width: 32%;
+}
+#wrapperFooter {
+ text-align: left;
+}
+#wrapperFooter #footerLinks {
+ margin: 0 auto;
+ min-width: 994px;
+ max-width: 1400px;
+}
+/* ** 2.1 Social Bookmarks ** */
+ #wrapperSB {
+  margin: 0 auto;
+  text-align: left;
+  min-width: 994px;
+  max-width: 1400px;
+  background-color: #f4f4f4;
+ }
+ #wrapperSiteInfo {
+  height: 30px;
+ }
+ #siteInfo {
+  margin: 0 auto;
+  min-width: 994px;
+  max-width: 1400px;
+ }
+/* ** 2.2 Pictures ** */
+ .picture, .illustration {
+   padding-bottom:4px;
+ }
+ .module .picture, .module .illustration {
+   padding-bottom: 0px;
+ }
+ .picture.rand, .illustration.rand {
+   border:1px solid #d9d9d9;
+ }
+ .picture.links, .illustration.links {
+   float:left;
+  margin:0 12px 0px 0;
+ }
+ .picture.rechts, .illustration.rechts {
+   float:right;
+  margin:0 0 8px 12px;
+  text-align:left!important;
+ }
+ span.picture.floatleft,
+ p.illustration.floatleft {
+  margin-right:1em;
+ }
+.pressrelease .pictureBeforeBody {
+ float: left;
+ margin-right: 15px;
+}
+/* ** 2.3 Overlay ** */
+ .overlay.module {
+   padding:0;
+   padding-bottom:12px;
+   background-color:#e2edf3;
+ }
+  .overlay.overlayWeiss {background-color:#FFF;}
+ .overlay h1 {
+   font-size:1.167em; /*fix*/
+   line-height:1em;
+   text-transform:uppercase;
+   letter-spacing:1px;
+   font-weight:normal;
+   padding:12px 14px 9px 16px;
+   background-color:#ffffff;
+ }
+ .overlay ul.menu {
+   float:right;
+   width:30%!important;
+  margin-top:12px;
+ }
+ .overlay ul.menu li {
+   padding:6px 4px 6px 12px;
+   margin-left:10px;
+   background-color:#ffffff;
+   margin-bottom:2px;
+ }
+  .overlay.overlayWeiss ul.menu li {background-color:#f4f4f4;}
+ .overlay ul.menu li.active {
+   padding:6px 4px 6px 22px;
+   margin-left:0px;
+   background-color:#065891;
+ }
+ .overlay ul.menu li.active a {
+   color:#ffffff;
+ }
+ .overlay ul.menu li.active a, .overlay ul.menu li.active a:hover {
+   cursor:default;
+  text-decoration:none;
+ }
+ .overlay .content {
+   width:70%!important;
+ }
+ .overlay .content .module, .overlay .content .module .wrapperTeaser {
+   background-color:#e2edf3;
+ }
+ .overlay.overlayWeiss .content .module, .overlay.overlayWeiss .content .module .wrapperTeaser {
+   background-color:#FFF;
+ }
+/* Aufzaehlungspunkte wieder sichtbar machen fuer WiSta-Ueberarbeitung (in OverlayWeiss innerhalb von Reitern) - TK 07.04.2016  */
+.singleview.generictable .overlay.overlayWeiss .content .singleview.documentleaf ul {list-style: disc;}
+/* ** 2.4 Tabbed Slider ** */
+ /* 2.4.1 Tabbed Slider Teaser */
+ .tabbedSliderTeaser {
+   height:400px;
+  overflow-y:auto;
+  position:relative;
+ }
+ .tabbedSliderTeaser .singleTeaser .teaser {
+  padding: 7px 0 4px;
+ }
+ .tabbedSliderTeaser .menu {
+   height:50px;
+   overflow-x:auto;
+  overflow-y: hidden;
+  padding-bottom:0px;
+  padding-left:0;
+  white-space:nowrap;
+ }
+ .tabbedSliderTeaser .menu li.level1 {
+  display:inline-block;
+  height:45px;
+  padding-left:8px;
+  vertical-align: top;
+ }
+ .tabbedSliderTeaser .menu li.level1 div {
+   display:inline-block;
+   height:45px;
+   padding: 11px 13px 0 9px;
+   white-space: normal;
+ }
+ .tabbedSliderTeaser .menu li.level1.current div span {
+   display:inline-block;
+   position:relative;
+   top:16px;
+   font-weight:bold;
+ }
+ .tabbedSliderTeaser .menu li.level1 div a {
+  position: relative;
+  line-height: 14px;
+ }
+ .tabbedSliderTeaser .menu li.level1.current div a {
+   color:#2B2B2D;
+  font-weight:bold;
+  cursor:default;
+ }
+ .tabbedSliderTeaser .tab h2 a {
+   color:#2B2B2D;
+  cursor:default;
+ }
+ .tabbedSliderTeaser .tab h2 a:hover {
+   text-decoration:none;
+ }
+ .tabbedSliderTeaser .btnLeft, .tabbedSliderTeaser .btnRight {
+  position:absolute;
+  top:4px;
+ }
+ .tabbedSliderTeaser .btnLeft {
+   left:0;
+ }
+ .tabbedSliderTeaser .btnRight {
+   right:0;
+ }
+ .tabbedSliderTeaser .btnLeft a, .tabbedSliderTeaser .btnRight a {
+  display:block;
+  width:18px;
+  height:42px;
+ }
+ .tabbedSliderTeaser .btnLeft a:focus, .tabbedSliderTeaser .btnRight a:focus {
+   outline:none;
+ }
+ .tabbedSliderTeaser .btnLeft a.disabled, .tabbedSliderTeaser .btnRight a.disabled {
+  cursor:default;
+ }
+ /* 2.4.2 Tabbed Slider X3 */
+.tabbedX3 {
+ position: relative;
+}
+.tabbedX3 .menu {
+ height: 50px;
+ overflow-x: auto;
+ overflow-y: hidden;
+ padding-bottom: 0px;
+ white-space: nowrap;
+ padding-left: 0px;
+}
+.tabbedX3 .menu li.level1 {
+ display: inline-block;
+ height: 45px;
+ padding-left: 8px;
+ vertical-align: top;
+}
+.tabbedX3 .menu li.level1 div {
+ display: inline-block;
+ height: 45px;
+ padding: 11px 13px 0 9px;
+ white-space: normal;
+}
+.tabbedX3 .menu li.level1.current div span {
+ display: inline-block;
+ position: relative;
+ font-weight: bold;
+}
+.tabbedX3 .menu li.level1 div {
+ padding-left: 8px;
+ padding-right: 16px;
+ max-width: 270px;
+}
+.tabbedX3 .menu li.level1 div a {
+ display: inline-block;
+ position: relative;
+ line-height: 1.2em;
+}
+.tabbedX3 .singleTeaser .teaser {
+  padding: 7px 0 4px;
+ }
+.tabbedX3.content {
+ padding: 0;
+}
+.tabbedX3 .tabContent .module.shadowBot {
+ padding: 0;
+ margin: 0;
+ background-image: none;
+}
+.tabbedX3 .tabContent {
+ padding-top: 5px;
+}
+.tabbedX3.content .module {
+ padding: 0;
+ /*clear: both;*/
+}
+.tabbedX3 .tabContent .navIndexLevel2 {
+ margin-right: 20px;
+}
+.tabbedX3 .tabContent .navIndexLevel2, .tabbedX3 .tabContent .navIndexLevel3 {
+ float: left;
+ overflow: hidden;
+ margin-top: 8px;
+ margin-bottom: 10px;
+}
+.tabbedX3 .tabContent .navIndexLevel2 li, .tabbedX3 .tabContent .navIndexLevel3 li {
+ float: left;
+ padding-left: 6px;
+ height: 25px;
+}
+.tabbedX3 .tabContent .navIndexLevel2 li a, .tabbedX3 .tabContent .navIndexLevel2 li strong, .tabbedX3 .tabContent .navIndexLevel3 li a, .tabbedX3 .tabContent .navIndexLevel3 li strong {
+ display: inline-block;
+ height: 25px;
+ padding-left: 6px;
+ padding-right: 12px;
+ line-height: 2em;
+}
+.tabbedX3 .tabContent .navIndexLevel2 li strong, .tabbedX3 .tabContent .navIndexLevel3 li strong {
+ font-weight: bold;
+}
+.tabbedX3 .tabContent.level3 {
+ padding-top: 12px;
+}
+.tabbedX3 .btnLeft, .tabbedX3 .btnRight {
+ position: absolute;
+ top: 4px;
+}
+.tabbedX3 .btnLeft {
+ left: 0px;
+}
+.tabbedX3 .btnRight {
+ right: 0px;
+}
+.tabbedX3 .btnLeft a, .tabbedX3 .btnRight a {
+ display: block;
+ width: 18px;
+ height: 42px;
+}
+.tabbedX3 .btnLeft a:focus, .tabbedX3 .btnRight a:focus {
+ outline: none;
+}
+.tabbedX3 .btnLeft a.disabled, .tabbedX3 .btnRight a.disabled {
+ cursor: default;
+}
+.tabbedX3 .overlay .menu {
+ height: auto;
+ background: none;
+ list-style-type: none;
+}
+.EinfacheBildergalerie .picture {
+ position: relative;
+}
+.EinfacheBildergalerie .picture a.lupe{
+  top:0px;
+  float:right;
+  height:100%;
+  position:absolute;
+  left:0;
+  width:100%;
+  display:block;
+  text-align:right;
+}
+.EinfacheBildergalerie .picture a.lupe img {
+ position: absolute;
+ bottom: 17px;
+ right: 5px;
+}
+.EinfacheBildergalerie p.picture {
+ float: left;
+ margin-right: 2em;
+}
+/* ** 2.5 Search ** */
+ /* 2.5.1 SearchForm */
+  .searchform .volltextsuche {
+    padding-bottom:12px;
+  }
+  .searchform .volltextsuche p.suchEingabe {
+    width:80%;
+    margin:0 auto;
+  }
+  .searchform .volltextsuche p.suchEingabe .formField input {
+    width:70%;
+    padding:3px 0 3px 4px;
+    margin-right:2px;
+  }
+  .searchform .volltextsuche p.suchEingabe .formHandle {
+    display:inline-block;
+    height:29px;
+    padding-left:6px;
+    cursor:pointer;
+  }
+  .searchform .volltextsuche p.suchEingabe .formHandle span {
+    display:inline-block;
+    height:29px;
+    padding-right:6px;
+    cursor:pointer;
+  }
+  .searchform .volltextsuche p.suchEingabe .formHandle span input {
+    color:#ffffff;
+    background:none;
+    border:0;
+    padding:6px 10px;
+    font-weight:bold;
+    cursor:pointer;
+  }
+  .searchform p.treffer {
+    font-size:1.3333em; /*16px*/
+    font-weight:bold;
+    border-top:2px solid #f0f2f1;
+    padding-top:16px;
+  }
+  .searchform .searchOptions {
+    background-color:#ccdfec;
+    padding:12px;
+    margin-bottom:12px;
+  }
+  .searchform .searchOptions .sort {
+    float:left;
+  }
+  .searchform .searchOptions .rows {
+    float:right;
+  }
+  .searchform .searchOptions span.info {
+    display:block;
+    font-weight:bold;
+    padding:0 0 4px 2px;
+  }
+  .searchform .searchOptions .buttons {
+    display:inline;
+    white-space:nowrap;
+  }
+  .searchform .searchOptions button {
+    float:left;
+    display:inline-block;
+    border:0;
+    background-color:transparent;
+    line-height:25px;
+    padding:0px;
+    margin: 0px;
+    cursor:pointer;
+    overflow:visible; /* removes extra side padding in IE */
+  }
+  /* Firefox/Webkit (Safari) Fix for button-Elements */
+  .searchform .searchOptions button::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+      margin:0;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari and Google Chrome only - fix margins */
+    .searchform .searchOptions button div {
+      margin: -1px -3px;
+    }
+  }
+  .searchform .searchOptions .disabledPageButton, .searchform .searchOptions .disabledPageButton div, .searchform .searchOptions .disabledPageButton div span {
+    cursor:default;
+    color:#2b2b2d;
+    font-weight:bold;
+  }
+  .searchform .searchOptions button div, .searchform .searchOptions button div span {
+    display:block;
+    height:25px;
+    line-height:25px;
+  }
+  .searchform .searchOptions button div {
+    padding:0 8px 0 0;
+  }
+  .searchform .searchOptions button div span {
+    padding:0 0 0 8px;
+  }
+ /* 2.5.2 SearchResult */
+  .searchresult ul.hitlist {list-style-type:none; padding:0; margin-bottom:12px;}
+  .searchresult ul.hitlist li {border-bottom:2px solid #F0F2F1; padding-bottom:12px; margin-bottom:12px;}
+  .searchresult ul.hitlist .searchResultRight {float:right; width:15%; height:31px; margin-top:0px;}
+  .searchresult ul.hitlist .searchResultRight p {font-weight:bold; padding:0px; margin:0px; color:#676767; text-align:center;}
+  .searchresult ul.hitlist .searchResultLeft {float:left; width:83%;}
+  .searchresult ul.hitlist .searchResultLeft em{background-color: #F8C326; font-weight: bold;}
+  .searchresult ul.hitlist .searchResultLeft h2 {font-size:1.1667em; /*14px*/ line-height:1.1428em; /*16px*/ font-weight:bold; padding-bottom:4px;}
+  .searchresult ul.hitlist .searchResultLeft p.picture a.lupe {bottom:0px;}
+  .searchresult ul.hitlist .searchResultLeft strong {font-weight:bold; background-color:#f8c326; padding:1px 3px;}
+  .searchresult ul.hitlist .searchResultLeft p.docType {font-weight:bold; padding-top:4px; color:#676767;}
+  .searchresult ul.hitlist .searchResultLeft div.playbutton {float:left; position:relative; padding-right:12px; padding-bottom:4px;}
+  .searchresult ul.hitlist .searchResultLeft div.playbutton a.playbutton {position:absolute; top:48px; left:84px; }
+  .searchresult ul.hitlist .searchResultHighlight {float:left; width:75%; padding: 10px; margin-top: 5px; background-color: #E6E6E6;}
+  .searchresult ul.hitlist .searchResultHighlight  em{background: #ffff00;}
+  .searchresult .pagelinks {margin-bottom:20px; text-align:center; background-color:#CCDFEC;}
+  .searchresult .pagelinks .naviButtons {display:inline-block; padding:10px 0 6px;}
+  .searchresult .pagelinks .naviButtons button, .searchresult .pagelinks .naviButtons span {display:inline-block; margin:0 6px 4px 6px; font-weight:bold;}
+  .searchresult .pagelinks .naviButtons button {background:none; border: 1px solid #0160a2; cursor:pointer; color:#075083;}
+  .searchresult .pagelinks .naviButtons button:hover {border:1px solid #fff;}
+  .searchresult .pagelinks .naviButtons button.disabledPageButton {cursor:default; color:#676767;}
+  .searchresult .pagelinks .naviButtons button.disabledPageButton:hover {border: 1px solid #0160a2;}
+  .searchresult .pagelinks .naviButtons span {display:inline-block;}
+  .searchresult .picture img {max-height: 100px;}
+ /* 2.5.3 Filter */
+ .suchfilter.module {padding: 0; background-color: #F4F4F4;}
+ form#suchfilter h3 {font-size: 1.167em; line-height: 1em; text-transform: uppercase; letter-spacing: 1px; padding: 12px 30px 10px 16px; font-weight: normal; background-color: #ffffff;}
+ form#suchfilter h4 {font-size: 1.167em; line-height: 1.3em; padding: 4px 50px 5px 16px; font-weight: normal; border-bottom: 1px solid #DEEEF8;}
+ form#suchfilter fieldset {position: relative; margin-bottom: 10px; background-color: #CCDFEC; }
+ form#suchfilter fieldset .btnExpand {position: absolute; right: 7px; top: 9px; width: 21px; height: 21px; cursor: pointer;}
+ form#suchfilter fieldset .options .btnExpand {top: 3px;}
+ form#suchfilter fieldset .options {position: relative; padding: 12px 0;}
+ form#suchfilter fieldset .options .options {padding-left: 22px; background-color: red;}
+ form#suchfilter fieldset.themenBereich .options {padding: 0;}
+ form#suchfilter fieldset.suchBereich .options .options {background-color: #DEEEF8;}
+ form#suchfilter fieldset.themenBereich .options .options {padding: 3px 0 0; background-color: #DEEEF8;}
+ form#suchfilter fieldset.themenBereich .options .options .options{padding: 0px 0 4px 9px;}
+ form#suchfilter fieldset .options .formField {display: block; overflow: hidden; padding: 0px 14px 0px 16px;}
+ form#suchfilter fieldset .options h4.formField {padding: 8px 50px 7px 16px;}
+ form#suchfilter fieldset .options .formField button {background: none; border: none; cursor: pointer; padding-left: 15px; color: #075083; text-align: left; line-height: 1.167em;}
+ form#suchfilter fieldset .options .formField button:hover {text-decoration: underline;}
+ form#suchfilter fieldset .options .formField button.disabled {cursor: default; color: #2b2b2d; font-weight: bold;}
+ form#suchfilter fieldset .options .formField button.disabled:hover {text-decoration: none;}
+ form#suchfilter fieldset .options .formField span.buttonErsatz {display:block; padding-left: 18px; padding-top:3px; color: #2b2b2d; font-weight: bold;}
+ form#suchfilter fieldset.zeitraumBereich .formHandle {cursor: pointer; display: inline-block; height: 29px; padding-left: 6px; margin-left: 14px; margin-bottom: 14px;}
+ form#suchfilter fieldset.zeitraumBereich .formHandle span {cursor: pointer; display: inline-block; height: 29px; padding-right: 6px;}
+ form#suchfilter fieldset.zeitraumBereich .formHandle span input {background: none repeat scroll 0 0 transparent; border: 0 none; color: #FFFFFF; cursor: pointer; font-weight: bold; padding: 6px 10px;}
+ form#suchfilter fieldset.zeitraumBereich .options .customDate {margin-top: 12px;}
+ form#suchfilter fieldset.zeitraumBereich .options .customDate div {float: left; width: 90px; margin-right: 4px; overflow: hidden;}
+ form#suchfilter fieldset.zeitraumBereich .options .customDate div .formLabel {display: block; padding-left: 16px;}
+ form#suchfilter fieldset.zeitraumBereich .options .customDate div .formField {display: inline-block;}
+ .fixDateWidth .value {width: 10em; display: inline-block;}
+ 
+ form#suchfilter .ieSpecialButtons button, form#suchfilter .ieSpecialButtons button span { display:block; width:100%; }
+/*********************** 3. HEADER ***********************/
+#fade2BG {width: 140px; height: 127px; position: absolute; right: 0; z-index: 1;}
+#logoDestatis {width: 227px; height: 104px;}
+/* ** 3.1 Service Navigation Meta ** */
+ /* Die minimale Breite des Blocks der TopNav ist um 2px vergroessert worden, damit die Anzeige bei Anklicken von Leichte Sprache oder Gebaerdensprache wegen der Bold-Auszeichnung nicht umbricht. Das wurde erreicht durch Verkleinern von margin-right von 151px auf 149px  -  JK, 04.02.2016 sowie von rechtem padding von 12px auf 10px - TK, 29.02.2016 */
+ #navServiceMeta {position: absolute; top: 0; left: 244px; font-size: 0.9167em; /* 11px */ line-height: 1em; padding: 0px 10px; margin-right: 149px;}
+ #navServiceMeta ul {overflow: hidden; padding-top: 6px; padding-bottom: 6px;}
+ /* #navServiceMeta ul li {float: left; padding-right: 6px; margin-right: 6px; border-right: 1px solid #C3C4C6;} Abstaende auf 4px verkleinert, damit Gebaerden- und Leichte Sprache Icons nicht zum Umbruch bei kleineren Bildschirmauflösungen führen */
+ #navServiceMeta ul li {float: left; padding-right: 4px; margin-right: 4px; border-right: 1px solid #C3C4C6;}
+ #navServiceMeta ul li.last,
+ #navServiceMeta ul li:last-child {padding-right: 0px; margin-right: 0px; border-right: none;}
+ #navServiceMeta ul li a {color: #2B2B2D;}
+ #navServiceMeta ul li a:hover {color: #000000;}
+/* Bild in navServiceMeta (neu für Leichte Sprache und Gebaerdensprache) erhaelt kleinen Abstand rechts - TK, 29.02.2016 */
+ #navServiceMeta ul li img {margin-right:2px;}
+/* ** 3.2 Language Switcher ** */
+ #langSwitch {position: absolute; top: 0; right: 2px; z-index: 10;}
+ #langSwitch ul li {float: left;}
+ #langSwitch ul li a, #langSwitch ul li strong {display: inline-block; font-size: 0.9167em; color: #2B2B2D;}
+ #langSwitch ul li a:hover {text-decoration: none;}
+ #langSwitch ul li.deutsch_node strong, #langSwitch ul li.deutsch_node a {padding: 4px 9px;}
+ #langSwitch ul li.englisch_node strong, #langSwitch ul li.englisch_node a {padding: 4px 15px;}
+ #langSwitch ul li span, #langSwitch ul li strong {font-weight: bold; cursor: default;}
+/* ** 3.3 Search Bar ** */
+ #search {position: absolute; top: 40px; right: 2px; line-height: 0; z-index: 10;}
+ #search form p {position: relative; display: inline-block; width: 206px; height: 27px;}
+ #search form input.suchtext {display: inline-block; margin: 6px 0 0 12px; width: 160px; border: none; background-color: #ffffff; color: #000000; font-size: 12px; line-height: 1em; padding-right: 24px; padding-bottom: 4px;}
+ #search input.submit {display: inline-block; position: absolute; top: 6px; right: 10px; border: none; width: 16px; height: 16px; color: transparent; cursor: pointer;}
+/*********************** 4. NAVIGATION ***********************/
+/* ** 4.1 Primary Navigation ** */
+ #navPrimary {position: relative; top: -21px; margin-left: 244px; z-index: 10;}
+ #navPrimary #bgLeft {width: 243px; height: 12px; position: absolute; top: 33px; left: -244px;}
+ #navPrimary ul {overflow: visible;}
+ #navPrimary ul li {float: left; min-width: 19.9%; max-width: 19.9%; margin-right: 0.1%; max-height: 3.55em; height: 3.55em;}
+ #navPrimary ul li ul li {height: auto; max-height: none;}
+ #navPrimary ul li div.box {height: 100%; width: 100%;}
+ #navPrimary ul li.last {margin-right: 0;}
+ #navPrimary ul li h3 {text-transform: uppercase; line-height: 1.1667em; padding-left: 4px; letter-spacing: 0px; height: 100%;}
+ #navPrimary ul li h3 a,
+ #navPrimary ul li h3 strong {display: block; color: #ffffff; font-weight: normal; height: 100%; padding: 0 3px; position: relative;}
+ #navPrimary ul li h3 a span,
+ #navPrimary ul li h3 strong span {bottom: 6px; display: inline-block; position: absolute; width: 95%; background-color:#6A7883;}
+ #navPrimary ul li h3 strong {cursor: default;}
+ #navPrimary ul li h3 strong span,
+ #navPrimary ul li h3 a.on span {background-color:#075083;}
+ #navPrimary ul li.hovered h3 a.on {background-color:transparent;}
+ #navPrimary ul li.hovered h3 a.on span,
+ #navPrimary ul li h3 a:hover.on span,
+ #navPrimary ul li.hovered h3 a span,
+ #navPrimary ul li h3 a:hover,
+ #navPrimary ul li h3 a:focus,
+ #navPrimary ul li h3 a:hover span,
+ #navPrimary ul li h3 a:focus span {background-color:#0160A2; text-decoration: none;}
+ #navPrimary ul li.active.hovered h3 strong span {background-color:#0160A2;}
+ #navPrimary .rounded, #navPrimary .roundedr {display: none;}
+ /* 4.1.1 Flyout */
+ #navPrimary ul li .box .menu {display: none;}
+ #navPrimary ul li.hovered .box .menu {background-color: #0160A2; box-shadow: 1px 1px 2px #666666; -moz-box-shadow: 1px 1px 2px #666666; -webkit-box-shadow: 1px 1px 2px #666666; display: block; left: 0; position: absolute; top: 41px; width: 99.6%; z-index: 10;}
+ #navPrimary ul li.hovered #n-2.box,
+ #navPrimary ul li.hovered #n-3.box,
+ #navPrimary ul li.hovered #n-4.box,
+ #navPrimary ul li.hovered #n-5.box{position: relative;}
+ #navPrimary ul li.hovered #n-2.box .menu,
+ #navPrimary ul li.hovered #n-3.box .menu,
+ #navPrimary ul li.hovered #n-4.box .menu,
+ #navPrimary ul li.hovered #n-5.box .menu {display: block;padding-right: 3px; position: absolute; top: 41px; z-index: 10; background: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;}
+ #navPrimary ul li.hovered #n-2.box .menu .menu-box,
+ #navPrimary ul li.hovered #n-3.box .menu .menu-box,
+ #navPrimary ul li.hovered #n-4.box .menu .menu-box,
+ #navPrimary ul li.hovered #n-5.box .menu .menu-box {background-color: #0160A2; box-shadow: 1px 1px 2px #666666; -moz-box-shadow: 1px 1px 2px #666666; -webkit-box-shadow: 1px 1px 2px #666666; display: block; overflow: hidden; width: 98%; min-width: 98%;}
+ #navPrimary ul li.hovered #n-2.box .menu .menu-box .col,
+ #navPrimary ul li.hovered #n-3.box .menu .menu-box .col,
+ #navPrimary ul li.hovered #n-4.box .menu .menu-box .col,
+ #navPrimary ul li.hovered #n-5.box .menu .menu-box .col {margin-right: 0; padding-right: 0; overflow: hidden; max-width: 100%; width: 100% !important; padding: 0;}
+ #navPrimary ul li.hovered #n-2.box .menu .menu-box .wrapperFlyout,
+ #navPrimary ul li.hovered #n-3.box .menu .menu-box .wrapperFlyout,
+ #navPrimary ul li.hovered #n-4.box .menu .menu-box .wrapperFlyout,
+ #navPrimary ul li.hovered #n-5.box .menu .menu-box .wrapperFlyout {margin: 24px 8px;}
+ #navPrimary ul li.hovered #n-2.box .menu .wrapperFlyout .col,
+ #navPrimary ul li.hovered #n-3.box .menu .wrapperFlyout .col,
+ #navPrimary ul li.hovered #n-4.box .menu .wrapperFlyout .col,
+ #navPrimary ul li.hovered #n-5.box .menu .wrapperFlyout .col {width: auto; border-right: medium none;}
+ #navPrimary ul li.active.hovered .box .menu {background-color: #0160A2;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout {margin: 24px;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col {float: left; width: 21.6%; margin-right: 2%; padding-right: 2%; padding-top: 6px; padding-bottom: 6px; border-right: 1px solid #ffffff;}
+ #navPrimary ul li.active.hovered .box .menu .wrapperFlyout .col {border-right: 1px solid #80B0D1;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col.last {margin-right: 0; padding-right: 0; border-right: none;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col h5 {color: #ffffff; font-size: 1em; line-height: 1.4167em; font-weight: bold; padding: 0px 4px 6px 4px;}
+ .wrapperFlyout h5 a {color: #fff; font-weight: bold; font-size: 1.1em;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li {float: none; margin: 0; margin-right: 0; padding: 0; min-width: 100%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col.last li {float: none; margin: 0; margin-right: 0; padding: 0; min-width: 100%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li a {display: block; color: #ffffff; padding: 4px; min-width: 90%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li a:hover,
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li a:focus {color: #075083; background-color: #ffffff; text-decoration: none; min-width: 90%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col.last li a:hover,
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col.last li a:focus {color: #075083; background-color: #ffffff; text-decoration: none; min-width: 90%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col.last li a {display: block; color: #ffffff; padding: 4px; margin-right: -20px; min-width: 100%;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li a:focus {outline: none;}
+ #navPrimary ul li.hovered .box .menu .wrapperFlyout .col li strong {display: block; color: #ffffff; cursor: default; font-weight: normal; text-decoration: underline; padding: 4px;}
+ .n-3 .menu {width: 200px; left: 250px;}
+/* ** 4.2 Secondary Navigation ** */
+ #navSecondary {
+  position: relative;
+  width: 220px;
+  left: 0;
+  float: left;
+  min-height: 400px;
+ }
+ #navSecondary .navMain {
+  padding-bottom: 12px;
+ }
+ #navSecondary .navMain li {
+  margin-bottom: 3px;
+ }
+ #navSecondary .navMain ul li a:hover, #navSecondary .navMain ul li strong {
+  text-decoration: none;
+ }
+ #navSecondary .navMain li a, #navSecondary .navMain li strong {
+  padding: 3px 0 2px;
+  font-size: 1em; /* 12px */
+  line-height: 1.25em; /* 15px */
+  font-weight: normal;
+ }
+ #navSecondary .navMain ul li a {
+  display: block;
+  background-color: #075083;
+  color: #ffffff;
+  padding-left: 8px;
+  -moz-box-shadow: 2px 1px 1px #888888;
+  -webkit-box-shadow: 2px 1px 1px #888888;
+  box-shadow: 2px 1px 1px #888888;
+ }
+ #navSecondary .navMain ul li a:hover,
+ #navSecondary .navMain ul li a:focus {
+  background-color: #fff;
+  color: #075083;
+  text-decoration: none;
+ }
+ #navSecondary .navMain ul li strong {
+  display: block;
+  background-color: #fff;
+  color: #075083;
+  padding-left: 8px;
+  -moz-box-shadow: 2px 1px 1px #888888;
+  -webkit-box-shadow: 2px 1px 1px #888888;
+  box-shadow: 2px 1px 1px #888888;
+ }
+ #navSecondary .navMain ul li ul {
+  margin-top: 3px;
+  margin-bottom: 9px;
+ }
+ #navSecondary .navMain ul li ul li a, #navSecondary .navMain ul li ul li strong {
+  color: #075083;
+  padding-left: 24px;
+ }
+ #navSecondary .navMain ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li strong {
+  padding-left: 36px;
+  background-color: transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ }
+ #navSecondary .navMain ul li ul li em a ,
+ #navSecondary .navMain ul li ul li ul li a:hover,
+ #navSecondary .navMain ul li ul li ul li strong,
+ #navSecondary .navMain ul li ul li ul li em a {
+  font-weight: bold;
+ }
+ #navSecondary .navMain ul li ul li ul li ul li a, #navSecondary .navMain ul li ul li ul li ul li strong {
+  padding-left: 48px;
+  font-size: 1em;
+  line-height: 1.0909em; /* 12px */
+ }
+ #navSecondary .navMain ul li ul li ul li ul li a:hover, #navSecondary .navMain ul li ul li ul li ul li strong, #navSecondary .navMain ul li ul li ul li ul li em a{
+  font-weight: bold;
+ }
+ #navSecondary .navMain ul li ul li ul li ul li ul a, #navSecondary .navMain ul li ul li ul li ul li ul strong {
+  padding-left: 62px;
+  font-size: 0.9167em; /* 11px */
+  line-height: 1.0909em; /* 12px */
+ }
+ /* 4.2.1 Teaser in navSecondary Spalte */
+  #naviteaser h3 {
+   font-size: 1.1667em;
+   line-height: 1.2142em;
+   padding-bottom: 4px;
+  }
+/* ** 4.3 Breadcrumb ** */
+ #siteNav #navBreadcrumbs ol, #siteNav #navBreadcrumbs ol li {
+  float: left;
+  list-style: none;
+ }
+ #siteNav #navBreadcrumbs ol li {
+  margin-right: 12px;
+ }
+ #siteNav #navBreadcrumbs ol li a, #siteNav #navBreadcrumbs ol li strong {
+  padding-left: 8px;
+ }
+ #siteNav #navBreadcrumbs ol li.first a {
+  padding-left: 0px;
+ }
+/*********************** 5. CONTENT ***********************/
+/* ** 5.1 Module ** */
+ .module {
+  padding: 12px 14px 4px 16px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+ }
+ .module h1 a, .module h2 a {
+  font-weight: bold;
+  color: #075083;
+ }
+ .moreLink {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 3px;
+  padding-right: 7px;
+ }
+ .module p strong.more a  {
+  display: inline-block;
+  font-weight: bold;
+  padding-right: 7px;
+ }
+ .module .allLink {
+  padding-bottom: 6px;
+ }
+ .module .allLink a {
+  display: inline-block;
+  padding-left: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+ }
+ .module p {
+  padding-bottom: 12px;
+ }
+ .module.bannerLink {
+   text-align:center;
+   padding:0 0 4px 0;
+ }
+ a.themenLink {
+   display:inline-block;
+   padding-left:18px;
+   padding-bottom:6px;
+ }
+ span.topline {
+   display:block;
+  font-size:0.647em; /*fix*/
+  line-height:1.1667em; /* 14px */
+  padding-bottom:6px;
+   color:#2B2B2D;
+   font-weight: normal;
+ }
+/* ** 5.2 Area ** */
+ #area {height:40px; margin-left:234px;}
+ #area .leftBGStart {float:left; width:10px; height:40px;}
+ #area p {float:right; display:inline-block; height:40px; padding:0 4px; background-color:#f4f4f4; vertical-align:middle;}
+ #area p img {font-weight:bold; text-transform:uppercase; padding-right:4px; position: relative;top: -6px;}
+ #area p span {font-size:18px; line-height:18px; font-weight:bold; position:relative; bottom:-7px;}
+ #area .leftBGEnd {float:right; width:10px; height:40px;}
+ #area .rightBGStart {float:right; width:10px; height:40px; margin-right:4%;}
+ #area .rightBGEnd {float:right; width:10px; height:40px;}
+/* ** 5.3 Special Elements ** */
+ /* 5.3.1 Eilmeldung */
+  #eilmeldung {
+    border:3px solid #f2b30c;
+  }
+  #eilmeldung h2 {
+    display:inline-block;
+   font-size:1.417em;
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding-bottom:8px;
+    font-weight:bold;
+  }
+ /* 5.3.2 Teaser */
+ .singleTeaser ul {
+  padding-left: 20px;
+  padding-bottom: 12px;
+  list-style-type: disc;
+  overflow: hidden;
+ }
+ .pmTeaser {
+  padding: 6px 0 4px 0;
+ }
+ .pmTeaser .singleTeaser {
+  padding: 12px 0;
+  border-bottom: 2px solid #F4F4F4;
+ }
+ .pmTeaser .singleTeaser .wrapperSingleTeaser {
+  padding: 0 14px 0 16px;
+ }
+ .pmTeaser .singleTeaser .wrapperSingleTeaser h1 {
+  font-size: 1.417em; /*fix*/
+  line-height: 1.1667em;
+  font-weight: bold;
+  padding: 0px 0 12px 0;
+ }
+ .pmTeaser .singleTeaser p.pmInfo {
+  line-height: 1em;
+  padding: 0 0 6px 0;
+ }
+ .pmTeaser .allLink {
+  padding: 6px 0 6px 16px;
+ }
+  #wrapperLayoutEinspaltigMitMS #content .pmTeaser .singleTeaser h1,
+  #columnA .pmTeaser .singleTeaser h3 {
+    font-size:1.417em; /*fix*/
+    line-height:1.1667em;
+    font-weight:bold;
+    padding:0px 0 12px 0;
+  }
+ /* 5.3.3 Schlaglicht */
+  .schlaglicht h2 {
+    font-size:1.167em !important; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding-bottom:8px;
+    font-weight:normal !important;
+  }
+  .schlaglicht h3 {
+    font-size:1.5em; /* 18px */
+    line-height:1.1667em; /* 21px */
+    font-weight:bold !important;
+    padding:0px 0 12px 0;
+  }
+  .schlaglicht .picture.border {
+    border:1px;
+    overflow: hidden;
+  }
+  .schlaglicht .picture.border .teaserImage  {
+ padding-bottom: 0;
+  }
+  .schlaglicht .picture.border .teaserImage  .wrapper{
+ padding-bottom: 0;
+  }
+  .schlaglicht .picture {
+    padding-bottom:0px;
+  }
+  .schlaglicht .picture.floatleft {
+    float:left;
+   margin:0 12px 8px 0;
+  }
+  .schlaglicht .picture.floatright {
+    float:right;
+    margin:0 0 8px 12px;
+  }
+ /* 5.3.4 Tagcloud */
+  #supplement .tagcloud h3  {
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 8px 0;
+    font-weight:normal;
+  }
+  .tagcloud ul {
+   text-align:center;
+  }
+  .tagcloud ul li {
+    display:inline;
+  }
+  .tagcloud ul li a {
+   display:inline-block;
+   margin:0 0.5em;
+   line-height:1em;
+   height:1.3em;
+  }
+  .tagcloud ul li a.prio1 {
+   font-size:1.8em;
+  }
+  .tagcloud ul li a.prio2 {
+   font-size:1.5em;
+  }
+  .tagcloud ul li a.prio3 {
+   font-size:1.2em;
+  }
+  .tagcloud ul li a.prio4 {
+   font-size:1em;
+  }
+  .tagcloud ul li a.prio4 {
+   font-size:0.9em;
+  }
+ /* 5.3.5 Weitere Statistiken */
+  .weitereStatistiken {
+    position:relative;
+  }
+  .weitereStatistiken h1 {
+    display:inline-block;
+   width:80%;
+   font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding-bottom:16px;
+    font-weight:normal;
+  }
+  .miniNav ul li.disabled a {
+    cursor:default;
+  }
+  .weitereStatistiken .miniNav {
+    position:absolute;
+    right:16px;
+    top:10px;
+    width:54px;
+  }
+  .weitereStatistiken .miniNav ul li {
+    float:left;
+  }
+  .weitereStatistiken .miniNav ul li.btnLeft {
+    margin-right:6px;
+  }
+  .weitereStatistiken .miniNav ul li a {
+    display:inline-block;
+    width:21px;
+    height:21px;
+   margin:1px;
+  }
+  .weitereStatistiken div.alleStatistiken {
+    overflow:scroll;
+    white-space:nowrap;
+    overflow-y:hidden;
+   padding:0 4px 12px;
+  }
+  .weitereStatistiken div.alleStatistiken div.eintrag {
+    display:inline-block;
+    width:50%;
+    vertical-align:top;
+  }
+  .weitereStatistiken div.alleStatistiken div.eintrag ul {
+   overflow: hidden;
+  }
+  .weitereStatistiken div.alleStatistiken div.eintrag h2 {
+    font-size:1em;
+    font-weight:bold;
+    padding-right:12px;
+ white-space: normal;
+ padding-bottom: 3px;
+ overflow: hidden;
+  }
+  .weitereStatistiken div.alleStatistiken div.eintrag ul li a {
+    text-transform:uppercase;
+    padding-left:20px;
+  }
+ /* 5.3.6 Zahl der Woche */
+  .zahlDerWoche {
+    padding:0;
+  }
+  .zahlDerWoche h2, #supplement .zahlDerWoche h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:12px 0 8px 16px;
+    font-weight:normal;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche {
+    background-color:#deeef8;
+   padding-bottom:12px;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .leftSide {
+    float:left;
+   padding:10px 8px 0 16px;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox {
+    height: 50px;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox span {
+    margin-left:8px;
+    padding-right:8px;
+    display: inline-block;
+    height: 50px;
+    text-align:center;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox span a {
+    display:inline-block;
+    font-size:1.8333em; /* 22px */
+    line-height:1em;
+    font-weight:bold;
+    padding:15px 12px 0;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .leftSide .sdBox span a:hover {
+    text-decoration:none;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .rightSide {
+    padding:12px 16px 0 22px;
+  }
+  .zahlDerWoche .wrapperZahlDerWoche .rightSide p {
+    padding:0;
+  }
+  /* 5.3.7 aktuelle Publikationen */
+  .quickFacts h2, #supplement .quickFacts h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 8px 0;
+    font-weight:normal;
+  }
+  .aktuellePublikationen {
+    position:relative;
+    background-color:transparent;
+    overflow: hidden;
+  }
+  .aktuellePublikationen h1 {
+    width:80%;
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding-bottom:16px;
+    font-weight:normal;
+    margin:6px 0 6px 16px;
+  }
+  .aktuellePublikationen p {
+    margin:6px 0 6px 16px;
+  }
+  .aktuellePublikationen .miniNav {
+    position:absolute;
+    right:16px;
+    top:3px;
+    width:54px;
+  }
+  .aktuellePublikationen .miniNav ul li {
+    float:left;
+  }
+  .aktuellePublikationen .miniNav ul li.btnLeft {
+    margin-right:6px;
+  }
+  .aktuellePublikationen .miniNav ul li a {
+    display:inline-block;
+    width:21px;
+    height:21px;
+   margin:1px;
+  }
+  .aktuellePublikationen div.allePublikationen {
+    overflow:scroll;
+    white-space:nowrap;
+    overflow-y:hidden;
+    padding-bottom:15px;
+  }
+  .aktuellePublikationen div.allePublikationen.has1AllLink {
+    padding-bottom:7px;
+    margin-bottom:36px;
+  }
+  .aktuellePublikationen div.allePublikationen.has2AllLink {
+    padding-bottom:7px;
+    margin-bottom:65px;
+  }
+  .aktuellePublikationen div.allePublikationen.has3AllLink {
+    padding-bottom:7px;
+    margin-bottom:94px;
+  }
+ .aktuellePublikationen div.allePublikationen div.eintrag {
+    display:inline-block;
+    text-align:center;
+    vertical-align: top;
+  }
+  .aktuellePublikationen.x1 div.allePublikationen div.eintrag {
+    width:96%;
+    margin: 0 2%;
+  }
+  .aktuellePublikationen.x2 div.allePublikationen div.eintrag {
+    width:46%;
+    margin: 0 2%;
+  }
+  .aktuellePublikationen.x3 div.allePublikationen div.eintrag {
+    width:29%;
+    margin: 0 2%;
+  }
+  .aktuellePublikationen div.allePublikationen div.eintrag a {
+    position: relative;
+    padding-top: 132px;
+    display: block;
+    margin-top: 10px;
+  }
+  .aktuellePublikationen.flach div.allePublikationen div.eintrag a {
+    padding-top: 97px;
+  }
+  .aktuellePublikationen div.allePublikationen div.eintrag .imageWrapper {
+   left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 132px;
+    overflow: hidden;
+  }
+  .aktuellePublikationen.flach div.allePublikationen div.eintrag .imageWrapper {
+    height: 97px;
+  }
+  .aktuellePublikationen div.allePublikationen div.eintrag .imageWrapper span {
+   bottom: 0;
+    display: block;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+ }
+  .aktuellePublikationen div.allePublikationen div.eintrag a span {
+    display:block;
+    white-space: normal;
+  }
+  .aktuellePublikationen .allLink {
+    bottom: 0;
+    left: 0;
+    padding-bottom: 7px;
+    position: absolute;
+    width: 100%;
+  }
+  .aktuellePublikationen .allLink a {
+    display:inline-block;
+    padding-left:18px;
+    margin:6px 0 6px 16px;
+    font-weight:bold;
+    text-transform:uppercase;
+  }
+  .toptable h2, #supplement .toptable h3, #supplement .naechsteTermine h3, .naechsteTermine h2, .singleview .naechsteTermine h2 {
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 8px 0;
+    font-weight:normal;
+  }
+ /* 5.3.8 interaktive Anwendungen */
+  .toptable ul {
+    list-style-type:disc;
+    color:#075083;
+    margin-left:16px;
+    padding-bottom:12px;
+  }
+  .interaktiveAnwendungen {
+    position:relative;
+    background-color:transparent;
+  }
+  .interaktiveAnwendungen h1 {
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:3px 0 16px 0;
+    font-weight:normal;
+    width:80%;
+  }
+  #supplement .interaktiveAnwendungen h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:3px 0 8px 0;
+    font-weight:normal;
+    width:80%;
+  }
+  .interaktiveAnwendungen .miniNav {
+    position:absolute;
+    right:-3px;
+    top:0px;
+    width:54px;
+  }
+  .interaktiveAnwendungen .miniNav ul li {
+    float:left;
+  }
+  .interaktiveAnwendungen .miniNav ul li.btnLeft {
+    margin-right:6px;
+  }
+  .interaktiveAnwendungen .miniNav ul li a {
+    display:inline-block;
+    width:21px;
+    height:21px;
+   margin:1px;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen {
+    overflow:auto;
+    white-space:nowrap;
+    overflow-y:hidden;
+    padding-bottom:12px;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser {
+    display:inline-block;
+    text-align:center;
+   vertical-align:top;
+   padding:0;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser a {
+    font-size:1.1667em; /* 14px */
+    line-height:1.2142em; /* 17px */
+    display: block;
+    margin-top: 10px;
+    padding-top: 100px;
+    position: relative;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser a span {
+   white-space: normal;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser .imageWrapper {
+   left: 0;
+   height: 100px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser .imageWrapper span {
+   bottom: 5px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+ }
+  .interaktiveAnwendungen.x1 div.alleAnwendungen div.teaser {
+    width:99%;
+  }
+  .interaktiveAnwendungen.x2 div.alleAnwendungen div.teaser {
+    width:45.5%;
+    margin: 0 2%;
+  }
+  .interaktiveAnwendungen.x2 h1 {
+    padding-bottom: 5px;
+  }
+  .interaktiveAnwendungen.x3 div.alleAnwendungen div.teaser {
+    width:28%;
+    margin: 0 2%;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser p.picture {
+    margin:0 auto;
+  }
+  .interaktiveAnwendungen div.alleAnwendungen div.teaser a.linkZurAnwendung {
+    display:inline-block;
+    font-size:1.0833em; /* 13px */
+    font-weight:bold;
+  }
+  .interaktiveAnwendungen.x1 div.alleAnwendungen div.teaser a.linkZurAnwendung {
+    width:100%;
+  }
+  .interaktiveAnwendungen.x2 div.alleAnwendungen div.teaser a.linkZurAnwendung {
+    width:50%;
+  }
+  .interaktiveAnwendungen.x3 div.alleAnwendungen div.teaser a.linkZurAnwendung {
+    width:33.3%;
+  }
+ /* 5.3.9 Schiebebühne */
+  .schiebebuehne {
+    position:relative;
+  }
+  .schiebebuehne h1 {
+   font-size: 1.167em;/*fix*/
+   font-weight: normal;
+   line-height: 1em;
+   padding: 0 0 16px;
+   width:80%;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+  }
+  #wrapperContent .schiebebuehne h1 {
+   font-size: 1.167em;/*fix*/
+   font-weight: normal;
+   line-height: 1em;
+   padding: 3px 0 16px;
+   width:80%;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+  }
+  #supplement .schiebebuehne h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 16px 0;
+    font-weight:normal;
+    width:80%;
+  }
+  .schiebebuehne .miniNav {
+    position:absolute;
+    right:10px;
+    top:12px;
+    width:54px;
+  }
+  .schiebebuehne .miniNav ul {
+    list-style-type:none;
+   overflow:hidden;
+   padding:0;
+  }
+  .schiebebuehne .miniNav ul li {
+    float:left;
+  }
+  .schiebebuehne .miniNav ul li.btnLeft {
+    margin-right:6px;
+  }
+  .schiebebuehne .miniNav ul li a {
+    display:inline-block;
+    width:21px;
+    height:21px;
+   margin:1px;
+  }
+  .schiebebuehne .schiebebuehneWrapper {
+    overflow:auto;
+    white-space:nowrap;
+    overflow-y:hidden;
+    padding-bottom:12px;
+  }
+  .schiebebuehne .schiebebuehneWrapper .teaserOneCol {
+    display:inline-block;
+    text-align:left;
+    vertical-align:top;
+    width:100%;
+  }
+  .schiebebuehne .schiebebuehneWrapper .teaser {
+    display:inline-block;
+    text-align:left;
+   vertical-align:top;
+    white-space:normal;
+   width:100%;
+  }
+  .schiebebuehne .schiebebuehneWrapper .wrapperTeaser {
+    margin-left:0;
+  }
+  .schiebebuehne .schiebebuehneWrapper .teaserOneCol .wrapperTeaser .teaser {
+    overflow: hidden;
+    padding: 12px 14px 4px 2px;
+  }
+ /* 5.3.10 naechste Termine */
+  .naechsteTermine.module {
+    padding:0;
+  }
+  .naechsteTermine .termin {
+    background-color:#E5EFF5;
+    margin-bottom:2px;
+    padding:3px;
+  }
+  .naechsteTermine .termin .datum {
+    float:left;
+    width:36px;
+    padding-right:12px;
+  }
+  .naechsteTermine .termin .datum .monat {
+    text-align:center;
+    background-color:#075083;
+  }
+  .naechsteTermine .termin .datum .monat abbr {
+    color:#ffffff;
+  }
+  .naechsteTermine .termin .datum .tag {
+    text-align:center;
+    background-color:#ffffff;
+  }
+  .naechsteTermine .termin .datum .tag span {
+    color:#075083;
+    font-weight:bold;
+  }
+  .naechsteTermine .termin h3 {
+    padding:0;
+    font-size:1em;
+    padding-top:3px;
+  }
+  .naechsteTermine .termin h3 a {
+    font-weight:normal;
+  }
+  .naechsteTermine ul {
+    list-style:none!important;
+   padding-left:0!important;
+  }
+ /* 5.3.11 PublicationBox */
+  #supplement .TeaserBGPicture h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 16px 0;
+    font-weight:normal;
+  }
+  #supplement .publicationBox {
+    padding:12px 14px 4px 16px;
+  }
+  #supplement .publicationBox h3 a {
+   display:inline-block;
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 16px 0;
+    font-weight:normal;
+  }
+ /* 5.3.12 Kontaktformular */
+  .kontaktformular h1 {
+    font-size:1.500em; /*fix*/
+    line-height:1.1363em;
+    font-weight:bold;
+    padding:0px 0 12px 0;
+  }
+  #kontaktformular {
+    width: auto;
+    margin:0 auto;
+    background-color:#e5eff5;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #c8ccd0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  #kontaktformular input[type=text], textarea, select {
+    /*border:1px solid #6a7883;*/
+    padding:2px 0 2px 4px;
+  }
+  #kontaktformular .formElement .formLabel {
+    display:block;
+  }
+  #kontaktformular .formElement.half {
+    float:left;
+  }
+  #kontaktformular .formElement.half {
+    width:50%;
+  }
+  #kontaktformular .formElement.full {
+    width:100%;
+  }
+  #kontaktformular .formElement .formField {
+   display: block;
+   margin-right: 14px;
+  }
+  #kontaktformular .formElement.half, #kontaktformular .formElement.full {
+    padding-bottom:12px;
+  }
+  #kontaktformular .formElement.half .formField input {
+    width: 100%;
+  }
+  #kontaktformular .formElement.half .formField select {
+    width: 102.5%;
+  }
+  #kontaktformular .formElement.full .formField input, #kontaktformular .formElement.full .formField textarea {
+    width: 100%;
+  }
+  #kontaktformular .formElement.full .formField textarea {
+    height: 100%;
+    padding:4px;
+  }
+  #kontaktformular .formElement.full .formField select {
+    width: 101%;
+  }
+  #kontaktformular .formElement .formField input[type="radio"], #kontaktformular .formElement .formField input[type="checkbox"] {
+    width:auto;
+  }
+  #kontaktformular .formElement .formFieldCheckbox input {
+    float:left;
+    margin-right:8px;
+  }
+  #kontaktformular .formElement .formFieldCheckbox .formLabel {
+    display:inline-block;
+    width:370px;
+  }
+  #kontaktformular .submitButton div {
+    float:right;
+    display:block;
+    height:29px;
+    padding-left:6px;
+    margin-right:5px;
+    cursor:pointer;
+  }
+  #kontaktformular .submitButton div span {
+    display:block;
+    height:29px;
+    padding-right:6px;
+  }
+  #kontaktformular .submitButton div span input {
+    background:none;
+    border:none;
+    padding-top:6px;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:pointer;
+  }
+ /* 5.3.13 BestellerdatenForm */
+  .bestellerdatenForm span.formLabel {
+    display:block;
+  }
+  #bestellerdatenForm {
+    width: auto;
+    margin:0 auto;
+    background-color:#e5eff5;
+    padding:12px 25px 12px 12px;
+    margin-bottom:20px;
+    border:1px solid #c8ccd0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  #bestellerdatenForm input[type=text], textarea, select {
+    /*border:1px solid #6a7883;*/
+    padding:2px 0 2px 4px;
+    width:100%;
+  }
+  #bestellerdatenForm .formElement .formLabel {
+    display:block;
+  }
+  #bestellerdatenForm .formElement.half {
+    float:left;
+  }
+  #bestellerdatenForm .formElement.half {
+    width:50%;
+  }
+  #bestellerdatenForm .formElement.full {
+    width:100%;
+  }
+  #bestellerdatenForm .formElement .formField {
+   display: block;
+   margin-right: 14px;
+  }
+  #bestellerdatenForm .formElement.half, #bestellerdatenForm .formElement.full {
+    padding-bottom:12px;
+  }
+  #bestellerdatenForm .formElement.half .formField input {
+    width: 100%;
+  }
+  #bestellerdatenForm .formElement.half .formField select {
+    width: 102.5%;
+  }
+  #bestellerdatenForm .formElement.full .formField input, #bestellerdatenForm .formElement.full .formField textarea {
+    width: 100%;
+  }
+  #bestellerdatenForm .formElement.full .formField textarea {
+    height: 100%;
+    padding:4px;
+  }
+  #bestellerdatenForm .formElement.full .formField select {
+    width: 101%;
+  }
+  #bestellerdatenForm .formElement .formField input[type="radio"], #bestellerdatenForm .formElement .formField input[type="checkbox"] {
+    width:auto;
+  }
+  #bestellerdatenForm .formElement .formFieldCheckbox input {
+    float:left;
+    margin-right:8px;
+  }
+  #bestellerdatenForm .formElement .formFieldCheckbox .formLabel {
+    display:inline-block;
+    width:370px;
+  }
+  #bestellerdatenForm .submitButton div {
+    float:right;
+    display:block;
+    height:29px;
+    padding-left:6px;
+    margin-right:5px;
+    cursor:pointer;
+  }
+  #bestellerdatenForm .submitButton div span {
+    display:block;
+    height:29px;
+    padding-right:6px;
+  }
+  #bestellerdatenForm .submitButton div span input {
+    background:none;
+    border:none;
+    padding-top:6px;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:pointer;
+  }
+ /* 5.3.14 d115:leistung */
+  .module .leistung {
+  }
+  .module .leistung h2 {
+   margin-top: 15px;
+   padding-bottom: 8px;
+  }
+  .module .leistung h3 {
+  }
+  .module div.d115 {
+   margin: 10px 0;
+  }
+  .module .d115containerSubH3 .address {padding-bottom:12px;}:
+ /* 5.3.17 Piktogramm-Bloecke Marginalspalte */
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser {
+  width: 32%;
+  margin: 0 1% 0 0;
+}
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser div {
+  height: 100px;
+}
+#wrapperInner #wrapperDivisions .marginalblock.ssblock div.wrapperTeaser div a {
+ padding-top: 60px;
+}
+#wrapperInner #wrapperDivisions .marginalblock.module.shadowBot {
+ padding-bottom: 12px;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser {
+ width: 48%;
+ margin: 0.5%;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser.row1 {
+ margin-left: 1%;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div {
+ height: 70px;
+ overflow: hidden;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div a {
+ display:block;
+ color: #000000;
+ font-size: 1em;
+ text-align: center;
+ padding-top: 50px;
+ padding-bottom: 5px;
+ width: 100px;
+ margin: 0;
+ width: 100%;
+}
+#wrapperInner #wrapperDivisions .marginalblock div.wrapperTeaser div {
+ background-repeat: no-repeat;
+ background-scroll: scroll;
+ background-position: center 0;
+ background-color: transparent;
+}
+ /* 5.3.17b Piktogramm-Themenbloecke unten */
+#wrapperInner #wrapperDivisions .themenLinks.module.shadowBot {
+ padding-bottom: 12px;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperRow {
+ display: table;
+ width: 100%;
+ margin-bottom: 7px;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser {
+ float: none;
+ width: 50%;
+ display: table-cell;
+ background-color: #eff4f9;
+}
+#wrapperInner #wrapperDivisions .themenLinks.tabellenbloecke div.wrapperTeaser {
+ background-color: #ffffff;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser.rightCol {
+ border-left:6px solid #ffffff;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div {
+ overflow: hidden;
+ background-repeat: no-repeat;
+ background-scroll: scroll;
+ background-position: center 0;
+ background-color: transparent;
+}
+#wrapperInner #wrapperDivisions .themenLinks h2.boxheadline {
+ padding-bottom: 10px;
+ padding-left: 0.5%;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.datenbanken { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.publikationen { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.regional { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.national { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.international { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.weiterfuehrend { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser div.andereanbieter { min-height: 61px; }
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser h3 {
+ color: #000000;
+ font-weight: bold;
+ font-size: 1em;
+ padding: 5px 6px 0px 61px;
+}
+#wrapperInner #wrapperDivisions .themenLinks div.wrapperTeaser ul {
+ padding-left: 72px;
+ padding-right: 6px;
+ list-style: disc none outside;
+}
+
+
+ /* 5.3.18 zweispaltige Bloecke */
+#wrapperInner #wrapperDivisions .row {
+  clear: both;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+#wrapperInner #wrapperDivisions .block {
+}
+#wrapperInner #wrapperDivisions .block.leftblock {
+  float: left;
+  height: 100%;
+  margin-bottom: -2000px;
+  margin-right: 5px;
+  overflow: hidden;
+  padding-bottom: 2000px;
+  width: 49.5%;
+}
+#wrapperInner #wrapperDivisions .block.rightblock {
+  float: right;
+  height: 100%;
+  margin-bottom: -2000px;
+  margin-left: 5px;
+  padding-bottom: 2000px;
+  width: 49.5%;
+}
+#wrapperInner #wrapperDivisions .block.breit {
+ width: 100%;
+}
+#wrapperInner #wrapperDivisions .block .shadowBot {
+  background: none;
+}
+#wrapperInner #wrapperDivisions .block.module {
+ padding-top: 0;
+ padding-right: 0;
+ padding-left: 0;
+ margin-top: 0;
+ margin-right: 0;
+ margin-left: 0;d
+}
+#wrapperInner #wrapperDivisions .block.module .module {
+  padding: 12px 14px 4px 16px;
+  margin-bottom: 10px;
+}
+#wrapperInner #wrapperDivisions .block.module .picture.links {
+  margin: 0 24px 0 0;
+}
+#wrapperInner #wrapperDivisions .block.module .picture.links.pfeilsymbol {
+  margin: 0 6px 0 0;
+}
+@media only screen and (max-width: 1130px) {
+ #wrapperInner #wrapperDivisions .block.module .picture.links {
+  margin: 0 230px 0 0;
+ }
+}
+ /* 5.3.19 Presse Terminvorschau */
+/* h1 fuer Einzelansicht der auszugsweisen Veroeffentlichungskalender der Pressemitteilungen definiert - TK, 24.03.2016 */
+.pressetermine .naechsteTermine h1 {
+    font-size:1.167em; /*fix*/
+    line-height:1em;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 8px 0;
+    font-weight:normal;
+}
+.pressetermine .naechsteTermine ul {
+  list-style: outside none disc;
+}
+.pressetermine .naechsteTermine ul li {
+  list-style: outside none disc;
+  margin-left: 16px;
+}
+#wrapperOuter div.naechsteTermine table.pressetermine tr.termin td {
+ padding: 4px;
+}
+/* Trennstriche (als border) zwischen Monaten und Jahren - TK, 31.03.2016 */
+.pressetermine tr.newmonth {
+ border-top: 4px solid #999999;
+}
+.pressetermine tr.newmonth.newyear {
+ border-top: 8px solid #999999;
+}
+table.pressetermine tr.termin .voetermin {
+ text-align: center;
+ float: none;
+ width: 81px;
+ white-space: nowrap;
+}
+table.pressetermine tr.termin th.voetermin {
+ white-space: pre-wrap;
+}
+table.pressetermine tr.termin th {
+ text-align: left;
+}
+table.pressetermine tr.termin .title {
+ text-align: left;
+}
+table.pressetermine tr.termin .title span.title {
+ font-weight: bold;
+}
+table.pressetermine tr.termin .add_info {
+ text-align: left;
+}
+table.pressetermine tr.termin .ref_period {
+ text-align: center;
+/* Breite festgelegt und nowrap, damit kein Umbruch zwischen ausgeschriebenem Monat und Jahr erfolgt  - TK, 05.04.2016 */
+ width: 78px;
+ white-space: nowrap;
+}
+/** 5.4 SingleView **/
+/*  .singleview {
+   padding-bottom:20px;
+ } */
+ .singleview h1, .wrapperSitemap h1 {
+   font-size:1.500em;/*fix*/
+   line-height: 28px;
+   font-weight:bold;
+   padding:0px 0 12px 0;
+ }
+ .singleview h2 {
+   font-size:1.417em;/*fix*/
+   line-height:21px;
+   padding-bottom:12px;
+   font-weight:bold;
+ }
+ .singleview h2.colouredbg {
+  padding-top: 12px;
+  padding-left: 10px;
+ }
+ .singleview h3 {
+   font-size:1.417em;/*fix*/
+   line-height:21px;
+   padding-bottom:12px;
+   font-weight:normal;
+   text-transform: none;
+   letter-spacing: 0;
+ }
+ .singleview h4 {
+   font-size:1.250em;
+   line-height: 1.3em;
+   padding-bottom:12px;
+   font-weight:bold;
+ }
+ .singleview h5 {
+   font-size:1.250em;
+   line-height: 1.3em;
+   padding-bottom:12px;
+   font-weight:normal;
+ }
+ .singleview h6 {
+   font-size:1.083em;
+   line-height:15px;
+   padding-bottom:12px;
+   font-weight:normal;
+ }
+ .singleview strong {
+   font-weight:bold;
+ }
+ .singleview em {
+   font-style:italic;
+ }
+ .singleview strong em, .singleview em strong {
+   font-style:italic;
+   font-weight:bold;
+ }
+ .singleview code {
+   font-family:"Courier New", Courier, monospace;
+ }
+ .singleview samp {
+   background-color:#fcf998;
+   padding:0 4px;
+ }
+ .singleview q {
+   display:inline-block;
+   padding:0 40px;
+   font-style:italic;
+ }
+ .singleview cite {
+   float:right;
+   padding-right:40px;
+   font-variant:small-caps;
+ }
+ .singleview p.hervorhebung {
+   background-color:#e7eaec;
+   padding:18px;
+   margin-bottom:12px;
+ }
+ .singleview address {
+   padding-left:20px;
+   padding-bottom:12px;
+ }
+ .singleview table {
+   width:auto;
+   margin-bottom:22px;
+ }
+ .singleview .RichTextExtLink {
+   padding-right:16px;
+ }
+ .singleview a.GlossarEntry {
+   border-bottom: 1px dotted #075083;
+ }
+ .singleview a.GlossarEntry:hover {
+   border-bottom: 1px solid #075083;
+  text-decoration:none;
+ }
+ .singleview sup, .singleview sub {
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+  position: relative;
+  font-size:0.8em;
+ }
+ .singleview sup {
+  bottom: 0.5em;
+ }
+ .singleview sub {
+  top: 0.2em;
+ }
+ .singleview p.justify {
+   text-align:justify;
+ }
+ .singleview p.rechts {
+   float:right;
+ }
+ .singleview p.links {
+   float:left;
+ }
+ .singleview p.klein1 {
+   font-size:0.9em;
+ }
+ .singleview p.klein2 {
+   font-size:0.8em;
+ }
+ .singleview p.gross {
+   font-size:1.2em;
+ }
+ .singleview p.ind1 {
+   padding-left:20px;
+ }
+ .singleview p.ind2 {
+   padding-left:40px;
+ }
+ .singleview .docData {
+   padding-bottom:12px;
+ }
+ .singleview .docData .value{
+ }
+ .singleview .docData .label{
+   display: inline-block;
+   font-weight: bold;
+   width: 15em;
+ }
+ .singleview .docData .value a.themenLink {
+   margin-left: 0px;
+ }
+ .singleview .subheadline p {
+   font-size:1.083em; /*fix*/
+   line-height:1.1428em; /* 16px */
+   font-weight:bold;
+   padding:0px 0 12px 0;
+ }
+ .singleview .abstract p {
+   color:#666666;
+ }
+ .singleview .sectionRelated h2, .singleview .mainLanguage h2 {
+   font-size:1.1667em; /* 14px */
+   line-height:1.1428em; /* 16px */
+   padding-bottom:6px;
+   margin-top: 10px;
+ }
+ .singleview .sectionRelated ul.links, .singleview .mainLanguage ul.links {
+   list-style-type:none;
+   padding-left:0;
+ }
+ .singleview .mainLanguage ul li {
+   display:inline-block;
+   padding-left:22px;
+ }
+ .singleview.Todesanzeige {
+   border:4px solid #000;
+  padding:10px;
+  margin-bottom:12px;
+  background-color:#ddd;
+  -moz-box-shadow: 0 0 4px 1px #333;
+   -webkit-box-shadow: 0 0 4px 1px #333;
+   box-shadow: 0 0 4px 1px #333;
+ }
+ /* 5.4.1 SingleView Anchor */
+  ul.tableOfDocuments {
+      list-style-type: none;
+      overflow: hidden;
+      padding-bottom: 12px;
+      padding-left: 0px;
+  }
+  .singleview ul.toc {
+   list-style-type:none;
+   padding-left:0px;
+  }
+  .singleview ul.toc ul {
+   list-style-type:none;
+   padding-left:0px;
+  }
+  .singleview ul.toc li a {
+    padding-left:20px;
+    font-size:1em; /*1.1667em;*/ /* 14px */
+    line-height:2em; /*1.2142em;*/ /* 17px */
+   font-weight:normal; /*bold;*/
+  }
+  .singleview ul.links {
+    list-style-type:none;
+    padding:0;
+  }
+  .singleview ul.links li div.download {
+    padding-bottom:0;
+  }
+  .singleview ul.links li div.download span.downloadIcon a {
+    display:inline-block;
+    height:16px;
+    padding: 0 0 0 17px;
+    margin-right:4px;
+  }
+  .singleview ul.links li div.download span.downloadIcon a:hover, .singleview ul.links li div.download span.shoppingCartAdd a:hover {
+    text-decoration:none;
+  }
+  .singleview ul.links li {
+   padding:1px 0;
+   margin-bottom: 6px;
+  }
+  .singleview ul.links li span.dateOfIssue {
+    display:inline-block;
+   width:70px;
+  }
+  .singleview ul.links li a span {
+    color:#075083!important;
+  }
+  .singleview p.navToTop, .dossierDocuments p.navToTop {
+    overflow:hidden;
+   clear:both;
+  }
+  .singleview p.navToTop a, .dossierDocuments p.navToTop a {
+    float:right;
+   padding-right:16px;
+  }
+  .dossierDocuments .teaser {
+    float:left;
+    width:46%;
+    padding:0 2% 6px;
+  }
+  .dossierDocuments .teaser h2 {
+    font-size:1.1667em; /* 14px */
+    line-height:1.2142em; /* 17px */
+    padding-bottom: 4px;
+    font-weight:bold;
+  }
+ /* 5.4.2 SingleView ListStyles */
+  .singleview ul {
+    list-style-type:disc;
+    overflow:hidden;
+    padding-left:20px;
+    padding-bottom:12px;
+  }
+  .singleview ul li p {
+    padding-bottom:0;
+  }
+  .singleview ul li ul {
+    list-style-type:circle;
+    padding-bottom:0;
+  }
+  .singleview ul li ul li ul {
+    list-style-type:square;
+    padding-bottom:0;
+  }
+  .singleview ol {
+    list-style-type:decimal ;
+    overflow:hidden;
+    padding-left:20px;
+    padding-bottom:12px;
+  }
+  .singleview ol li p {
+    padding-bottom:0;
+  }
+  .singleview ol li ol {
+    list-style-type:lower-alpha;
+    padding-bottom:0;
+  }
+  .singleview ol li ol li ol {
+    list-style-type:lower-roman;
+    padding-bottom:0;
+  }
+ /* 5.4.3 SingleView PhotoGallery */
+ .singleview .photogalleryDocuments {
+  overflow:hidden;
+  margin-bottom:12px;
+  margin-top: 10px;
+ }
+ .singleview .photogalleryDocuments .picture {
+   float:left;
+  margin-right:8px;
+  margin-bottom:8px;
+  border: 1px solid #6A7883;
+  padding:1px;
+  background-color:#ffffff;
+ }
+ .singleview.photogallery .previewIllustration {
+  margin: 0 auto;
+ }
+ .singleview .pictureGallery {
+  clear:both;
+ }
+ .singleview .pictureGallery .picture {
+  display: inline-block;
+     margin-right: 20px;
+     vertical-align: top;
+ }
+ .singleview .picture a.lupe, .singleview .illustration a.lupe {
+   position:relative;
+   display: block;
+ }
+ .singleview .picture a.lupe span.empty, .singleview .illustration a.lupe span.empty {
+  display:inline-block;
+  width:16px;
+  height:16px;
+  position:absolute;
+  right:4px;
+  bottom:6px;
+  cursor:pointer;
+  text-indent: -9999px;
+ }
+ .singleview .picture .wrapper, .singleview .illustration .wrapper {
+   display:inline-block;
+  padding-bottom: 5px;
+ }
+ .singleview .picture .caption, .singleview .illustration .caption {
+   display:block;
+  padding:0 4px 5px;
+ }
+ .singleview .picture .source, .singleview .illustration .source {
+   display:block;
+  color:#6a7883;
+  padding:0 4px 5px;
+ }
+ .singleview .picture .caption + .source, .singleview .illustration .caption + .source {
+ margin-top: -5px;
+ }
+ .singleview .picture .source cite, .singleview .illustration .source cite {
+   float:none;
+  font-variant:normal;
+  padding:0;
+ }
+ /* 5.4.4 Bestellformular */
+ .singleview fieldset.bestellerdatenForm div span.formHandle {
+   display:inline-block;
+   height:29px;
+   padding-left:6px;
+   cursor:pointer;
+ }
+ .singleview fieldset.bestellerdatenForm div span.formHandle span {
+   display:inline-block;
+   height:29px;
+   padding-right:6px;
+   cursor:pointer;
+ }
+ .singleview fieldset.bestellerdatenForm div span.formHandle span input {
+   color:#ffffff;
+   background:none;
+   border:0;
+   padding:6px 10px;
+   font-weight:bold;
+   cursor:pointer;
+ }
+ .formError {
+  display:block;
+  padding: 5px 0 2px;
+  color:#ff0000;
+ }
+/** 5.5 Teaser Layout **/
+ /* 5.5.1 Teaser Wrapper */
+  .wrapperTeaser {
+    float:left;
+    display:inline-block;
+    background-color:#ffffff;
+    text-align:left;
+  }
+  .wrapperTeaser.singleTeaser {  float:none; }
+  .wrapperTeaser .banner {
+    text-align:center;
+  }
+  .wrapperTeaser .teaser {
+    overflow:hidden;
+    padding:12px 14px 4px 16px;
+  }
+  .wrapperTeaser .teaser .teaser {
+    padding:0;
+  }
+  .wrapperTeaser .teaser h2 {
+    font-size:1.1667em; /* 14px; */
+    line-height:1.2142em; /* 17px */
+    padding-bottom:4px;
+  }
+  #supplement .wrapperTeaser .teaser h3 {
+    font-size:1.167em; /*fix*/
+    line-height:1em; /* 17px */
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:0 0 16px 0;
+    font-weight:normal;
+  }
+  .wrapperTeaser .teaserImage {
+    float:left;
+    padding-right:14px;
+    margin:0;
+    font-size:0;
+    line-height:0;
+ padding-bottom: 5px;
+  }
+  .wrapperTeaser .teaserImage a.lupe {
+    position:relative;
+  }
+  .wrapperTeaser .teaserImage span.empty {
+   display:inline-block;
+   width:16px;
+   height:16px;
+   position:absolute;
+   right:4px;
+   bottom:6px;
+   cursor:pointer;
+  }
+  .wrapperTeaser .teaserImage.right {
+    float:right;
+    padding-left:14px;
+    padding-right:0;
+  }
+ /* 5.5.2 Teaser Col Layout */
+  .teaserOneCol, .teaserTwoCol, .teaserThreeCol {
+    padding:0;
+    background-color:transparent;
+  }
+  .teaserOneCol .wrapperTeaser {
+    width:100%;
+  }
+  .teaserTwoCol .wrapperTeaser {
+    width:49.5%;
+    margin-left:1%;
+  }
+  .teaserTwoCol .wrapperTeaser.first {
+    margin-left:0;
+  }
+  .teaserThreeCol .wrapperTeaser {
+    width:32.5%;
+    margin-left:1.25%;
+  }
+  .teaserThreeCol .wrapperTeaser.first {
+    margin-left:0%;
+  }
+  .teaserThreeCol .wrapperTeaser.double {
+    width:66.25%;
+  }
+  .teaserThreeCol .wrapperTeaser .teaser .module {
+    margin-bottom:0;
+  }
+ /* 5.5.3 StatMagazin */
+  .teaserSTATmagazin {
+    padding:0;
+    height:98px;
+  }
+  .teaserSTATmagazin .wrapperSTATmagazin {
+    width:100%;
+    height:98px;
+  }
+  .teaserSTATmagazin .wrapperSTATmagazin h2 {
+    padding:12px 0 4px 16px;
+    font-size:1.167em; /*fix*/
+    font-weight:bold;
+    text-transform:none;
+    letter-spacing:normal;
+  }
+  .teaserSTATmagazin .wrapperSTATmagazin p {
+    padding:0 0 4px 16px;
+    width:43%;
+    font-weight:bold;
+  }
+  .teaserSTATmagazin .allLink a {
+    margin:0 0 0 16px;
+  }
+/* ** 5.6 Sitemap ** */
+ .wrapperSitemap {
+   padding-bottom:12px;
+ }
+ .wrapperSitemap h1 {}
+ .wrapperSitemap h2 {
+   background-color:#6A7883;
+   color:#ffffff;
+   font-size:1em;
+   line-height:1.2142em; /* 17px */
+   padding:10px 0 4px 6px;
+   margin-bottom:12px;
+   font-weight:bold;
+   text-transform: uppercase;
+   letter-spacing: 0px;
+ }
+ .wrapperSitemap h2 a {
+   color:#ffffff;
+   font-weight: normal;
+ }
+ .wrapperSitemap h3 a {
+  font-weight: bold;
+ }
+ .wrapperSitemap h3 {
+     font-size: 1.25em;
+     font-weight: bold;
+     letter-spacing: 0;
+     line-height: 1.1667em;
+     padding: 0 0 4px;
+     text-transform: none;
+ }
+ .wrapperSitemap h4 {
+   font-size:1.5em; /* 18px */
+   line-height:1.1667em; /* 21px */
+   padding:0 0 4px 0;
+   text-transform: none;
+   font-weight:normal;
+ }
+ .wrapperSitemap ul.sitemap {
+   padding-bottom:22px;
+ }
+ .wrapperSitemap ul.sitemap li ul {
+   font-size:1.1667em; /* 14px */
+  line-height:1.2142em; /* 17px */
+ }
+ .wrapperSitemap ul.sitemap li ul li ul {
+   font-size:0.8571em; /* 12px */
+  line-height:1.4167em; /* 17px */
+ }
+ .wrapperSitemap ul.sitemap li ul li ul {
+   font-size:0.8333em; /* 10px */
+  line-height:1.4167em; /* 17px */
+ }
+ .wrapperSitemap ul.sitemap li ul a {
+   padding-left:16px;
+ }
+ .wrapperSitemap ul.sitemap li ul li ul a {
+   padding-left:32px;
+ }
+ .wrapperSitemap ul.sitemap li ul li ul li ul a {
+   padding-left:48px;
+ }
+ .wrapperSitemap ul.sitemap li ul {
+   padding-bottom:6px;
+   padding-top: 2px;
+ }
+ .wrapperSitemap .leftSide.twoCol {
+   float:left;
+   width:65.5%;
+ }
+ .wrapperSitemap .leftSide.oneCol {
+   float:left;
+   width:32.5%;
+ }
+ .wrapperSitemap .rightSide.oneCol {
+   float:right;
+   width:32.5%;
+ }
+ .wrapperSitemap .rightSide.twoCol {
+   float:right;
+   width:65.5%;
+ }
+ .wrapperSitemap .leftSide.twoCol .col {
+   float:left;
+   width:49%;
+ }
+ .wrapperSitemap .leftSide.oneCol .col {
+   width:98%;
+ }
+ .wrapperSitemap .rightSide.twoCol .col {
+   float:left;
+   width:49%;
+ }
+ .wrapperSitemap .rightSide.oneCol .col {
+   width:98%;
+ }
+ .wrapperSitemap .threeCol .oneCol {
+   float:left;
+   width:32%;
+   margin-left:2%;
+ }
+ .wrapperSitemap .threeCol .oneCol.first {
+   margin-left:0;
+ }
+/* ** 5.7 Optimierte Mobilversion ** */
+#footerLinksMobile { display: none; }
+#themenAuswahl { display: none; }
+#siteInfo .imprintFooter { display: none; }
+#jump:not(:target) { display: none; }
+#back:not(:target) { display: none; }
+#back:not(:target) a { display: none; }
+.aktuellePublikationen.mobil { display: none; }
+
+/*********************** 6. FOOTER ***********************/
+#footerLinks {
+  padding-bottom:20px;
+}
+#footerLinks > ul {
+ padding-left: 32px;
+}
+#footerLinks ul li {
+  float:left;
+  width:18%;
+  margin-right: 1.5%;
+}
+#footerLinks ul li p {
+  font-size:1.1667em; /* 14px */
+  line-height:1.2142em; /* 17px */
+  text-transform:uppercase;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+#footerLinks ul li ul li {
+  float:none;
+  width:auto;
+  padding-bottom:8px;
+  font-size:0.9167em;
+}
+#footerLinks ul li ul li a  {
+  font-size:1em;
+  line-height:1em;
+  color:#2B2B2D;
+}
+#footerLinks ul li ul li a:hover {
+  text-decoration:underline;
+}
+ul#socialBookmarks {
+  float:right;
+  padding:10px 0;
+  margin-right:38px;
+}
+ul#socialBookmarks li {
+  float:left;
+  padding-left:14px;
+}
+#wrapperSiteInfo {
+  background-color:#697782;
+}
+#siteInfo {
+  padding-top:6px;
+  color:#FFFFFF;
+}
+#siteInfo p {
+  float:left;
+  display:inline-block;
+  margin-left: 32px;
+}
+#btnDrucken {
+  float:right;
+  display:inline-block;
+  margin-right:38px;
+}
+#btnDrucken a {
+  display:inline-block;
+  color:#ffffff;
+  padding-left:22px;
+}
+#btnDrucken a.noprint {
+  margin-left:20px;
+}
+#btnDrucken a:hover {
+  text-decoration:underline;
+}
+/*********************** 7. SPECIAL ELEMENTS *******************/
+ul#searchResultIndex {background-color:#ccdfec; margin-bottom:10px; padding:10px;list-style-type:none;}
+#searchResultIndex li {display:inline; }
+/* ** 7.1 Flash Content ** */
+ .audioBox {
+   padding:0px 0 24px;
+ }
+ .audioBox object {
+   width:80%!important;
+ }
+ .videoBox {
+   padding:0px 0 24px;
+ }
+/* ** 7.2 Calendar ** */
+ .calendar {position: relative;}
+ .calendar h1, #supplement .calendar .live-calendar h3 {font-size:1.167em; /*fix*/ line-height:1em; /* 17px */ text-transform:uppercase; letter-spacing:1px; padding:0 0 16px 0; font-weight:normal;}
+ .calendar h2 {padding-bottom: 8px !important;}
+ .calendar.module {overflow: visible;}
+ .calendar p.monat {font-size:1.1667em; /* 14px */line-height:1.2142em; /* 17px */background-color:#075083; color:#ffffff; padding:8px 0 8px 12px; font-weight:bold;}
+ .calendar-state {height: 20px;left: 50%; position: absolute; text-indent: -9999px; top: 50%; width: 20px;}
+ .calendar .live-calendar {position:relative;}
+ .calendar .live-calendar .pager {position:absolute;top:31px;   right:8px; width:50px;}
+ .calendar .live-calendar .pager a {display:inline-block; width:21px; height:21px;}
+ .calendar .live-calendar .pager div.prev, .calendar .live-calendar .pager div.next {float:left;}
+ .calendar .live-calendar .pager div.prev {margin-right:6px;}
+ .calendar .live-calendar table {background-color:#E5EFF5;}
+ .calendar .live-calendar table th, .calendar .live-calendar table td {padding:0;}
+ .calendar .live-calendar table thead {border-top:2px solid #ffffff; border-left:1px solid #ffffff; border-right:1px solid #ffffff;}
+ .calendar .live-calendar table th {height:28px;text-align:center; vertical-align:middle; border:none; background-color:#E5EFF5;}
+ .calendar .live-calendar table th abbr {font-weight:bold;}
+ .calendar .live-calendar table th.sun abbr {color:#666666;}
+ .calendar .live-calendar table tr {}
+ .calendar .live-calendar table tr td {height:28px; border:1px solid #ffffff; text-align:center; vertical-align:middle; background-color: #CCDFEC;}
+ .calendar .live-calendar table tr td .calendar-cell {position: relative;}
+ .calendar .live-calendar table tr td .calendar-cell a {}
+ .calendar .live-calendar table tr td.today {background-color:#075083;}
+ .calendar .live-calendar table tr td.today em span {color:#ffffff; font-weight:bold; font-style:normal;}
+ .calendar .live-calendar table td.today a {color:#ffffff; font-weight:bold;}
+ .js-on #wrapperDivisions .calendar-details {background-color: #FFFFFF; border: 1px solid #075083; left: auto !important; overflow: hidden; padding: 5px; position: absolute; right: 5px; top: -30px; width: 280%; cursor: default; z-index: 999;}
+ .js-on #wrapperDivisions .calendar-details h4 {font-weight: bold;}
+/* ** 7.3 FancyBox ** */
+ #fancybox-loading {position: fixed; top: 50%; left: 50%; width: 40px; height: 40px; margin-top: -20px; margin-left: -20px; cursor: pointer; overflow: hidden; z-index: 1104; display: none;}
+ #fancybox-loading div {position: absolute; top: 0; left: 0; width: 40px; height: 480px;}
+ #fancybox-wrap {background-color: #fff; padding: 10px 25px; min-width: 200px; position: absolute; top: 0; left: 0; z-index: 1101; outline: none; display: none;}
+ #fancybox-outer {margin: 0; overflow: visible; position: relative; width: 100%; height: 100%; background: #fff;}
+ #fancybox-content {border: 0px solid #EFEFEF !important; margin: 9px 0 0 5px; padding: 5px; width: 0; height: 0; outline: none; position: relative; overflow: hidden; z-index: 1102;}
+ #fancybox-overlay {position: absolute; top: 0; left: 0; width: 100%; z-index: 1100; display: none;}
+ #fancybox-tmp {padding: 0; margin: 0; border: 0; overflow: auto; display: none;}
+ #fancybox-error { color: #444; padding: 14px; margin: 0;}
+ #fancybox-img { width: 100%; height: 100%; padding: 0; margin: 0; border: none; outline: none; line-height: 0; vertical-align: top;}
+ #fancybox-frame { width: 100%; height: 100%; border: none; display: block;}
+ #fancybox-hide-sel-frame { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 1101;}
+ #fancybox-title {z-index: 1102;}
+ .fancybox-title-inside { padding-bottom: 10px; text-align: left; color: #333; background: #fff; position: relative;}
+ .fancybox-title-inside .fbSource {color:#6a7883;}
+ .fancybox-title-outside { padding-top: 10px; color: #fff;}
+ .fancybox-title-over { position: absolute; bottom: 0; left: 0; color: #FFF; text-align: left;}
+ #fancybox-bg-n { top: -20px; left: 0; width: 100%;}
+ #fancybox-bg-ne { top: -20px; right: -20px;}
+ #fancybox-bg-e { top: 0; right: -20px; height: 100%;}
+ #fancybox-bg-se { bottom: -20px; right: -20px;}
+ #fancybox-bg-s { bottom: -20px; left: 0; width: 100%;}
+ #fancybox-bg-sw { bottom: -20px; left: -20px;}
+ #fancybox-bg-w { top: 0; left: -20px; height: 100%;}
+ #fancybox-bg-nw { top: -20px; left: -20px;}
+ #fancybox-outer .formHandle {cursor: pointer; display: inline-block; height: 29px; padding-left: 6px;}
+ #fancybox-outer .formHandle span {cursor: pointer; display: inline-block; height: 29px; padding-right: 6px;}
+ #fancybox-outer .formHandle a {background: none repeat scroll 0 0 transparent; border: 0 none; color: #FFFFFF; cursor: pointer; font-weight: bold; margin: 0; padding: 0 5px; line-height: 2.4em;}
+ #fancybox-outer .formHandle a:hover {text-decoration: none;}
+ #fancybox-outer #fancybox-left {left: -23px;}
+ #fancybox-outer #fancybox-right {right: -22px;}
+#fancybox-outer .fbClose {position:absolute; right:-23px; top:-9px; z-index:10000; line-height:26px;padding-right:26px;height:22px;}
+ #fancybox-outer .fbCaption {padding: 10px 0 3px;}
+ #fancybox-left,
+ #fancybox-right { position: absolute; bottom: 47%; height: 100%; width: 25px; cursor: pointer; outline: none; z-index: 1102; display: none;}
+ #fancybox-left { left: 10px;  height: 25px;}
+ #fancybox-right { right: 10px; height: 25px;}
+ #fancybox-left-ico,
+ #fancybox-right-ico { position: absolute; top: 0; left: 0px; width: 28px; height: 30px; margin-top: 0px; cursor: pointer; z-index: 1102; display: block;}
+ #fancybox-left-ico { background-position: -42px -30px;}
+ #fancybox-right-ico { background-position: -42px -60px;}
+ #fancybox-left:hover,
+ #fancybox-right:hover { visibility: visible; /* IE6 */}
+ .fancybox-bg { position: absolute; padding: 0; margin: 0; border: 0; width: 20px; height: 20px; z-index: 1001;}
+ #fancybox-print,
+ #fancybox-close  {position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; cursor: pointer; z-index: 1103; display: none;}
+/* ** 7.4 jQuery UI ** */
+ /* Layout helpers
+ ----------------------------------*/
+ .ui-helper-hidden { display: none; }
+ .ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+ .ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+ .ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+ .ui-helper-clearfix { display: inline-block; }
+ * html .ui-helper-clearfix { height:1%; }
+ .ui-helper-clearfix { display:block; }
+ .ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+ .ui-state-disabled { cursor: default !important; }
+ .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+ .ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+ /* Component containers
+ ----------------------------------*/
+ .ui-widget {font-size: 1.1em; }
+ .ui-widget .ui-widget { font-size: 1em; }
+ .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-size: 1em; }
+ .ui-widget-content { border: 1px solid #dddddd; background-color: #f2f5f7; color: #2b2b2d; }
+ .ui-widget-content a { color: #2b2b2d; }
+ .ui-widget-header { border: 1px solid #aed0ea; background-color: #deedf7; color: #222222; font-weight: bold; }
+ .ui-widget-header a { color: #222222; }
+ /* Interaction states
+ ----------------------------------*/
+ .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #aed0ea; background-color: #d7ebf9; font-weight: bold; color: #0160A2; }
+ .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {text-decoration: none; }
+ .ui-state-hover, .ui-widget-content .ui-state-hover,
+ .ui-widget-header .ui-state-hover,
+ .ui-state-focus,
+ .ui-widget-content .ui-state-focus,
+ .ui-widget-header .ui-state-focus { border: 1px solid #0160A2; background-color: #DEEEF8; font-weight: bold;}
+ .ui-state-hover a, .ui-state-hover a:hover {text-decoration: none; }
+ .ui-state-active,
+ .ui-widget-content .ui-state-active,
+ .ui-widget-header .ui-state-active { border: 1px solid #0160A2; background-color: #CCDFEC; font-weight: bold; color: #0160A2; }
+ .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
+ .ui-widget :active { outline: none; }
+ /* Interaction Cues
+ ----------------------------------*/
+ .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #f9dd34; background-color: #ffef8f; color: #363636; }
+ .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+ .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background-color: #cd0a0a; color: #ffffff; }
+ .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #ffffff; }
+ .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #ffffff; }
+ .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+ .ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+ .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+ /* Overlays */
+ .ui-widget-overlay { background-color: #eeeeee; opacity: .80;filter:Alpha(Opacity=80); }
+ .ui-widget-shadow { margin: -7px 0 0 -7px; padding: 7px; background-color: #000000; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+ .ui-autocomplete { position: absolute; cursor: default; }
+ ul.ui-autocomplete {background-color: #fff; border: 1px solid #C3C4C6; padding: 4px; border-top: none;}
+ ul.ui-autocomplete li a {display: block; padding: 2px 4px; cursor: pointer;}
+ ul.ui-autocomplete li a:hover {border: none; background-color: #DEEEF8; font-weight: normal; color: #0160A2; text-decoration: none;}
+ ul.ui-autocomplete li span {font-style: italic; color: #C3C4C6;}
+ ul.ui-autocomplete .ui-state-hover, ul.ui-autocomplete .ui-widget-content .ui-state-hover,
+ ul.ui-autocomplete .ui-widget-header .ui-state-hover,
+ ul.ui-autocomplete .ui-state-focus,
+ ul.ui-autocomplete .ui-widget-content .ui-state-focus,
+ ul.ui-autocomplete .ui-widget-header .ui-state-focus { border: none; background-color: #DEEEF8; font-weight: normal; color: #000;}
+ /* workarounds */
+ * html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+ /* jQuery UI Datepicker 1.8.13 */
+ .ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
+ .ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+ .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 3px; width: 1.8em; height: 1.8em; cursor: pointer;}
+ .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 3px; border: none; }
+ .ui-datepicker .ui-datepicker-prev { left:2px; }
+ .ui-datepicker .ui-datepicker-next { right:2px; }
+ .ui-datepicker .ui-datepicker-prev-hover { left:2px; }
+ .ui-datepicker .ui-datepicker-next-hover { right:2px; }
+ .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+ .ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+ .ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+ .ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+ .ui-datepicker select.ui-datepicker-month,
+ .ui-datepicker select.ui-datepicker-year { width: 49%;}
+ .ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+ .ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+ .ui-datepicker td { border: 0; padding: 1px; }
+ .ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+ .ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+ .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+ .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+ /* with multiple calendars */
+ .ui-datepicker.ui-datepicker-multi { width:auto; }
+ .ui-datepicker-multi .ui-datepicker-group { float:left; }
+ .ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+ .ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+ .ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+ .ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+ .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+ .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+ .ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+ .ui-datepicker-row-break { clear:both; width:100%; }
+ /* RTL support */
+ .ui-datepicker-rtl { direction: rtl; }
+ .ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+ .ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+ .ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+ .ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+ .ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+ .ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+ .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+ .ui-datepicker-rtl .ui-datepicker-group { float:right; }
+ .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+ .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+ .ui-datepicker-calendar thead th {background-color: transparent !important;
+ /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+ .ui-datepicker-cover {
+     display: none; /*sorry for IE5*/
+     display/**/: block; /*sorry for IE5*/
+     position: absolute; /*must have*/
+     z-index: -1; /*must have*/
+     filter: mask(); /*must have*/
+     top: -4px; /*must have*/
+     left: -4px; /*must have*/
+     width: 200px; /*must have*/
+     height: 200px; /*must have*/
+ }
+/*********************** 8. TEMP SECTION ***********************/
+/*.schiebebuehneWrapper .wrapperTeaser {width:100%!important;}
+.wrapperTeaser .wrapperTeaser {width:100%!important;}
+ .wrapperTeaser .shadowBot{background-image:none;}
+.singleview dfn {
+  color:red;
+  font-weight:bold;
+}
+div.employeeImage {margin-right:1em!important;}
+.employeeImage img {height:100px;}
+.employeeAdress, .employeeContact {width:30%;}
+.mediabox {margin-bottom:1em;}*/
+/* TESTINTEGRATION SVG  -  TEMP*/
+#svgTest #vertical {float: left; height: 50%; margin-top: -289px; width: 100%;}
+#svgTest #app { width: 100%; clear: both;}
+#svgTest #pyramid {background-repeat: no-repeat; background-position: center; clear: both; float: left; background-color: #ffffff; height: 565px; width: 525px; padding-top: 10px; margin-left: -35px;}
+#svgTest #meta { word-spacing: -1px; padding-right: 25px; padding-left: 25px; padding-top: 65px; padding-bottom: 10px; line-height: 125%; font-size: 14px; position: relative; top: 0; float: left; height: auto; width: 380px; background-color: #ececec;}
+#svgTest #logo { position: absolute; background-color: #fff; top: 0px; left: 0px; width: 410px; padding-right: 20px;}
+#svgTest #controlls { height: 31px; width: 480px; margin-left: 45px; margin-top: 10px; clear: both;}
+#svgTest #buttonPause { position: relative; left: 50px; float: left; font-size: 14px;}
+#svgTest #buttonPlay { position: relative; right: 50px; float: right; font-size: 14px;}
+#svgTest #yearControl { text-align: center;}
+#svgTest #languageControl { float: left; margin-left: 10px;}
+#svgTest #data { margin-bottom: 35px; padding: 5px; position: relative; background-color: #ccc; top: 20px; height: 110px; width: 340px; display: block;}
+#svgTest #dynamicTextGroup { padding-left: 15px; padding-bottom: 6px; padding-right: 5px; padding-top: 4px; margin-bottom: 35px; position: relative; background-color: #fff; top: 20px; height: 110px; width: 300px; display: none;}
+#svgTest #displayCurrentYear { background-color: #ccc; font-size: 12px;}
+#svgTest #displayAge { font-size: 16px; font-weight: bold;}
+#svgTest #displayBirthYear { font-size: 14px;}
+#svgTest #countData { margin-top: 40px; margin-left: 175px; font-size: 12px; line-height: 95%;}
+#svgTest #yearData {float: left;}
+#svgTest #variantControl { float: left; margin-right: 10px;}
+#svgTest table { margin-left: 8px; text-align: right; border-width: 1px;}
+#svgTest td { width: 45px; padding: 3px;}
+#svgTest tr { background-color: white;}
+#svgTest .head { background-color: #fffee1; font-weight: bold;}
+#svgTest .left { padding-left: 8px; text-align: left;}
+#svgTest ul { margin-bottom: 0; margin-top: 0; clear: both;}
+#svgTest li { margin-bottom: 6px;}
+#svgTest h3 { font-size: 16px; font-weight: bold;}
+#svgTest h4 { margin-left: 10px; margin-bottom: 5px; margin-right: 0px; margin-top: 2px; font-size: 12px; font-weight: bold;}
+.MsoNormal span.underline{text-decoration:underline;}
+.MsoNormal span.strike{text-decoration:line-through;}

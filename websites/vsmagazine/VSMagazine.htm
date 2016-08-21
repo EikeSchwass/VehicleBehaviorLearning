@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="js rgba multiplebgs borderradius boxshadow cssanimations csstransitions generatedcontent no-ticker wf-adellesans-n8-active wf-adellesans-i4-active wf-adellesans-n4-active wf-adellesans-n6-active wf-abriltext-i4-active wf-adellesans-i8-active wf-active" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    
+<title>Neural Network Data Normalization and Encoding -- Visual Studio Magazine</title>
+<meta name="description" content="James McCaffrey explains how to normalize and encode neural network data from a developer's point of view. ">
+<meta name="keywords" content="c#, neural networks, visual studio">
+
+<meta property="og:title" content="Neural Network Data Normalization and Encoding -- Visual Studio Magazine">
+<meta property="og:description" content="James McCaffrey explains how to normalize and encode neural network data from a developer's point of view. ">
+<meta property="og:url" content="https://visualstudiomagazine.com/articles/2013/07/01/neural-network-data-normalization-and-encoding.aspx">
+<meta property="og:image" content="https://visualstudiomagazine.com/~/media/ECG/visualstudiomagazine/Images/introimages/0713vsm_McCaffreyNeuralN.jpg">
+<meta property="og:site_name" content="Visual Studio Magazine">
+   
+    <!-- NEW GA HEAD CODE -->
+<script async="" src="VSMagazine-Dateien/cbgapi.loaded_1"></script><script async="" src="VSMagazine-Dateien/cbgapi.loaded_0"></script><script src="VSMagazine-Dateien/munchkin.js" async="" type="text/javascript"></script><script src="VSMagazine-Dateien/sdk.js" id="facebook-jssdk"></script><script src="VSMagazine-Dateien/tag.aspx" async="" type="text/javascript"></script><script src="VSMagazine-Dateien/analytics.js" async=""></script><script async="" src="VSMagazine-Dateien/sti6gzh.js"></script><script type="text/javascript">
+(function(){
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script><script src="VSMagazine-Dateien/gpt.js"></script><script id="gpt-impl-0.20625209401056954" src="VSMagazine-Dateien/pubads_impl_94.js"></script><link href="https://tpc.googlesyndication.com/safeframe/1-0-4/html/container.html" rel="prefetch">
+
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="shortcut icon" href="https://visualstudiomagazine.com/design/ECG/VisualStudioMagazine/img/favicon-vsm.ico" type="image/x-icon">
+<link rel="stylesheet" href="VSMagazine-Dateien/style.css">
+<script src="VSMagazine-Dateien/modernizr.js"></script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'sti6gzh',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script src="VSMagazine-Dateien/scripts-min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/design/ECG/VisualStudioMagazine/js/min/html5shiv.min.js"></script>
+<script src="/design/ECG/VisualStudioMagazine/js/min/respond.min.js"></script>
+<![endif]-->
+
+<script>
+function showIntersitial(){}
+</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6779162-24', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+#logoRight {z-index:10!important;}
+</style>
+
+
+
+
+    
+    
+    
+    
+<script> (function () {  _ml = window._ml || {};  _ml.eid = '50202';  _ml.ht = 'shex';  _ml.em = '';  _ml.dm = '';  _ml.informer = { enable: true };  var s = document.getElementsByTagName('script')[0], cd = new Date(), mltag = document.createElement('script');  mltag.type = 'text/javascript'; mltag.async = true;  mltag.src = '//ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth() + cd.getFullYear();  s.parentNode.insertBefore(mltag, s);  })(); </script>
+ <script src="VSMagazine-Dateien/embed.js" async="" type="text/javascript"></script><script src="VSMagazine-Dateien/plusone.js" async="" type="text/javascript"></script><script id="twitter-wjs" src="VSMagazine-Dateien/widgets.js"></script><style type="text/css">.tk-abril-text{font-family:"abril-text",sans-serif;}.tk-adelle-sans{font-family:"adelle-sans",sans-serif;}</style><style type="text/css">@font-face{font-family:abril-text;src:url(https://fonts.typekit.net/af/9a78e8/0000000000000000000119be/23/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:adelle-sans;src:url(https://fonts.typekit.net/af/1d26a8/000000000000000000012b01/23/l?subset_id=2&fvd=n8) format("woff2");font-weight:800;font-style:normal;}@font-face{font-family:adelle-sans;src:url(https://fonts.typekit.net/af/90d714/000000000000000000012b02/23/l?subset_id=2&fvd=i8) format("woff2");font-weight:800;font-style:italic;}@font-face{font-family:adelle-sans;src:url(https://fonts.typekit.net/af/f35af4/000000000000000000012afc/23/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:adelle-sans;src:url(https://fonts.typekit.net/af/03cb99/000000000000000000012afb/23/l?subset_id=2&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:adelle-sans;src:url(https://fonts.typekit.net/af/a7018c/000000000000000000012afd/23/l?subset_id=2&fvd=n6) format("woff2");font-weight:600;font-style:normal;}</style><script src="VSMagazine-Dateien/button.js" async="" charset="utf-8" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+
+<body id="Body1">
+    
+    
+    
+    
+    
+    <form name="form1" method="post" action="neural-network-data-normalization-and-encoding.aspx" id="form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTk5OTU3MDU3Nw9kFgYCAQ9kFggCAQ8WAh4EVGV4dAVITmV1cmFsIE5ldHdvcmsgRGF0YSBOb3JtYWxpemF0aW9uIGFuZCBFbmNvZGluZyAtLSBWaXN1YWwgU3R1ZGlvIE1hZ2F6aW5lZAIDDxYCHwAFdWNvbnRlbnQ9IkphbWVzIE1jQ2FmZnJleSBleHBsYWlucyBob3cgdG8gbm9ybWFsaXplIGFuZCBlbmNvZGUgbmV1cmFsIG5ldHdvcmsgZGF0YSBmcm9tIGEgZGV2ZWxvcGVyJ3MgcG9pbnQgb2Ygdmlldy4gImQCBQ8WAh8ABSxjb250ZW50PSJjIywgbmV1cmFsIG5ldHdvcmtzLCB2aXN1YWwgc3R1ZGlvImQCCQ8WAh8ABfcEPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSJOZXVyYWwgTmV0d29yayBEYXRhIE5vcm1hbGl6YXRpb24gYW5kIEVuY29kaW5nIC0tIFZpc3VhbCBTdHVkaW8gTWFnYXppbmUiIC8+DQo8bWV0YSBwcm9wZXJ0eT0ib2c6ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkphbWVzIE1jQ2FmZnJleSBleHBsYWlucyBob3cgdG8gbm9ybWFsaXplIGFuZCBlbmNvZGUgbmV1cmFsIG5ldHdvcmsgZGF0YSBmcm9tIGEgZGV2ZWxvcGVyJ3MgcG9pbnQgb2Ygdmlldy4gIiAvPg0KPG1ldGEgcHJvcGVydHk9Im9nOnVybCIgY29udGVudD0iaHR0cHM6Ly92aXN1YWxzdHVkaW9tYWdhemluZS5jb20vYXJ0aWNsZXMvMjAxMy8wNy8wMS9uZXVyYWwtbmV0d29yay1kYXRhLW5vcm1hbGl6YXRpb24tYW5kLWVuY29kaW5nLmFzcHgiIC8+DQo8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9Imh0dHBzOi8vdmlzdWFsc3R1ZGlvbWFnYXppbmUuY29tL34vbWVkaWEvRUNHL3Zpc3VhbHN0dWRpb21hZ2F6aW5lL0ltYWdlcy9pbnRyb2ltYWdlcy8wNzEzdnNtX01jQ2FmZnJleU5ldXJhbE4uanBnIiAvPg0KPG1ldGEgcHJvcGVydHk9Im9nOnNpdGVfbmFtZSIgY29udGVudD0iVmlzdWFsIFN0dWRpbyBNYWdhemluZSIgLz4NCmQCDw9kFgJmDxYCHwAFyAM8c2NyaXB0PiAoZnVuY3Rpb24gKCkgeyAgX21sID0gd2luZG93Ll9tbCB8fCB7fTsgIF9tbC5laWQgPSAnNTAyMDInOyAgX21sLmh0ID0gJ3NoZXgnOyAgX21sLmVtID0gJyc7ICBfbWwuZG0gPSAnJzsgIF9tbC5pbmZvcm1lciA9IHsgZW5hYmxlOiB0cnVlIH07ICB2YXIgcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKVswXSwgY2QgPSBuZXcgRGF0ZSgpLCBtbHRhZyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOyAgbWx0YWcudHlwZSA9ICd0ZXh0L2phdmFzY3JpcHQnOyBtbHRhZy5hc3luYyA9IHRydWU7ICBtbHRhZy5zcmMgPSAnLy9tbDMxNC5jb20vdGFnLmFzcHg/JyArIGNkLmdldERhdGUoKSArIGNkLmdldE1vbnRoKCkgKyBjZC5nZXRGdWxsWWVhcigpOyAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShtbHRhZywgcyk7ICB9KSgpOyA8L3NjcmlwdD5kAhEPZBYCAgsPZBYGAhkPZBYCAgEPZBYCZg9kFgICAQ9kFgQCAQ8PZBYEHgdvbkZvY3VzBShGb2N1c1NlYXJjaEJveCgncGhfaGVhZGVyMl8xX3R4dFNlYXJjaCcpHgZvbkJsdXIFD0JsdXJTZWFyY2hCb3goKWQCAw8QZGQWAGQCOQ9kFgJmD2QWAmYPZBYCAgEPZBYCAgEPDxYCHgtOYXZpZ2F0ZVVybAVsaHR0cHM6Ly92aXN1YWxzdHVkaW9tYWdhemluZS5jb20vQXJ0aWNsZXMvMjAxMy8wNy8wMS9OZXVyYWwtTmV0d29yay1EYXRhLU5vcm1hbGl6YXRpb24tYW5kLUVuY29kaW5nLmFzcHg/cD0xZGQCXQ9kFgJmD2QWAgIBDxYCHwAF4QLCqSAxOTk2LTIwMTYgMTEwNSBNZWRpYSwgSW5jLiBWaWV3IG91ciA8YSBocmVmPSJodHRwOi8vMTEwNW1lZGlhLmNvbS9wcml2YWN5LmFzcHgiIHRhcmdldD0iX2JsYW5rIj5Qcml2YWN5IFBvbGljeTwvYT4gYW5kIDxhIGhyZWY9Imh0dHA6Ly8xMTA1bWVkaWEuY29tL3Rlcm1zLmh0bWwiIHRhcmdldD0iX2JsYW5rIj5UZXJtcyBvZiBVc2U8L2E+Lgo8cCBhbGlnbj0iY2VudGVyIj48Yj48YSBocmVmPSJtYWlsdG86Ym5hZ2VsQDExMDVtZWRpYS5jb20/c3ViamVjdD1SZWdhcmRpbmcgVmlzdWFsc3R1ZGlvbWFnYXppbmUuY29tIj5Qcm9ibGVtcz8gUXVlc3Rpb25zPyBGZWVkYmFjaz8gRS1tYWlsIHVzLjwvYT48L2I+PC9wPmQYBQUacGhfc2NvbnRlbnQ1XzAkbHZPdXRlckxpc3QPZ2QFGXBoX3Bjb250ZW50MV8xJEF1dGhvckluZm8PZ2QFLnBoX3Bjb250ZW50MV8xJEFydGljbGVMb2dJbiRjdGwwMCRsc3RSZWdDaG9pY2UPZ2QFJnBoX3Bjb250ZW50MV8xJExpc3RWaWV3QXNzb2NpYXRlZEZpbGVzDzwrAAoCBxQrAAFkCAIBZAUacGhfc2NvbnRlbnQzXzAkbHZPdXRlckxpc3QPZ2TBIvVsA8seDtwzUkcOgPlYAQMZMg==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="VSMagazine-Dateien/WebResource.js" type="text/javascript"></script>
+
+<script language="javascript" type="text/javascript">
+var id = ''; 
+
+function FocusSearchBox(ctl) {
+id = ctl;}
+
+function BlurSearchBox() {
+id = '';}
+
+document.onkeypress = function disableKey(e) { var evtobj = window.event ? event : e;var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode;if (unicode == 13) {if (id == '') {window.event.keyCode = 0;} else {document.getElementById("hdnSearch").value = id;document.getElementById(id.replace("txt", "btn")).click();} } }
+</script>
+<script src="VSMagazine-Dateien/ScriptResource.js" type="text/javascript"></script>
+<script src="VSMagazine-Dateien/ScriptResource_002.js" type="text/javascript"></script>
+<div>
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A9DC696D" type="hidden">
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', document.getElementById('form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    
+        <div class="wrapper">
+            
+    <div class="ad">
+        <div id="div-gpt-ad-01">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[152,800],[152,650]], 'div-gpt-ad-01')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['WALLPAPER'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-01');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_008"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dWALLPAPER%26Topic%253dC_Sharp%252cDevelopment&sz=152x800|152x650&tile=1&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dWALLPAPER%26Topic%253dC_Sharp%252cDevelopment&sz=152x800|152x650&tile=1&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+            
+            
+            
+            
+            
+            <div class="leaderboard">
+                
+    <div class="ad">
+        <div id="div-gpt-ad-02">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[728,90],[700,90]], 'div-gpt-ad-02')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['LEAD_T1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-02');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_020"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dLEAD_T1%26Topic%253dC_Sharp%252cDevelopment&sz=728x90|700x90&tile=2&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dLEAD_T1%26Topic%253dC_Sharp%252cDevelopment&sz=728x90|700x90&tile=2&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+<div style="display: none;" class="ticker">
+
+
+
+    <div class="ad">
+        <div id="div-gpt-ad-03">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[974,32]], 'div-gpt-ad-03')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['TICK_T1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-03');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_019"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTICK_T1%26Topic%253dC_Sharp%252cDevelopment&sz=974x32&tile=3&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTICK_T1%26Topic%253dC_Sharp%252cDevelopment&sz=974x32&tile=3&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+                </div><!-- closing div -->
+
+
+
+                
+                
+                
+            </div>		            
+
+            <header role="banner" class="header"><p class="collapse-menu">COLLAPSE MENU</p><p class="expand-menu">EXPAND MENU FOR MORE TOPICS</p>            
+                <h1><a href="https://visualstudiomagazine.com/"><img alt="Visual Studio Magazine - Expert Solutions for .NET Development" src="VSMagazine-Dateien/vsm_logo_mobile.png"></a></h1>
+
+
+
+                <div id="ph_header2_0_divBlockBox" class="twitter">
+	
+	<div id="ph_header2_0_divBody" class="summary"> 
+<div class="social"><a class="twitter ir" href="http://twitter.com/VSMdev" target="_blank">Twitter</a> <a class="rss ir" href="https://visualstudiomagazine.com/rss-feeds/rss-list.aspx">RSS</a><img alt="" src="VSMagazine-Dateien/vslogo.png"> </div></div>
+	
+</div>
+
+<noindex>
+
+<div id="ph_header2_1_pnlSearch" class="search">
+	
+    <fieldset>
+        <input name="ph_header2_1$txtSearch" id="ph_header2_1_txtSearch" onfocus="FocusSearchBox('ph_header2_1_txtSearch')" onblur="BlurSearchBox()" type="text">        
+        
+        <input name="ph_header2_1$btnSearch" value="Search" id="ph_header2_1_btnSearch" class="submit" type="submit">
+        
+	    <input id="hdnSearch" name="hdnSearch" visible="false" type="hidden">
+	</fieldset>
+
+</div>
+
+</noindex>
+
+<noindex>
+
+<!-- component markup start -->
+<div class="nav topics">
+    <ul class="topnavlist"><li class="navblock vs">
+		<a href="https://visualstudiomagazine.com/pages/topic-pages/visual-studio-tutorials.aspx">
+				<img alt="" src="VSMagazine-Dateien/blank.png"></a>
+</li><li class="navblock c-vb">		<a href="https://visualstudiomagazine.com/pages/topic-pages/c-sharp-vb-tutorials.aspx">
+				<img alt="" src="VSMagazine-Dateien/blank.png"></a>
+</li><li class="navblock net">
+		<a href="https://visualstudiomagazine.com/pages/topic-pages/net-tutorials.aspx">
+				<img alt="" src="VSMagazine-Dateien/blank.png"></a>
+</li><li class="navblock mobile">
+		<a href="https://visualstudiomagazine.com/pages/topic-pages/mobile-how-to.aspx">
+				<img alt="" src="VSMagazine-Dateien/blank.png"></a>
+</li><li class="navblock last html5-js">
+		<a href="https://visualstudiomagazine.com/pages/topic-pages/html5-javascript-tutorials.aspx">
+				<img alt="" src="VSMagazine-Dateien/blank.png"></a>
+</li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+
+                
+
+<noindex>
+
+<!-- component markup start -->
+<div class="top-menu-left nav">
+    <ul class="topnavlist"><li class=""><a href="https://visualstudiomagazine.com/articles/list/news.aspx">News</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/features.aspx">In-Depth</a></li><li class=""><a href="https://visualstudiomagazine.com/blogs/tool-tracker/list/blog-list.aspx">.NET Tips &amp; Tricks</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/agile-advisor.aspx">Agile Advisor</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/on-vb.aspx">Code Focused</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/c-sharp-corner.aspx">C# Corner</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/mono-for-android.aspx">Cross-Platform C#</a></li><li class=""><a href="https://visualstudiomagazine.com/blogs/data-driver/list/blog-list.aspx">Data Driver</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/inside-tfs.aspx">Inside TFS</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/mobile-corner.aspx">Mobile Corner</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/new-age-c.aspx">Modern C++</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/neural-network-lab.aspx">Neural Network Lab</a></li><li class=""><a href="https://visualstudiomagazine.com/blogs/onward-and-upward/list/blog-list.aspx">OnWard and UpWard</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/practical-aspnet.aspx">Practical .NET</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/redmond-review.aspx">Redmond Review</a></li><li class=" last"><a href="https://visualstudiomagazine.com/articles/list/ui-code-expert.aspx">UI Code Expert</a></li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+
+
+<noindex>
+
+<!-- component markup start -->
+<div class="top-menu-right nav">
+    <ul class="topnavlist"><li class=""><a href="https://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Tech Library</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/salary-surveys/salary-survey.aspx">2013 Salary Survey</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/visual-studio-2012.aspx">Visual Studio 2012</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/alm.aspx">ALM</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/agile-and-scrum.aspx">Agile/Scrum</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/async.aspx">Async/Parallel/Multicore</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/cloud-computing.aspx">Cloud/Azure</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/open-source.aspx">Open Source</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/sharepoint.aspx">SharePoint</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/sql-server.aspx">SQL Server</a></li><li class=""><a href="https://visualstudiomagazine.com/articles/list/web-development.aspx">Web Development</a></li><li class=""><a href="https://visualstudiomagazine.com/issues/issue-archive.aspx">HTML Issue Archive</a></li><li class=" last"><a href="https://visualstudiomagazine.com/pages/topic-pages/archive.aspx">Full Archive</a></li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+
+                
+                
+            </header>
+                
+
+            <div id="main">
+    		
+                
+                
+                
+                
+                
+
+                 <div class="sideBar">
+                    
+
+<noindex>
+
+<!-- component markup start -->
+<div class="topnav nav">
+    <ul class="topnavlist"><li class=" home"><a href="https://visualstudiomagazine.com/home.aspx">Home</a></li><li class=""><a href="https://newsletters.1105pubs.com/nl/URMG.do?pk=WSNVSM" target="_blank">Newsletters</a></li><li class=""><a href="https://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Whitepapers</a></li><li class=""><a href="https://visualstudiomagazine.com/webcasts/list/webcast-list.aspx">Webcasts</a></li><li class=""><a href="https://visualstudiomagazine.com/research/list/back-issues.aspx">PDF Back Issues</a></li><li class=""><a href="https://1105ecg.com/pages/vs.aspx" target="_blank">Advertise</a></li><li class=""><a href="https://visualstudiomagazine.com/pages/contact-us.aspx">Contact Us</a></li><li class=" last"><a href="https://visualstudiomagazine.com/blogs/vs-live-video/list/blog-list.aspx">Live! Video</a></li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+
+                    
+                    
+                    
+                    
+                </div>
+                
+                <div class="pContent">
+                    <div id="ph_pcontent1_0_divBlockBox" class="promo-link">
+	
+	<div id="ph_pcontent1_0_divBody" class="summary">		<!--<p>
+				<a href="http://vslive.com/events/redmond-2011/home.aspx?utm_source=AttendeeMktg&utm_medium=Miscellaneous&utm_campaign=VSLRINTR" target="_blank">
+						<i>Developer Training @ Microsoft HQ- Visual Studio Live! Redmond</i>
+				</a>
+		</p>
+--></div>
+	
+</div>
+
+<div id="level0">
+    <div id="article"><div class="horizontal-social-buttons"><div class="social-button"><div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;"><iframe data-gapiattached="true" class="jhcnkrvrguwjzceaapjd" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=https%3A%2F%2Fvisualstudiomagazine.com&amp;url=https%3A%2F%2Fvisualstudiomagazine.com%2Farticles%2F2013%2F07%2F01%2Fneural-network-data-normalization-and-encoding.aspx&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.de.kcl7tTEJKxQ.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCPrVR2CzYWaT-QFKmMOCzPp114yhQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1471725454638&amp;parent=https%3A%2F%2Fvisualstudiomagazine.com&amp;pfname=&amp;rpctoken=34551804" name="I0_1471725454638" id="I0_1471725454638" vspace="0" tabindex="0" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div><div data-gapistub="true" data-onload="true" data-gapiscan="true" class="g-plusone" data-size="medium" data-href="https://visualstudiomagazine.com/articles/2013/07/01/neural-network-data-normalization-and-encoding.aspx"></div></div><div class="social-button"><a data-twitter-extracted-i1471725454250593447="true" href="https://twitter.com/share" class="twitter-share-button twitter-share-button-error" data-url="https://visualstudiomagazine.com/articles/2013/07/01/neural-network-data-normalization-and-encoding.aspx">Tweet</a></div><div class="social-button"><script type="IN/Share" data-counter="right" data-url="https://visualstudiomagazine.com/articles/2013/07/01/neural-network-data-normalization-and-encoding.aspx"></script><script src="VSMagazine-Dateien/in.js" type="text/javascript"> lang: en_US </script></div><div class="social-button"><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="VSMagazine-Dateien/LJ9CfGDsgQ7.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script><div fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fvisualstudiomagazine.com%2Farticles%2F2013%2F07%2F01%2Fneural-network-data-normalization-and-encoding.aspx&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey" fb-xfbml-state="rendered" class="fb-share-button fb_iframe_widget" data-href="https://visualstudiomagazine.com/articles/2013/07/01/neural-network-data-normalization-and-encoding.aspx" data-layout="button_count"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe class="jhcnkrvrguwjzceaapjd" src="https://www.facebook.com/v2.0/plugins/share_button.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FLJ9CfGDsgQ7.js%3Fversion%3D42%23cb%3Df2048f26c1792a%26domain%3Dvisualstudiomagazine.com%26origin%3Dhttps%253A%252F%252Fvisualstudiomagazine.com%252Ff266c793c4a5cb8%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fvisualstudiomagazine.com%2Farticles%2F2013%2F07%2F01%2Fneural-network-data-normalization-and-encoding.aspx&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey" style="border: medium none; visibility: visible; width: 0px; height: 0px;" title="fb:share_button Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f37adde12464b7c" frameborder="0" height="1000px" width="1000px"></iframe></span></div></div></div> 
+        
+        <p id="ph_pcontent1_1_KickerText" class="kicker"><a href="https://visualstudiomagazine.com/Articles/List/Neural-Network-Lab.aspx">Neural Network Lab</a></p>
+        
+        <h3 id="ph_pcontent1_1_MainHeading" class="title">Neural Network Data Normalization and Encoding</h3>
+        <p id="ph_pcontent1_1_Deck" class="deck">James McCaffrey explains how to normalize and encode neural network data from a developer's point of view. </p>
+        
+        <ul id="ph_pcontent1_1_ByAuthor" class="byline">
+			<li class="author">By <a href="https://visualstudiomagazine.com/forms/emailtoauthor.aspx?AuthorItem=%7BACEDC2E2-EF62-4F3D-A452-58FCAEB55039%7D&amp;ArticleItem=%7B39E65AF6-7762-42F8-A04E-F77E7B4275DA%7D">James McCaffrey</a></li><li class="date">07/22/2013</li>
+		</ul><ul class="associatedFiles">
+                    
+                <li>
+                    <a id="ph_pcontent1_1_ListViewAssociatedFiles_ctrl0_AssociatedURL" href="https://visualstudiomagazine.com/%7E/media/ECG/visualstudiomagazine/Code%20Download/2013/07/0713vsm_McCaffreyNeuralCode.zip">Get Code Download</a>                               
+                    <p>                                    
+                        <span>
+                            <em></em>
+                        </span>
+                        <span>
+                            <em></em>
+                        </span>                                    
+                    </p>
+                </li>
+            
+                </ul>
+
+        
+		
+
+<div class="introimage">
+<img alt="" src="VSMagazine-Dateien/0713vsm_McCaffreyNeuralN.jpg">
+</div>
+
+
+
+<p>A topic that's often very confusing for beginners when using neural 
+networks is data normalization and encoding. Because neural networks 
+work internally with numeric data, binary data (such as sex, which can 
+be male or female) and categorical data (such as a community, which can 
+be suburban, city or rural) must be encoded in numeric form. 
+Additionally, experience has shown that in most cases numeric data, such
+ as a person's age, should be normalized. There are many references that
+ discuss the theory of normalization and encoding, but few that provide 
+practical guidance and even fewer that provide code-implementation 
+examples. This article explains how to normalize and encode neural 
+network data from a developer's point of view. The process is 
+conceptually simple but surprisingly difficult to implement.
+</p>
+<p>The best way to see where this article is headed is to take a look at the screenshot of a demo program in <b>Figure 1</b>.
+ The demo program starts with six lines of raw data that's intended to 
+be fed to a neural network. Each line represents a person. The raw data 
+is:
+</p>
+<pre class="codesnippet">male 60000.00 suburban 54 republican 
+female 24000.00 city 28 democrat
+male 30000.00 rural 31 libertarian
+female 30000.00 suburban 48 republican
+female 18000.00 city 22 democrat
+male 56000.00 rural 39 other</pre>
+
+
+
+
+
+
+
+<figure>
+	<a href="https://visualstudiomagazine.com/articles/2013/07/01/%7E/media/ECG/visualstudiomagazine/Images/2013/07/0713vsm_McCaffreyNeuralN.ashx" target="_blank">
+    <img alt="" src="VSMagazine-Dateien/0713vsm_McCaffreyNeuralN_s.jpg">
+    </a>
+	<figcaption>
+		<b>[Click on image for larger view.]</b>	
+		<em>Figure 1.</em> The normalization and encoding demo.
+	</figcaption>
+</figure>
+
+
+
+
+
+
+<p>The first field is the person's sex, the second is annual income in 
+dollars, the third is community type, and the fourth is age. The fifth 
+field is the person's political affiliation. The idea is to create a 
+neural network model that uses the first four variables to predict a 
+person's political affiliation. The first variables are called the 
+independent, or x, variables. The variable to predict is called the 
+dependent, or y, variable.
+</p>
+
+    <div class="ad">
+        <div id="div-gpt-ad-04">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-04')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['BOX_A3'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-04');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_014"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_A3%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=4&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_A3%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=4&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+<br><p>When using neural networks, raw data is usually binary (two 
+possible values), categorical (three or more possible values) or 
+numeric. In the demo, sex is identified as binary, income as numeric, 
+community as categorical, and age as numeric. The dependent variable, 
+political affiliation, is tagged as categorical.
+</p>
+<p>The demo program breaks the raw data down into individual fields and 
+stores each value in a string matrix. Next, the program scans the 
+tokenized data to determine all the distinct binary and categorical 
+values. Then the program scans the tokenized data and computes the means
+ (mathematical averages) and standard deviations of the numeric data 
+(income and age). Next, the demo program iterates through each of the 
+six data lines and encodes binary and categorical data, and normalizes 
+numeric data. The demo finishes by displaying the final, normalized and 
+encoded data, which can be used by a neural network to predict political
+ affiliation from sex, income, community type and age.
+</p>
+<p>This article assumes you have at least intermediate-level programming
+ skills and a basic knowledge of neural networks. The demo program is 
+coded in C# with static methods, but you shouldn't have too much trouble
+ refactoring the code to another language or using an object-oriented 
+programming (OOP) style if you wish. To keep the main ideas clear, all 
+normal error checking has been removed.
+</p>
+
+
+
+<p><span class="a12blub">Encoding Binary and Categorical Data</span><br>
+When encoding binary and categorical data, there are four cases you must
+ deal with: independent (x) binary data, dependent (y) binary data, 
+independent (x) categorical data and dependent (y) categorical data. An 
+example of independent binary data is a predictor variable, sex, which 
+can take one of two values: "male" or "female." For such data I 
+recommend encoding the two possible values as -1.0 and +1.0:
+</p>
+<pre class="codesnippet">male   = -1.0
+female = +1.0</pre>
+
+
+
+<p>There's convincing research that indicates a -1.0, +1.0 scheme is 
+superior to a simple 0.0, 1.0 scheme for independent binary variables.
+</p>
+<p>An example of independent categorical data is a predictor variable 
+community, which can take values "suburban," "rural" or "city." For such
+ data I recommend using what's often called 1-of-(C-1) effects encoding.
+ Effects encoding is not obvious and is best explained by example:
+</p>
+<pre class="codesnippet">suburban = [ 0.0,  0.0,  1.0]
+rural    = [ 0.0,  1.0,  0.0]
+city     = [-1.0, -1.0, -1.0]</pre>
+
+
+
+<p>In other words, effects encoding sets up an array of numeric values. 
+The size of the array is the number of possible values, c. The first 
+categorical value has 0.0 values in all positions except a single 1.0 
+value in the last position. The second categorical value has the single 
+1.0 at the second-to-last position, and so on. The last categorical 
+value, instead of having a 1.0 in the first position and 0.0 values in 
+the remaining c-1 positions as you might expect, has -1.0 values at all c
+ positions.
+</p>
+<p>In the demo, the dependent variable, political affiliation, is 
+categorical and has four possible values: "republican," "democrat," 
+"libertarian" and "other." To encode dependent categorical data I 
+recommend using what's often called 1-of-C dummy encoding:
+</p>
+<pre class="codesnippet">republican  = [0.0, 0.0,  0.0,  1.0]
+democrat    = [0.0, 0.0,  1.0,  0.0]
+libertarian = [0.0, 1.0,  0.0,  0.0]
+other       = [1.0, 0.0,  0.0,  0.0]</pre>
+
+
+
+<p>In other words, 1-of-C encoding is the same as effects encoding 
+except that that last categorical value has a 1.0 in the first array 
+position, and 0.0 values in all other c-1 positions.
+</p>
+<p>Instead of having four possible values, suppose the dependent 
+variable, political affiliation, had just two values, "conservative" or 
+"liberal." This would be an example of dependent binary data. In such 
+situations I recommend using a simple 0.0, 1.0 scheme:
+</p>
+<pre class="codesnippet">conservative  = 0.0
+liberal       = 1.0 </pre>
+
+
+
+<p>It isn't at all obvious why I recommend four different encoding 
+schemes for the four different data cases. And there are several 
+alternatives. You can find many online references that go into a 
+painfully detailed discussion of this topic if you're interested in the 
+theory behind these encoding recommendations.
+</p>
+
+
+
+<p><span class="a12blub">Normalizing Numeric Data</span><br>
+There are two neural network numeric data cases: independent (x) numeric
+ data and dependent (y) numeric data. An example of independent numeric 
+data values are the ages (54, 28, 31, 48, 22, 39) in the demo program. I
+ recommend normalizing independent numeric data by computing the means 
+and standard deviation of the numeric x data, then applying the 
+transform (x - mean) / stddev.
+</p>
+<p>For example, in the demo program, the mean of all six age values is 
+37.0 and the standard deviation of the six age values is 11.22. So the 
+normalized age for the first person is (54.0 - 37.0) / 11.22 = 1.51.
+</p>
+<p>In most cases, normalized numeric data will have values that range 
+between -6.0 and +6.0. The idea behind data normalization is to scale 
+all numeric data to have roughly similar magnitudes. In the demo, a 
+typical annual income value is 30,000.0, but a typical age value is 
+31.0. Without normalization, the large magnitudes of the income data 
+relative to the age data would make the neural network training process 
+more difficult than with normalized data, because changes to the 
+income-weights would have a much greater effect than changes to the 
+age-weights.
+</p>
+<p>For dependent numeric data, except in very unusual situations, I recommend not normalizing or transforming the data.
+</p>
+
+
+
+<p><span class="a12blub">The Demo Program</span><br>
+The structure of the demo program, with a few minor edits, is presented in <b>Listing 1</b>.
+ To create the demo, I launched Visual Studio (any recent version will 
+work) and created a new C# console application program named 
+NeuralNetworkData. After the template code loaded, I removed all using 
+statements except the ones that reference the System and 
+Collections.Generic namespaces. In the Solution Explorer window I 
+renamed file Program.cs to NeuralDataProgram.cs, and Visual Studio 
+automatically renamed the class Program.
+</p>
+
+
+
+<span class="a12blub">Listing 1. The neural network data demo program structure.
+</span>
+<br>
+
+
+
+<pre class="codesnippet">using System;
+using System.Collections.Generic;
+
+namespace NeuralNetworkData
+{
+  class NeuralDataProgram
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("\nDemo of neural network data encoding and normalization\n");
+
+      string[] rawData = new string[] { 
+        "male 60000.00 suburban 54 republican", 
+        "female 24000.00 city 28 democrat",
+        "male 30000.00 rural 31 libertarian",
+        "female 30000.00 suburban 48 republican",
+        "female 18000.00 city 22 democrat",
+        "male 56000.00 rural 39 other" };
+
+      Console.WriteLine("\nThe raw data is: \n");
+      ShowRawData(rawData);
+
+      string[] colTypes = new string[5] { "binary", "numeric", "categorical",
+        "numeric", "categorical" }; 
+      Console.WriteLine("\nThe column types are:");
+      ShowColTypes(colTypes);
+
+      Console.WriteLine("\nBegin transform");
+
+      double[][] nnData = Transform(rawData, colTypes);
+
+      Console.WriteLine("\nTransform complete");
+      Console.WriteLine("\nEncoded and normalized result data is:\n");
+      ShowTransformed(nnData);
+
+      Console.WriteLine("\nEnd demo\n");
+      Console.ReadLine();
+    }
+
+    static double[][] Transform(string[] rawData, string[] colTypes) { . . }
+
+    static double BinaryIndepenToValue(string val, int col,
+      string[][]distinctValues) { . . }
+    
+    static double BinaryDepenToValue(string val, int col,
+      string[][]distinctValues) { . . }
+    
+    static double[] CatIndepenToValues(string val, int col,
+      string[][]distinctValues) { . . }
+    
+    static double[] CatDepenToValues(string val, int col,
+      string[][]distinctValues) { . . }
+    
+    static double NumIndepenToValue(string val, int col, double[] means,
+      double[] stdDevs) { . . }
+    
+    static int NumNewCols(string[][]distinctValues, string[] colTypes) { . . }
+    
+    static string[][] GetValues(string[][] data, string[] colTypes) { . . }
+    
+    static string[][] LoadData(string[] rawData) { . . }
+    
+    static double[] GetMeans(string[][] data, string[] colTypes) { . . }
+    
+    static double[] GetStdDevs(string[][] data, string[] colTypes,
+      double[] means) { . . }
+    
+    static void ShowVector(double[] vector, int decimals) { . . }
+    static void ShowRawData(string[] rawData) { . . }
+    static void ShowColTypes(string[] colTypes) { . . }
+    static void ShowTokenData(string[][] data) { . . }
+    static void ShowDistinctValues(string[][] distinctValues) { . . }
+    static void ShowTransformed(double[][] nnData) { . . }
+    
+  } // Program
+} // ns</pre>
+<br>
+        
+        
+        
+        
+        
+        
+        
+        <!-- pager start -->
+        <div class="pagination"><ul>
+<li><a href="#" class="prev disablelink">« previous</a></li>
+<li><a href="#" class="currentpage">1</a></li>
+<li><a href="https://visualstudiomagazine.com/Articles/2013/07/01/Neural-Network-Data-Normalization-and-Encoding.aspx?Page=2">2</a></li>
+
+<li><a href="https://visualstudiomagazine.com/Articles/2013/07/01/Neural-Network-Data-Normalization-and-Encoding.aspx?Page=2" class="next">next »</a></li>
+</ul>
+</div>
+
+        <!-- pager end -->
+        
+        
+            
+        
+                
+            
+
+        
+    </div>
+</div>
+                    <div class="pagetools">
+
+
+
+                    
+<noindex>
+<div id="ph_pcontent3_0_PrintFormat" class="print">
+	
+	<p><a id="ph_pcontent3_0_Print" href="https://visualstudiomagazine.com/Articles/2013/07/01/Neural-Network-Data-Normalization-and-Encoding.aspx?p=1" target="_blank">Printable Format</a></p>
+
+</div>
+</noindex></div><!-- closing div -->
+
+
+    <div id="disqus_thread"><iframe verticalscrolling="no" horizontalscrolling="no" src="VSMagazine-Dateien/a_003.htm" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 673px ! important;" title="Disqus" tabindex="0" scrolling="no" allowtransparency="true" name="dsq-app2" id="dsq-app2" frameborder="0" width="100%"></iframe></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vsmag'; // required: replace example with your forum shortname
+    var yoink = document.title;
+
+    var disqus_identifier = 'Title:' + yoink;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+
+
+
+                    
+                    
+                </div>
+                
+                <div class="sContent">
+                    
+
+<noindex>
+<!-- component markup start -->
+<div id="popular">
+    <div class="tabbedFields">
+        <ul class="tabMenu">
+            <li><a href="javascript:;">Most Popular Articles</a></li>
+            <li><a href="javascript:;">Most Emailed Articles</a></li>
+        </ul>
+        <!-- content 1 -->
+        <div class="tabContent">
+            
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl00_StoryHeadlineHyperLink" href="https://visualstudiomagazine.com/articles/2016/08/01/17-new-extensions.aspx">17 New Extensions for Visual Studio 2015</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl01_StoryHeadlineHyperLink" href="https://visualstudiomagazine.com/articles/2016/08/01/all-about-character.aspx">It's All About Character in C# and Visual Basic</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl02_StoryHeadlineHyperLink" href="https://visualstudiomagazine.com/articles/2016/08/18/powershell-linux-macosx-oms.aspx">PowerShell on Linux? It's About Time</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl03_StoryHeadlineHyperLink" href="https://visualstudiomagazine.com/articles/2016/07/21/bash-on-windows-linux.aspx">Bash on Windows: Getting Productive with Windows Subsystem for Linux</a></h3>
+                
+                    <h3><a id="ph_scontent1_0_PopularItemsRepeater_ctl04_StoryHeadlineHyperLink" href="https://visualstudiomagazine.com/articles/2016/08/01/data-updates-and-deletes-more-efficient.aspx">Making Your Data Updates and Deletes More Efficient</a></h3>
+                
+        </div>
+        <!-- content 2 -->
+        
+    </div>
+</div>
+<!-- component markup end -->
+</noindex>
+                    
+    <div class="ad">
+        <div id="div-gpt-ad-05">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[300,250]], 'div-gpt-ad-05')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['BOX_R1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-05');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_023"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_R1%26Topic%253dC_Sharp%252cDevelopment&sz=300x250&tile=5&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_R1%26Topic%253dC_Sharp%252cDevelopment&sz=300x250&tile=5&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+    <div class="ad">
+        <div id="div-gpt-ad-06">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-06')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['TEMP1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-06');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_011"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP1%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=6&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP1%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=6&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+                    <div id="ph_scontent3_0_divListBox" class="featured-free-whitepapers module">
+    
+    <h3 id="ph_scontent3_0_h3Header"><a href="https://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">Free Whitepapers</a></h3>
+                
+            
+            
+            <ul id="ph_scontent3_0_lvOuterList_ctrl0_ulListItem">
+                        
+                    
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl0_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/whitepapers/2016/06/ca-technologies/releaseautomation/ways-application-advances-continuous-delivery-journey.aspx?tc=page0">Three Ways Application Release Automation Advances Your Continuous Delivery Journey</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl0_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl1_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/whitepapers/2016/08/ca-technologies/taking-devops-next-level-continuous-delivery.aspx?tc=page0">Taking DevOps to the next level: It’s all about continuous delivery</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl1_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl2_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/whitepapers/2016/08/ca-technologies/release-automation-action-ways-reliably-deploy-applications-on-demand-win-application-economy.aspx?tc=page0">Release Automation in Action: Six Ways You Can Reliably Deploy Applications On-Demand and Win in the Application Economy</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl2_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl3_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/whitepapers/2016/08/syncfusion/store-limitless-amounts-time-series-data.aspx?tc=page0">Store Limitless Amounts of Time Series Data</a>
+    		            <span id="ph_scontent3_0_lvOuterList_ctrl0_lvItemList_ctrl3_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                
+            </ul>
+        
+        
+    <p id="ph_scontent3_0_pFooter" class="footer"><a href="https://visualstudiomagazine.com/whitepapers/list/vsm-tech-library-list.aspx">&gt; More TechLibrary</a></p>
+</div>
+
+                    
+    <div class="ad">
+        <div id="div-gpt-ad-07">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-07')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['BOX_R2'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-07');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_025"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_R2%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=7&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dBOX_R2%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=7&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+<div id="ph_scontent4_1_divBlockBox" class="calendar-listing">
+	
+	<div id="ph_scontent4_1_divBody" class="summary"><div class="upcoming-events">Upcoming Events</div> 
+<ul>
+
+
+<li>
+<a href="https://vslive.com/events/redmond-2016/home.aspx">Visual Studio Live! Redmond</a><br>
+August 8-12, 2016<br>
+Redmond, WA
+</li>
+
+<li>
+<a href="https://vslive.com/events/anaheim-2016/home.aspx">Visual Studio Live! Anaheim</a><br>
+September 26-29, 2016<br>
+Anaheim, CA
+</li>
+
+<li>
+<a href="https://vslive.com/events/washingtondc-2016/home.aspx">Visual Studio Live! Washington, D.C.</a><br>
+October 3-6, 2016<br>
+Washington, D.C.
+</li>
+
+
+
+<li>
+<a href="https://live360events.com/events/orlando-2016/home.aspx">Live! 360 Orlando</a><br>
+December 5-9, 2016<br>
+Orlando, FL
+</li>
+
+
+<li>
+<a href="https://vslive.com/events/orlando-2016">Visual Studio Live! Orlando</a><br>
+December 5-9, 2016<br>
+Orlando, FL
+</li>
+
+</ul></div>
+	
+</div><div class="NET-INSIGHT">
+	
+	<h3>.NET Insight</h3><p class="signupfor">Sign up for our newsletter.</p>
+	<div class="enl">
+		<div id="error" style=""></div>
+		<div class="enlform">
+			<div id="dvForm">
+				<div id="result"></div>
+					<input id="hndTABLENAME" value="ONE001982" type="hidden">
+				<input id="hndP00150002" value="1S" type="hidden">
+				<input id="hndP00490002" value="ZN" type="hidden">
+				<input id="hndP06660001" value="A" type="hidden">
+				<input id="hndP35160001" value="R" type="hidden">
+				<input id="hndP91620001" value="R" type="hidden">
+				<input id="hndP43140001" value="H" type="hidden">
+				<input id="hndP23230006" value="GetDate()" type="hidden">
+				<input id="hndP00880006" value="WSREDM" type="hidden">
+				<div class="formlabel">
+                    <label for="textfield">Email Address:</label>
+                </div>
+				<div class="emailAddress">
+					<div class="userEntry">
+						<input name="txtEMAILADR" id="txtEMAILADR" data-val="true" data-val-required="The Email address field is required." data-val-regex-pattern="^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$" data-val-regex="Please enter valid email" placeholder="signup@example.com" type="text">
+					</div>
+				</div>
+				<div class="dvForm-button">
+                    <input value="submit" id="button" data-state="hidden" type="button">
+                </div>
+			</div>
+			<div id="FormSent" class="hide"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="VSMagazine-Dateien/enewsletter-miniforms.js"></script><p class="enewsletterprivacypolicy">I agree to this site's <a href="http://1105media.com/privacy.html" target="_blank">Privacy Policy</a>.</p>
+</div>
+
+
+
+
+    <div class="ad">
+        <div id="div-gpt-ad-08">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-08')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['TEMP2'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-08');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_002"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP2%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=8&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP2%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=8&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+                    <div id="ph_scontent5_0_divListBox" class="featured-free-whitepapers module">
+    
+    <h3 id="ph_scontent5_0_h3Header">Free Webcasts</h3>
+                
+            
+            
+            <ul id="ph_scontent5_0_lvOuterList_ctrl0_ulListItem">
+                        
+                    
+                    <li id="ph_scontent5_0_lvOuterList_ctrl0_lvItemList_ctrl0_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/webcasts/2016/08/ibm-webcast-090716.aspx?tc=page0">Deliver on Your Innovation Goals with IBM Bluemix</a>
+    		            <span id="ph_scontent5_0_lvOuterList_ctrl0_lvItemList_ctrl0_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                    <li id="ph_scontent5_0_lvOuterList_ctrl0_lvItemList_ctrl1_liListItem">
+                        
+    		            
+    		            <a href="https://visualstudiomagazine.com/webcasts/2016/06/project-centennial-bridge-future-desktop-installations.aspx?tc=page0">Project Centennial: A Bridge to the Future of Desktop Installations</a>
+    		            <span id="ph_scontent5_0_lvOuterList_ctrl0_lvItemList_ctrl1_litSource1" class="source"></span>
+    		            
+    		            
+	                    
+				        
+                    </li>
+                
+                
+            </ul>
+        
+        
+    <p id="ph_scontent5_0_pFooter" class="footer"><a href="https://visualstudiomagazine.com/webcasts/list/webcast-list.aspx">&gt; More Webcasts</a></p>
+</div>
+
+    <div class="ad">
+        <div id="div-gpt-ad-09">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-09')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['TEMP3'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-09');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_022"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP3%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=9&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP3%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=9&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+    <div class="ad">
+        <div id="div-gpt-ad-10">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[336,280],[300,250]], 'div-gpt-ad-10')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['temp4'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-10');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_010"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtemp4%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=10&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtemp4%26Topic%253dC_Sharp%252cDevelopment&sz=336x280|300x250&tile=10&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+                </div>
+                
+                <div class="xContent">
+                    
+                    
+                    
+
+<div style="display: none;" id="sponsorTextLink" class="ad sztextlink">
+    <h2>Sponsored Links:</h2><ul><li class="clearleftplease">
+    <div class="ad">
+        <div id="div-gpt-ad-text-01">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-01')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx01'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-01');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_004"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx01%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=1&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx01%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=1&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-02">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-02')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx02'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-02');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_006"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx02%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=2&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx02%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=2&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-03">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-03')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx03'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-03');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_018"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx03%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=3&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx03%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=3&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li class="clearleftplease">
+    <div class="ad">
+        <div id="div-gpt-ad-text-04">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-04')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx04'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-04');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_009"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx04%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=4&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx04%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=4&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-05">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-05')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx05'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-05');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_005"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx05%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=5&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx05%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=5&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-06">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-06')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx06'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-06');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_015"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx06%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=6&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx06%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=6&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li class="clearleftplease">
+    <div class="ad">
+        <div id="div-gpt-ad-text-07">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-07')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx07'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-07');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx07%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=7&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx07%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=7&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-08">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-08')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx08'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-08');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_013"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx08%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=8&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx08%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=8&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-09">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-09')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx09'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-09');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_003"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx09%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=9&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx09%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=9&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li class="clearleftplease">
+    <div class="ad">
+        <div id="div-gpt-ad-text-10">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-10')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx10'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-10');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_016"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx10%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=10&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx10%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=10&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-11">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-11')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx11'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-11');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_024"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx11%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=11&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx11%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=11&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li><li>
+    <div class="ad">
+        <div id="div-gpt-ad-text-12">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[620,28]], 'div-gpt-ad-text-12')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['tx12'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-text-12');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_017"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx12%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=12&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dtx12%26Topic%253dC_Sharp%252cDevelopment&sz=620x28&tile=12&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+</li></ul>
+</div>
+    <div class="ad">
+        <div id="div-gpt-ad-11">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[728,90],[700,90]], 'div-gpt-ad-11')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['TEMP1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-11');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_021"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP1%26Topic%253dC_Sharp%252cDevelopment&sz=728x90|700x90&tile=11&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dTEMP1%26Topic%253dC_Sharp%252cDevelopment&sz=728x90|700x90&tile=11&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+                    
+                    
+                </div>
+    		
+            </div>
+
+            <footer role="contentinfo" class="footer">
+                
+                
+                
+                
+
+<noindex>
+
+<!-- component markup start -->
+<div class="footer1 nav">
+    <ul class="footerlist"><li class=""><a href="https://visualstudiomagazine.com/pages/contact-us.aspx">Contact Us</a></li><li class=""><a href="https://1105ecg.com/pages/vs.aspx" target="_blank">Advertise</a></li><li class=""><a href="http://vslive.com/">Events</a></li><li class=""><a href="https://visualstudiomagazine.com/issues/issue-archive.aspx">Print Issues Online</a></li><li class=""><a href="https://newsletters.1105pubs.com/nl/URMG.do?pk=WSNVSM">Free Newsletters</a></li><li class=""><a href="https://visualstudiomagazine.com/pages/sitemap.aspx">Site Map</a></li><li class=""><a href="http://1105reprints.com/" target="_blank">Reprints</a></li><li class=" last"><a href="https://www.meritdirect.com/1105-media/" target="_blank">List Rental</a></li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+
+                
+
+<noindex>
+
+<!-- component markup start -->
+<div class="footer-sites nav">
+    <ul class="footerlist"><li class=""><a href="http://adtmag.com/" target="_blank">Application&nbsp;Development&nbsp;Trends</a></li><li class=""><a href="https://awsinsider.net/home.aspx">AWSInsider.net</a></li><li class=""><a href="http://esj.com/" target="_blank">Enterprise&nbsp;Systems</a></li><li class=""><a href="http://mcpmag.com/" target="_blank">MCPmag.com</a></li><li class=""><a href="http://redmondmag.com/" target="_blank">Redmond    </a></li><li class=""><a href="http://rcpmag.com/" target="_blank">Redmond&nbsp;Channel&nbsp;Partner</a></li><li class=" last"><a href="http://virtualizationreview.com/" target="_blank">Virtualization&nbsp;Review</a></li></ul>
+    <br class="clear">
+</div>
+<!-- component markup end -->
+
+</noindex>
+
+<script> 
+  
+  window.onload = function() { 
+  
+    // Delay to allow the async Google Ads to load
+    setTimeout(function() { 
+      
+      // Get the first AdSense ad unit on the page
+      var ad = document.querySelector("ins.adsbygoogle");
+      
+      // If the ads are not loaded, track the event
+      if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+ 
+        if (typeof ga !== 'undefined') {
+ 
+            // Log an event in Universal Analytics
+            // but without affecting overall bounce rate
+            ga('send', 'event', 'Adblock', 'Yes', {'nonInteraction': 1}); 
+ 
+        } else if (typeof _gaq !== 'undefined') {
+ 
+            // Log a non-interactive event in old Google Analytics
+            _gaq.push(['_trackEvent', 'Adblock', 'Yes', undefined, undefined, true]);
+ 
+        }
+      }
+    }, 2000); // Run ad block detection 2 seconds after page load
+  }; 
+  
+</script>
+
+
+
+                <div id="Copyright_copyright" class="copyright">
+    © 1996-2016 1105 Media, Inc. View our <a href="http://1105media.com/privacy.aspx" target="_blank">Privacy Policy</a> and <a href="http://1105media.com/terms.html" target="_blank">Terms of Use</a>.
+<p align="center"><b><a href="mailto:bnagel@1105media.com?subject=Regarding%20Visualstudiomagazine.com">Problems? Questions? Feedback? E-mail us.</a></b></p>
+</div>
+            </footer>
+            
+            
+            
+            
+            
+            
+            
+    	            
+                
+                
+    </div>
+
+    
+<script type="text/javascript">
+    var gIntersitial = 20000 ;
+</script>
+<div id="intersitialMask"></div>
+<div id="intersitial">
+    <div class="adClose"><a id="adclose" href="javascript:;">Close this Advertisement</a></div>
+    
+    <div class="ad">
+        <div id="div-gpt-ad-12">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[640,480]], 'div-gpt-ad-12')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['S01'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-12');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_007"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dS01%26Topic%253dC_Sharp%252cDevelopment&sz=640x480&tile=12&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253dS01%26Topic%253dC_Sharp%252cDevelopment&sz=640x480&tile=12&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" language="javascript">showIntersitial();</script>
+</div>
+
+
+
+    
+    
+    
+    
+    <div class="ad">
+        <div id="div-gpt-ad-13">
+            <script type="text/javascript">
+                googletag.defineSlot('/5978/eof.vsm', [[100,100],[1,1]], 'div-gpt-ad-13')
+                .addService(googletag.pubads())
+                .setTargeting('item',['39e65af6_7762_42f8_a04e_f77e7b4275da'])
+                .setTargeting('pos',['dog_t1'])
+                .setTargeting('Topic',['C_Sharp','Development']);
+                googletag.pubads().enableSyncRendering();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-13');
+            </script><script type="text/javascript" src="VSMagazine-Dateien/ads_012"></script>
+            <noscript>
+                <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253ddog_t1%26Topic%253dC_Sharp%252cDevelopment&sz=100x100|1x1&tile=13&c=123456789" target="_blank" >
+                <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/5978/eof.vsm&t=item%253d39e65af6_7762_42f8_a04e_f77e7b4275da%26pos%253ddog_t1%26Topic%253dC_Sharp%252cDevelopment&sz=100x100|1x1&tile=13&c=123456789" border="0" alt="" />
+                </a>
+            </noscript>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+        <script type="text/javascript">
+            $.ajax({
+                url: '//munchkin.marketo.net/munchkin.js',
+                dataType: 'script',
+                cache: true,
+                success: function () {
+                    Munchkin.init('354-LPT-160');
+                }
+            });
+    </script>
+
+
+
+<iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="VSMagazine-Dateien/postmessageRelay.htm" id="oauth2relay548998729" name="oauth2relay548998729"></iframe></body></html>

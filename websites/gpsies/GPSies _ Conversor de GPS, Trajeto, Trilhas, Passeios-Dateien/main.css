@@ -1,0 +1,4577 @@
+/*
+*************************** 
+			Sprite
+*************************** 
+ */
+/* line 328, gpsies/*.png */
+.gpsiesSprite, .gpsies-animals-1, .gpsies-animals-2, .gpsies-animals-3, .gpsies-animals-4, .gpsies-biking-1, .gpsies-biking-2, .gpsies-biking-3, .gpsies-biking-4, .gpsies-check_mark, .gpsies-checkbox, .gpsies-checkbox_checked, .gpsies-magnifier, .gpsies-motor-1, .gpsies-motor-2, .gpsies-motor-3, .gpsies-motor-4, .gpsies-other-1, .gpsies-other-2, .gpsies-other-3, .gpsies-other-4, .gpsies-radio-mark, .gpsies-radio, .gpsies-radio_checked, .gpsies-running-1, .gpsies-running-2, .gpsies-running-3, .gpsies-running-4, .gpsies-track-me-icon, .gpsies-water-1, .gpsies-water-2, .gpsies-water-3, .gpsies-water-4, .gpsies-winter-1, .gpsies-winter-2, .gpsies-winter-3, .gpsies-winter-4 {
+  background-image: url('../../../../images/summit/sprite-gpsies.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-animals-1 {
+  background-position: 0 0;
+  height: 24px;
+  width: 25px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-animals-2 {
+  background-position: 0 -29px;
+  height: 24px;
+  width: 25px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-animals-3 {
+  background-position: 0 -58px;
+  height: 24px;
+  width: 25px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-animals-4 {
+  background-position: 0 -87px;
+  height: 24px;
+  width: 25px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-biking-1 {
+  background-position: 0 -116px;
+  height: 25px;
+  width: 27px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-biking-2 {
+  background-position: 0 -146px;
+  height: 25px;
+  width: 27px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-biking-3 {
+  background-position: 0 -176px;
+  height: 25px;
+  width: 27px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-biking-4 {
+  background-position: 0 -206px;
+  height: 25px;
+  width: 27px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-check_mark {
+  background-position: 0 -236px;
+  height: 14px;
+  width: 15px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-checkbox {
+  background-position: 0 -255px;
+  height: 16px;
+  width: 16px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-checkbox_checked {
+  background-position: 0 -276px;
+  height: 18px;
+  width: 19px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-magnifier {
+  background-position: 0 -299px;
+  height: 16px;
+  width: 17px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-motor-1 {
+  background-position: 0 -320px;
+  height: 24px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-motor-2 {
+  background-position: 0 -349px;
+  height: 24px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-motor-3 {
+  background-position: 0 -378px;
+  height: 24px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-motor-4 {
+  background-position: 0 -407px;
+  height: 24px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-other-1 {
+  background-position: 0 -436px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-other-2 {
+  background-position: 0 -465px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-other-3 {
+  background-position: 0 -494px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-other-4 {
+  background-position: 0 -523px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-radio-mark {
+  background-position: 0 -552px;
+  height: 9px;
+  width: 9px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-radio {
+  background-position: 0 -566px;
+  height: 18px;
+  width: 18px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-radio_checked {
+  background-position: 0 -589px;
+  height: 18px;
+  width: 18px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-running-1 {
+  background-position: 0 -612px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-running-2 {
+  background-position: 0 -641px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-running-3 {
+  background-position: 0 -670px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-running-4 {
+  background-position: 0 -699px;
+  height: 24px;
+  width: 21px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-track-me-icon {
+  background-position: 0 -728px;
+  height: 18px;
+  width: 18px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-water-1 {
+  background-position: 0 -751px;
+  height: 21px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-water-2 {
+  background-position: 0 -777px;
+  height: 21px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-water-3 {
+  background-position: 0 -803px;
+  height: 21px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-water-4 {
+  background-position: 0 -829px;
+  height: 21px;
+  width: 26px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-winter-1 {
+  background-position: 0 -855px;
+  height: 22px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-winter-2 {
+  background-position: 0 -882px;
+  height: 22px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-winter-3 {
+  background-position: 0 -909px;
+  height: 22px;
+  width: 24px;
+}
+
+/* line 84, ../../../../../../../Ruby200/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.gpsies-winter-4 {
+  background-position: 0 -936px;
+  height: 22px;
+  width: 24px;
+}
+
+/* line 30, ../../../../scss/summit/themes/default/main.scss */
+.gpsiesSprite, .gpsies-animals-1, .gpsies-animals-2, .gpsies-animals-3, .gpsies-animals-4, .gpsies-biking-1, .gpsies-biking-2, .gpsies-biking-3, .gpsies-biking-4, .gpsies-check_mark, .gpsies-checkbox, .gpsies-checkbox_checked, .gpsies-magnifier, .gpsies-motor-1, .gpsies-motor-2, .gpsies-motor-3, .gpsies-motor-4, .gpsies-other-1, .gpsies-other-2, .gpsies-other-3, .gpsies-other-4, .gpsies-radio-mark, .gpsies-radio, .gpsies-radio_checked, .gpsies-running-1, .gpsies-running-2, .gpsies-running-3, .gpsies-running-4, .gpsies-track-me-icon, .gpsies-water-1, .gpsies-water-2, .gpsies-water-3, .gpsies-water-4, .gpsies-winter-1, .gpsies-winter-2, .gpsies-winter-3, .gpsies-winter-4 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*
+*************************** 
+			Imports
+*************************** 
+ */
+/* ===== Body Style Toggle ===== */
+/* line 36, ../../../../scss/summit/themes/default/_colors.scss */
+.style-toggle-body .colors {
+  margin: 0;
+}
+
+/* line 40, ../../../../scss/summit/themes/default/_colors.scss */
+.style-toggle-body .colors > li {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* ===== Link and Font Colors ===== */
+/* line 48, ../../../../scss/summit/themes/default/_colors.scss */
+.text-color {
+  color: #444444;
+}
+
+/* line 52, ../../../../scss/summit/themes/default/_colors.scss */
+h2.text-color, h3 {
+  color: #333333;
+}
+
+/* line 56, ../../../../scss/summit/themes/default/_colors.scss */
+a {
+  color: #0a9ad1;
+  text-decoration: none;
+}
+/* line 59, ../../../../scss/summit/themes/default/_colors.scss */
+a:hover, a:focus {
+  color: #5bc0de;
+  text-decoration: underline;
+}
+
+/* ===== Border Colors ===== */
+/* line 67, ../../../../scss/summit/themes/default/_colors.scss */
+.border-color {
+  border-color: #8a9499;
+}
+
+/* ===== Background Colors ===== */
+/* line 73, ../../../../scss/summit/themes/default/_colors.scss */
+.bg-color {
+  background-color: #8a9499;
+}
+
+/* line 77, ../../../../scss/summit/themes/default/_colors.scss */
+.bg-hover-color:hover,
+.open > .bg-hover-color {
+  background-color: #5bc0de !important;
+}
+
+/*
+
+.dropdown-menu .bg-hover-color:hover,
+.dropdown-menu .open > .bg-hover-color {
+	background-color: $blue-primary !important;
+}
+*/
+/* ===== Buttons Colors ===== */
+/* line 92, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-color,
+.btn-color:hover {
+  color: #fff !important;
+  -webkit-transition: background-color 300ms, border-color 300ms;
+  transition: background-color 300ms, border-color 300ms;
+}
+
+/* Buttons */
+/* line 101, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-color {
+  background-color: #5bc0de;
+  border: none;
+}
+
+/* line 106, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-color:hover,
+.btn-color:focus,
+.btn-color:active {
+  background-color: #0a9ad1;
+  border: none;
+}
+
+/* line 113, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-primary {
+  color: #ffffff;
+  background-color: #0a9ad1;
+  border: none;
+}
+/* line 117, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-primary:focus {
+  background-color: #0a9ad1;
+}
+
+/* line 122, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  background-color: #5bc0de;
+}
+
+/* line 126, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-default, .btn-grey {
+  color: #ffffff;
+  background-color: #1bd05b;
+  border: none;
+}
+/* line 130, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-default:focus, .btn-grey:focus {
+  background-color: #1bd05b;
+}
+/* line 133, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-default:hover, .btn-grey:hover, .btn-default:active, .btn-grey:active {
+  color: #ffffff;
+  background-color: #15a347;
+}
+
+/* line 139, ../../../../scss/summit/themes/default/_colors.scss */
+.navbar-btn.login {
+  background-color: #15a347;
+}
+
+/* line 145, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-grey {
+  color: #485054;
+  border: 1px solid #e6ebed;
+  background-color: transparent;
+}
+/* line 150, ../../../../scss/summit/themes/default/_colors.scss */
+.btn-grey:hover {
+  color: #485054;
+  background-color: #e6ebed;
+}
+
+/* ===== Page Not Found ===== */
+/* line 158, ../../../../scss/summit/themes/default/_colors.scss */
+.not-found-p {
+  background: #94BA65;
+  background-image: radial-gradient(#a6c680, #749b46);
+}
+
+/* line 1, ../../../../scss/summit/themes/default/_helpers.scss */
+.add-margin-both {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* line 6, ../../../../scss/summit/themes/default/_helpers.scss */
+.add-margin-bottom {
+  margin-bottom: 8px;
+}
+
+/* line 10, ../../../../scss/summit/themes/default/_helpers.scss */
+.margin-top-text {
+  margin-top: 20px;
+}
+
+/* line 14, ../../../../scss/summit/themes/default/_helpers.scss */
+.margin-map {
+  margin-top: 40px;
+}
+
+/* line 18, ../../../../scss/summit/themes/default/_helpers.scss */
+.no-border-top {
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 23, ../../../../scss/summit/themes/default/_helpers.scss */
+.on-top {
+  z-index: 9999;
+}
+
+/* line 27, ../../../../scss/summit/themes/default/_helpers.scss */
+.padding-slider {
+  padding-bottom: 50px;
+}
+
+/* line 31, ../../../../scss/summit/themes/default/_helpers.scss */
+.panel-row-extraMarginTop {
+  margin-top: 15px;
+}
+
+/* line 35, ../../../../scss/summit/themes/default/_helpers.scss */
+.panel-row-extraMarginTopDouble {
+  margin-top: 30px;
+}
+
+/* line 39, ../../../../scss/summit/themes/default/_helpers.scss */
+.position-inherit {
+  position: inherit !important;
+}
+
+/* line 43, ../../../../scss/summit/themes/default/_helpers.scss */
+.sliderContainer {
+  margin-bottom: 60px;
+}
+
+/* line 47, ../../../../scss/summit/themes/default/_helpers.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 51, ../../../../scss/summit/themes/default/_helpers.scss */
+.valign-middle {
+  vertical-align: middle;
+}
+
+/* ===== Mini Navbar ===== */
+/* line 3, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar {
+  width: 100%;
+  height: 40px;
+  font-size: 0.9em;
+  z-index: 9999;
+  position: relative;
+}
+
+/* line 11, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar .hidden-sm {
+  display: inline-block !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 16, ../../../../scss/summit/themes/default/_navigation.scss */
+  .mini-navbar .hidden-sm {
+    display: none !important;
+  }
+}
+/* line 21, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar .phone {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* line 26, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar a {
+  display: inline-block;
+  padding: 10px 10px 11px 10px;
+  -webkit-transition: background 500ms;
+  transition: background 500ms;
+}
+
+/* line 33, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar a.first-child {
+  margin-left: -25px;
+  /* To align with logo and container */
+}
+
+/* line 37, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar a:hover {
+  text-decoration: none;
+}
+
+/* line 41, ../../../../scss/summit/themes/default/_navigation.scss */
+.logoContainer {
+  display: inline-block;
+  height: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 46, ../../../../scss/summit/themes/default/_navigation.scss */
+  .logoContainer {
+    width: 331px;
+    background: url("../../../../images/summit/logo.png") no-repeat 0 0 transparent;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 52, ../../../../scss/summit/themes/default/_navigation.scss */
+  .logoContainer {
+    width: 145px;
+    background: url("../../../../images/summit/logo_small.png") no-repeat 0 0 transparent;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 58, ../../../../scss/summit/themes/default/_navigation.scss */
+  .logoContainer {
+    width: 331px;
+    background: url("../../../../images/summit/logo.png") no-repeat 0 0 transparent;
+  }
+}
+/* Mini Navbar Styles */
+/* line 67, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar-white {
+  background: #fff;
+  color: #505050;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+/* line 73, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar-white a {
+  color: #505050;
+}
+
+/* line 77, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar-white a:hover {
+  background: #f5f5f5;
+}
+
+/* Search Form */
+/* line 83, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar form {
+  width: 250px;
+}
+
+/* line 87, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar form .form-control {
+  height: 26px;
+  margin: 7px;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 95, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar form button {
+  height: 26px;
+  margin: 7px;
+  padding: 2px 7px;
+  background: #ecf0f1;
+}
+
+/* line 102, ../../../../scss/summit/themes/default/_navigation.scss */
+.mini-navbar-white form .form-control {
+  background: #fff;
+  border: 1px solid #dedede;
+  color: #505050;
+}
+
+/* ===== Navbar ===== */
+/* line 110, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-static-top {
+  right: 0;
+  left: 0;
+}
+
+/* Navbar gets a bit higher */
+/* line 117, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar {
+  margin-bottom: 0 !important;
+  z-index: 9998;
+}
+
+@media (min-width: 768px) {
+  /* line 124, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav > li > a {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+  }
+}
+/* line 129, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-header {
+  margin-left: -20px !important;
+}
+
+/* line 132, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-form {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+
+/* line 137, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-brand {
+  padding: 8px 15px 60px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* line 144, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-brand > span {
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  /* line 149, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-brand > span {
+    display: none;
+  }
+}
+/* line 154, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-btn {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+
+/* line 159, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-text {
+  margin-top: 27.5px;
+  margin-bottom: 27.5px;
+}
+
+/* line 164, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-toggle {
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
+}
+
+/* Navbar Styles */
+/* line 171, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar {
+  background-color: #fff;
+  border: 0;
+  -webkit-box-shadow: 0 0 16px 0 rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 0 0 16px 0 rgba(50, 50, 50, 0.3);
+  box-shadow: 0 0 16px 0 rgba(50, 50, 50, 0.3);
+}
+
+/* line 179, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-brand {
+  color: #505050;
+}
+
+/* line 183, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-brand > span {
+  color: #ccc;
+}
+
+/* line 187, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #111;
+}
+
+/* line 192, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-text {
+  color: #505050;
+}
+
+/* line 195, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > li > a {
+  padding: 24px 10px;
+  color: #0a9ad1;
+  background: transparent;
+  -webkit-transition: background 500ms;
+  transition: background 500ms;
+}
+
+/* line 202, ../../../../scss/summit/themes/default/_navigation.scss */
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > a:active,
+.navbar-nav > .dropdown > a:hover .caret,
+.navbar-nav > .dropdown > a:focus .caret {
+  color: #ffffff;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* .navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+	color: #fff;
+} */
+/* .nav-hover-fix:hover {
+	color: #fff !important;
+}
+ */
+/* line 221, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: #111;
+}
+
+/* line 227, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > .disabled > a,
+.navbar-nav > .disabled > a:hover,
+.navbar-nav > .disabled > a:focus {
+  color: #ccc;
+}
+
+/* line 233, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-toggle {
+  border-color: transparent;
+  background: transparent;
+}
+
+/* line 238, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background-color: #f5f5f5;
+}
+
+/* line 243, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-toggle .icon-bar {
+  background-color: #505050;
+}
+
+/* line 247, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-toggle:hover .icon-bar,
+.navbar-toggle:focus .icon-bar {
+  background-color: #111;
+}
+
+/* line 252, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-collapse,
+.navbar-form {
+  border-color: #ccc;
+}
+
+/* line 257, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > .open > a,
+.navbar-nav > .open > a:hover,
+.navbar-nav > .open > a:focus {
+  color: #ffffff;
+}
+
+/* .navbar-nav > .dropdown > a:hover .caret {
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+} */
+/* line 268, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > .dropdown > a .caret {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+
+/* .navbar-nav > .open > a .caret,
+.navbar-nav > .open > a:hover .caret,
+.navbar-nav > .open > a:focus .caret {
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+}
+ */
+/* Navbar White Dropdown Menu */
+/* line 281, ../../../../scss/summit/themes/default/_navigation.scss */
+.dropdown-menu {
+  border-radius: 0;
+}
+
+/* line 285, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-nav > li > .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ecf0f1;
+  border-top: 1px solid #f5f5f5;
+  border-radius: 0;
+}
+
+/* line 292, ../../../../scss/summit/themes/default/_navigation.scss */
+.dropdown-menu > li > a {
+  padding: 7px 20px;
+  border-bottom: 1px solid #ecf0f1;
+  color: #505050;
+}
+
+/* line 298, ../../../../scss/summit/themes/default/_navigation.scss */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #fff;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #1bd05b;
+}
+
+/* line 306, ../../../../scss/summit/themes/default/_navigation.scss */
+.dropdown-menu > li:last-child > a {
+  border-bottom: 0;
+}
+
+/* line 310, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-link {
+  color: #505050;
+}
+
+/* line 314, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-link:hover {
+  color: #505050;
+}
+
+/* line 318, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-language {
+  margin-left: -30px;
+}
+
+/* line 322, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-language > li > a {
+  padding-bottom: 12px;
+}
+
+/* line 326, ../../../../scss/summit/themes/default/_navigation.scss */
+.navbar-language .dropdown-menu {
+  top: 93%;
+}
+
+/* Navbar White Mobile */
+@media (max-width: 767px) {
+  /* line 333, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #ecf0f1;
+  }
+
+  /* line 336, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav .open .dropdown-menu > li > a {
+    color: #505050;
+    padding: 10px 20px;
+    border: 0;
+  }
+
+  /* line 341, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+  }
+
+  /* line 345, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #505050;
+    background-color: transparent;
+  }
+
+  /* line 351, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+
+  /* .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus {
+	  color: #fff;
+	} */
+  /* line 361, ../../../../scss/summit/themes/default/_navigation.scss */
+  .navbar-nav > .open > a,
+  .navbar-nav > .open > a:hover,
+  .navbar-nav > .open > a:focus {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 0;
+  }
+}
+/* line 1, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-gray {
+  border-color: #f2f2f2;
+}
+/* line 3, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-gray .panel-heading {
+  border-color: #f2f2f2;
+  background-color: #f6f6f6;
+}
+
+/* line 9, ../../../../scss/summit/themes/default/_search-extended.scss */
+.radio-inline, .checkbox-inline {
+  padding-left: 0;
+}
+
+/* line 13, ../../../../scss/summit/themes/default/_search-extended.scss */
+.checkbox {
+  cursor: pointer;
+}
+
+/* line 17, ../../../../scss/summit/themes/default/_search-extended.scss */
+.checkbox > span,
+.checkbox-inline > span {
+  width: 19px;
+  height: 19px;
+}
+/* line 21, ../../../../scss/summit/themes/default/_search-extended.scss */
+.page_editTrack .checkbox > span, .page_upload .checkbox > span, .page_editTrack
+.checkbox-inline > span, .page_upload
+.checkbox-inline > span {
+  margin-left: -5px;
+}
+
+/* line 27, ../../../../scss/summit/themes/default/_search-extended.scss */
+.gpsies-track-me-icon {
+  margin: -3px 10px 0 0;
+}
+
+/* line 31, ../../../../scss/summit/themes/default/_search-extended.scss */
+.checkbox .gpsies-check_mark.checked {
+  position: absolute;
+  top: -1px;
+  left: 23px;
+}
+/* line 35, ../../../../scss/summit/themes/default/_search-extended.scss */
+.accordionElement .checkbox .gpsies-check_mark.checked {
+  top: -2px;
+  left: 4px;
+}
+
+/* line 41, ../../../../scss/summit/themes/default/_search-extended.scss */
+.checkbox-inline .gpsies-check_mark.checked {
+  position: absolute;
+  top: -1px;
+  left: 3px;
+}
+
+/* line 47, ../../../../scss/summit/themes/default/_search-extended.scss */
+label {
+  color: #8a9499;
+}
+/* line 49, ../../../../scss/summit/themes/default/_search-extended.scss */
+label.checked {
+  color: #0a9ad1;
+}
+
+/* line 54, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-col-left {
+  margin-left: -33px;
+}
+
+/* line 58, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-heading {
+  font-size: 15px;
+  color: #8a9499;
+}
+/* line 61, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-heading .gpsiesSprite, .panel-heading .gpsies-animals-1, .panel-heading .gpsies-animals-2, .panel-heading .gpsies-animals-3, .panel-heading .gpsies-animals-4, .panel-heading .gpsies-biking-1, .panel-heading .gpsies-biking-2, .panel-heading .gpsies-biking-3, .panel-heading .gpsies-biking-4, .panel-heading .gpsies-check_mark, .panel-heading .gpsies-checkbox, .panel-heading .gpsies-checkbox_checked, .panel-heading .gpsies-magnifier, .panel-heading .gpsies-motor-1, .panel-heading .gpsies-motor-2, .panel-heading .gpsies-motor-3, .panel-heading .gpsies-motor-4, .panel-heading .gpsies-other-1, .panel-heading .gpsies-other-2, .panel-heading .gpsies-other-3, .panel-heading .gpsies-other-4, .panel-heading .gpsies-radio-mark, .panel-heading .gpsies-radio, .panel-heading .gpsies-radio_checked, .panel-heading .gpsies-running-1, .panel-heading .gpsies-running-2, .panel-heading .gpsies-running-3, .panel-heading .gpsies-running-4, .panel-heading .gpsies-track-me-icon, .panel-heading .gpsies-water-1, .panel-heading .gpsies-water-2, .panel-heading .gpsies-water-3, .panel-heading .gpsies-water-4, .panel-heading .gpsies-winter-1, .panel-heading .gpsies-winter-2, .panel-heading .gpsies-winter-3, .panel-heading .gpsies-winter-4 {
+  margin-right: 10px;
+}
+
+/* line 67, ../../../../scss/summit/themes/default/_search-extended.scss */
+a.accordionLink .panel-heading {
+  color: #ffffff;
+  background-color: #5bc0de;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+/* line 73, ../../../../scss/summit/themes/default/_search-extended.scss */
+a.accordionLink .attributesActivated {
+  color: white;
+}
+/* line 76, ../../../../scss/summit/themes/default/_search-extended.scss */
+a.accordionLink:hover {
+  text-decoration: none;
+}
+/* line 80, ../../../../scss/summit/themes/default/_search-extended.scss */
+a.accordionLink.collapsed .panel-heading {
+  color: #485054;
+  background-color: #f6f6f6;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+/* line 86, ../../../../scss/summit/themes/default/_search-extended.scss */
+a.accordionLink.collapsed .attributesActivated {
+  color: #8a9499;
+}
+
+/* line 94, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-body .btn {
+  width: 100%;
+}
+/* line 97, ../../../../scss/summit/themes/default/_search-extended.scss */
+.panel-body .row {
+  padding-bottom: 7px;
+}
+
+/* line 102, ../../../../scss/summit/themes/default/_search-extended.scss */
+.attributesActivated {
+  display: block;
+  float: right;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+/* line 109, ../../../../scss/summit/themes/default/_search-extended.scss */
+form[name="tracksForm"] > .row > .col-md-4 {
+  padding: 0 6px;
+}
+
+/* ===== General ===== */
+/* line 3, ../../../../scss/summit/themes/default/_custom.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 7, ../../../../scss/summit/themes/default/_custom.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #444444;
+}
+
+@media (min-width: 1200px) {
+  /* line 15, ../../../../scss/summit/themes/default/_custom.scss */
+  .container {
+    width: 1000px !important;
+  }
+}
+/* ===== Typography ===== */
+/* line 22, ../../../../scss/summit/themes/default/_custom.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 37, ../../../../scss/summit/themes/default/_custom.scss */
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-radius: 0;
+}
+
+/* ===== Page header ===== */
+/* line 48, ../../../../scss/summit/themes/default/_custom.scss */
+.page-header {
+  margin-top: 25px;
+}
+
+/* ===== Sticky Footer ===== */
+/* line 57, ../../../../scss/summit/themes/default/_custom.scss */
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  /* for older versions of IE */
+  height: 100%;
+  margin-bottom: -270px;
+  /* footer height + margin */
+  padding-top: 20px;
+  /* margin */
+  padding-bottom: 270px;
+  /* footer height + margin */
+}
+
+/* ===== Style Toggle ===== */
+/* line 68, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle-btn {
+  position: absolute;
+  z-index: 50505055;
+  top: -3px;
+  left: -46px;
+  color: #FFF;
+  background: #4E4D4A;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+}
+
+/* line 81, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle-btn.fa-angle-double-right {
+  padding: 12px 17px 12px 16px;
+}
+
+/* line 85, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle {
+  position: fixed;
+  z-index: 50505055;
+  top: 150px;
+  right: -180px;
+  max-width: 180px;
+  border-radius: 0 0 0 3px;
+  background: #fff;
+  border: 3px solid #666;
+  border-right: 0;
+  color: #505050;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
+}
+
+/* line 100, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle-show {
+  right: 0;
+}
+
+/* line 104, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle-header {
+  padding: 10px;
+  color: #fff;
+  background: #666;
+}
+
+/* line 110, ../../../../scss/summit/themes/default/_custom.scss */
+.style-toggle-body {
+  padding: 10px;
+}
+
+/* ===== Back to Top link ===== */
+/* line 116, ../../../../scss/summit/themes/default/_custom.scss */
+.backtotop {
+  background: #666;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #FFF;
+  border-radius: 3px;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+/* line 126, ../../../../scss/summit/themes/default/_custom.scss */
+.backtotop:hover {
+  background: #4E4D4A;
+}
+
+/* ===== Footer ===== */
+/* line 132, ../../../../scss/summit/themes/default/_custom.scss */
+footer {
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* line 137, ../../../../scss/summit/themes/default/_custom.scss */
+footer h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8a9499;
+  margin-bottom: 20px;
+}
+
+/* line 143, ../../../../scss/summit/themes/default/_custom.scss */
+footer h3 > span {
+  padding: 7px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+/* line 149, ../../../../scss/summit/themes/default/_custom.scss */
+.footer__imprint {
+  margin: 8px 0;
+}
+
+/* line 153, ../../../../scss/summit/themes/default/_custom.scss */
+.footer__socialMedia {
+  margin: 12px 0 24px 0;
+}
+
+/* Footer */
+/* line 159, ../../../../scss/summit/themes/default/_custom.scss */
+.footer {
+  position: relative;
+  height: 220px;
+  color: #485054;
+  background-color: #e6ebed;
+}
+/* line 164, ../../../../scss/summit/themes/default/_custom.scss */
+.footer hr {
+  border-top: 1px solid #4E4D4A;
+}
+/* line 167, ../../../../scss/summit/themes/default/_custom.scss */
+.footer.overflow-bg::before {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url("../../../../images/summit/footer.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+/* Footer White */
+/* line 181, ../../../../scss/summit/themes/default/_custom.scss */
+.footer-white {
+  background: #fff;
+  border-top: 1px solid #dedede;
+  color: #999;
+}
+
+/* line 187, ../../../../scss/summit/themes/default/_custom.scss */
+.footer-white h3 {
+  border-color: #eee;
+}
+
+/* Social Links */
+/* line 193, ../../../../scss/summit/themes/default/_custom.scss */
+.social > ul,
+.social > ul > li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 199, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin: 0 2px 2px 0;
+  border-radius: 34px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 34px;
+  background: #fff;
+  color: #4E4D4A;
+  transition: background 500ms, color 500ms;
+  -webkit-transition: background 500ms, color 500ms;
+}
+
+/* line 214, ../../../../scss/summit/themes/default/_custom.scss */
+.social li:hover > a {
+  color: #fff;
+}
+
+/* line 218, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.rss:hover {
+  background: #ff9900;
+}
+
+/* line 222, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.facebook:hover {
+  background: #3B5998;
+}
+
+/* line 226, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.twitter:hover {
+  background: #1dcaff;
+}
+
+/* line 230, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.plus:hover {
+  background: #dd4b39;
+}
+
+/* line 234, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.vk:hover {
+  background: #3f628a;
+}
+
+/* line 238, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.pinterest:hover {
+  background: #c92026;
+}
+
+/* line 242, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.vimeo:hover {
+  background: #446d82;
+}
+
+/* line 246, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.github:hover {
+  background: #657e8c;
+}
+
+/* line 250, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.linkedin:hover {
+  background: #0c7bb3;
+}
+
+/* line 254, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.dropbox:hover {
+  background: #4fa3e3;
+}
+
+/* line 258, ../../../../scss/summit/themes/default/_custom.scss */
+.social li > a.youtube:hover {
+  background: #ed413e;
+}
+
+/* Footer White Social Links */
+/* line 264, ../../../../scss/summit/themes/default/_custom.scss */
+.footer-white .social li > a {
+  border: 1px solid #ccc;
+}
+
+/* line 268, ../../../../scss/summit/themes/default/_custom.scss */
+.footer-white .social li > a:hover {
+  border: 1px solid transparent;
+}
+
+/* ===== Jumbotron ===== */
+/* line 274, ../../../../scss/summit/themes/default/_custom.scss */
+.main-slideshow {
+  position: relative;
+  margin-top: -20px;
+}
+
+/* line 279, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.first {
+  background: url(../../../../images/summit/slide-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* line 284, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.second {
+  background: url(../../../../images/summit/slide-2.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 289, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.third {
+  background: url(../../../../images/summit/slide-3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* line 294, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.fourth {
+  background: url(../../../../images/summit/slides/slide-4-radflicken.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* line 299, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron {
+  width: 100%;
+  height: 470px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #FFF;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+/* line 310, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* line 317, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.second img {
+  margin: 76px auto 0;
+}
+
+/* line 321, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.third img {
+  position: absolute;
+  bottom: -575px;
+  left: 50%;
+  margin-left: -300px;
+  cursor: pointer;
+  transition: bottom 0.3s;
+  -webkit-transition: bottom 0.3s;
+}
+
+/* line 332, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.third img:hover {
+  bottom: -435px;
+}
+
+/* line 336, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.third .video {
+  width: 80%;
+  margin: 50px auto 0 auto;
+}
+
+/* line 341, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron.first h1,
+.jumbotron.third h1 {
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  /* Adjusting for mobile */
+  /* line 348, ../../../../scss/summit/themes/default/_custom.scss */
+  .jumbotron.first h1,
+  .jumbotron.third h1 {
+    margin-top: 20px;
+  }
+}
+/* line 354, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron .lead {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* line 358, ../../../../scss/summit/themes/default/_custom.scss */
+.jumbotron .btn {
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Slideshow controls */
+/* line 367, ../../../../scss/summit/themes/default/_custom.scss */
+a.slideshow-arrow {
+  position: absolute;
+  display: block;
+  height: 100px;
+  width: 50px;
+  top: 47%;
+  margin-top: -60px;
+  background: transparent;
+  color: transparent;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background 500ms, color 500ms;
+  transition: background 500ms, color 500ms;
+}
+
+/* line 385, ../../../../scss/summit/themes/default/_custom.scss */
+.main-slideshow:hover a.slideshow-arrow,
+.slideshow:hover a.slideshow-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+/* line 391, ../../../../scss/summit/themes/default/_custom.scss */
+a.slideshow-arrow:hover,
+a.slideshow-arrow:active {
+  text-decoration: none;
+}
+
+/* line 396, ../../../../scss/summit/themes/default/_custom.scss */
+a.slideshow-arrow-prev {
+  left: 0;
+  right: auto;
+  padding-right: 5px;
+}
+
+/* line 402, ../../../../scss/summit/themes/default/_custom.scss */
+a.slideshow-arrow-next {
+  right: 0;
+  left: auto;
+  padding-left: 5px;
+}
+
+/* ===== Intro Text ===== */
+/* line 410, ../../../../scss/summit/themes/default/_custom.scss */
+.intro .btn {
+  margin-top: 20px;
+}
+
+/* ===== Services ===== */
+/* line 416, ../../../../scss/summit/themes/default/_custom.scss */
+.services {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+/* line 421, ../../../../scss/summit/themes/default/_custom.scss */
+.services-item i {
+  float: left;
+  margin: 15px 15px 0 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+/* line 428, ../../../../scss/summit/themes/default/_custom.scss */
+.services-item-desc {
+  overflow: hidden;
+}
+/* line 430, ../../../../scss/summit/themes/default/_custom.scss */
+.services-item-desc h3 {
+  font-size: 20px;
+}
+
+/* Portfolio */
+/* line 437, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio {
+  margin-bottom: 30px;
+}
+
+/* line 441, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-item > a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+/* line 447, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-item > a > img {
+  border-radius: 3px;
+}
+
+/* line 451, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-item > a > .mask {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+  background: #5bc0de;
+  color: #fff;
+  -webkit-transition: bottom 500ms;
+  transition: bottom 500ms;
+}
+
+/* line 463, ../../../../scss/summit/themes/default/_custom.scss */
+.col-sm-3 > .portfolio-item > a > .mask,
+.col-md-3 > .portfolio-item > a > .mask,
+.col-lg-3 > .portfolio-item > a > .mask {
+  font-size: 0.9em;
+}
+
+/* line 469, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-item > a:hover > .mask {
+  bottom: 0;
+}
+
+/* line 473, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-desc {
+  padding: 0 5px;
+  margin-bottom: 20px;
+}
+
+/* line 478, ../../../../scss/summit/themes/default/_custom.scss */
+.portfolio-desc > h3,
+.portfolio-desc > a > h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== Features ===== */
+/* line 487, ../../../../scss/summit/themes/default/_custom.scss */
+.features.last {
+  margin-bottom: 50px;
+}
+
+/* line 491, ../../../../scss/summit/themes/default/_custom.scss */
+.divider {
+  border-bottom: 1px solid #eee;
+  margin: 20px 0 40px;
+}
+
+/* line 496, ../../../../scss/summit/themes/default/_custom.scss */
+.features h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 50px;
+}
+
+/* line 502, ../../../../scss/summit/themes/default/_custom.scss */
+.features p {
+  line-height: 1.7;
+}
+
+/* line 506, ../../../../scss/summit/themes/default/_custom.scss */
+.features img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 512, ../../../../scss/summit/themes/default/_custom.scss */
+.features .border-bottom {
+  border-bottom: 1px solid #dedede;
+}
+
+@media (max-width: 768px) {
+  /* Adjusting for mobile */
+  /* line 518, ../../../../scss/summit/themes/default/_custom.scss */
+  .features h3 {
+    margin-top: 30px;
+  }
+
+  /* line 521, ../../../../scss/summit/themes/default/_custom.scss */
+  .features h3.first-child {
+    margin-top: 0;
+  }
+
+  /* line 524, ../../../../scss/summit/themes/default/_custom.scss */
+  .features.last {
+    margin-bottom: 0;
+  }
+}
+/* ===== Block Block ===== */
+/* line 531, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blogs {
+  margin-bottom: 20px;
+}
+
+/* line 535, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blog {
+  margin-bottom: 20px;
+}
+
+/* line 539, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blog img {
+  height: 70px;
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 70px;
+}
+
+/* line 547, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blog-desc {
+  overflow: hidden;
+}
+
+/* line 551, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blog-desc h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+/* line 557, ../../../../scss/summit/themes/default/_custom.scss */
+.recent-blog-desc p {
+  line-height: 1.7;
+}
+
+/* ===== About Us Page ===== */
+/* line 563, ../../../../scss/summit/themes/default/_custom.scss */
+.about-us-p img {
+  max-width: 40%;
+  margin: 0 20px 20px 0;
+}
+
+/* Our Team */
+/* line 570, ../../../../scss/summit/themes/default/_custom.scss */
+.team-member {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 577, ../../../../scss/summit/themes/default/_custom.scss */
+.team-member:hover {
+  border-color: #ddd;
+}
+
+/* line 581, ../../../../scss/summit/themes/default/_custom.scss */
+.team-member > img {
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+/* ===== Blog Page ===== */
+/* line 588, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p img.author {
+  float: left;
+  height: 70px;
+  width: 70px;
+  border-radius: 70px;
+  margin-right: 20px;
+}
+
+/* line 596, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-body {
+  overflow: hidden;
+}
+
+/* line 600, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-body p {
+  line-height: 1.7;
+}
+
+/* line 604, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-body .flex-video {
+  margin: 20px 0;
+}
+
+/* line 608, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-body img {
+  border-radius: 3px;
+  margin: 20px 0;
+}
+
+/* line 613, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-search {
+  margin-bottom: 40px;
+}
+
+/* line 617, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-social {
+  list-style-type: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+/* line 623, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-social > li {
+  padding: 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* line 628, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-social > li a {
+  display: block;
+  padding: 10px 0;
+}
+
+/* line 633, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-social > li i {
+  margin-right: 10px;
+}
+
+/* line 637, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-popular {
+  list-style-type: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+/* line 643, ../../../../scss/summit/themes/default/_custom.scss */
+.blog-p-popular > li {
+  margin-bottom: 10px;
+}
+
+/* ===== Comments ===== */
+/* line 649, ../../../../scss/summit/themes/default/_custom.scss */
+.comments {
+  margin: 20px 0;
+}
+
+/* line 653, ../../../../scss/summit/themes/default/_custom.scss */
+.cmt {
+  margin-bottom: 15px;
+}
+
+/* line 657, ../../../../scss/summit/themes/default/_custom.scss */
+.cmt > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 3px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+/* line 665, ../../../../scss/summit/themes/default/_custom.scss */
+.cmt > .cmt-block {
+  overflow: hidden;
+}
+
+/* line 669, ../../../../scss/summit/themes/default/_custom.scss */
+.cmt > .cmt-block > .cmt-body {
+  margin-top: 5px;
+}
+
+/* line 673, ../../../../scss/summit/themes/default/_custom.scss */
+.cmt > .cmt-block textarea {
+  border-radius: 0;
+}
+
+/* ===== Coming Soon ===== */
+/* line 679, ../../../../scss/summit/themes/default/_custom.scss */
+.coming-soon-p {
+  padding: 100px 0;
+  background: url(../../../img/bg-1.jpg) center bottom no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* line 687, ../../../../scss/summit/themes/default/_custom.scss */
+.coming-soon-p h1 {
+  font-size: 50px;
+  text-shadow: 1px 1px 2px #505050;
+}
+
+/* line 692, ../../../../scss/summit/themes/default/_custom.scss */
+.coming-soon-p .lead {
+  margin: 40px 0 50px;
+  text-shadow: 1px 1px 2px #505050;
+}
+
+/* line 697, ../../../../scss/summit/themes/default/_custom.scss */
+.coming-soon-p form .form-control {
+  height: 45px;
+  width: 300px;
+  padding: 12px 24px;
+  border: 1px solid #749B46;
+  border-radius: 45px 0 0 45px;
+  font-size: 18px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 708, ../../../../scss/summit/themes/default/_custom.scss */
+.coming-soon-p form button {
+  height: 45px;
+  border-radius: 0 45px 45px 0;
+  margin-left: -4px;
+}
+
+@media (max-width: 767px) {
+  /* line 715, ../../../../scss/summit/themes/default/_custom.scss */
+  .coming-soon-p {
+    padding: 30px 0;
+  }
+
+  /* line 718, ../../../../scss/summit/themes/default/_custom.scss */
+  .coming-soon-p form .form-control {
+    border-radius: 45px;
+    width: 100%;
+  }
+
+  /* line 722, ../../../../scss/summit/themes/default/_custom.scss */
+  .coming-soon-p form button {
+    display: block;
+    width: 100%;
+    border-radius: 45px;
+  }
+}
+/* line 729, ../../../../scss/summit/themes/default/_custom.scss */
+.is-countdown {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 32px;
+  text-shadow: 1px 1px 2px #505050;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 737, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-rtl {
+  direction: rtl;
+}
+
+/* line 741, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+}
+
+/* line 748, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show1 .countdown-section {
+  width: 98%;
+}
+
+/* line 752, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show2 .countdown-section {
+  width: 48%;
+}
+
+/* line 756, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show3 .countdown-section {
+  width: 32.5%;
+}
+
+/* line 760, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show4 .countdown-section {
+  width: 24.5%;
+}
+
+/* line 764, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show5 .countdown-section {
+  width: 19.5%;
+}
+
+/* line 768, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show6 .countdown-section {
+  width: 16.25%;
+}
+
+/* line 772, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-show7 .countdown-section {
+  width: 14%;
+}
+
+/* line 776, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center;
+}
+
+/* line 783, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-amount {
+  font-size: 200%;
+}
+
+/* line 787, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-period {
+  display: block;
+}
+
+/* line 791, ../../../../scss/summit/themes/default/_custom.scss */
+.countdown-descr {
+  display: block;
+  width: 100%;
+}
+
+/* ===== Contact Us ===== */
+/* line 798, ../../../../scss/summit/themes/default/_custom.scss */
+.map {
+  overflow: hidden;
+}
+
+/* ===== Portfolio List ===== */
+/* line 804, ../../../../scss/summit/themes/default/_custom.scss */
+.glr-list-p > li:first-child {
+  padding-left: 5px !important;
+}
+
+/* line 808, ../../../../scss/summit/themes/default/_custom.scss */
+.glr-list-p > li {
+  margin-bottom: 10px;
+}
+
+/* line 812, ../../../../scss/summit/themes/default/_custom.scss */
+.glr-list-p > li.clearfix {
+  display: none;
+}
+
+/* ===== Portfolio Item ===== */
+/* line 818, ../../../../scss/summit/themes/default/_custom.scss */
+.port-slideshow-p {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* Slideshow controls */
+/* line 827, ../../../../scss/summit/themes/default/_custom.scss */
+a.port-arrow-p {
+  position: absolute;
+  display: block;
+  height: 100px;
+  width: 50px;
+  top: 50%;
+  margin-top: -50px;
+  background: transparent;
+  color: transparent;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background 500ms, color 500ms;
+  transition: background 500ms, color 500ms;
+}
+
+/* line 845, ../../../../scss/summit/themes/default/_custom.scss */
+.port-slideshow-p:hover a.port-arrow-p {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+
+/* line 850, ../../../../scss/summit/themes/default/_custom.scss */
+a.port-arrow-p:hover,
+a.port-arrow-p:active {
+  text-decoration: none;
+}
+
+/* line 855, ../../../../scss/summit/themes/default/_custom.scss */
+a.port-arrow-prev {
+  left: 0;
+  right: auto;
+  padding-right: 5px;
+}
+
+/* line 861, ../../../../scss/summit/themes/default/_custom.scss */
+a.port-arrow-next {
+  right: 0;
+  left: auto;
+  padding-left: 5px;
+}
+
+/* !Slideshow controls */
+/* line 869, ../../../../scss/summit/themes/default/_custom.scss */
+.port-item-p h3 {
+  line-height: 1.5;
+}
+
+/* line 873, ../../../../scss/summit/themes/default/_custom.scss */
+.port-item-p p {
+  line-height: 1.7;
+}
+
+/* ===== Pricing Table ===== */
+/* line 879, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .item {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-transition: margin-top 500ms;
+  transition: margin-top 500ms;
+}
+
+/* line 889, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .item:hover {
+  margin-top: -10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* line 896, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .head {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 30px 10px 10px;
+  border-radius: 3px;
+}
+
+/* line 903, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .head h4 {
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+/* line 908, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .head .arrow {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  border-top-width: 30px;
+  border-top-style: solid;
+  border-right: 99px solid white;
+  border-left: 99px solid white;
+}
+
+/* line 920, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .sceleton h5 {
+  font-size: 30px;
+}
+
+/* line 924, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .sceleton span {
+  font-size: 24px;
+}
+
+/* line 928, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .sceleton ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+/* line 933, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .sceleton li {
+  list-style-type: none;
+  padding: 10px 0;
+  border-top: 1px dotted #ccc;
+}
+
+/* line 939, ../../../../scss/summit/themes/default/_custom.scss */
+.pricing-p .sceleton li:hover {
+  border-top: 1px solid #ccc;
+  background: #eee;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  /* Adjusting for large devices */
+  /* line 947, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .head .arrow {
+    border-right-width: 95px;
+    border-left-width: 95px;
+  }
+}
+@media (max-width: 992px) {
+  /* Adjusting for small devices */
+  /* line 955, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .head .arrow {
+    border-right-width: 68px;
+    border-left-width: 68px;
+    border-top-width: 20px;
+  }
+}
+@media (max-width: 768px) {
+  /* Adjusting for mobile */
+  /* line 964, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .head {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* line 968, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .head .arrow {
+    border: 0;
+  }
+
+  /* line 971, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .item {
+    margin: 20px 0;
+  }
+
+  /* line 974, ../../../../scss/summit/themes/default/_custom.scss */
+  .pricing-p .item:hover {
+    margin: 20px 0;
+  }
+}
+/* ===== Services Page ===== */
+/* line 981, ../../../../scss/summit/themes/default/_custom.scss */
+.services-p {
+  margin: 10px 0;
+}
+
+/* ===== Sign In & Sign Up ===== */
+/* line 987, ../../../../scss/summit/themes/default/_custom.scss */
+.sign-form {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* line 996, ../../../../scss/summit/themes/default/_custom.scss */
+.sign-form .popover {
+  min-width: 200px;
+}
+
+/* line 1000, ../../../../scss/summit/themes/default/_custom.scss */
+.popover-title {
+  font-family: 'Roboto', sans-serif !important;
+  background: transparent;
+  font-weight: bold;
+}
+
+/* ===== 404 Not Found ===== */
+/* line 1008, ../../../../scss/summit/themes/default/_custom.scss */
+.not-found-p {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 1016, ../../../../scss/summit/themes/default/_custom.scss */
+.not-found-p .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -43px;
+  margin-left: -98px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1027, ../../../../scss/summit/themes/default/_custom.scss */
+.not-found-p h1 {
+  margin-top: 0;
+}
+
+/* line 1031, ../../../../scss/summit/themes/default/_custom.scss */
+.not-found-p h2 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+/* ===== Theme FAQ ===== */
+/* line 1038, ../../../../scss/summit/themes/default/_custom.scss */
+.theme-faq-p p {
+  line-height: 1.7;
+}
+
+/* ===== Theme FAQ ===== */
+/* line 1044, ../../../../scss/summit/themes/default/_custom.scss */
+.counter--animated {
+  list-style-type: none;
+  width: 566px;
+  margin: 50px auto;
+  display: block;
+}
+/* line 1049, ../../../../scss/summit/themes/default/_custom.scss */
+.counter--animated li {
+  float: left;
+  background: url(../../../img/counter_filmstrip.png) 0 0 no-repeat;
+  width: 53px;
+  height: 103px;
+}
+/* line 1055, ../../../../scss/summit/themes/default/_custom.scss */
+.counter--animated li.seperator {
+  width: 12px;
+  background: none;
+}
+
+/* line 1061, ../../../../scss/summit/themes/default/_custom.scss */
+.mfp-wrap {
+  z-index: 10000;
+}
+/* line 1063, ../../../../scss/summit/themes/default/_custom.scss */
+.mfp-wrap .mfp-content {
+  width: 100%;
+  /*@media (max-width: 767px){
+  	width: 90%;
+  }
+  @media (min-width: 768px){
+  	width: 100%;
+  }
+  @media (min-width: 992px){
+  	width: 70%;
+  }*/
+  margin: auto;
+  background-color: #ffffff;
+}
+
+/* line 1079, ../../../../scss/summit/themes/default/_custom.scss */
+.headline-username {
+  display: block;
+  float: right;
+  font-size: 16px;
+}
+/* line 1084, ../../../../scss/summit/themes/default/_custom.scss */
+.headline-username .avatarImage {
+  width: auto;
+  height: 28px;
+  margin-left: 8px;
+}
+
+/* line 1091, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-widget {
+  margin-bottom: 20px;
+}
+/* line 1093, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-widget .panel-widget-headline {
+  font-size: 36px;
+}
+
+/* line 1098, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form {
+  margin-bottom: 8px;
+}
+/* line 1101, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading > a {
+  display: block;
+}
+/* line 1104, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading > a .fa-caret-up {
+  display: inherit;
+}
+/* line 1107, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading > a .fa-caret-down {
+  display: none;
+}
+/* line 1112, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading > a.collapsed .fa-caret-up {
+  display: none;
+}
+/* line 1115, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading > a.collapsed .fa-caret-down {
+  display: inherit;
+}
+/* line 1121, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading.heading-track a {
+  display: inline-block;
+}
+/* line 1123, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form .panel-heading.heading-track a .flag {
+  margin-right: 8px;
+}
+/* line 1129, ../../../../scss/summit/themes/default/_custom.scss */
+.panel-form a[data-toggle="collapse"] i {
+  margin-top: 3px;
+}
+
+/* line 1135, ../../../../scss/summit/themes/default/_custom.scss */
+.amenities .checkbox {
+  margin: 15px 0;
+}
+/* line 1138, ../../../../scss/summit/themes/default/_custom.scss */
+.amenities .checkbox-img-amenity {
+  margin-right: 12px;
+  margin-top: -8px;
+}
+
+/* line 1144, ../../../../scss/summit/themes/default/_custom.scss */
+#powerTip {
+  max-width: 50%;
+  background-color: #ffffff;
+  border-color: #065D7E;
+  box-shadow: none;
+}
+/* line 1150, ../../../../scss/summit/themes/default/_custom.scss */
+#powerTip.n:before {
+  border-top: 10px solid #065D7E;
+  border-top: 10px solid rgba(6, 93, 126, 0.8);
+  bottom: -10px;
+}
+/* line 1155, ../../../../scss/summit/themes/default/_custom.scss */
+#powerTip.e:before {
+  border-right: 10px solid #065D7E;
+  border-right: 10px solid rgba(6, 93, 126, 0.8);
+  left: -10px;
+}
+/* line 1160, ../../../../scss/summit/themes/default/_custom.scss */
+#powerTip.s:before {
+  border-bottom: 10px solid #065D7E;
+  border-bottom: 10px solid rgba(6, 93, 126, 0.8);
+  top: -10px;
+}
+/* line 1165, ../../../../scss/summit/themes/default/_custom.scss */
+#powerTip.w:before {
+  border-left: 10px solid #065D7E;
+  border-left: 10px solid rgba(6, 93, 126, 0.8);
+  right: -10px;
+}
+
+/* line 1172, ../../../../scss/summit/themes/default/_custom.scss */
+#weatherSection {
+  height: 80px;
+  margin: 8px 0 45px 0;
+}
+/* line 1175, ../../../../scss/summit/themes/default/_custom.scss */
+#weatherSection > div {
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 1178, ../../../../scss/summit/themes/default/_custom.scss */
+#weatherSection > div > div > div {
+  float: none !important;
+}
+
+/* line 1185, ../../../../scss/summit/themes/default/_custom.scss */
+.leaflet-control ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 1193, ../../../../scss/summit/themes/default/_custom.scss */
+.form-control.inline {
+  margin: 0 4px;
+}
+
+/**
+Loader effects from:
+http://tympanus.net/Development/CreativeLoadingEffects/
+
+*/
+/* line 1204, ../../../../scss/summit/themes/default/_custom.scss */
+#pageOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Effect 10: Corner indicator */
+/* line 1213, ../../../../scss/summit/themes/default/_custom.scss */
+.loader-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: #5bc0de;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+  transform: translateX(100%) translateY(-100%) rotate(45deg);
+  pointer-events: none;
+  z-index: 999999;
+}
+
+/* line 1228, ../../../../scss/summit/themes/default/_custom.scss */
+.loader-corner.animate {
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
+}
+
+/* Loading circle idea from http://codepen.io/Metty/details/lgJck */
+/* line 1234, ../../../../scss/summit/themes/default/_custom.scss */
+.loader-corner::before,
+.loader-corner::after {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  display: block;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  content: '';
+}
+
+/* line 1245, ../../../../scss/summit/themes/default/_custom.scss */
+.loader-corner::before {
+  margin-left: -40px;
+  width: 80px;
+  height: 80px;
+  border-right-color: #0a9ad1;
+  border-left-color: #0a9ad1;
+  -webkit-animation: rotation 3s linear infinite;
+  animation: rotation 3s linear infinite;
+}
+
+/* line 1255, ../../../../scss/summit/themes/default/_custom.scss */
+.loader-corner::after {
+  bottom: 50px;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  border-top-color: #0a9ad1;
+  border-bottom-color: #0a9ad1;
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/**
+* button groups
+**/
+/* line 1294, ../../../../scss/summit/themes/default/_custom.scss */
+.btn-group.open .btn-default, .btn-group.open .btn-grey {
+  background-color: #15a347;
+  color: #ffffff;
+}
+
+/* line 1301, ../../../../scss/summit/themes/default/_custom.scss */
+.btn-xs {
+  line-height: 20px;
+  padding-bottom: 2px;
+}
+
+/* line 1307, ../../../../scss/summit/themes/default/_custom.scss */
+.infinity-standalone {
+  position: absolute;
+  right: 5%;
+  font-size: 38px;
+  line-height: 36px;
+  color: #8a9499;
+}
+
+/* line 1314, ../../../../scss/summit/themes/default/_custom.scss */
+.infinity-inline {
+  font-size: 13px;
+}
+
+/* line 1317, ../../../../scss/summit/themes/default/_custom.scss */
+.shareBT {
+  margin: 0 auto 30px auto;
+}
+/* line 1319, ../../../../scss/summit/themes/default/_custom.scss */
+.shareBT label {
+  background: #0a9ad1 !important;
+  color: #ffffff !important;
+}
+
+/* line 1326, ../../../../scss/summit/themes/default/_custom.scss */
+.page_welcome .img-thumbnail {
+  max-width: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-color: #8a9499;
+  padding: 0;
+}
+/* line 1334, ../../../../scss/summit/themes/default/_custom.scss */
+.page_welcome .start-avatars {
+  margin-left: 10px;
+}
+/* line 1336, ../../../../scss/summit/themes/default/_custom.scss */
+.page_welcome .start-avatars li {
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* line 1343, ../../../../scss/summit/themes/default/_custom.scss */
+#banner {
+  margin: 12px 0 6px 0;
+}
+
+/* line 1347, ../../../../scss/summit/themes/default/_custom.scss */
+#skyscraper {
+  position: absolute;
+  width: 160px;
+  height: 600px;
+  left: 87%;
+  top: 30%;
+  display: none;
+  z-index: 7899;
+}
+@media (min-width: 1400px) {
+  /* line 1356, ../../../../scss/summit/themes/default/_custom.scss */
+  #skyscraper {
+    display: block;
+  }
+}
+/* line 1361, ../../../../scss/summit/themes/default/_custom.scss */
+.page_welcome #skyscraper {
+  top: 740px;
+}
+
+/* line 1366, ../../../../scss/summit/themes/default/_custom.scss */
+#mainBox {
+  position: relative;
+}
+
+/* line 1370, ../../../../scss/summit/themes/default/_custom.scss */
+#modalSpinner {
+  padding: 15px 11px 0 !important;
+  overflow: hidden !important;
+}
+
+/* line 1376, ../../../../scss/summit/themes/default/_custom.scss */
+.row-align-bottom {
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin-left: -14px;
+}
+/* line 1383, ../../../../scss/summit/themes/default/_custom.scss */
+.row-align-bottom .itemContainer {
+  display: table-cell;
+  padding-left: 14px;
+  vertical-align: bottom;
+}
+/* line 1387, ../../../../scss/summit/themes/default/_custom.scss */
+.row-align-bottom .itemContainer .btn {
+  padding: 7px 12px;
+}
+
+/* line 1395, ../../../../scss/summit/themes/default/_custom.scss */
+.imgIcon-aligned img {
+  vertical-align: top;
+  margin: 0 4px 0 0;
+}
+
+/* line 1401, ../../../../scss/summit/themes/default/_custom.scss */
+.mfp-iframe-holder .mfp-content {
+  max-height: 530px;
+  top: 50px;
+}
+/* line 1405, ../../../../scss/summit/themes/default/_custom.scss */
+.mfp-iframe-holder .mfp-content button.mfp-close {
+  color: #8a9499;
+  background: #ffffff;
+  opacity: 1;
+  right: 0;
+}
+
+/* line 1415, ../../../../scss/summit/themes/default/_custom.scss */
+.adsCalculators .mfp-content {
+  max-height: none;
+  height: 650px;
+}
+/* line 1420, ../../../../scss/summit/themes/default/_custom.scss */
+.adsCalculators.calculator2 .mfp-content {
+  height: 550px;
+}
+/* line 1425, ../../../../scss/summit/themes/default/_custom.scss */
+.adsCalculators.calculator3 .mfp-content {
+  height: 770px;
+}
+
+@media screen and (min-height: 760px) {
+  /* line 1433, ../../../../scss/summit/themes/default/_custom.scss */
+  .mfp-iframe-holder .mfp-content {
+    top: 0;
+  }
+}
+/* line 1438, ../../../../scss/summit/themes/default/_custom.scss */
+.shareBT.sharer-0 {
+  width: auto !important;
+}
+/* line 1441, ../../../../scss/summit/themes/default/_custom.scss */
+.shareBT.sharer-0 label span {
+  font-size: .8em !important;
+}
+
+/* line 1447, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget,
+.header-widget {
+  margin-left: -4px;
+  margin-right: 0;
+  padding: 4px 0;
+}
+/* line 1455, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget .form-group,
+.header-widget .form-group {
+  margin-bottom: 0;
+  padding: 0 5px;
+}
+/* line 1459, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget .list-inline,
+.header-widget .list-inline {
+  padding-top: 6px;
+}
+/* line 1461, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget .list-inline li,
+.header-widget .list-inline li {
+  padding: 0 1px;
+}
+/* line 1465, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget .link,
+.header-widget .link {
+  font-size: .9em;
+}
+/* line 1467, ../../../../scss/summit/themes/default/_custom.scss */
+.header-form-widget .link .ic-weather,
+.header-widget .link .ic-weather {
+  vertical-align: top;
+}
+
+/* line 1474, ../../../../scss/summit/themes/default/_custom.scss */
+.header-widget {
+  margin-left: 10px;
+}
+
+/*
+	dropdown menu
+*/
+/* line 1481, ../../../../scss/summit/themes/default/_custom.scss */
+.dropdown-menu {
+  top: 97%;
+}
+
+/* line 1488, ../../../../scss/summit/themes/default/_custom.scss */
+.nav.navbar-right .dropdown:hover a.dropdown-toggle,
+.nav.navbar-left .dropdown:hover a.dropdown-toggle {
+  background: #5bc0de !important;
+  color: #ffffff;
+}
+/* line 1491, ../../../../scss/summit/themes/default/_custom.scss */
+.nav.navbar-right .dropdown:hover a.dropdown-toggle b,
+.nav.navbar-left .dropdown:hover a.dropdown-toggle b {
+  color: #ffffff;
+}
+/* line 1495, ../../../../scss/summit/themes/default/_custom.scss */
+.nav.navbar-right .dropdown:hover > ul.dropdown-menu,
+.nav.navbar-left .dropdown:hover > ul.dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  /* line 1509, ../../../../scss/summit/themes/default/_custom.scss */
+  .nav.navbar-right .dropdown:hover .dropdown-menu,
+  .nav.navbar-left .dropdown:hover .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  /* line 1518, ../../../../scss/summit/themes/default/_custom.scss */
+  .nav.navbar-right .dropdown:hover .dropdown-menu > li > a, .nav.navbar-right .dropdown:hover .dropdown-menu .dropdown-header,
+  .nav.navbar-left .dropdown:hover .dropdown-menu > li > a,
+  .nav.navbar-left .dropdown:hover .dropdown-menu .dropdown-header {
+    border: 0;
+    padding: 5px 15px 12px 25px;
+    line-height: 20px;
+  }
+}
+/* line 5, ../../../../scss/summit/themes/default/_forms.scss */
+.gpsies-checkbox,
+.gpsies-checkbox_checked,
+.gpsies-radio,
+.gpsies-radio_checked {
+  margin: 4px 4px 4px -26px;
+}
+/* line 11, ../../../../scss/summit/themes/default/_forms.scss */
+td .gpsies-checkbox, td
+.gpsies-checkbox_checked, td
+.gpsies-radio, td
+.gpsies-radio_checked {
+  margin-left: -30px;
+  margin-right: 1px;
+}
+
+/* line 17, ../../../../scss/summit/themes/default/_forms.scss */
+.radio, .radio-inline,
+.checkbox, .checkbox-inline {
+  cursor: pointer;
+  padding-left: 26px;
+}
+
+/* line 24, ../../../../scss/summit/themes/default/_forms.scss */
+.table td.number {
+  width: 10%;
+}
+/* line 26, ../../../../scss/summit/themes/default/_forms.scss */
+.table td.number label {
+  font-size: 10px;
+}
+
+/*------------------------------------------------------------------
+Project:	Mosaic
+Version:	1.2
+Created: 		20/01/2014
+Last change:	27/02/2014
+-------------------------------------------------------------------*/
+/* ===== Helper Classes ===== */
+/* line 10, ../../../../scss/summit/themes/default/_ui.scss */
+.primary-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 13, ../../../../scss/summit/themes/default/_ui.scss */
+.first-child {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  /* line 17, ../../../../scss/summit/themes/default/_ui.scss */
+  .first-child-m {
+    margin-top: 20px;
+  }
+}
+/* line 21, ../../../../scss/summit/themes/default/_ui.scss */
+.delay-1 {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+/* line 25, ../../../../scss/summit/themes/default/_ui.scss */
+.delay-2 {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+/* line 29, ../../../../scss/summit/themes/default/_ui.scss */
+.delay-3 {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+/* line 33, ../../../../scss/summit/themes/default/_ui.scss */
+.tab-1 {
+  margin-right: 15px;
+}
+
+/* line 36, ../../../../scss/summit/themes/default/_ui.scss */
+.tab-2 {
+  margin-right: 30px;
+}
+
+/* line 39, ../../../../scss/summit/themes/default/_ui.scss */
+.tab-3 {
+  margin-right: 45px;
+}
+
+/* line 42, ../../../../scss/summit/themes/default/_ui.scss */
+.tab-3 {
+  margin-right: 60px;
+}
+
+/* line 45, ../../../../scss/summit/themes/default/_ui.scss */
+hr.arrow-down {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* line 50, ../../../../scss/summit/themes/default/_ui.scss */
+hr.arrow-down:after {
+  content: url(../img/arrow.png);
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: -5px;
+}
+
+/* ===== Buttons ===== */
+/* line 61, ../../../../scss/summit/themes/default/_ui.scss */
+.btn {
+  border-radius: 3px;
+}
+
+/* ===== Headlines ===== */
+/* line 67, ../../../../scss/summit/themes/default/_ui.scss */
+.headline {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+
+/* line 73, ../../../../scss/summit/themes/default/_ui.scss */
+.headline span {
+  padding-bottom: 6px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+/* line 78, ../../../../scss/summit/themes/default/_ui.scss */
+h3.headline span {
+  padding-bottom: 8px;
+}
+
+/* ===== Breadcrumbs ===== */
+/* line 84, ../../../../scss/summit/themes/default/_ui.scss */
+.topic {
+  margin-top: -20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+/* line 89, ../../../../scss/summit/themes/default/_ui.scss */
+.topic h3 {
+  display: inline-block;
+  padding: 20px 0 20px;
+  margin: 0 0 -1px 0;
+  font-size: 20px;
+}
+
+/* line 95, ../../../../scss/summit/themes/default/_ui.scss */
+.topic .breadcrumb {
+  margin-bottom: 0;
+  padding: 21px 0;
+  background: transparent;
+}
+
+/* ===== Responsive Video =====*/
+/* line 103, ../../../../scss/summit/themes/default/_ui.scss */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* line 112, ../../../../scss/summit/themes/default/_ui.scss */
+.flex-video.widescreen {
+  padding-bottom: 57.25%;
+}
+
+/* line 113, ../../../../scss/summit/themes/default/_ui.scss */
+.flex-video.vimeo {
+  padding-top: 0;
+}
+
+/* line 115, ../../../../scss/summit/themes/default/_ui.scss */
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  /* line 125, ../../../../scss/summit/themes/default/_ui.scss */
+  .flex-video {
+    padding-top: 0;
+  }
+}
+/* ===== Pagination ===== */
+/* line 130, ../../../../scss/summit/themes/default/_ui.scss */
+.body-green .pagination > .active > a,
+.body-green .pagination > .active > span,
+.body-green .pagination > .active > a:hover,
+.body-green .pagination > .active > span:hover,
+.body-green .pagination > .active > a:focus,
+.body-green .pagination > .active > span:focus {
+  background-color: #94BA65;
+  border-color: #94BA65;
+}
+
+/* line 139, ../../../../scss/summit/themes/default/_ui.scss */
+.body-blue .pagination > .active > a,
+.body-blue .pagination > .active > span,
+.body-blue .pagination > .active > a:hover,
+.body-blue .pagination > .active > span:hover,
+.body-blue .pagination > .active > a:focus,
+.body-blue .pagination > .active > span:focus {
+  background-color: #2790B0;
+  border-color: #2790B0;
+}
+
+/* line 148, ../../../../scss/summit/themes/default/_ui.scss */
+.body-red .pagination > .active > a,
+.body-red .pagination > .active > span,
+.body-red .pagination > .active > a:hover,
+.body-red .pagination > .active > span:hover,
+.body-red .pagination > .active > a:focus,
+.body-red .pagination > .active > span:focus {
+  background-color: #E35E54;
+  border-color: #E35E54;
+}
+
+/* line 157, ../../../../scss/summit/themes/default/_ui.scss */
+.body-orange .pagination > .active > a,
+.body-orange .pagination > .active > span,
+.body-orange .pagination > .active > a:hover,
+.body-orange .pagination > .active > span:hover,
+.body-orange .pagination > .active > a:focus,
+.body-orange .pagination > .active > span:focus {
+  background-color: #D26C22;
+  border-color: #D26C22;
+}
+
+/* line 166, ../../../../scss/summit/themes/default/_ui.scss */
+.pagination > li > a,
+.pagination > li > span {
+  color: #999;
+}
+
+/* line 170, ../../../../scss/summit/themes/default/_ui.scss */
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #666;
+}
+
+/* ===== Panels ===== */
+/* 1. Panel Green */
+/* line 181, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-green {
+  border-color: #94BA65;
+}
+
+/* line 184, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-green > .panel-heading {
+  color: #fff;
+  background-color: #94BA65;
+  border-color: #94BA65;
+}
+
+/* line 189, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-green > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #94BA65;
+}
+
+/* line 192, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-green > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #94BA65;
+}
+
+/* line 195, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-green > .panel-footer {
+  background-color: #94BA65;
+  border-top: 1px solid #94BA65;
+}
+
+/* 2. Panel Blue */
+/* line 202, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-blue {
+  border-color: #2790B0;
+}
+
+/* line 205, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-blue > .panel-heading {
+  color: #fff;
+  background-color: #2790B0;
+  border-color: #2790B0;
+}
+
+/* line 210, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-blue > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #2790B0;
+}
+
+/* line 213, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-blue > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #2790B0;
+}
+
+/* line 216, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-blue > .panel-footer {
+  background-color: #2790B0;
+  border-top: 1px solid #2790B0;
+}
+
+/* 3. Panel Red */
+/* line 223, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-red {
+  border-color: #E35E54;
+}
+
+/* line 226, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-red > .panel-heading {
+  color: #fff;
+  background-color: #E35E54;
+  border-color: #E35E54;
+}
+
+/* line 231, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-red > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #E35E54;
+}
+
+/* line 234, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-red > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #E35E54;
+}
+
+/* line 237, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-red > .panel-footer {
+  background-color: #E35E54;
+  border-top: 1px solid #E35E54;
+}
+
+/* 4. Panel Orange */
+/* line 244, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-orange {
+  border-color: #D26C22;
+}
+
+/* line 247, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-orange > .panel-heading {
+  color: #fff;
+  background-color: #D26C22;
+  border-color: #D26C22;
+}
+
+/* line 252, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-orange > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #D26C22;
+}
+
+/* line 255, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-orange > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #D26C22;
+}
+
+/* line 258, ../../../../scss/summit/themes/default/_ui.scss */
+.panel-orange > .panel-footer {
+  background-color: #D26C22;
+  border-top: 1px solid #D26C22;
+}
+
+/* ===== Info Boards ==== */
+/* line 265, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+}
+
+/* line 270, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board h4 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 274, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board p:last-child {
+  margin-bottom: 0;
+}
+
+/* 1. Info board green */
+/* line 280, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board-green {
+  background-color: #F5F9F1;
+  border-color: #94BA65;
+}
+
+/* 2. Info board blue */
+/* line 287, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board-blue {
+  background-color: #EEF8FB;
+  border-color: #2790B0;
+}
+
+/* 3. Info board orange */
+/* line 294, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board-orange {
+  background-color: #FCF4ED;
+  border-color: #D26C22;
+}
+
+/* 4. Info board red */
+/* line 301, ../../../../scss/summit/themes/default/_ui.scss */
+.info-board-red {
+  background-color: #FCEEED;
+  border-color: #E35E54;
+}
+
+/* ===== Navs ===== */
+/* 1. Nav tabs */
+/* line 310, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* line 313, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs > li > a {
+  border-bottom: 1px solid #dedede;
+  border-radius: 0;
+  background: #fff;
+  color: #999;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+/* line 321, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #fff;
+  border-color: #fff #fff #dedede;
+  color: #ffffff;
+}
+
+/* line 327, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #515151;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+/* line 335, ../../../../scss/summit/themes/default/_ui.scss */
+.body-green .nav-tabs > li.active > a,
+.body-green .nav-tabs > li.active > a:hover,
+.body-green .nav-tabs > li.active > a:focus {
+  border-bottom-color: #94BA65;
+}
+
+/* line 340, ../../../../scss/summit/themes/default/_ui.scss */
+.body-blue .nav-tabs > li.active > a,
+.body-blue .nav-tabs > li.active > a:hover,
+.body-blue .nav-tabs > li.active > a:focus {
+  border-bottom-color: #2790B0;
+}
+
+/* line 345, ../../../../scss/summit/themes/default/_ui.scss */
+.body-orange .nav-tabs > li.active > a,
+.body-orange .nav-tabs > li.active > a:hover,
+.body-orange .nav-tabs > li.active > a:focus {
+  border-bottom-color: #D26C22;
+}
+
+/* line 350, ../../../../scss/summit/themes/default/_ui.scss */
+.body-red .nav-tabs > li.active > a,
+.body-red .nav-tabs > li.active > a:hover,
+.body-red .nav-tabs > li.active > a:focus {
+  border-bottom-color: #E35E54;
+}
+
+/* line 355, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 0;
+}
+
+/* line 359, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid transparent;
+}
+
+/* 2. Nav pills */
+/* line 368, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills {
+  margin-bottom: 15px;
+}
+
+/* line 371, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills > li > a {
+  color: #515151;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+/* line 376, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills > li > a {
+  background-color: #f5f5f5;
+}
+
+/* line 379, ../../../../scss/summit/themes/default/_ui.scss */
+.body-green .nav-pills > li.active > a,
+.body-green .nav-pills > li.active > a:hover,
+.body-green .nav-pills > li.active > a:focus {
+  background-color: #94BA65;
+}
+
+/* line 384, ../../../../scss/summit/themes/default/_ui.scss */
+.body-blue .nav-pills > li.active > a,
+.body-blue .nav-pills > li.active > a:hover,
+.body-blue .nav-pills > li.active > a:focus {
+  background-color: #2790B0;
+}
+
+/* line 389, ../../../../scss/summit/themes/default/_ui.scss */
+.body-orange .nav-pills > li.active > a,
+.body-orange .nav-pills > li.active > a:hover,
+.body-orange .nav-pills > li.active > a:focus {
+  background-color: #D26C22;
+}
+
+/* line 394, ../../../../scss/summit/themes/default/_ui.scss */
+.body-red .nav-pills > li.active > a,
+.body-red .nav-pills > li.active > a:hover,
+.body-red .nav-pills > li.active > a:focus {
+  background-color: #E35E54;
+}
+
+/* line 399, ../../../../scss/summit/themes/default/_ui.scss */
+.nav.nav-pills > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #f0f0f0;
+}
+
+/* line 403, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills-green > li.active > a,
+.nav-pills-green > li.active > a:hover,
+.nav-pills-green > li.active > a:focus {
+  background-color: #94BA65 !important;
+}
+
+/* line 408, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills-blue > li.active > a,
+.nav-pills-blue > li.active > a:hover,
+.nav-pills-blue > li.active > a:focus {
+  background-color: #2790B0 !important;
+}
+
+/* line 413, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills-red > li.active > a,
+.nav-pills-red > li.active > a:hover,
+.nav-pills-red > li.active > a:focus {
+  background-color: #E35E54 !important;
+}
+
+/* line 418, ../../../../scss/summit/themes/default/_ui.scss */
+.nav-pills-orange > li.active > a,
+.nav-pills-orange > li.active > a:hover,
+.nav-pills-orange > li.active > a:focus {
+  background-color: #D26C22 !important;
+}
+
+/* ===== Sidebar ===== */
+/* line 425, ../../../../scss/summit/themes/default/_ui.scss */
+.bs-sidebar {
+  margin-bottom: 50px;
+}
+
+/* line 428, ../../../../scss/summit/themes/default/_ui.scss */
+.bs-sidebar.affix {
+  position: static;
+}
+
+/* Show and affix the side nav for ui elements when space allows it */
+@media (min-width: 992px) {
+  /* line 434, ../../../../scss/summit/themes/default/_ui.scss */
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+
+  /* Widen the fixed sidebar */
+  /* line 438, ../../../../scss/summit/themes/default/_ui.scss */
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-bottom {
+    width: 213px;
+  }
+
+  /* line 442, ../../../../scss/summit/themes/default/_ui.scss */
+  .bs-sidebar.affix {
+    position: fixed;
+    /* Undo the static from mobile first approach */
+    top: 110px;
+  }
+
+  /* line 446, ../../../../scss/summit/themes/default/_ui.scss */
+  .bs-sidebar.affix-bottom {
+    position: absolute;
+    /* Undo the static from mobile first approach */
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  /* line 452, ../../../../scss/summit/themes/default/_ui.scss */
+  .bs-sidebar.affix-bottom,
+  .bs-sidebar.affix {
+    width: 220px;
+  }
+}
+/* line 1, ../../../../scss/summit/themes/default/_counter.scss */
+.counter-wrapper {
+  float: right;
+  position: relative;
+  left: -50%;
+  margin-top: 58px;
+}
+
+/* line 7, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter {
+  position: relative;
+  left: 50%;
+  list-style-type: none;
+}
+
+/* line 12, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter li {
+  float: right;
+}
+
+/* line 15, ../../../../scss/summit/themes/default/_counter.scss */
+.no-csstransforms3d span.back {
+  display: none;
+}
+
+/* line 18, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit {
+  position: relative;
+  z-index: 0;
+  width: 60px;
+  height: 90px;
+  margin-left: 10px;
+  background-color: #000000;
+  text-align: center;
+  line-height: 0;
+  -webkit-text-stroke: 2px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 35, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit:last-child {
+  margin-left: 0;
+}
+
+/* line 38, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit span {
+  position: absolute;
+  left: 0;
+  height: 45px;
+  width: 60px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-indent: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 58, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit span.front {
+  top: 0;
+  padding-top: 45px;
+}
+
+/* line 62, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit span.back {
+  bottom: 0;
+}
+
+/* line 65, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .line {
+  position: absolute;
+  z-index: 10;
+  height: 45px;
+  width: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+}
+
+/* line 75, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .hinge-wrap {
+  z-index: 5;
+  position: relative;
+  overflow: visible;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -ms-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 84, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .hinge {
+  position: absolute;
+  height: 45px;
+  width: 60px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 101, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .hinge span {
+  height: 0px;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 109, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .hinge span.front {
+  padding-top: 45px;
+}
+
+/* line 112, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit .hinge span.back {
+  height: 45px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* line 120, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit.animate .hinge {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+/* line 127, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.default .digit-delimiter {
+  padding-top: 38px;
+  margin-right: -5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  color: #000000;
+  text-indent: 3.3333333333333335px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 137, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit {
+  position: relative;
+  z-index: 0;
+  width: 60px;
+  height: 90px;
+  margin-left: 10px;
+  background-color: #e8f1ff;
+  text-align: center;
+  line-height: 0;
+  -webkit-text-stroke: 2px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(232, 241, 255, 0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(232, 241, 255, 0.5);
+  box-shadow: 1px 1px 5px 0px rgba(232, 241, 255, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 154, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit:last-child {
+  margin-left: 0;
+}
+
+/* line 157, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit span {
+  position: absolute;
+  left: 0;
+  height: 45px;
+  width: 60px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-indent: 2px;
+  background-color: #e8f1ff;
+  color: #ffffff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 177, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit span.front {
+  top: 0;
+  padding-top: 45px;
+}
+
+/* line 181, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit span.back {
+  bottom: 0;
+}
+
+/* line 184, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .line {
+  position: absolute;
+  z-index: 10;
+  height: 45px;
+  width: 60px;
+  border-bottom: 1px solid rgba(232, 241, 255, 0.7);
+  -webkit-box-shadow: 0px 5px 7px -4px rgba(232, 241, 255, 0.7);
+  -moz-box-shadow: 0px 5px 7px -4px rgba(232, 241, 255, 0.7);
+  box-shadow: 0px 5px 7px -4px rgba(232, 241, 255, 0.7);
+}
+
+/* line 194, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .hinge-wrap {
+  z-index: 5;
+  position: relative;
+  overflow: visible;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -ms-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 203, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .hinge {
+  position: absolute;
+  height: 45px;
+  width: 60px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 220, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .hinge span {
+  height: 0px;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 228, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .hinge span.front {
+  padding-top: 45px;
+}
+
+/* line 231, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit .hinge span.back {
+  height: 45px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* line 239, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit.animate .hinge {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+/* line 246, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.light .digit-delimiter {
+  padding-top: 38px;
+  margin-right: -5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  color: #e8f1ff;
+  text-indent: 3.3333333333333335px;
+  text-shadow: 1px 1px 5px rgba(232, 241, 255, 0.5);
+}
+
+/* line 256, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit {
+  position: relative;
+  z-index: 0;
+  width: 30px;
+  height: 40px;
+  margin-left: 5px;
+  background-color: #000000;
+  text-align: center;
+  line-height: 0;
+  -webkit-text-stroke: 2px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 273, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit:last-child {
+  margin-left: 0;
+}
+
+/* line 276, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit span {
+  position: absolute;
+  left: 0;
+  height: 20px;
+  width: 30px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 34px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-indent: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 296, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit span.front {
+  top: 0;
+  padding-top: 20px;
+}
+
+/* line 300, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit span.back {
+  bottom: 0;
+}
+
+/* line 303, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .line {
+  position: absolute;
+  z-index: 10;
+  height: 20px;
+  width: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+}
+
+/* line 313, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .hinge-wrap {
+  z-index: 5;
+  position: relative;
+  overflow: visible;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -ms-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 322, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .hinge {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 339, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .hinge span {
+  height: 0px;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 347, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .hinge span.front {
+  padding-top: 20px;
+}
+
+/* line 350, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit .hinge span.back {
+  height: 20px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* line 358, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit.animate .hinge {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+/* line 365, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.small .digit-delimiter {
+  padding-top: 15px;
+  margin-right: -2.5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #000000;
+  text-indent: 1.6666666666666667px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 375, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit {
+  position: relative;
+  z-index: 0;
+  width: 140px;
+  height: 200px;
+  margin-left: 20px;
+  background-color: #000000;
+  text-align: center;
+  line-height: 0;
+  -webkit-text-stroke: 2px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 392, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit:last-child {
+  margin-left: 0;
+}
+
+/* line 395, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit span {
+  position: absolute;
+  left: 0;
+  height: 100px;
+  width: 140px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 190px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-indent: 2px;
+  background-color: #000000;
+  color: #ffffff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 415, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit span.front {
+  top: 0;
+  padding-top: 100px;
+}
+
+/* line 419, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit span.back {
+  bottom: 0;
+}
+
+/* line 422, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .line {
+  position: absolute;
+  z-index: 10;
+  height: 100px;
+  width: 140px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.7);
+}
+
+/* line 432, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .hinge-wrap {
+  z-index: 5;
+  position: relative;
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+
+/* line 441, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .hinge {
+  position: absolute;
+  height: 100px;
+  width: 140px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 458, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .hinge span {
+  height: 0px;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 466, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .hinge span.front {
+  padding-top: 100px;
+}
+
+/* line 469, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit .hinge span.back {
+  height: 100px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* line 477, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit.animate .hinge {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+/* line 484, ../../../../scss/summit/themes/default/_counter.scss */
+.flip-counter.huge .digit-delimiter {
+  padding-top: 130px;
+  margin-right: -10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: #000000;
+  text-indent: 6.666666666666667px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*****************************/
+/* iToggle */
+/*****************************/
+/* line 5, ../../../../scss/summit/themes/default/_iToggle.scss */
+.iToggle {
+  display: inline-block;
+  border-radius: 2px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+}
+
+/* .iToggle.focus {
+    outline: none;
+    box-shadow: 0 0 5px #549ED4;
+} */
+/* line 18, ../../../../scss/summit/themes/default/_iToggle.scss */
+.iToggle span.label {
+  display: inline-block;
+  padding: 7px 3px;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+}
+
+/* line 26, ../../../../scss/summit/themes/default/_iToggle.scss */
+.iToggle .slider {
+  border: 1px solid #CCC;
+  background-color: #eeeeee;
+  /* fallback */
+  background-image: linear-gradient(to top, #c7c7c7 3%, #f5f5f5 100%, #ffffff 95%);
+  background-image: -o-linear-gradient(bottom, #c7c7c7 3%, whitesmoke 100%, white 95%);
+  background-image: -moz-linear-gradient(bottom, #c7c7c7 3%, whitesmoke 100%, white 95%);
+  background-image: -webkit-linear-gradient(bottom, #c7c7c7 3%, whitesmoke 100%, white 95%);
+  background-image: -ms-linear-gradient(bottom, #c7c7c7 3%, whitesmoke 100%, white 95%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.03, #c7c7c7), color-stop(1, whitesmoke), color-stop(0.95, white));
+}
+
+/* line 44, ../../../../scss/summit/themes/default/_iToggle.scss */
+.iToggle .label-off {
+  background: #0a9ad1;
+}
+
+/* line 48, ../../../../scss/summit/themes/default/_iToggle.scss */
+.iToggle .label-on {
+  background: #15a347;
+}
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+/* line 6, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 16, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-target {
+  position: relative;
+  direction: ltr;
+}
+
+/* line 20, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 25, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 32, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 36, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+     its values is > 50%. */
+  z-index: 10;
+}
+
+/* line 41, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-stacking + .noUi-origin {
+  /* Fix stacking order in IE7, which incorrectly
+     creates a new context for the origins. */
+  *z-index: -1;
+}
+
+/* line 46, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s;
+}
+
+/* line 50, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+/* line 57, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-base {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slider size and handle placement;
+ */
+/* line 64, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-horizontal {
+  height: 18px;
+}
+
+/* line 67, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-horizontal .noUi-handle {
+  width: 34px;
+  height: 28px;
+  left: -17px;
+  top: -6px;
+}
+
+/* line 73, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-vertical {
+  width: 18px;
+}
+
+/* line 76, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-vertical .noUi-handle {
+  width: 28px;
+  height: 34px;
+  left: -6px;
+  top: -17px;
+}
+
+/* Styling;
+ */
+/* line 85, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-background {
+  background: #fafafa;
+  box-shadow: inset 0 1px 1px #f0f0f0;
+}
+
+/* line 89, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-connect {
+  background: #0a9ad1 !important;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+
+/* line 95, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-origin {
+  border-radius: 2px;
+  background: #FAFAFA;
+}
+
+/* line 99, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-target {
+  border-radius: 4px;
+  border: 1px solid #D3D3D3;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+/* line 104, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-target.noUi-connect {
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #BBB;
+}
+
+/* Handles and cursors;
+ */
+/* line 110, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-dragable {
+  cursor: w-resize;
+}
+
+/* line 113, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-vertical .noUi-dragable {
+  cursor: n-resize;
+}
+
+/* line 116, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+
+/* line 125, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+
+/* Handle stripes;
+ */
+/* line 133, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+
+/* line 144, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-handle:after {
+  left: 17px;
+}
+
+/* line 147, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+  width: 14px;
+  height: 1px;
+  left: 6px;
+  top: 14px;
+}
+
+/* line 154, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+.noUi-vertical .noUi-handle:after {
+  top: 17px;
+}
+
+/* Disabled state;
+ */
+/* line 160, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+
+/* line 164, ../../../../scss/summit/themes/default/_jquery.nouislider.scss */
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+ *
+ */
+/* line 5, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-pips {
+  position: absolute;
+  font: 400 12px Arial;
+  color: #999;
+}
+
+/* Values;
+ *
+ */
+/* line 19, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-value {
+  width: 40px;
+  position: absolute;
+  text-align: center;
+}
+
+/* line 24, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/* Markings;
+ *
+ */
+/* line 32, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker {
+  position: absolute;
+  background: #CCC;
+}
+
+/* line 36, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-sub {
+  background: #AAA;
+}
+
+/* line 39, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-large {
+  background: #AAA;
+}
+
+/* Horizontal layout;
+ *
+ */
+/* line 46, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 50px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+/* line 53, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-value-horizontal {
+  margin-left: -20px;
+  padding-top: 20px;
+}
+
+/* line 57, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-value-horizontal.noUi-value-sub {
+  padding-top: 15px;
+}
+
+/* line 61, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+
+/* line 66, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+
+/* line 69, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+
+/* Vertical layout;
+ *
+ */
+/* line 76, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+/* line 82, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-value-vertical {
+  width: 15px;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+/* line 88, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+/* line 93, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+
+/* line 96, ../../../../scss/summit/themes/default/_jquery.nouislider.pips.scss */
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+
+/* line 1, ../../../../scss/summit/themes/default/_searchResults.scss */
+thead {
+  background-color: #e6ebed;
+}
+
+/* line 4, ../../../../scss/summit/themes/default/_searchResults.scss */
+td {
+  font-size: 11px;
+}
+/* line 6, ../../../../scss/summit/themes/default/_searchResults.scss */
+td h5 {
+  margin-top: 0;
+}
+/* line 9, ../../../../scss/summit/themes/default/_searchResults.scss */
+td .preview {
+  margin-top: 10px;
+}
+
+/*
+********************************* 
+	custom general styles
+********************************* 
+ */
+/* line 68, ../../../../scss/summit/themes/default/main.scss */
+label {
+  position: relative;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* line 74, ../../../../scss/summit/themes/default/main.scss */
+.panel-activity .row {
+  margin-bottom: 15px;
+}
+
+/* line 78, ../../../../scss/summit/themes/default/main.scss */
+#map {
+  height: 500px;
+}
+
+/* line 82, ../../../../scss/summit/themes/default/main.scss */
+.downloadOptions, .containerPadding {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+/* line 87, ../../../../scss/summit/themes/default/main.scss */
+#extendedSearchContainer {
+  padding-top: 45px;
+  border: 2px solid rgba(10, 154, 209, 0.6);
+}
+
+/* line 94, ../../../../scss/summit/themes/default/main.scss */
+footer h3 > span {
+  font-size: 2.3rem;
+  border-bottom: none;
+}
+
+/* line 101, ../../../../scss/summit/themes/default/main.scss */
+.code {
+  background-color: #f9f2f4;
+  white-space: inherit;
+}
+/* line 104, ../../../../scss/summit/themes/default/main.scss */
+.code code {
+  backgroound: none;
+  white-space: normal;
+  font-size: 10px;
+  color: #c7254e;
+}
+
+/* line 112, ../../../../scss/summit/themes/default/main.scss */
+.success {
+  padding: 10px;
+  width: 50%;
+}
+
+/* line 117, ../../../../scss/summit/themes/default/main.scss */
+.color-blue {
+  color: #0a9ad1;
+}
+
+/* line 121, ../../../../scss/summit/themes/default/main.scss */
+.help-block-mag {
+  padding: 30px;
+  background: #ffffff;
+}
+
+/* line 126, ../../../../scss/summit/themes/default/main.scss */
+.cursor-btn {
+  cursor: pointer;
+}
+
+/* line 130, ../../../../scss/summit/themes/default/main.scss */
+.leaflet-control input, .leaflet-control select, .leaflet-control textarea, .leaflet-control button {
+  border: none;
+}
+
+/* line 134, ../../../../scss/summit/themes/default/main.scss */
+input.smaller, select.smaller {
+  width: 4em !important;
+}
+
+/* line 139, ../../../../scss/summit/themes/default/main.scss */
+.page-header h1 {
+  font-size: 28px;
+}
+/* line 142, ../../../../scss/summit/themes/default/main.scss */
+.page-header .avatarImage {
+  margin-top: -16px;
+}
+
+/* line 147, ../../../../scss/summit/themes/default/main.scss */
+.mfp-container {
+  padding: 0 10% !important;
+}
+
+/* line 154, ../../../../scss/summit/themes/default/main.scss */
+.row > .btn-group .btn, .row > .btn-group ul {
+  margin-left: 15px;
+}
+
+/* line 160, ../../../../scss/summit/themes/default/main.scss */
+.btn {
+  margin: 0 0 5px 15px;
+}
+/* line 163, ../../../../scss/summit/themes/default/main.scss */
+.btn:first-child {
+  margin-left: 0;
+}
+/* line 166, ../../../../scss/summit/themes/default/main.scss */
+.panel-heading .btn, .form-group .btn {
+  margin: 0;
+}
+/* line 169, ../../../../scss/summit/themes/default/main.scss */
+.btn .fa {
+  margin-right: 8px;
+}
+/* line 173, ../../../../scss/summit/themes/default/main.scss */
+.btn.is-shorter {
+  width: 92%;
+  margin-right: 4px;
+}
+
+/* line 180, ../../../../scss/summit/themes/default/main.scss */
+.btn-group .dropdown-menu {
+  margin-top: -5px;
+}
+
+/* line 187, ../../../../scss/summit/themes/default/main.scss */
+dl.spaced-vertical dt, dl.spaced-vertical dd {
+  margin-top: 8px;
+}
+/* line 190, ../../../../scss/summit/themes/default/main.scss */
+dl.spaced-vertical dt:first-child {
+  margin-top: 0;
+}
+/* line 195, ../../../../scss/summit/themes/default/main.scss */
+dl.text-left dt {
+  text-align: left !important;
+}
+
+/* line 201, ../../../../scss/summit/themes/default/main.scss */
+.map-mini {
+  margin: 15px 0 10px 0;
+}
+
+/* line 205, ../../../../scss/summit/themes/default/main.scss */
+.img-thumbnail {
+  border-color: #149641;
+}
+
+/* line 210, ../../../../scss/summit/themes/default/main.scss */
+.panel-body h4 {
+  font-size: 15px;
+}
+
+/* line 215, ../../../../scss/summit/themes/default/main.scss */
+.breadcrumb {
+  padding-left: 0;
+  color: #8a9499;
+  background-color: transparent;
+  font-size: 12px;
+  /*li {
+  	position: relative;
+  	float: left;
+  	margin-right: 20px;
+  	&::after {
+  	  position: absolute;
+  	  content: '>';
+  	  right: -13px;
+  	}
+  	&:last-child::after {
+  	  content: '';
+  	}
+    }*/
+}
+/* line 220, ../../../../scss/summit/themes/default/main.scss */
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 241, ../../../../scss/summit/themes/default/main.scss */
+.leaflet-control label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+/* line 247, ../../../../scss/summit/themes/default/main.scss */
+.leaflet-control .mapControl label {
+  display: inline;
+}
+/* line 248, ../../../../scss/summit/themes/default/main.scss */
+.leaflet-control .mapControl .clear {
+  clear: both;
+}
+/* line 249, ../../../../scss/summit/themes/default/main.scss */
+.leaflet-control .mapControl input[type=radio] {
+  margin-right: 3px;
+}
+
+/*# sourceMappingURL=main.css.map */

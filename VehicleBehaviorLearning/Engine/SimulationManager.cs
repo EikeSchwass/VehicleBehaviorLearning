@@ -5,18 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using VehicleBehaviorLearning.Engine.Helper;
 using VehicleBehaviorLearning.Engine.Vehicles.Behavior;
+using VehicleBehaviorLearning.Windows;
 
 namespace VehicleBehaviorLearning.Engine
 {
     public class SimulationManager
     {
-        public SimulationData SimulationData { get; } = new SimulationData();
+        public SimulationData SimulationData { get; private set; } = new SimulationData();
         public Simulation[] Simulations { get; } = new Simulation[SimulationSettings.Instance.VehicleBehaviors.Count];
 
         public event Action<SimulationManager, SimulationResult[]> GenerationCompleted;
 
         private SimulationManager()
         {
+            SimulationData = new SimulationData();
+            Simulations.Initialize();
             for (int i = 0; i < Simulations.Length; i++)
             {
                 Simulations[i] = new Simulation(SimulationSettings.Instance.VehicleBehaviors[i].CreateVehicleBehavior());
@@ -86,7 +89,6 @@ namespace VehicleBehaviorLearning.Engine
 
         public double CalculateDeviation(SimulationResult simulationResult)
         {
-            return Math.Max(0.1, 2 - simulationResult.Rating);
             int generation = SimulationData.Generations;
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationDeviationStart - SimulationSettings.Instance.MachineLearningSettings.MutationDeviationBase) / generation;
@@ -100,7 +102,6 @@ namespace VehicleBehaviorLearning.Engine
 
         public double CalculateMutationChance(SimulationResult simulationResult)
         {
-            return Math.Max(0.01, 0.01 / Math.Pow(simulationResult.Rating, 0.2));
             int generation = SimulationData.Generations;
             generation = Math.Max(1, generation);
             double y = (SimulationSettings.Instance.MachineLearningSettings.MutationChanceStart - SimulationSettings.Instance.MachineLearningSettings.MutationChanceBase) / generation;

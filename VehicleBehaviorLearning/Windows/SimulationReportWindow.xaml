@@ -18,6 +18,7 @@
             <Button Content="Single Step" x:Name="SingleStepButton" Click="SingleStepButton_OnClick" />
             <Button Content="Run" x:Name="RunButton" Click="RunButton_OnClick" />
             <Button Content="Stop" x:Name="StopButton" Click="StopButton_OnClick" />
+            <Button Content="Visualize Best" IsEnabled="False" x:Name="VisualizeBestButton" Click="VisualizeBestButton_OnClick" />
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -54,7 +55,7 @@
                 </liveCharts.Wpf:CartesianChart.AxisY>
             </liveCharts.Wpf:CartesianChart>
             <controls:TreeViewControl Grid.Column="1" Grid.Row="0" x:Name="TreeViewControl" Margin="5" TreeNodeClicked="TreeViewControl_OnTreeNodeClicked" TreeNodeMouseEnter="TreeViewControl_OnTreeNodeMouseEnter" TreeNodeMouseLeave="TreeViewControl_OnTreeNodeMouseLeave" />
-            <controls:SimulationResultDisplay Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" x:Name="SimulationResultDisplay" />
+            <controls:SimulationResultDisplay Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" x:Name="SimulationResultDisplay" VisualizeRequested="SimulationResultDisplay_OnVisualizeRequested" />
         </Grid>
     </Grid>
 </Window>

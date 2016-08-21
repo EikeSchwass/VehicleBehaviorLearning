@@ -1,0 +1,503 @@
+.purple {
+	background-color: purple !important;
+}
+.fuchsia {
+	background-color: fuchsia !important;
+}
+.blue {
+	background-color: blue !important;
+}
+.aqua {
+	background-color: aqua !important;
+}
+.green {
+	background-color: green !important;
+}
+.lime {
+	background-color: lime !important;
+}
+.olive {
+	background-color: olive !important;
+}
+.yellow {
+	background-color: yellow !important;
+}
+.maroon {
+	background-color: maroon !important;
+}
+.red {
+	background-color: red !important;
+}
+
+.mapControl input {
+    border: 0;
+    cursor: pointer;
+}
+
+.mapControl {
+	/*
+	color: #0C6CEA;
+	background: #def5ff;
+	border: 1px solid #0C6CEA;
+	margin-right: 5px;
+	padding: 3px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: left;
+	*/
+	cursor: default;
+	color: #4b4b4b;
+	-moz-box-shadow: 0 1px 7px #999;
+	-webkit-box-shadow: 0 1px 7px #999;
+	box-shadow: 0 1px 7px #999;
+	background: #f8f8f9;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-right: 5px;
+	border-radius: 8px;
+	padding: 5px;
+	margin-left: 10px;	
+	
+}
+
+.mapControlInfo {
+	text-align: center;
+	border: 2px solid #c9e3ff;
+	background: #fff;
+	margin-top: 2px;
+}
+
+.mapControlInlineBlock {
+	color: #4b4b4b;
+	-moz-box-shadow: 0 1px 7px #999;
+	-webkit-box-shadow: 0 1px 7px #999;
+	box-shadow: 0 1px 7px #999;
+	background: #f8f8f9;
+	margin-right: 5px;
+	display: inline-block;
+	padding: 0 3px 0 3px;
+	cursor: pointer;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-o-border-radius:8px;
+	-khtml-border-radius:8px;
+}
+
+.mapControlInlineBlock img {
+	position: absolute;
+	margin-top: 1px;
+}
+	
+.mapControlInverted {
+	color: #4b4b4b;
+	margin-bottom: 3px; 
+	border: 2px solid #ddd;
+}
+
+.mapControlSelect{
+	color: #4b4b4b;
+	-moz-box-shadow: 0 1px 7px #999;
+	-webkit-box-shadow: 0 1px 7px #999;
+	box-shadow: 0 1px 7px #999;	
+	border: 2px solid #ddd;
+	font-size: 0.9em;
+	width: 90px;	
+}
+
+.trackControl {
+	text-align: left;
+	color: #0C6CEA;
+	background-color: rgb(222, 245, 255);
+	background-color: rgba(222, 245, 255, 0.75);
+	border: 1px solid #0C6CEA;
+	margin-right: 5px;
+	padding: 3px;
+}
+
+
+.trackTextControlElement {
+	margin-bottom: 3px; 
+	text-align: center; 
+	border: 2px solid #ddd;
+	background: #ddd;
+}
+
+.backButtonWidget {
+	font-family : "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #fff;
+	background-color: #4b4b4b;
+	padding: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;	
+}
+
+.controlButtonSmall {
+	font-family : "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	font-size: 1.0em;
+	color: #4b4b4b;
+	background-color: #fff;
+	padding: 1px;
+	cursor: pointer;
+}
+
+.controlButton {
+	font-family : "Trebuchet MS", Helvetica, Verdana, sans-serif;
+	font-size: 1.0em;
+	color: #4b4b4b;
+	width: 100%;
+	height: 1.8em;
+	text-align: center;	
+	margin-bottom: 3px; 
+	border: 2px solid #bbb;
+	background: #ddd;
+	cursor: pointer;
+}
+
+.map_icon {
+	padding: 2px;
+	border: 1px solid #e3e3e3;
+	background-color:#fff;
+}
+
+.leaflet-control input, .leaflet-control select, .leaflet-control textarea, .leaflet-control button {
+    border: 0;
+}
+
+.leaflet-container a {
+	color: #4b4b4b;
+}
+
+.leaflet-container h3 {
+	margin: 0;
+}
+
+.leaflet-control-map-content {
+	-moz-box-shadow: 0 1px 7px #999;
+	-webkit-box-shadow: 0 1px 7px #999;
+	box-shadow: 0 1px 7px #999;
+	background: #f8f8f9;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 5px;
+	margin-left: 10px;	
+}
+
+.leaflet-marker-icon-wrapper {
+	position: absolute
+}
+
+.leaflet-marker-iconlabel {
+	background: #fff;
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	-moz-box-shadow: 0 3px 10px #888;
+	 -webkit-box-shadow: 0 3px 14px #999;
+	box-shadow: 0 3px 10px #888;
+	display: block;
+	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	padding: 4px 6px;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+}
+
+.leaflet-marker-iconlabel-waypoint {
+	background-color: rgb(119, 171, 239);
+	background-color: rgba(119, 171, 239, 0.75);
+	padding: 2px 4px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.leaflet-marker-iconlabel-info {
+	background-color: rgb(119, 171, 239);
+	background-color: rgba(119, 171, 239, 0.75);
+	padding: 2px 4px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.leaflet-marker-iconlabel-special {
+	background-color: rgb(238, 27, 0);
+	background-color: rgba(238, 27, 0, 0.75);
+	padding: 2px 4px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.leaflet-marker-iconlabel-milestone {
+	background-color: rgb(255, 245, 208);
+	background-color: rgba(255, 245, 208, 0.75);
+	padding: 2px 4px;
+	font-weight: bold;
+}
+
+.leaflet-marker-iconlabel-livetracking {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	padding: 2px 4px;
+	font-weight: bold;
+}
+
+.leaflet-control-map-content {
+	-moz-box-shadow: 0 1px 7px #999;
+	-webkit-box-shadow: 0 1px 7px #999;
+	box-shadow: 0 1px 7px #999;
+	background: #f8f8f9;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 5px;
+	margin-left: 10px;	
+}
+.page_createTrack .leaflet-control-track-creator {
+	clear: none;
+	margin-top: 5px;
+}
+.page_createTrack .leaflet-control-layers,
+.page_createTrack .leaflet-control-track-creator {
+	float: left !important;
+}
+.btnCarElActive {
+	background: url(../images/routing_car_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnCarElInactive {
+	background: url(../images/routing_car_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnCycleElActive {
+	background: url(../images/routing_cycle_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnCycleElInactive {
+	background: url(../images/routing_cycle_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnWalkElActive {
+	background: url(../images/routing_walk_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnWalkElInactive {
+	background: url(../images/routing_walk_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnMotorbikingElActive {
+	background: url(../images/routing_motorbiking_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnMotorbikingElInactive {
+	background: url(../images/routing_motorbiking_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnMountainbikingElActive {
+	background: url(../images/routing_mountainbiking_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnMountainbikingElInactive {
+	background: url(../images/routing_mountainbiking_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnRacingbikeElActive {
+	background: url(../images/routing_racingbike_active.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.btnRacingbikeElInactive {
+	background: url(../images/routing_racingbike_inactive.png) no-repeat scroll left top;
+	height: 23px;
+	width: 27px;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.headlineOnly {
+	background: #DEF5FF;
+	text-align: left;
+	padding-top: 4px;
+	padding-left: 8px;	
+}
+
+.headlineOnly h5 {
+	display: inline;
+	white-space: nowrap;
+}
+
+.headlineOnly a {
+	text-decoration: none;
+}
+
+.headlineOnly form {
+	display: inline;
+	white-space: nowrap;
+	font-size: 1.0em;
+}
+
+.btnTrkActive {
+	background: url(../images/btn_track_aktive.png) no-repeat scroll left top;
+	height: 31px;
+	width: 31px;
+	float: left;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.btnTrkInactive {
+	background: url(../images/btn_track_inaktive.png) no-repeat scroll left top;
+	height: 31px;
+	width: 31px;
+	float: left;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.btnWptActive {
+	background: url(../images/btn_waypoint_aktive.png) no-repeat scroll left top;
+	height: 31px;
+	width: 31px;
+	float: left;
+	cursor: pointer;
+}
+
+.btnWptInactive {
+	background: url(../images/btn_waypoint_inaktive.png) no-repeat scroll left top;
+	height: 31px;
+	width: 31px;
+	float: left;
+	cursor: pointer;
+}
+
+* html .btnTrkActive {
+	background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='./images/btn_track_aktive.png', sizingMethod='scale');
+}
+
+* html .btnTrkInactive {
+	background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='./images/btn_track_inaktive.png', sizingMethod='scale');
+}
+
+* html .btnWptActive {
+	background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='./images/btn_waypoint_aktive.png', sizingMethod='scale');
+}
+
+* html .btnWptInactive {
+	background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='./images/btn_waypoint_inaktive.png', sizingMethod='scale');
+}
+
+#fadeSpinner {
+    display: none;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    /*
+    background-color: #ababab;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+    */
+}
+
+#modalSpinner {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 64px;
+    height: 64px;
+    padding:30px 15px 0px;
+    border: 3px solid #ababab;
+    box-shadow:1px 1px 10px #ababab;
+    border-radius:20px;
+    background-color: white;
+    z-index: 1002;
+    text-align:center;
+    overflow: auto;
+}
+
+.leaflet-control-geocoder-form input {
+	width: 90px;	
+}
